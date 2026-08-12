@@ -10,6 +10,7 @@ from typing import Any
 
 import numpy as np
 
+from .acl002 import execute_confirmatory, validate_preregistration_bundle
 from .bandit import ContextualBandit, run_bandit_trajectory
 from .experiments import (
     CategoricalExperimentConfig,
@@ -150,6 +151,23 @@ def build_parser() -> argparse.ArgumentParser:
     demo.add_argument("--output-dir", default="results/demo")
     demo.add_argument("--seed", type=int, default=1729)
     demo.add_argument("--seeds", type=int, default=32)
+
+    acl002_validate = subparsers.add_parser(
+        "acl002-validate",
+        help="validate the locked ACL-002 bundle without generating outcomes",
+    )
+    acl002_validate.add_argument(
+        "--bundle", default="preregistrations/ACL-002"
+    )
+    acl002_validate.add_argument("--output")
+
+    acl002_run = subparsers.add_parser(
+        "acl002-run",
+        help="execute ACL-002 only after explicit approval of its preregistration SHA",
+    )
+    acl002_run.add_argument("--bundle", default="preregistrations/ACL-002")
+    acl002_run.add_argument("--approved-sha", required=True)
+    acl002_run.add_argument("--output", required=True)
     return parser
 
 
@@ -288,6 +306,20 @@ def main(argv: list[str] | None = None) -> int:
             return 0 if payload["passed"] else 1
         elif args.command == "demo":
             print(json.dumps(_demo(args), indent=2, sort_keys=True))
+        elif args.command == "acl002-validate":
+            payload = validate_preregistration_bundle(args.bundle)
+            _emit_json(payload, args.output)
+        elif args.command == "acl002-run":
+            bundle = Path(args.bundle)
+            destination = execute_confirmatory(
+                repo_path=Path.cwd(),
+                manifest_path=bundle / "manifest.json",
+                registry_path=bundle / "analytic_registry.json",
+                lock_path=bundle / "LOCK.json",
+                approved_sha=args.approved_sha,
+                output_path=args.output,
+            )
+            print(destination.resolve())
         else:
             parser.error(f"unhandled command: {args.command}")
     except (ValueError, FloatingPointError) as error:

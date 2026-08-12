@@ -1,0 +1,908 @@
+{
+  "delta_floor": 2e-12,
+  "experiment_id": "ACL-002",
+  "kind": "pre-outcome-analytic-registry",
+  "landscapes": [
+    {
+      "C_primary": 1.6178839578693451,
+      "K_primary": 1.5305263239750295,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.447295975280539,
+          "C_max_path_l1": 0.447295975280539,
+          "K_kl_q_p": 0.13099980983108944
+        },
+        "20": {
+          "C_endpoint_l1": 1.6178839578693451,
+          "C_max_path_l1": 2.0431125069523084,
+          "K_kl_q_p": 1.5305263239750295
+        },
+        "5": {
+          "C_endpoint_l1": 1.7057443238824315,
+          "C_max_path_l1": 1.7057443238824315,
+          "K_kl_q_p": 1.9144771258285203
+        },
+        "50": {
+          "C_endpoint_l1": 21.689411307414396,
+          "C_max_path_l1": 21.689411307414396,
+          "K_kl_q_p": 1082.2135604695102
+        }
+      },
+      "id": "S01",
+      "mutation": "uniform_off_diagonal",
+      "p0": "mixed",
+      "reward": "dominant_a",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 2.5537390387812984,
+      "K_primary": 3.7103974833331885,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.01254900895379285,
+          "C_max_path_l1": 0.01254900895379285,
+          "K_kl_q_p": 9.026736984119686e-05
+        },
+        "20": {
+          "C_endpoint_l1": 2.5537390387812984,
+          "C_max_path_l1": 2.5537390387812984,
+          "K_kl_q_p": 3.7103974833331885
+        },
+        "5": {
+          "C_endpoint_l1": 0.19365382852136104,
+          "C_max_path_l1": 0.19365382852136104,
+          "K_kl_q_p": 0.02030458382819978
+        },
+        "50": {
+          "C_endpoint_l1": 8.127397814572994,
+          "C_max_path_l1": 8.127397814572994,
+          "K_kl_q_p": 104.09486366055563
+        }
+      },
+      "id": "S02",
+      "mutation": "forward_cycle",
+      "p0": "balanced",
+      "reward": "dominant_b",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 14.686808254627987,
+      "K_primary": 178.59988268240858,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.736128431726147,
+          "C_max_path_l1": 0.736128431726147,
+          "K_kl_q_p": 0.4178417357898419
+        },
+        "20": {
+          "C_endpoint_l1": 14.686808254627987,
+          "C_max_path_l1": 14.686808254627987,
+          "K_kl_q_p": 178.59988268240858
+        },
+        "5": {
+          "C_endpoint_l1": 3.680524581586109,
+          "C_max_path_l1": 3.680524581586109,
+          "K_kl_q_p": 10.597027436987249
+        },
+        "50": {
+          "C_endpoint_l1": 36.19249854312967,
+          "C_max_path_l1": 36.19249854312967,
+          "K_kl_q_p": 1229.8541597021413
+        }
+      },
+      "id": "S03",
+      "mutation": "uniform_mix",
+      "p0": "skew_a",
+      "reward": "weak",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 9.888674129278309,
+      "K_primary": 118.03309074777765,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.5294438569592275,
+          "C_max_path_l1": 0.5294438569592275,
+          "K_kl_q_p": 0.4095732044121443
+        },
+        "20": {
+          "C_endpoint_l1": 9.888674129278309,
+          "C_max_path_l1": 9.888674129278309,
+          "K_kl_q_p": 118.03309074777765
+        },
+        "5": {
+          "C_endpoint_l1": 2.6816143341546557,
+          "C_max_path_l1": 2.6816143341546557,
+          "K_kl_q_p": 9.658109427111308
+        },
+        "50": {
+          "C_endpoint_l1": 20.085123220194472,
+          "C_max_path_l1": 20.085123220194472,
+          "K_kl_q_p": 332.96857929762547
+        }
+      },
+      "id": "S04",
+      "mutation": "asymmetric_a",
+      "p0": "skew_b",
+      "reward": "tie_ab",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 12.731449866302427,
+      "K_primary": 347.4146126903105,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.44713082550447797,
+          "C_max_path_l1": 0.44713082550447797,
+          "K_kl_q_p": 0.5154111048191048
+        },
+        "20": {
+          "C_endpoint_l1": 12.731449866302427,
+          "C_max_path_l1": 12.731449866302427,
+          "K_kl_q_p": 347.4146126903105
+        },
+        "5": {
+          "C_endpoint_l1": 2.4188501939298366,
+          "C_max_path_l1": 2.4188501939298366,
+          "K_kl_q_p": 14.118013215133656
+        },
+        "50": {
+          "C_endpoint_l1": 51.6102896557736,
+          "C_max_path_l1": 51.6102896557736,
+          "K_kl_q_p": 5599.41836075167
+        }
+      },
+      "id": "S05",
+      "mutation": "backward_cycle",
+      "p0": "edge",
+      "reward": "dominant_a",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 4.66666666666667,
+      "K_primary": 14.333333333333357,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.23333333333333334,
+          "C_max_path_l1": 0.23333333333333334,
+          "K_kl_q_p": 0.03583333333333333
+        },
+        "20": {
+          "C_endpoint_l1": 4.66666666666667,
+          "C_max_path_l1": 4.66666666666667,
+          "K_kl_q_p": 14.333333333333357
+        },
+        "5": {
+          "C_endpoint_l1": 1.1666666666666667,
+          "C_max_path_l1": 1.1666666666666667,
+          "K_kl_q_p": 0.8958333333333335
+        },
+        "50": {
+          "C_endpoint_l1": 11.66666666666667,
+          "C_max_path_l1": 11.66666666666667,
+          "K_kl_q_p": 89.5833333333334
+        }
+      },
+      "id": "S06",
+      "mutation": "asymmetric_b",
+      "p0": "balanced",
+      "reward": "neutral",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 6.664188435156811,
+      "K_primary": 25.025268952227812,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.3328198199901298,
+          "C_max_path_l1": 0.3328198199901298,
+          "K_kl_q_p": 0.07253238662794105
+        },
+        "20": {
+          "C_endpoint_l1": 6.664188435156811,
+          "C_max_path_l1": 6.664188435156811,
+          "K_kl_q_p": 25.025268952227812
+        },
+        "5": {
+          "C_endpoint_l1": 1.6677192828602525,
+          "C_max_path_l1": 1.6677192828602525,
+          "K_kl_q_p": 1.757421429161659
+        },
+        "50": {
+          "C_endpoint_l1": 15.857501875048406,
+          "C_max_path_l1": 15.857501875048406,
+          "K_kl_q_p": 126.3803193132102
+        }
+      },
+      "id": "S07",
+      "mutation": "uniform_mix",
+      "p0": "mixed",
+      "reward": "compressed",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 12.601610872340792,
+      "K_primary": 249.42233377919732,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 1.0626488487478591,
+          "C_max_path_l1": 1.0626488487478591,
+          "K_kl_q_p": 0.8883586225312206
+        },
+        "20": {
+          "C_endpoint_l1": 12.601610872340792,
+          "C_max_path_l1": 12.601610872340792,
+          "K_kl_q_p": 249.42233377919732
+        },
+        "5": {
+          "C_endpoint_l1": 4.982192459666486,
+          "C_max_path_l1": 4.982192459666486,
+          "K_kl_q_p": 20.570459151915543
+        },
+        "50": {
+          "C_endpoint_l1": 27.815712561163913,
+          "C_max_path_l1": 27.815712561163913,
+          "K_kl_q_p": 1683.579076280202
+        }
+      },
+      "id": "S08",
+      "mutation": "uniform_off_diagonal",
+      "p0": "skew_a",
+      "reward": "dominant_b",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 5.532251707330355,
+      "K_primary": 226.84373931371044,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.3831445040706417,
+          "C_max_path_l1": 0.3831445040706417,
+          "K_kl_q_p": 0.40329458910348237
+        },
+        "20": {
+          "C_endpoint_l1": 5.532251707330355,
+          "C_max_path_l1": 5.532251707330355,
+          "K_kl_q_p": 226.84373931371044
+        },
+        "5": {
+          "C_endpoint_l1": 1.8193962822118634,
+          "C_max_path_l1": 1.8193962822118634,
+          "K_kl_q_p": 10.926399504874011
+        },
+        "50": {
+          "C_endpoint_l1": 7.854930208506198,
+          "C_max_path_l1": 7.854930208506198,
+          "K_kl_q_p": 2812.9712535858926
+        }
+      },
+      "id": "S09",
+      "mutation": "forward_cycle",
+      "p0": "skew_b",
+      "reward": "dominant_c",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 16.455415247612244,
+      "K_primary": 3338.991154673543,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.8801337112910117,
+          "C_max_path_l1": 0.8801337112910117,
+          "K_kl_q_p": 8.033739902967817
+        },
+        "20": {
+          "C_endpoint_l1": 16.455415247612244,
+          "C_max_path_l1": 16.455415247612244,
+          "K_kl_q_p": 3338.991154673543
+        },
+        "5": {
+          "C_endpoint_l1": 4.329687435215517,
+          "C_max_path_l1": 4.329687435215517,
+          "K_kl_q_p": 201.34264064183077
+        },
+        "50": {
+          "C_endpoint_l1": 38.44020190207137,
+          "C_max_path_l1": 38.44020190207137,
+          "K_kl_q_p": 25356.90371920135
+        }
+      },
+      "id": "S10",
+      "mutation": "asymmetric_b",
+      "p0": "edge",
+      "reward": "tie_bc",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 3.007548228010177,
+      "K_primary": 5.077195839044791,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.01665972598167903,
+          "C_max_path_l1": 0.01665972598167903,
+          "K_kl_q_p": 0.00015247155972717512
+        },
+        "20": {
+          "C_endpoint_l1": 3.007548228010177,
+          "C_max_path_l1": 3.007548228010177,
+          "K_kl_q_p": 5.077195839044791
+        },
+        "5": {
+          "C_endpoint_l1": 0.25351544766357514,
+          "C_max_path_l1": 0.25351544766357514,
+          "K_kl_q_p": 0.032996102409154196
+        },
+        "50": {
+          "C_endpoint_l1": 8.235579860443863,
+          "C_max_path_l1": 8.235579860443863,
+          "K_kl_q_p": 113.15864445366002
+        }
+      },
+      "id": "S11",
+      "mutation": "backward_cycle",
+      "p0": "balanced",
+      "reward": "reversed",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 0.7516119506864213,
+      "K_primary": 0.4079334992527989,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.16513946324558954,
+          "C_max_path_l1": 0.16513946324558954,
+          "K_kl_q_p": 0.01945225745352821
+        },
+        "20": {
+          "C_endpoint_l1": 0.7516119506864213,
+          "C_max_path_l1": 0.9748712238184472,
+          "K_kl_q_p": 0.4079334992527989
+        },
+        "5": {
+          "C_endpoint_l1": 0.6861551110756858,
+          "C_max_path_l1": 0.6861551110756858,
+          "K_kl_q_p": 0.3110741853882998
+        },
+        "50": {
+          "C_endpoint_l1": 7.157227687307666,
+          "C_max_path_l1": 7.157227687307666,
+          "K_kl_q_p": 88.69861753390943
+        }
+      },
+      "id": "S12",
+      "mutation": "asymmetric_a",
+      "p0": "mixed",
+      "reward": "strong_ordered",
+      "split": "source",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 0.0,
+      "K_primary": 0.0,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.0,
+          "C_max_path_l1": 0.0,
+          "K_kl_q_p": 0.0
+        },
+        "20": {
+          "C_endpoint_l1": 0.0,
+          "C_max_path_l1": 0.0,
+          "K_kl_q_p": 0.0
+        },
+        "5": {
+          "C_endpoint_l1": 0.0,
+          "C_max_path_l1": 0.0,
+          "K_kl_q_p": 0.0
+        },
+        "50": {
+          "C_endpoint_l1": 0.0,
+          "C_max_path_l1": 0.0,
+          "K_kl_q_p": 0.0
+        }
+      },
+      "id": "S13",
+      "mutation": "identity",
+      "p0": "balanced",
+      "reward": "neutral",
+      "split": "source",
+      "stratum": "analytic-zero"
+    },
+    {
+      "C_primary": 1.7895488687766888e-12,
+      "K_primary": 2.1169400791612592e-24,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 9.894972513241147e-14,
+          "C_max_path_l1": 9.894972513241147e-14,
+          "K_kl_q_p": 6.515168001037167e-27
+        },
+        "20": {
+          "C_endpoint_l1": 1.7895488687766888e-12,
+          "C_max_path_l1": 1.7895488687766888e-12,
+          "K_kl_q_p": 2.1169400791612592e-24
+        },
+        "5": {
+          "C_endpoint_l1": 4.851131766223334e-13,
+          "C_max_path_l1": 4.851131766223334e-13,
+          "K_kl_q_p": 1.5625361233798948e-25
+        },
+        "50": {
+          "C_endpoint_l1": 3.657150675069549e-12,
+          "C_max_path_l1": 3.657150675069549e-12,
+          "K_kl_q_p": 8.923011319139791e-24
+        }
+      },
+      "id": "S14",
+      "mutation": "near_identity",
+      "p0": "mixed",
+      "reward": "weak",
+      "split": "source",
+      "stratum": "low-sensitivity"
+    },
+    {
+      "C_primary": 2.668202301435618,
+      "K_primary": 9.386408885795209,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.07472514836433938,
+          "C_max_path_l1": 0.07472514836433938,
+          "K_kl_q_p": 0.003918679558119628
+        },
+        "20": {
+          "C_endpoint_l1": 2.668202301435618,
+          "C_max_path_l1": 2.668202301435618,
+          "K_kl_q_p": 9.386408885795209
+        },
+        "5": {
+          "C_endpoint_l1": 0.4758777048520966,
+          "C_max_path_l1": 0.4758777048520966,
+          "K_kl_q_p": 0.1614240931515039
+        },
+        "50": {
+          "C_endpoint_l1": 7.907868140669987,
+          "C_max_path_l1": 7.907868140669987,
+          "K_kl_q_p": 206.49389006662966
+        }
+      },
+      "id": "T01",
+      "mutation": "asymmetric_a",
+      "p0": "target_a",
+      "reward": "dominant_a",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 5.155208288707014,
+      "K_primary": 38.06860996037062,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.25112424316991555,
+          "C_max_path_l1": 0.25112424316991555,
+          "K_kl_q_p": 0.08786523041718926
+        },
+        "20": {
+          "C_endpoint_l1": 5.155208288707014,
+          "C_max_path_l1": 5.155208288707014,
+          "K_kl_q_p": 38.06860996037062
+        },
+        "5": {
+          "C_endpoint_l1": 1.2631649029989296,
+          "C_max_path_l1": 1.2631649029989296,
+          "K_kl_q_p": 2.234738971442361
+        },
+        "50": {
+          "C_endpoint_l1": 13.271909901796777,
+          "C_max_path_l1": 13.271909901796777,
+          "K_kl_q_p": 267.3030084087437
+        }
+      },
+      "id": "T02",
+      "mutation": "forward_cycle",
+      "p0": "target_b",
+      "reward": "weak",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 20.80752190945781,
+      "K_primary": 326.82425190344014,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.8267271604688728,
+          "C_max_path_l1": 0.8267271604688728,
+          "K_kl_q_p": 0.7436169429954025
+        },
+        "20": {
+          "C_endpoint_l1": 20.80752190945781,
+          "C_max_path_l1": 20.80752190945781,
+          "K_kl_q_p": 326.82425190344014
+        },
+        "5": {
+          "C_endpoint_l1": 4.454411366732167,
+          "C_max_path_l1": 4.454411366732167,
+          "K_kl_q_p": 18.87862631817733
+        },
+        "50": {
+          "C_endpoint_l1": 53.01064137200179,
+          "C_max_path_l1": 53.01064137200179,
+          "K_kl_q_p": 2578.6699995023014
+        }
+      },
+      "id": "T03",
+      "mutation": "uniform_off_diagonal",
+      "p0": "target_c",
+      "reward": "tie_ab",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 18.212886220597927,
+      "K_primary": 446.41638470085763,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.9377144447055981,
+          "C_max_path_l1": 0.9377144447055981,
+          "K_kl_q_p": 1.0634092906914776
+        },
+        "20": {
+          "C_endpoint_l1": 18.212886220597927,
+          "C_max_path_l1": 18.212886220597927,
+          "K_kl_q_p": 446.41638470085763
+        },
+        "5": {
+          "C_endpoint_l1": 4.666060247739626,
+          "C_max_path_l1": 4.666060247739626,
+          "K_kl_q_p": 26.86644997060866
+        },
+        "50": {
+          "C_endpoint_l1": 42.31658878712781,
+          "C_max_path_l1": 42.31658878712781,
+          "K_kl_q_p": 2994.848470536789
+        }
+      },
+      "id": "T04",
+      "mutation": "uniform_mix",
+      "p0": "target_d",
+      "reward": "compressed",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 2.245129387349434,
+      "K_primary": 7.690878420165275,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.01665972598167903,
+          "C_max_path_l1": 0.01665972598167903,
+          "K_kl_q_p": 0.00016028894376054982
+        },
+        "20": {
+          "C_endpoint_l1": 2.245129387349434,
+          "C_max_path_l1": 2.245129387349434,
+          "K_kl_q_p": 7.690878420165275
+        },
+        "5": {
+          "C_endpoint_l1": 0.2372775016895502,
+          "C_max_path_l1": 0.2372775016895502,
+          "K_kl_q_p": 0.037114236420893634
+        },
+        "50": {
+          "C_endpoint_l1": 4.708319617758285,
+          "C_max_path_l1": 4.708319617758285,
+          "K_kl_q_p": 450.575370603811
+        }
+      },
+      "id": "T05",
+      "mutation": "backward_cycle",
+      "p0": "balanced",
+      "reward": "dominant_a",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 6.666666666666664,
+      "K_primary": 29.629629629629623,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.3333333333333333,
+          "C_max_path_l1": 0.3333333333333333,
+          "K_kl_q_p": 0.07407407407407407
+        },
+        "20": {
+          "C_endpoint_l1": 6.666666666666664,
+          "C_max_path_l1": 6.666666666666664,
+          "K_kl_q_p": 29.629629629629623
+        },
+        "5": {
+          "C_endpoint_l1": 1.6666666666666665,
+          "C_max_path_l1": 1.6666666666666665,
+          "K_kl_q_p": 1.8518518518518512
+        },
+        "50": {
+          "C_endpoint_l1": 16.66666666666666,
+          "C_max_path_l1": 16.66666666666666,
+          "K_kl_q_p": 185.18518518518516
+        }
+      },
+      "id": "T06",
+      "mutation": "uniform_mix",
+      "p0": "mixed",
+      "reward": "neutral",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 7.701443790578784,
+      "K_primary": 383.5758063418742,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.5269727267029053,
+          "C_max_path_l1": 0.5269727267029053,
+          "K_kl_q_p": 0.7224484306246862
+        },
+        "20": {
+          "C_endpoint_l1": 7.701443790578784,
+          "C_max_path_l1": 7.701443790578784,
+          "K_kl_q_p": 383.5758063418742
+        },
+        "5": {
+          "C_endpoint_l1": 2.4907823459035083,
+          "C_max_path_l1": 2.4907823459035083,
+          "K_kl_q_p": 18.921853317830887
+        },
+        "50": {
+          "C_endpoint_l1": 11.430959821312907,
+          "C_max_path_l1": 11.430959821312907,
+          "K_kl_q_p": 5760.506936194262
+        }
+      },
+      "id": "T07",
+      "mutation": "asymmetric_b",
+      "p0": "target_e",
+      "reward": "dominant_b",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 15.23653145232657,
+      "K_primary": 145.14485554446313,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.7950445009252174,
+          "C_max_path_l1": 0.7950445009252174,
+          "K_kl_q_p": 0.4101073360447933
+        },
+        "20": {
+          "C_endpoint_l1": 15.23653145232657,
+          "C_max_path_l1": 15.23653145232657,
+          "K_kl_q_p": 145.14485554446313
+        },
+        "5": {
+          "C_endpoint_l1": 3.943095573075518,
+          "C_max_path_l1": 3.943095573075518,
+          "K_kl_q_p": 10.002057901105365
+        },
+        "50": {
+          "C_endpoint_l1": 34.78624193406296,
+          "C_max_path_l1": 34.78624193406296,
+          "K_kl_q_p": 726.7405847751586
+        }
+      },
+      "id": "T08",
+      "mutation": "uniform_off_diagonal",
+      "p0": "target_f",
+      "reward": "weak",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 4.717127327704444,
+      "K_primary": 32.919778182711475,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.23490112737051153,
+          "C_max_path_l1": 0.23490112737051153,
+          "K_kl_q_p": 0.11549551571232072
+        },
+        "20": {
+          "C_endpoint_l1": 4.717127327704444,
+          "C_max_path_l1": 4.717127327704444,
+          "K_kl_q_p": 32.919778182711475
+        },
+        "5": {
+          "C_endpoint_l1": 1.2214178726325686,
+          "C_max_path_l1": 1.2214178726325686,
+          "K_kl_q_p": 2.694478764927773
+        },
+        "50": {
+          "C_endpoint_l1": 7.694484913404585,
+          "C_max_path_l1": 7.694484913404585,
+          "K_kl_q_p": 217.11422505003983
+        }
+      },
+      "id": "T09",
+      "mutation": "forward_cycle",
+      "p0": "target_g",
+      "reward": "dominant_c",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 7.671865557905107,
+      "K_primary": 36.84203964743577,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.3711829419533299,
+          "C_max_path_l1": 0.3711829419533299,
+          "K_kl_q_p": 0.08187717165733917
+        },
+        "20": {
+          "C_endpoint_l1": 7.671865557905107,
+          "C_max_path_l1": 7.671865557905107,
+          "K_kl_q_p": 36.84203964743577
+        },
+        "5": {
+          "C_endpoint_l1": 1.8765684041839248,
+          "C_max_path_l1": 1.8765684041839248,
+          "K_kl_q_p": 2.1030564697619236
+        },
+        "50": {
+          "C_endpoint_l1": 19.07157810845073,
+          "C_max_path_l1": 19.07157810845073,
+          "K_kl_q_p": 271.236223380267
+        }
+      },
+      "id": "T10",
+      "mutation": "asymmetric_a",
+      "p0": "target_h",
+      "reward": "tie_bc",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 5.950434629933982,
+      "K_primary": 67.82797090953194,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.38199111658489737,
+          "C_max_path_l1": 0.38199111658489737,
+          "K_kl_q_p": 0.12494782174132049
+        },
+        "20": {
+          "C_endpoint_l1": 5.950434629933982,
+          "C_max_path_l1": 5.950434629933982,
+          "K_kl_q_p": 67.82797090953194
+        },
+        "5": {
+          "C_endpoint_l1": 1.838767864264389,
+          "C_max_path_l1": 1.838767864264389,
+          "K_kl_q_p": 3.3674380387343006
+        },
+        "50": {
+          "C_endpoint_l1": 9.25569410728695,
+          "C_max_path_l1": 9.25569410728695,
+          "K_kl_q_p": 702.4309814864398
+        }
+      },
+      "id": "T11",
+      "mutation": "backward_cycle",
+      "p0": "skew_b",
+      "reward": "reversed",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 41.464013809159866,
+      "K_primary": 25911.133450632864,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 1.1272876815686077,
+          "C_max_path_l1": 1.1272876815686077,
+          "K_kl_q_p": 50.797963687223216
+        },
+        "20": {
+          "C_endpoint_l1": 41.464013809159866,
+          "C_max_path_l1": 41.464013809159866,
+          "K_kl_q_p": 25911.133450632864
+        },
+        "5": {
+          "C_endpoint_l1": 6.307032567294687,
+          "C_max_path_l1": 6.307032567294687,
+          "K_kl_q_p": 1288.6846855894628
+        },
+        "50": {
+          "C_endpoint_l1": 484.3315856647335,
+          "C_max_path_l1": 484.3315856647335,
+          "K_kl_q_p": 417438.6052585106
+        }
+      },
+      "id": "T12",
+      "mutation": "uniform_mix",
+      "p0": "edge",
+      "reward": "strong_ordered",
+      "split": "target",
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 0.0,
+      "K_primary": 0.0,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.0,
+          "C_max_path_l1": 0.0,
+          "K_kl_q_p": 0.0
+        },
+        "20": {
+          "C_endpoint_l1": 0.0,
+          "C_max_path_l1": 0.0,
+          "K_kl_q_p": 0.0
+        },
+        "5": {
+          "C_endpoint_l1": 0.0,
+          "C_max_path_l1": 0.0,
+          "K_kl_q_p": 0.0
+        },
+        "50": {
+          "C_endpoint_l1": 0.0,
+          "C_max_path_l1": 0.0,
+          "K_kl_q_p": 0.0
+        }
+      },
+      "id": "T13",
+      "mutation": "identity",
+      "p0": "target_a",
+      "reward": "neutral",
+      "split": "target",
+      "stratum": "analytic-zero"
+    },
+    {
+      "C_primary": 3.1116203249155438e-12,
+      "K_primary": 1.0521198153368719e-23,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 1.5890824969900514e-13,
+          "C_max_path_l1": 1.5890824969900514e-13,
+          "K_kl_q_p": 2.9396107479735317e-26
+        },
+        "20": {
+          "C_endpoint_l1": 3.1116203249155438e-12,
+          "C_max_path_l1": 3.1116203249155438e-12,
+          "K_kl_q_p": 1.0521198153368719e-23
+        },
+        "5": {
+          "C_endpoint_l1": 7.918567992166798e-13,
+          "C_max_path_l1": 7.918567992166798e-13,
+          "K_kl_q_p": 7.186026709485549e-25
+        },
+        "50": {
+          "C_endpoint_l1": 7.540424231686602e-12,
+          "C_max_path_l1": 7.540424231686602e-12,
+          "K_kl_q_p": 5.348531382732955e-23
+        }
+      },
+      "id": "T14",
+      "mutation": "near_identity",
+      "p0": "target_c",
+      "reward": "compressed",
+      "split": "target",
+      "stratum": "low-sensitivity"
+    }
+  ],
+  "manifest_canonical_sha256": "59b7860737f3a13ad30aad025a811abb2565d74d25a5d08f9509d2553a6af487",
+  "outcomes_generated": false,
+  "primary_horizon": 20,
+  "row_vector_convention": true,
+  "schema_version": 1
+}

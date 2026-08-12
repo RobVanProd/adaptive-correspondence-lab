@@ -48,6 +48,7 @@ acl transport --perturbation reward-bias --output results/transport.json
 acl gaussian --steps 30 --output results/gaussian.json
 acl bandit --steps 30 --output results/bandit.json
 acl verify
+acl acl002-validate
 ```
 
 `acl demo` uses 32 seeds and tiny arrays. Larger sweeps are processed in bounded
@@ -77,3 +78,14 @@ The bundled [software verification](evidence/software-verification.json) and
 source commit that produced them. The [mutation curve](evidence/mutation-stability.csv)
 is intentionally labeled as a deterministic format example rather than a research
 result.
+
+## Current preregistration
+
+[ACL-002](preregistrations/ACL-002/PREREGISTRATION.md) freezes a deterministic,
+held-out test of categorical mutation stability. It includes an explicit row-vector
+Jacobian, zero-fit and source-calibrated predictions, landscape-balanced estimators,
+pre-outcome sensitivity strata, an oriented-KL quadratic check, a fixed manifest, and
+file hashes. The checkpoint contains no confirmatory mutation outcomes.
+
+The future `acl acl002-run` command refuses to execute without an explicitly approved
+Git SHA, a clean tracked worktree, valid preregistration hashes, and a new output path.

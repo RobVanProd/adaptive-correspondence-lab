@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ACL-002",
+  "title": "Stability of the categorical correspondence under deterministic mutation",
+  "randomness": "none",
+  "vector_convention": "row",
+  "mutation_operation": "(1-epsilon)*F(p) + epsilon*(F(p) @ M)",
+  "eta": 0.05,
+  "primary_horizon": 20,
+  "secondary_horizons": [1, 5, 50],
+  "epsilon_grid": [0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1],
+  "confirmatory_epsilons": [0.0001, 0.0003, 0.001, 0.003, 0.01],
+  "stress_epsilons": [0.03, 0.1],
+  "numerical_policy": {
+    "inherited_tolerance": 2e-14,
+    "safety_multiplier": 100,
+    "delta_floor": 2e-12,
+    "quantile_method": "linear",
+    "quantile_definition": "Hyndman-Fan Type 7"
+  },
+  "gates": {
+    "target_landscape_median_relative_error_max": 0.1,
+    "target_landscape_q90_relative_error_max": 0.2
+  },
+  "states": {
+    "balanced": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+    "mixed": [0.2, 0.3, 0.5],
+    "skew_a": [0.7, 0.2, 0.1],
+    "skew_b": [0.05, 0.15, 0.8],
+    "edge": [0.001, 0.099, 0.9],
+    "target_a": [0.3, 0.4, 0.3],
+    "target_b": [0.6, 0.1, 0.3],
+    "target_c": [0.1, 0.6, 0.3],
+    "target_d": [0.8, 0.15, 0.05],
+    "target_e": [0.05, 0.8, 0.15],
+    "target_f": [0.15, 0.25, 0.6],
+    "target_g": [0.45, 0.05, 0.5],
+    "target_h": [0.12, 0.68, 0.2]
+  },
+  "rewards": {
+    "dominant_a": [1.0, 0.0, -1.0],
+    "dominant_b": [-0.5, 1.0, 0.0],
+    "dominant_c": [0.0, -0.75, 1.25],
+    "weak": [0.1, 0.0, -0.1],
+    "tie_ab": [0.5, 0.5, -0.5],
+    "tie_bc": [-0.4, 0.3, 0.3],
+    "neutral": [0.0, 0.0, 0.0],
+    "compressed": [0.2, -0.1, 0.0],
+    "reversed": [-1.0, 0.0, 1.0],
+    "strong_ordered": [1.5, 0.25, -0.4]
+  },
+  "mutation_matrices": {
+    "uniform_off_diagonal": [
+      [0.0, 0.5, 0.5],
+      [0.5, 0.0, 0.5],
+      [0.5, 0.5, 0.0]
+    ],
+    "uniform_mix": [
+      [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+      [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+      [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+    ],
+    "forward_cycle": [
+      [0.75, 0.25, 0.0],
+      [0.0, 0.75, 0.25],
+      [0.25, 0.0, 0.75]
+    ],
+    "backward_cycle": [
+      [0.75, 0.0, 0.25],
+      [0.25, 0.75, 0.0],
+      [0.0, 0.25, 0.75]
+    ],
+    "asymmetric_a": [
+      [0.7, 0.2, 0.1],
+      [0.05, 0.65, 0.3],
+      [0.25, 0.15, 0.6]
+    ],
+    "asymmetric_b": [
+      [0.9, 0.05, 0.05],
+      [0.3, 0.6, 0.1],
+      [0.1, 0.4, 0.5]
+    ],
+    "identity": [
+      [1.0, 0.0, 0.0],
+      [0.0, 1.0, 0.0],
+      [0.0, 0.0, 1.0]
+    ],
+    "near_identity": [
+      [0.9999999999998, 0.0000000000001, 0.0000000000001],
+      [0.0000000000001, 0.9999999999998, 0.0000000000001],
+      [0.0000000000001, 0.0000000000001, 0.9999999999998]
+    ]
+  },
+  "landscapes": [
+    {"id": "S01", "split": "source", "p0": "mixed", "reward": "dominant_a", "mutation": "uniform_off_diagonal"},
+    {"id": "S02", "split": "source", "p0": "balanced", "reward": "dominant_b", "mutation": "forward_cycle"},
+    {"id": "S03", "split": "source", "p0": "skew_a", "reward": "weak", "mutation": "uniform_mix"},
+    {"id": "S04", "split": "source", "p0": "skew_b", "reward": "tie_ab", "mutation": "asymmetric_a"},
+    {"id": "S05", "split": "source", "p0": "edge", "reward": "dominant_a", "mutation": "backward_cycle"},
+    {"id": "S06", "split": "source", "p0": "balanced", "reward": "neutral", "mutation": "asymmetric_b"},
+    {"id": "S07", "split": "source", "p0": "mixed", "reward": "compressed", "mutation": "uniform_mix"},
+    {"id": "S08", "split": "source", "p0": "skew_a", "reward": "dominant_b", "mutation": "uniform_off_diagonal"},
+    {"id": "S09", "split": "source", "p0": "skew_b", "reward": "dominant_c", "mutation": "forward_cycle"},
+    {"id": "S10", "split": "source", "p0": "edge", "reward": "tie_bc", "mutation": "asymmetric_b"},
+    {"id": "S11", "split": "source", "p0": "balanced", "reward": "reversed", "mutation": "backward_cycle"},
+    {"id": "S12", "split": "source", "p0": "mixed", "reward": "strong_ordered", "mutation": "asymmetric_a"},
+    {"id": "S13", "split": "source", "p0": "balanced", "reward": "neutral", "mutation": "identity"},
+    {"id": "S14", "split": "source", "p0": "mixed", "reward": "weak", "mutation": "near_identity"},
+    {"id": "T01", "split": "target", "p0": "target_a", "reward": "dominant_a", "mutation": "asymmetric_a"},
+    {"id": "T02", "split": "target", "p0": "target_b", "reward": "weak", "mutation": "forward_cycle"},
+    {"id": "T03", "split": "target", "p0": "target_c", "reward": "tie_ab", "mutation": "uniform_off_diagonal"},
+    {"id": "T04", "split": "target", "p0": "target_d", "reward": "compressed", "mutation": "uniform_mix"},
+    {"id": "T05", "split": "target", "p0": "balanced", "reward": "dominant_a", "mutation": "backward_cycle"},
+    {"id": "T06", "split": "target", "p0": "mixed", "reward": "neutral", "mutation": "uniform_mix"},
+    {"id": "T07", "split": "target", "p0": "target_e", "reward": "dominant_b", "mutation": "asymmetric_b"},
+    {"id": "T08", "split": "target", "p0": "target_f", "reward": "weak", "mutation": "uniform_off_diagonal"},
+    {"id": "T09", "split": "target", "p0": "target_g", "reward": "dominant_c", "mutation": "forward_cycle"},
+    {"id": "T10", "split": "target", "p0": "target_h", "reward": "tie_bc", "mutation": "asymmetric_a"},
+    {"id": "T11", "split": "target", "p0": "skew_b", "reward": "reversed", "mutation": "backward_cycle"},
+    {"id": "T12", "split": "target", "p0": "edge", "reward": "strong_ordered", "mutation": "uniform_mix"},
+    {"id": "T13", "split": "target", "p0": "target_a", "reward": "neutral", "mutation": "identity"},
+    {"id": "T14", "split": "target", "p0": "target_c", "reward": "compressed", "mutation": "near_identity"}
+  ],
+  "predeclared_stratum_expectations": {
+    "analytic_zero": ["S13", "T13"],
+    "low_sensitivity": ["S14", "T14"]
+  }
+}
