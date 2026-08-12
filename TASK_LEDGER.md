@@ -831,7 +831,7 @@
 ## PHASE-II-AUDIT — Canonicalize and reclassify Phase I
 
 - **Task ID:** `PHASE-II-AUDIT`.
-- **Status:** in progress; audit/protocol only, no new scientific outcomes.
+- **Status:** complete; audit/protocol only, no new scientific outcomes.
 - **Observed state:** Phase I ended on branch `agent/acl003-preregistration` at synthesis
   commit `358e18baccf29fd2959054be6bb25dd3869d8f77`; public `main` previously stopped at
   `50ad814138e783f036ca4acdf95ce9ebbf644a90`, before ACL-003 through ACL-005.
@@ -899,3 +899,32 @@
 - **Stop conditions:** damping enters the estimator; an analytic comparator calls sampled
   code; a target outcome is generated; support decomposition fails to close; or a new
   semantic choice is needed after data exist.
+
+### ACL-006 mechanism completion record
+
+- **Outcome status:** theorem/mechanism checkpoint only. No ACL-006 manifest, target
+  random stream, confirmatory row, or evidence artifact exists.
+- **Exact finite law:** exhaustive four-cell multinomial enumeration computes the
+  undamped plug-in direction's expectation, covariance, Fisher angular bias, support
+  distribution, and two-term error decomposition without fitted constants.
+- **Proved results:** exact support-pattern probabilities; Fisher-orthogonal support and
+  observed-support error decomposition; the split-half self-consistency converse; and
+  a reward-shift counterexample showing that `N p_min`, support probabilities, and the
+  analytic Fisher spectrum do not determine plug-in angular bias by themselves.
+- **Independent verification:** optimized tangent-coordinate enumeration agrees with
+  direct count-table score/Fisher accumulation; enumerated support mass agrees with
+  inclusion-exclusion; decomposition vectors and squared Fisher errors close at frozen
+  numerical tolerances.
+- **Classification:** the exact finite sum is a zero-fit law for this finite estimator
+  family. A compact nonvacuous angular bound remains a candidate, not a proved theorem.
+  Any subsequent stochastic execution is theorem/software verification plus a test of
+  the preregistered dissociation and reductions, not independent unification evidence.
+- **Design-only observations:** pre-preregistration fixtures show that equal `N p_min`
+  can have materially different bias when rarity is allocated to context versus action,
+  and additive reward shifts can rotate the plug-in expectation while preserving the
+  analytic tangent. These observations constrain ACL-006 design but are not outcomes.
+- **Verification:** 163 tests passed; Ruff passed; total coverage 84%; wheel build
+  passed. ACL-002 through ACL-005 artifact hashes remain unchanged.
+- **Recommended next action:** publish this mechanism checkpoint, then freeze new
+  ACL-006 values that independently vary effective count, support factorization,
+  conditioning, and reward offset before drawing any confirmatory shadows.

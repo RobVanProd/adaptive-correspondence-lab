@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "results": [
+    {
+      "id": "acl006-support-decomposition",
+      "status": "proved-algebraic-identity",
+      "statement": "For each observed support S, hat(d)-d = -(I-P_S)d + (hat(d)-P_S d), with Fisher-orthogonal summands and additive squared Fisher error.",
+      "scope": "three-action centered categorical tangent; analytic Fisher projector; undamped empirical-Fisher pseudoinverse",
+      "verification": "exhaustive count-table fixtures and independent score/Fisher accumulation"
+    },
+    {
+      "id": "acl006-support-pattern-law",
+      "status": "proved-finite-probability-identity",
+      "statement": "Exact action-support probabilities follow inclusion-exclusion; cell absence is (1-q_a)^N and rank deficiency for three actions is sum_a(q_0+q_a)^N-2q_0^N.",
+      "scope": "fixed-N joint multinomial sampling with interior action probabilities",
+      "verification": "exhaustive multinomial probability mass"
+    },
+    {
+      "id": "acl006-self-consistency-converse",
+      "status": "proved-probabilistic-limit",
+      "statement": "For independent finite-moment shadows with common nonzero mean m, disjoint-half Fisher cosine converges almost surely to one regardless of cos_F(m,d).",
+      "scope": "positive-definite Fisher metric on the tested tangent and nonzero estimator mean",
+      "falsification": "a counterexample satisfying the scope where either half mean does not converge to m or continuity of cosine fails"
+    },
+    {
+      "id": "acl006-reward-shift-necessity",
+      "status": "proved-estimator-identity",
+      "statement": "Adding c to all rewards preserves the analytic centered tangent but changes the plug-in expectation by c E[hat(F)^+ bar(s)] in general.",
+      "scope": "raw deterministic rewards with no fitted baseline and true-policy empirical scores",
+      "implication": "N p_min, support probabilities, and Fisher spectrum alone cannot determine angular bias"
+    },
+    {
+      "id": "acl006-support-conditioned-angular-bound",
+      "status": "candidate",
+      "statement": "A nonvacuous angular-bias bound should combine exact support-loss mass with full-rank whitened perturbation terms involving empirical Fisher deviation and score/reward residual.",
+      "scope": "to be frozen only if a useful bound is derived before ACL-006 outcomes"
+    }
+  ]
+}
