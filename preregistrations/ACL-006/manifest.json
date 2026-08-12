@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ACL-006",
+  "title": "Exact support-conditioned plug-in bias and self-consistency dissociation",
+  "randomness": "PCG64-independent-target-streams",
+  "actions": 3,
+  "empirical_fisher_rcond": 1e-12,
+  "replication_schedule": [8192, 32768, 131072, 262144],
+  "shadow_chunk_size": 4096,
+  "direction_score_max": 5.0,
+  "full_score_median_max": 1.5,
+  "full_score_q90_max": 2.5,
+  "dissociation_exact_truth_cosine_max": 0.9,
+  "dissociation_observed_truth_cosine_max": 0.95,
+  "dissociation_half_cosine_min": 0.995,
+  "resolvable_contrast_gap_min": 0.1,
+  "analytic_registry_atol": 2e-12,
+  "analytic_registry_rtol": 2e-12,
+  "benchmark_scope": "deterministic-held-out-support-bias-benchmark",
+  "inference_scope": "descriptive-criteria-not-population-confidence",
+  "mechanism_scope": "undamped-three-action-empirical-fisher-plugin-family",
+  "confirmatory_environment": {
+    "python_implementation": "CPython",
+    "python_version": "3.13.14",
+    "numpy_version": "2.5.2",
+    "platform_system": "Windows",
+    "platform_machine": "AMD64"
+  },
+  "targets": [
+    {
+      "id": "F01",
+      "family": "rare-context-N16",
+      "sample_count": 16,
+      "context_probability": 0.09,
+      "policy": [0.41, 0.34, 0.25],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61001
+    },
+    {
+      "id": "F02",
+      "family": "rare-action-N16",
+      "sample_count": 16,
+      "context_probability": 0.6,
+      "policy": [0.59, 0.3725, 0.0375],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61002
+    },
+    {
+      "id": "F03",
+      "family": "rare-context-N32",
+      "sample_count": 32,
+      "context_probability": 0.09,
+      "policy": [0.41, 0.34, 0.25],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61003
+    },
+    {
+      "id": "F04",
+      "family": "rare-action-N32",
+      "sample_count": 32,
+      "context_probability": 0.6,
+      "policy": [0.59, 0.3725, 0.0375],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61004
+    },
+    {
+      "id": "F05",
+      "family": "rare-context-N64",
+      "sample_count": 64,
+      "context_probability": 0.09,
+      "policy": [0.41, 0.34, 0.25],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61005
+    },
+    {
+      "id": "F06",
+      "family": "rare-action-N64",
+      "sample_count": 64,
+      "context_probability": 0.6,
+      "policy": [0.59, 0.3725, 0.0375],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61006
+    },
+    {
+      "id": "F07",
+      "family": "rare-context-N128",
+      "sample_count": 128,
+      "context_probability": 0.09,
+      "policy": [0.41, 0.34, 0.25],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61007
+    },
+    {
+      "id": "F08",
+      "family": "rare-action-N128",
+      "sample_count": 128,
+      "context_probability": 0.6,
+      "policy": [0.59, 0.3725, 0.0375],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61008
+    },
+    {
+      "id": "O01",
+      "family": "rare-context-N64-shifted",
+      "sample_count": 64,
+      "context_probability": 0.09,
+      "policy": [0.41, 0.34, 0.25],
+      "reward": [5.3, 4.0, 3.45],
+      "seed": 61101
+    },
+    {
+      "id": "O02",
+      "family": "rare-action-N64-shifted",
+      "sample_count": 64,
+      "context_probability": 0.6,
+      "policy": [0.59, 0.3725, 0.0375],
+      "reward": [5.3, 4.0, 3.45],
+      "seed": 61102
+    },
+    {
+      "id": "O03",
+      "family": "balanced-N32-centered",
+      "sample_count": 32,
+      "context_probability": 0.72,
+      "policy": [0.42, 0.33, 0.25],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61103
+    },
+    {
+      "id": "O04",
+      "family": "balanced-N32-shifted",
+      "sample_count": 32,
+      "context_probability": 0.72,
+      "policy": [0.42, 0.33, 0.25],
+      "reward": [5.3, 4.0, 3.45],
+      "seed": 61104
+    },
+    {
+      "id": "K01",
+      "family": "low-kappa-N32-centered",
+      "sample_count": 32,
+      "context_probability": 0.52,
+      "policy": [0.86, 0.1, 0.04],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61201
+    },
+    {
+      "id": "K02",
+      "family": "high-kappa-N32-centered",
+      "sample_count": 32,
+      "context_probability": 0.52,
+      "policy": [0.48, 0.48, 0.04],
+      "reward": [1.05, -0.25, -0.8],
+      "seed": 61202
+    },
+    {
+      "id": "K03",
+      "family": "low-kappa-N64-rotated",
+      "sample_count": 64,
+      "context_probability": 0.52,
+      "policy": [0.86, 0.1, 0.04],
+      "reward": [0.35, -1.1, 0.75],
+      "seed": 61203
+    },
+    {
+      "id": "K04",
+      "family": "high-kappa-N64-rotated",
+      "sample_count": 64,
+      "context_probability": 0.52,
+      "policy": [0.48, 0.48, 0.04],
+      "reward": [0.35, -1.1, 0.75],
+      "seed": 61204
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "effective-count-N16",
+      "kind": "matched-effective-count-support-factorization",
+      "left": "F01",
+      "right": "F02"
+    },
+    {
+      "id": "effective-count-N32",
+      "kind": "matched-effective-count-support-factorization",
+      "left": "F03",
+      "right": "F04"
+    },
+    {
+      "id": "effective-count-N64",
+      "kind": "matched-effective-count-support-factorization",
+      "left": "F05",
+      "right": "F06"
+    },
+    {
+      "id": "effective-count-N128",
+      "kind": "matched-effective-count-support-factorization",
+      "left": "F07",
+      "right": "F08"
+    },
+    {
+      "id": "reward-shift-rare-context-N64",
+      "kind": "reward-shift",
+      "left": "F05",
+      "right": "O01"
+    },
+    {
+      "id": "reward-shift-rare-action-N64",
+      "kind": "reward-shift",
+      "left": "F06",
+      "right": "O02"
+    },
+    {
+      "id": "reward-shift-balanced-N32",
+      "kind": "reward-shift",
+      "left": "O03",
+      "right": "O04"
+    },
+    {
+      "id": "conditioning-centered-N32",
+      "kind": "fisher-conditioning",
+      "left": "K01",
+      "right": "K02"
+    },
+    {
+      "id": "conditioning-rotated-N64",
+      "kind": "fisher-conditioning",
+      "left": "K03",
+      "right": "K04"
+    }
+  ]
+}

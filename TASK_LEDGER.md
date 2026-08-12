@@ -928,3 +928,100 @@
 - **Recommended next action:** publish this mechanism checkpoint, then freeze new
   ACL-006 values that independently vary effective count, support factorization,
   conditioning, and reward offset before drawing any confirmatory shadows.
+
+## ACL-006 — Exact support-conditioned bias and consistency dissociation
+
+- **Task ID:** `ACL-006`.
+- **Status:** preregistration construction only; no target shadow may be generated until
+  the locked bundle is committed publicly and passes an adversarial exact-head audit.
+- **Question:** does the exact finite multinomial law predict the undamped empirical-
+  Fisher plug-in estimator's conditional-mean angular bias, and can an estimator become
+  internally split-half consistent while remaining stably misaligned with the analytic
+  natural direction?
+- **Frozen system:** one isolated three-action categorical Fisher block with an outside-
+  context category; fixed joint sample count per shadow; deterministic rewards;
+  true-policy scores; same-count empirical gradient and Fisher; centered Moore-Penrose
+  direction with `rcond=1e-12`; no damping, fitted baseline, clipping, state update, or
+  target refit.
+- **Zero-fit comparator:** exact four-cell multinomial enumeration from the published
+  ACL-006 mechanism checkpoint. For each target it freezes `m=E[hat(d)]`, covariance,
+  support probabilities, decomposition terms, and `cos_F(m,d)` before RNG outcomes.
+- **Independent realized path:** PCG64 multinomial draws followed by direct full three-
+  coordinate empirical Fisher/gradient construction and a Hermitian pseudoinverse. It
+  must not call the tangent-coordinate exact enumerator.
+- **Targets:** 16 new deterministic targets. Eight matched-support-factorization cells
+  cross `N={16,32,64,128}` with rare-context and rare-action families having identical
+  minimum joint-cell probability; four reward-offset cells include centered/shifted
+  pairs with the same analytic tangent; four conditioning/orientation cells vary the
+  positive Fisher condition number at fixed `N`, context probability, minimum action
+  probability, and reward. Values and seeds are frozen in `manifest.json`.
+- **Replication schedule:** fixed checkpoints `8192,32768,131072,262144`; chunk size
+  `4096`; every target reaches the final checkpoint. There is no outcome-dependent
+  stopping, exclusion, or budget increase.
+- **Primary estimand:** for full and disjoint-half means, Fisher error relative to the
+  exact finite expectation divided by its exact RMS Fisher standard error. Every score
+  must be at most `5`; across full-mean target scores the Type-7 median must be at most
+  `1.5` and Q90 at most `2.5`. Each observed truth cosine must lie inside the frozen
+  angular envelope implied by the five-score Fisher ball.
+- **Dissociation stratum:** computed only from the analytic registry. A target qualifies
+  when exact truth cosine is at most `0.90`, its frozen five-score angular upper bound is
+  at most `0.95`, and the two-half geometric lower bound is at least `0.995`. PASS for
+  the dissociation prediction requires every such target to end with split-half cosine
+  at least `0.995` while full-mean truth cosine is at most `0.95`.
+- **Reduction counterexamples:** matched contrasts are marked resolvable only when their
+  exact cosine gap minus both frozen angular envelopes is at least `0.10`. Every marked
+  contrast must reproduce the predicted sign and retain an observed gap of at least
+  `0.10`. Unresolvable contrasts remain reported and non-gating.
+- **Verdicts:** report exact-mean prediction PASS/FAIL, dissociation PASS/FAIL, and
+  stochastic contrast reproduction PASS/FAIL separately. Report the one-parameter
+  `N p_min` and support-only laws as falsified by exact counterexample, not as failed
+  stochastic fits. PASS is theorem/software reproduction and mechanism validation, not
+  a new cross-class unification result.
+- **Numerical/environment guards:** CPython `3.13.14`, NumPy `2.5.2`, Windows AMD64,
+  float64, and PCG64 are execution requirements. Artifact bytes remain SHA-256 exact;
+  independently recomputed analytic registry floats use frozen `2e-12` absolute and
+  relative tolerances. Non-finite values, invalid probability mass, insufficient mean
+  norm for an envelope, or failed independent-oracle checks abort before outcomes.
+- **Execution guards:** exact approved SHA; full clean porcelain including untracked
+  files; exact canonical bundle and locked directory membership; previously nonexistent
+  SHA-derived evidence path; exact environment; analytic-only registry; and embedded
+  terminal RNG state and sufficient statistics. Execute exactly once.
+- **Allowed files:** ACL-006 module/tests/CLI, this ledger, theorem and bridge ledgers,
+  `preregistrations/ACL-006/`, and preregistration documentation. No evidence artifact
+  or post-outcome analysis in this task.
+- **Acceptance tests:** failing regressions first; direct-count and optimized exact oracle
+  parity; target/contrast validation; tolerant registry reproduction; score/envelope and
+  dissociation verdicts; stress/non-gating semantics; clean-worktree/canonical-path/lock/
+  environment guards; sufficient-statistic reconstruction; full pytest, Ruff, coverage,
+  wheel, and analytic-only validation.
+- **Risks:** making stochastic theorem reproduction sound like independent discovery;
+  treating `N p_min` as sufficient after its exact counterexample; using target RNG to
+  choose values; a reward offset acting as an unacknowledged baseline change; or allowing
+  split consistency to rescue truth misalignment.
+- **Stop conditions:** any shadow is sampled before public approval; damping or baseline
+  fitting enters; the exact comparator calls the sampled path; thresholds or targets
+  change after outcomes; or a required definition remains ambiguous.
+
+### ACL-006 preregistration completion record
+
+- **Status:** frozen preregistration awaiting adversarial audit of the exact public
+  commit. `outcomes_generated` is false; the analytic registry has `shadow_count: 0`.
+- **Registry:** 16 targets, seven analytically predeclared dissociation targets, and four
+  analytically resolvable gating contrasts. All use values absent from ACL-005 and from
+  the ACL-006 mechanism fixtures.
+- **Pre-outcome defect corrected:** the initial design used a `4096` checkpoint with a
+  `4096` chunk, which cannot form two complete chunk-aligned halves. Before lock and
+  before any RNG use, the schedule was corrected to
+  `8192,32768,131072,262144`; the final precision and fixed budget were unchanged.
+- **Independent path:** tests compare the vectorized full-coordinate stochastic kernel
+  with a scalar direct Fisher/gradient/pseudoinverse oracle and forbid the stochastic
+  estimator from calling exact multinomial enumeration.
+- **Frozen analytic classification:** dissociation IDs are `F02,F04,F06,O02,K01,K02,K03`;
+  resolvable contrast IDs are `effective-count-N16`, `effective-count-N32`,
+  `effective-count-N64`, and `reward-shift-rare-action-N64`.
+- **Validation:** analytic-only `acl006-validate` passes with tolerant registry
+  reproduction (`atol=rtol=2e-12`); 179 tests pass; Ruff passes; total coverage is 84%;
+  sdist and wheel builds pass; all prior evidence hashes remain immutable.
+- **Execution hold:** do not invoke `acl006-run` until this exact public commit has been
+  audited for manifest semantics, lock closure, canonical path/SHA binding, numerical
+  guards, independent oracle, analysis order, and outcome-free state.

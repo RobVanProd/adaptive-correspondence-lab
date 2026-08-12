@@ -114,3 +114,27 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
 - **Failure boundary:** the same statement is false without adequate support. Five of
   eight rare-cell stress blocks failed despite apparent convergence.
 - **Status:** preregistered cross-class confirmation, restricted by support coverage.
+
+## ACL-006 support-conditioned plug-in bias
+
+- **State map:** one interior three-action policy block plus an explicit outside-context
+  sampling category.
+- **Native geometry:** the analytic categorical Fisher metric on the centered-logit
+  tangent.
+- **Ideal tangent:** `d = F^+ g = r - mean(r) 1`, independently constructed from the
+  analytic score gradient and Fisher metric.
+- **Realized estimator:** `hat(d) = hat(F)^+ hat(g)` from one fixed-`N` multinomial
+  count table, using the same samples for both empirical objects and no damping.
+- **Scope:** deterministic rewards, true-policy scores, three interior actions, fixed
+  context probability, no fitted baseline, clipping, state update, or target refit.
+- **Transported prediction:** **preregistered, unexecuted.** Exact count-table moments
+  freeze the conditional mean, covariance-normalized Fisher error, angular envelope,
+  and split-half/truth dissociation before an independent PCG64 full-coordinate path.
+- **Failure boundary:** proved pre-outcome counterexamples show that `N p_min` alone is
+  insufficient across support factorizations and that support/Fisher spectrum without
+  reward geometry is insufficient under additive reward shifts.
+- **Falsifier:** a locked target outside its five-score exact-mean/angular envelope, or
+  failure of the predeclared split-consistent but truth-misaligned stratum at the fixed
+  budget.
+- **Status:** theorem/mechanism checkpoint plus locked preregistration, not yet evidence.
+  It remains inside the ACL-005 estimator family and adds no independent breadth class.

@@ -29,6 +29,12 @@ from .acl005 import (
 from .acl005 import (
     validate_preregistration_bundle as validate_acl005_preregistration_bundle,
 )
+from .acl006 import (
+    execute_confirmatory as execute_acl006_confirmatory,
+)
+from .acl006 import (
+    validate_preregistration_bundle as validate_acl006_preregistration_bundle,
+)
 from .bandit import ContextualBandit, run_bandit_trajectory
 from .experiments import (
     CategoricalExperimentConfig,
@@ -237,6 +243,21 @@ def build_parser() -> argparse.ArgumentParser:
     acl005_run.add_argument("--bundle", default="preregistrations/ACL-005")
     acl005_run.add_argument("--approved-sha", required=True)
     acl005_run.add_argument("--output", required=True)
+
+    acl006_validate = subparsers.add_parser(
+        "acl006-validate",
+        help="validate the locked ACL-006 bundle without generating shadows",
+    )
+    acl006_validate.add_argument("--bundle", default="preregistrations/ACL-006")
+    acl006_validate.add_argument("--output")
+
+    acl006_run = subparsers.add_parser(
+        "acl006-run",
+        help="execute ACL-006 only after explicit approval of its preregistration SHA",
+    )
+    acl006_run.add_argument("--bundle", default="preregistrations/ACL-006")
+    acl006_run.add_argument("--approved-sha", required=True)
+    acl006_run.add_argument("--output", required=True)
     return parser
 
 
@@ -419,6 +440,17 @@ def main(argv: list[str] | None = None) -> int:
             _emit_json(payload, args.output)
         elif args.command == "acl005-run":
             destination = execute_acl005_confirmatory(
+                repo_path=Path.cwd(),
+                bundle_path=args.bundle,
+                approved_sha=args.approved_sha,
+                output_path=args.output,
+            )
+            print(destination.resolve())
+        elif args.command == "acl006-validate":
+            payload = validate_acl006_preregistration_bundle(args.bundle)
+            _emit_json(payload, args.output)
+        elif args.command == "acl006-run":
+            destination = execute_acl006_confirmatory(
                 repo_path=Path.cwd(),
                 bundle_path=args.bundle,
                 approved_sha=args.approved_sha,

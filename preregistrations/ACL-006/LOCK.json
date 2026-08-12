@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ACL-006",
+  "kind": "preregistration-bundle-lock",
+  "outcomes_generated": false,
+  "scope": "Bundle files are SHA-256 locked here; the approved Git commit freezes code and tests.",
+  "files": {
+    "ANALYSIS_PLAN.md": "49c97324c9a65cab8db04c47a9830c69fa8254fbb604611ad9adad77e8c192c0",
+    "DERIVATION.md": "352ec34505be3723b025e9a2fee563ef46f237e5341b0c25702b3177c9b27d0f",
+    "PREREGISTRATION.md": "838143efb670c7e59ea371ca7de12b3e1c0888524e9cef3e45c26ca8503f21c0",
+    "README.md": "0433b6803ec807d303c0020b6ba666202c9f8470ecd4932ac9ab9e419df2bead",
+    "analytic_registry.json": "03c27c65890003c71a9ce14e5f50316376fd9e4d779b134ce1c5465b91acedd2",
+    "manifest.json": "4352ce206007b83a63d956da2e3771daac66e9f0090e9565cecc24f1614e9c51"
+  }
+}

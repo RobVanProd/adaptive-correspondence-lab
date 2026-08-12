@@ -45,7 +45,8 @@
       "state_space": "product of finite policy simplexes",
       "data_generation": "joint context-action multinomial sampling",
       "adaptation_role": "policy learning",
-      "phase_i_evidential_weight": "cross-estimator transport, but still inside the Fisher-natural family"
+      "phase_i_evidential_weight": "cross-estimator transport, but still inside the Fisher-natural family",
+      "phase_ii_status": "ACL-006 preregisters an exact support-conditioned mechanism test in this same class; it adds no structural-class count"
     }
   ],
   "phase_i_assessment": {
@@ -54,6 +55,11 @@
     "genuinely_sequential_environment": false,
     "inference_semantics_present": false,
     "conclusion": "Phase I establishes restricted Fisher-geometric transport, not broad adaptive-system unification"
+  },
+  "phase_ii_current_assessment": {
+    "acl006_adds_independent_class": false,
+    "acl006_role": "resolve the support/bias mechanism before breadth testing",
+    "next_breadth_requirement": "at least one class outside the Fisher-natural estimator family"
   },
   "phase_ii_candidates": [
     {

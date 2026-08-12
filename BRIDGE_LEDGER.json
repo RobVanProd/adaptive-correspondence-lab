@@ -227,6 +227,42 @@
         "preregistered-confirmation"
       ],
       "what_would_change_interpretation": "A new adaptive class that fails the frozen rule despite adequate support would show pair-specific rather than reusable structure; a support-conditioned angular-bias theorem would strengthen the reusable-class interpretation."
+    },
+    {
+      "id": "acl006-support-conditioned-plugin-bias",
+      "classes": [
+        "analytic-categorical-natural-direction",
+        "finite-sample-empirical-fisher-plugin-direction"
+      ],
+      "state_map": "one interior three-action policy block with an explicit outside-context sampling category",
+      "native_geometry": "analytic categorical Fisher metric on the centered-logit tangent",
+      "ideal_vector_field": "d = F^+ g = r - mean(r) 1, independently defined from the analytic score gradient and Fisher metric",
+      "realized_estimator": "hat(d) = hat(F)^+ hat(g) from the same fixed-N multinomial count table, undamped with rcond=1e-12",
+      "scope_assumptions": [
+        "three strictly positive action probabilities",
+        "fixed context probability and deterministic rewards",
+        "true-policy score rows",
+        "same-count empirical gradient and Fisher",
+        "no damping, fitted baseline, clipping, state update, or target refit"
+      ],
+      "transported_prediction": {
+        "status": "preregistered-unexecuted",
+        "quantity": "exact finite multinomial conditional mean, covariance-normalized Fisher error, angular envelope, and split-half/truth dissociation",
+        "source": "closed finite count-table law",
+        "target": "independent PCG64 full-coordinate pseudoinverse implementation",
+        "target_refit": false,
+        "bundle": "preregistrations/ACL-006"
+      },
+      "failure_boundary": {
+        "status": "proved-before-outcomes",
+        "result": "N p_min alone is insufficient when rare-context and rare-action support are factorized differently; support probabilities and Fisher spectrum without reward geometry are insufficient because additive reward shifts preserve d but generally change E[hat(d)]."
+      },
+      "falsifying_observation": "Any locked target whose sampled conditional mean violates its exact covariance-normalized five-score prediction or angular envelope; or any dissociation-stratum target that cannot become split-half aligned while remaining truth-misaligned at the fixed budget.",
+      "evidence_status": [
+        "theorem-reproduction",
+        "preregistered-unexecuted"
+      ],
+      "structural_distance_note": "ACL-006 remains inside the ACL-005 contextual-bandit empirical-Fisher estimator family and adds mechanism, not an independent adaptive class."
     }
   ]
 }
