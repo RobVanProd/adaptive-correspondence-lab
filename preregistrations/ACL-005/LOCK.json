@@ -5,10 +5,10 @@
   "outcomes_generated": false,
   "scope": "Bundle files are SHA-256 locked here; the approved Git commit freezes code and tests.",
   "files": {
-    "ANALYSIS_PLAN.md": "9fa01997d70739343ac643158b7e371188417a70292e897b3919614f1a0a2313",
+    "ANALYSIS_PLAN.md": "5ca2d2acbcb87ccd5c2a1684accce91496a113dfab4203f108a2d70389fba67c",
     "DERIVATION.md": "f28f462ef6b23abdb50d91ada30b3e45c7ccd44e94c27febc2d388f3ffab0189",
-    "PREREGISTRATION.md": "0b01f782ae7526603e83927ce591bf5ac2c3a531242121010bedfe9382c4472d",
-    "README.md": "052982681f540eef75203a8a001d577b78638937b7884ae899759896d415776f",
+    "PREREGISTRATION.md": "c43943a5b1769c839628f65aefa8f9e26139cc315f39099b07b89207d2119a90",
+    "README.md": "f80d48c6e0156dcb45bee15916d6692a23688b0774e609b7be12d377c732e86f",
     "analytic_registry.json": "fc7953f5a03030e95f1484cdcb70d736b07ea1212ac42fc7384f7f1654b0ece4",
     "manifest.json": "80f2613db05fa208546f5a22ae3ab6d8707dc2e3496934bd01058a0fc750b586"
   }

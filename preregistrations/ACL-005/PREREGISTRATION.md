@@ -71,6 +71,7 @@ sample.
 ## One-shot rule
 
 Execution requires the exact approved public SHA, a completely clean full porcelain
-status, valid exact bundle hashes and membership, a matching analytic registry, and a
-previously nonexistent SHA-derived path
+status, the canonical in-repository `preregistrations/ACL-005` bundle, valid exact
+bundle hashes and membership, a matching analytic registry, exact SHA-256 matches for
+the frozen ACL-004 evidence artifact and report, and a previously nonexistent path
 `evidence/ACL-005-confirmatory-{approved_sha}.json`. The first artifact is immutable.

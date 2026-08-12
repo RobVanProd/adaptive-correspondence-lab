@@ -16,6 +16,7 @@ Safe pre-outcome command:
 acl acl005-validate
 ```
 
-The future `acl005-run` requires explicit approval of an exact public SHA, a fully
-clean worktree, valid locks, and the SHA-derived canonical evidence path. It must not
-be invoked during construction or audit.
+The future `acl005-run` requires explicit approval of an exact public SHA, the canonical
+in-repository bundle, a fully clean worktree, valid locks, matching ACL-004 source
+artifact/report hashes, and the SHA-derived canonical evidence path. It must not be
+invoked during construction or audit.

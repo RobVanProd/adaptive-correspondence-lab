@@ -13,6 +13,7 @@ from adaptive_correspondence.acl005 import (
     reproduce_stopped_mean,
     validate_manifest_dict,
     validate_preregistration_bundle,
+    validate_source_evidence,
 )
 
 
@@ -178,6 +179,21 @@ def test_runner_requires_sha_derived_canonical_output(tmp_path: Path, monkeypatc
         )
 
 
+def test_runner_requires_sha_bound_canonical_bundle(tmp_path: Path, monkeypatch) -> None:
+    approved_sha = "d" * 40
+    monkeypatch.setattr(
+        acl005_module, "git_execution_state", lambda repo_path: (approved_sha, False)
+    )
+    canonical_output = tmp_path / "evidence" / f"ACL-005-confirmatory-{approved_sha}.json"
+    with pytest.raises(ValueError, match="canonical preregistration bundle"):
+        execute_confirmatory(
+            repo_path=tmp_path,
+            bundle_path=tmp_path / "external-self-consistent-bundle",
+            approved_sha=approved_sha,
+            output_path=canonical_output,
+        )
+
+
 def test_acl005_identifier_activates_exact_transport_design() -> None:
     payload = _toy_manifest()
     payload["experiment_id"] = "ACL-005"
@@ -194,6 +210,11 @@ def test_real_bundle_is_analytic_only_and_source_anchored() -> None:
     assert manifest.raw["source_evidence"]["evidence_sha256"] == (
         "3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a"
     )
+    source_validation = validate_source_evidence(Path.cwd(), manifest)
+    assert source_validation["valid"] is True
+    assert source_validation["evidence_sha256"] == (
+        "3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a"
+    )
 
 
 def test_real_bundle_rejects_extra_neighbor_file(tmp_path: Path) -> None:
@@ -202,3 +223,9 @@ def test_real_bundle_rejects_extra_neighbor_file(tmp_path: Path) -> None:
     (bundle / "unlocked-extra.txt").write_text("must fail\n", encoding="utf-8")
     with pytest.raises(ValueError, match="exact frozen directory contents"):
         validate_preregistration_bundle(bundle)
+
+
+def test_source_evidence_missing_aborts_as_validation_error(tmp_path: Path) -> None:
+    manifest = acl005_module.load_manifest("preregistrations/ACL-005/manifest.json")
+    with pytest.raises(ValueError, match="cannot read frozen ACL-004 source evidence"):
+        validate_source_evidence(tmp_path, manifest)

@@ -62,7 +62,9 @@ Each chunk stores count, direction sum, and flattened direction outer-product su
 These must reproduce the stopped and half means exactly. The artifact embeds the
 manifest, analytic registry, bundle lock, seeds, terminal PCG64 states, and provenance.
 
-Abort before shadows on SHA, dirty-worktree, output-path, pre-existing-artifact, lock,
-directory-membership, analytic-registry, stratum, or finite-value failure. After any
-shadow is generated, retain the first artifact and its FAIL/INCONCLUSIVE/PASS result;
-never rerun ACL-005 or change the design in place.
+Abort before shadows on SHA, dirty-worktree, output-path, pre-existing-artifact,
+noncanonical bundle path, lock, directory-membership, analytic-registry, source
+ACL-004 artifact/report hash, stratum, or finite-value failure. The runner accepts only
+`preregistrations/ACL-005` inside the approved repository; an external self-consistent
+bundle is forbidden. After any shadow is generated, retain the first artifact and its
+FAIL/INCONCLUSIVE/PASS result; never rerun ACL-005 or change the design in place.

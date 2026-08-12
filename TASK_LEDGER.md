@@ -758,3 +758,10 @@
 - **Stop conditions:** any manifest target is sampled before public approval; regular or
   stress analytic stratum disagrees; source thresholds/schedule change; the comparator
   depends on sampled outcomes; or baseline turns red.
+- **First public checkpoint and audit hold:** commit
+  `677086f` froze the design with zero target shadows. Exact-head audit held execution
+  because the runner accepted an arbitrary external self-consistent bundle, so the
+  approved SHA did not uniquely bind the target manifest. Before outcomes, require the
+  canonical in-repository bundle and directly verify the frozen ACL-004 evidence and
+  report hashes. The hypothesis, target landscapes, thresholds, and schedule do not
+  change; the first checkpoint is superseded pre-outcome.

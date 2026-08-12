@@ -10,7 +10,13 @@ from typing import Any
 import numpy as np
 from numpy.typing import NDArray
 
-from .acl002 import assert_execution_context, git_execution_state, type7_quantile, validate_lock
+from .acl002 import (
+    assert_execution_context,
+    git_execution_state,
+    sha256_file,
+    type7_quantile,
+    validate_lock,
+)
 from .control_finite_sample_bridge import (
     ControlBridgeState,
     exact_natural_direction,
@@ -617,6 +623,39 @@ def validate_preregistration_bundle(bundle_path: str | Path) -> dict[str, Any]:
     }
 
 
+def validate_source_evidence(
+    repo_path: str | Path, manifest: ACL005Manifest
+) -> dict[str, Any]:
+    repo = Path(repo_path).resolve()
+    source = manifest.raw.get("source_evidence")
+    if source != ACL005_SOURCE_EVIDENCE:
+        raise ValueError("ACL-005 source evidence differs from the frozen source record")
+    evidence = (repo / source["evidence_artifact"]).resolve()
+    report = (repo / source["report_summary"]).resolve()
+    try:
+        evidence.relative_to(repo)
+        report.relative_to(repo)
+    except ValueError as error:
+        raise ValueError("ACL-005 source evidence paths must stay inside the repository") from error
+    try:
+        evidence_hash = sha256_file(evidence)
+        report_hash = sha256_file(report)
+    except OSError as error:
+        raise ValueError("cannot read frozen ACL-004 source evidence") from error
+    if evidence_hash != source["evidence_sha256"]:
+        raise ValueError("ACL-004 source evidence SHA-256 mismatch")
+    if report_hash != source["report_summary_sha256"]:
+        raise ValueError("ACL-004 source report SHA-256 mismatch")
+    return {
+        "valid": True,
+        "source_experiment": manifest.source_experiment,
+        "evidence_artifact": source["evidence_artifact"],
+        "evidence_sha256": source["evidence_sha256"],
+        "report_summary": source["report_summary"],
+        "report_summary_sha256": source["report_summary_sha256"],
+    }
+
+
 def execute_confirmatory(
     *,
     repo_path: str | Path,
@@ -632,6 +671,13 @@ def execute_confirmatory(
     canonical = (repo / "evidence" / f"ACL-005-confirmatory-{approved_sha}.json").resolve()
     if requested != canonical:
         raise ValueError("ACL-005 output must equal the SHA-derived canonical evidence path")
+    bundle = Path(bundle_path)
+    if not bundle.is_absolute():
+        bundle = repo / bundle
+    bundle = bundle.resolve()
+    canonical_bundle = (repo / "preregistrations" / "ACL-005").resolve()
+    if bundle != canonical_bundle:
+        raise ValueError("ACL-005 requires the SHA-bound canonical preregistration bundle")
     current_sha, dirty = git_execution_state(repo)
     assert_execution_context(
         approved_sha=approved_sha,
@@ -639,9 +685,9 @@ def execute_confirmatory(
         worktree_dirty=dirty,
         output_path=canonical,
     )
-    validation = validate_preregistration_bundle(bundle_path)
-    bundle = Path(bundle_path)
+    validation = validate_preregistration_bundle(bundle)
     manifest = load_manifest(bundle / "manifest.json")
+    source_validation = validate_source_evidence(repo, manifest)
     locked_registry = json.loads(
         (bundle / "analytic_registry.json").read_text(encoding="utf-8")
     )
@@ -658,6 +704,7 @@ def execute_confirmatory(
         "kind": "confirmatory-cross-class-contextual-bandit-conditional-mean",
         "approved_preregistration_sha": approved_sha,
         "preregistration_validation": validation,
+        "source_evidence_validation": source_validation,
         "randomness": "PCG64 independent landscape streams",
         "target_refit": False,
         "source_experiment": manifest.source_experiment,
