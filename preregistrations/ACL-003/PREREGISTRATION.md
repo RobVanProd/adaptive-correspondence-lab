@@ -62,11 +62,18 @@ vectors, eight reward vectors, and six mutation matrices. Every hypothesis-beari
 numeric catalog value must differ from every ACL-002 catalog value at absolute
 tolerance `1e-15` with zero relative tolerance.
 
+The novelty reference is the byte-exact ACL-002 manifest with SHA-256
+`6a9e4e0a931277b1f5c464807d0bcacee3ccb684269843f8245a83ae88110741`.
+Supplying a different reference file is an execution error, even if its contents would
+also make the novelty comparison pass.
+
 The benchmark is deterministic and is not a random sample from a population.
 Median/Q90 are descriptive performance criteria, not confidence statements.
 
 `C01` is an identity-mutation software control and is not hypothesis-bearing. Its
 identity matrix is exempt from the new-value rule because zero response is its purpose.
+If it exceeds the frozen absolute tolerance, the result is `INVALID`; a passing primary
+gate is not reported as a scientific pass from an invalid instrument run.
 
 ## Regions and horizons
 
@@ -138,6 +145,7 @@ Secondary results cannot rescue, reverse, or redefine the primary verdict.
 - exact approved Git SHA required;
 - completely empty `git status --porcelain`, including untracked files;
 - valid bundle hashes and exact analytic-registry recomputation;
+- exact six-file lock membership and the frozen ACL-002 novelty-reference hash;
 - previously nonexistent output path.
 
 Any guard failure aborts before analysis and produces no valid scientific artifact.

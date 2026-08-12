@@ -1,4 +1,5 @@
 import json
+import shutil
 from pathlib import Path
 
 import numpy as np
@@ -129,6 +130,23 @@ def test_analysis_uses_max_local_score_and_keeps_stress_non_gating() -> None:
     ]
     assert analysis["stress_results_gating"] is False
     assert analysis["software_controls"][0]["passed"] is True
+    assert analysis["instrument_valid"] is True
+    assert analysis["verdict"] == "PASS"
+
+
+def test_software_control_failure_invalidates_scientific_verdict() -> None:
+    manifest = validate_manifest_dict(_toy_manifest())
+    registry = build_analytic_registry(manifest)
+    rows = generate_raw_rows(manifest)
+    for row in rows:
+        if row["landscape_id"] == "C01" and row["epsilon"] == 0.01:
+            row["endpoint_l1"] = 1e-6
+
+    analysis = analyze_raw_rows(manifest, registry, rows)
+
+    assert analysis["primary_gate"]["passed"] is True
+    assert analysis["instrument_valid"] is False
+    assert analysis["verdict"] == "INVALID"
 
 
 def test_raw_generation_stops_if_matrix_oracle_disagrees(monkeypatch) -> None:
@@ -193,3 +211,29 @@ def test_preregistration_validation_is_analytic_only(tmp_path: Path) -> None:
     assert result["valid"] is True
     assert result["outcomes_generated"] is False
     assert result["confirmatory_target_count"] == 1
+
+
+def test_real_acl003_bundle_rejects_wrong_reference_manifest(tmp_path: Path) -> None:
+    wrong_reference = tmp_path / "wrong-reference.json"
+    wrong_reference.write_text(
+        json.dumps({"states": {}, "rewards": {}, "mutation_matrices": {}}),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="reference manifest hash"):
+        validate_preregistration_bundle(
+            "preregistrations/ACL-003", reference_path=wrong_reference
+        )
+
+
+def test_real_acl003_bundle_requires_exact_lock_file_set(tmp_path: Path) -> None:
+    source = Path("preregistrations/ACL-003")
+    bundle = tmp_path / "ACL-003"
+    shutil.copytree(source, bundle)
+    lock_path = bundle / "LOCK.json"
+    lock = json.loads(lock_path.read_text(encoding="utf-8"))
+    del lock["files"]["README.md"]
+    lock_path.write_text(json.dumps(lock), encoding="utf-8")
+
+    with pytest.raises(ValueError, match="exact frozen file set"):
+        validate_preregistration_bundle(bundle)

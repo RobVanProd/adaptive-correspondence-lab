@@ -6,6 +6,7 @@
   "benchmark_scope": "deterministic-new-value-held-out-benchmark",
   "inference_scope": "descriptive-criteria-not-population-confidence",
   "transport_scope": "zero-fit-new-value-within-categorical-class",
+  "novelty_reference_manifest_sha256": "6a9e4e0a931277b1f5c464807d0bcacee3ccb684269843f8245a83ae88110741",
   "vector_convention": "row",
   "eta": 0.05,
   "primary_horizon": 20,

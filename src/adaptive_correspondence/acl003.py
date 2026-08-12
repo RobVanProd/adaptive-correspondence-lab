@@ -20,6 +20,7 @@ from .acl002 import (
     git_execution_state,
     matrix_power_oracle_trajectory,
     mutation_trajectory,
+    sha256_file,
     type7_quantile,
     validate_lock,
 )
@@ -50,6 +51,19 @@ ACL003_STATE_ORACLE_TOLERANCE = 5e-13
 ACL003_FIRST_ORACLE_TOLERANCE = 5e-11
 ACL003_CURVATURE_ORACLE_TOLERANCE = 2e-9
 CATALOG_NOVELTY_ATOL = 1e-15
+ACL002_REFERENCE_MANIFEST_SHA256 = (
+    "6a9e4e0a931277b1f5c464807d0bcacee3ccb684269843f8245a83ae88110741"
+)
+ACL003_LOCKED_FILES = frozenset(
+    {
+        "ANALYSIS_PLAN.md",
+        "DERIVATION.md",
+        "PREREGISTRATION.md",
+        "README.md",
+        "analytic_registry.json",
+        "manifest.json",
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -80,6 +94,7 @@ class ACL003Manifest:
     benchmark_scope: str
     inference_scope: str
     transport_scope: str
+    novelty_reference_manifest_sha256: str | None
     raw: dict[str, Any]
 
     @property
@@ -240,6 +255,13 @@ def validate_manifest_dict(payload: dict[str, Any]) -> ACL003Manifest:
     scopes = (benchmark_scope, inference_scope, transport_scope)
     if not all(isinstance(value, str) and value for value in scopes):
         raise ValueError("scope fields must be non-empty strings")
+    reference_hash = payload.get("novelty_reference_manifest_sha256")
+    if reference_hash is not None and (
+        not isinstance(reference_hash, str)
+        or len(reference_hash) != 64
+        or any(character not in "0123456789abcdef" for character in reference_hash)
+    ):
+        raise ValueError("novelty reference manifest hash must be lowercase SHA-256")
     if experiment_id == "ACL-003":
         design_matches = (
             eta == ACL003_ETA
@@ -255,6 +277,7 @@ def validate_manifest_dict(payload: dict[str, Any]) -> ACL003Manifest:
             and benchmark_scope == "deterministic-new-value-held-out-benchmark"
             and inference_scope == "descriptive-criteria-not-population-confidence"
             and transport_scope == "zero-fit-new-value-within-categorical-class"
+            and reference_hash == ACL002_REFERENCE_MANIFEST_SHA256
         )
         if not design_matches:
             raise ValueError("ACL-003 design constants mismatch")
@@ -273,6 +296,7 @@ def validate_manifest_dict(payload: dict[str, Any]) -> ACL003Manifest:
         benchmark_scope=benchmark_scope,
         inference_scope=inference_scope,
         transport_scope=transport_scope,
+        novelty_reference_manifest_sha256=reference_hash,
         raw=payload,
     )
 
@@ -579,6 +603,9 @@ def analyze_raw_rows(
                 "passed": maximum <= ACL003_DELTA_FLOOR,
             }
         )
+    controls_passed = all(item["passed"] for item in controls)
+    primary_passed = median <= ACL003_MEDIAN_GATE and q90 <= ACL003_Q90_GATE
+    verdict = "INVALID" if not controls_passed else "PASS" if primary_passed else "FAIL"
     return {
         "experiment_id": manifest.experiment_id,
         "primary_horizon": manifest.primary_horizon,
@@ -589,11 +616,13 @@ def analyze_raw_rows(
             "q90": q90,
             "median_threshold": ACL003_MEDIAN_GATE,
             "q90_threshold": ACL003_Q90_GATE,
-            "passed": median <= ACL003_MEDIAN_GATE and q90 <= ACL003_Q90_GATE,
+            "passed": primary_passed,
         },
         "prediction_rows": prediction_rows,
         "software_controls": controls,
-        "software_controls_passed": all(item["passed"] for item in controls),
+        "software_controls_passed": controls_passed,
+        "instrument_valid": controls_passed,
+        "verdict": verdict,
         "numerical_control_results_gating": False,
         "stress_results_gating": False,
         "secondary_results_location": "raw_rows",
@@ -617,13 +646,25 @@ def validate_preregistration_bundle(
     if lock.get("outcomes_generated") is not False:
         raise ValueError("ACL-003 lock must declare outcomes_generated=false")
     manifest = load_manifest(bundle / "manifest.json")
+    if manifest.experiment_id == "ACL-003" and (
+        lock.get("experiment_id") != "ACL-003"
+        or lock.get("kind") != "preregistration-bundle-lock"
+        or set(lock["files"]) != ACL003_LOCKED_FILES
+    ):
+        raise ValueError("ACL-003 lock must contain the exact frozen file set")
     try:
+        reference_hash = sha256_file(reference_path)
         locked_registry = json.loads(
             (bundle / "analytic_registry.json").read_text(encoding="utf-8")
         )
         reference = json.loads(Path(reference_path).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as error:
         raise ValueError("cannot read ACL-003 registry or reference manifest") from error
+    if (
+        manifest.novelty_reference_manifest_sha256 is not None
+        and reference_hash != manifest.novelty_reference_manifest_sha256
+    ):
+        raise ValueError("ACL-003 novelty reference manifest hash mismatch")
     computed = build_analytic_registry(manifest)
     validate_analytic_registry(locked_registry, computed)
     novelty = validate_catalog_novelty(manifest, reference)

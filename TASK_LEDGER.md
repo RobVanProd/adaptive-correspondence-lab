@@ -487,3 +487,14 @@
 - **Stop conditions:** any ACL-003 perturbed trajectory or outcome is generated before
   the lock audit; numeric novelty fails; the registry depends on outcomes; a threshold
   changes after outcomes; or the baseline is red.
+- **First public checkpoint and adversarial hold:** commit
+  `fecdd68809868280e3852d5bc23075db28ae2ff3` froze the intended design with no
+  outcomes, but pre-outcome source audit found that the validator accepted an arbitrary
+  caller-supplied novelty-reference manifest and did not require the lock to enumerate
+  the exact six frozen files. It also reported the identity control separately without
+  an explicit invalid-instrument verdict. That checkpoint is superseded before outcome
+  generation.
+- **Frozen audit amendments:** bind the numeric-novelty comparison to ACL-002 manifest
+  SHA-256 `6a9e4e0a931277b1f5c464807d0bcacee3ccb684269843f8245a83ae88110741`;
+  require the exact narrative/derivation/plan/readme/manifest/registry lock set; and
+  report `INVALID` if the identity control fails even when the hypothesis gate passes.

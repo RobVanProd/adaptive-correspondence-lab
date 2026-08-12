@@ -7,7 +7,8 @@ This directory contains no ACL-003 perturbed outcomes.
 - `DERIVATION.md` freezes the row-vector second-order recurrence and prediction.
 - `ANALYSIS_PLAN.md` is the executable analysis contract.
 - `manifest.json` contains 16 hypothesis-bearing landscapes built from numeric catalog
-  values not present in ACL-002, plus one identity software control.
+  values not present in the byte-frozen ACL-002 reference manifest, plus one identity
+  software control.
 - `analytic_registry.json` contains clean first/second derivatives and oracle checks;
   it declares `outcomes_generated=false`.
 - `LOCK.json` hashes this frozen bundle and also declares
