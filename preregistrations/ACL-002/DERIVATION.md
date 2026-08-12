@@ -55,8 +55,34 @@ s_0 = 0.
 ```
 
 Because `F` maps the simplex to itself and `M` is row-stochastic, every sensitivity
-sums to zero. The implementation treats failure of this tangent-mass invariant beyond
-the frozen float64 tolerance as an error.
+sums to zero. The accumulated tangent-mass guard is separately frozen at `2e-13`.
+
+## Independent matrix-power oracle
+
+Let
+
+```text
+D = diag(exp(eta r))
+A_epsilon = (1-epsilon) I + epsilon M.
+```
+
+One perturbed update can be written
+
+```text
+q_(t+1) = q_t D A_epsilon / (q_t D A_epsilon 1).
+```
+
+Because `M` is row-stochastic, `A_epsilon 1=1`. Successive normalizing scalars cancel,
+so induction gives the independently evaluable terminal state
+
+```text
+q_T = p0 (D A_epsilon)^T / (p0 (D A_epsilon)^T 1).
+```
+
+The matrix-power oracle uses this expression directly for every time index and does
+not call the iterative recurrence. Subtracting a constant from every reward merely
+scales `D` and cancels under normalization, so the implementation may use that gauge to
+avoid overflow.
 
 ## L1 coefficient
 

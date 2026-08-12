@@ -46,6 +46,23 @@ s_(t+1) = s_t J_F^R(p_t) + p_(t+1) (M-I).
 
 No implicit transpose or column-vector convention is permitted in ACL-002.
 
+The perturbed recurrence also has an independent closed form. With
+
+```text
+D = diag(exp(eta r))
+A_epsilon = (1-epsilon) I + epsilon M,
+```
+
+row-stochasticity gives `A_epsilon 1 = 1`, and therefore
+
+```text
+q_T = normalize(p0 (D A_epsilon)^T).
+```
+
+The future runner must compare every iterative state with this matrix-power oracle and
+stop if their maximum absolute difference exceeds the frozen oracle tolerance. The
+oracle does not call the iterative transition implementation.
+
 ## Hypotheses
 
 ### Primary zero-fit hypothesis, H_analytic
@@ -69,7 +86,7 @@ obscured by a calibrated result.
 ### Primary calibrated-transport hypothesis, H_transport
 
 For each regular-sensitivity source landscape, fit one origin-constrained coefficient
-over the five positive confirmatory epsilon values:
+over the three positive strict-confirmatory epsilon values:
 
 ```text
 x_(l,e) = C_l e
@@ -95,8 +112,14 @@ approximation over the region.
 Landscapes, not seeds, are experimental units. ACL-002 is deterministic and uses no RNG.
 The locked manifest contains 14 source and 14 held-out target landscapes. Each resolves
 to an explicit strictly interior `p0`, fixed reward vector `r`, and row-stochastic `M`.
-Reward catalogs contain dominance, weak-selection, tied, neutral, compressed, reversed,
-and additive-shift controls. They do not call fixed reward vectors cooperative or cyclic.
+Reward catalogs contain dominant, weak-selection, tied, neutral, compressed, reversed,
+and strongly ordered cases. They do not call fixed reward vectors cooperative or cyclic.
+
+The 14 targets are a deterministic held-out benchmark, not a random sample from a
+population of landscapes. Median and Q0.90 are descriptive performance criteria, not
+confidence statements. Source and target reuse the same state, reward, and mutation
+catalogs in different combinations, so ACL-002 tests within-family combinatorial
+held-out transport—not transport across an adaptive-system class.
 
 Source/target identity, catalogs, and landscape combinations are frozen in
 `manifest.json`. The manifest may be reviewed after this checkpoint but any change
@@ -107,11 +130,12 @@ requires a new preregistration commit and invalidates this checkpoint for execut
 - Primary horizon: `T=20`.
 - Secondary endpoint horizons: `T=1,5,50`.
 - Full epsilon grid: `0, 1e-4, 3e-4, 1e-3, 3e-3, 1e-2, 3e-2, 1e-1`.
-- Confirmatory local region: the five positive values from `1e-4` through `1e-2`.
+- Strict confirmatory region: `1e-4,3e-4,1e-3`.
+- Extended-local, non-gating region: `3e-3,1e-2`.
 - Stress region: `3e-2` and `1e-1`.
 
-The zero point is a consistency check. Stress outcomes are reported but are incapable
-of changing either confirmatory verdict.
+The zero point is a consistency check. Extended-local and stress outcomes are reported
+but are incapable of changing either confirmatory verdict or `alpha_source`.
 
 ## Sensitivity strata and numerical floor
 
@@ -125,7 +149,7 @@ delta_floor = 2e-12.
 At the primary horizon:
 
 - analytic-zero: `C_l <= 2e-14`;
-- low-sensitivity: `C_l > 2e-14` and `C_l * 1e-2 < 2e-12`;
+- low-sensitivity: `C_l > 2e-14` and `C_l * 1e-3 < 2e-12`;
 - regular-sensitivity: all remaining landscapes.
 
 Strata use only clean analytic quantities and are frozen in `analytic_registry.json`.
@@ -133,6 +157,15 @@ Analytic-zero and low-sensitivity landscapes are excluded from relative-error fi
 and gates. They remain fully reported. For each prediction layer they pass their
 separate absolute check only if every local-region absolute prediction error is at most
 `delta_floor`.
+
+The following guards are distinct and frozen; they are not collectively described as
+one float64 tolerance:
+
+- exact-correspondence/inherited tolerance: `2e-14`;
+- row-Jacobian output-mass tolerance: `2e-14`;
+- accumulated tangent-mass tolerance through `T=50`: `2e-13`;
+- perturbed-simplex absolute validation tolerance: `5e-13`;
+- iterative/matrix-oracle maximum absolute tolerance: `5e-13`.
 
 ## Primary gates
 
@@ -142,10 +175,17 @@ For each regular target landscape and prediction layer, calculate
 relative_error_(l,e) = |delta_(l,e) - delta_hat_(l,e)| / delta_hat_(l,e)
 ```
 
-at all five positive confirmatory epsilons. A nonpositive prediction automatically
-fails that prediction layer. Reduce the five errors to one landscape score with a
-Hyndman-Fan Type-7 median. Across target-landscape scores, calculate the Type-7 median
-and Type-7 0.90 quantile (`numpy.quantile(..., method="linear")`).
+at all three strict-confirmatory epsilons. A nonpositive prediction automatically
+fails that prediction layer. Reduce the three errors to one landscape score using their
+maximum:
+
+```text
+score_l = max_e relative_error_(l,e).
+```
+
+Across target-landscape scores, calculate the Type-7 median and Type-7 0.90 quantile
+(`numpy.quantile(..., method="linear")`). Thus a failure at one strict-confirmatory
+epsilon cannot be hidden by the other two epsilons.
 
 A prediction layer passes exactly when both hold:
 
@@ -176,15 +216,19 @@ other secondary analyses are descriptive and cannot change primary verdicts.
 
 ## Frozen analysis sequence
 
-1. Verify the approved Git SHA, clean tracked worktree, and preregistration file hashes.
+1. Verify the approved Git SHA, completely clean worktree (including no untracked
+   files), and preregistration file hashes.
 2. Validate all manifest states, rewards, matrices, identities, counts, and regions.
 3. Recompute the clean trajectories, row Jacobians, sensitivities, `C`, `K`, and strata;
    require exact agreement with the locked analytic registry within frozen tolerances.
-4. Generate every declared perturbed trajectory exactly once, in manifest order.
-5. Write raw per-landscape/per-epsilon/per-horizon measurements before summaries.
+4. Generate every declared perturbed trajectory exactly once, in manifest order, and
+   compare it with the independent matrix-power oracle before scientific analysis.
+5. Write raw per-landscape/per-epsilon/per-horizon measurements and oracle errors before
+   summaries.
 6. Estimate per-landscape source alphas, then their median.
 7. Evaluate and report `H_analytic` and `H_transport` separately.
-8. Report special strata, secondary analyses, and stress results without changing gates.
+8. Report special strata, secondary analyses, extended-local results, and stress results
+   without changing gates.
 9. Record configuration, approved SHA, file hashes, platform, package versions, and a
    statement that no RNG was used.
 

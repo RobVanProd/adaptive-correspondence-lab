@@ -53,10 +53,11 @@
   horizon, seed ensemble, and source/target split before treating any curve as research
   evidence.
 
-## ACL-002 — Preregister categorical mutation stability
+## ACL-002 — Preregister categorical mutation stability (superseded checkpoint)
 
-- **Status:** preregistered, not executed; confirmatory execution remains forbidden
-  until the public checkpoint SHA receives explicit approval.
+- **Status:** superseded by ACL-002A; commit `e90c097f58e4e4ab961272d3d50911d226eac25d`
+  was never approved or executed. Its frozen semantics below are retained as historical
+  evidence of the pre-outcome protocol change.
 - **Observed behavior:** ACL-001 contains a deterministic mutation format example but
   no confirmatory manifest, analytic tangent propagation, frozen estimator, transport
   gate, or immutable preregistration bundle.
@@ -131,3 +132,78 @@
 - **Recommended next action:** review the public manifest, derivation, analytic registry,
   and checkpoint SHA. If and only if accepted, explicitly approve that exact SHA for a
   later one-shot confirmatory execution.
+
+## ACL-002A — Pre-outcome review amendments
+
+- **Status:** replacement preregistration complete, not executed, and not yet approved
+  for execution. Commit `e90c097f58e4e4ab961272d3d50911d226eac25d` remains
+  superseded and unapproved.
+- **Observed behavior:** clean analytic review showed that `epsilon=1e-2` predicts L1
+  departures as large as roughly `0.4`; numerical guards were implemented but not all
+  separately declared; execution ignored untracked files; the manifest recurrence had
+  no independent matrix-power oracle; scope language overstated an additive-shift
+  control and did not distinguish deterministic benchmark criteria from inference over
+  a sampled population. The requested replacement for the permissive within-landscape
+  median was not present in the review text after its counterexample.
+- **Hypothesis:** restricting primary fitting/gating to `1e-4,3e-4,1e-3`, independently
+  verifying iteration with the normalized matrix power, and freezing all numerical and
+  execution guards will make the protocol more diagnostic without using outcomes.
+- **Frozen semantics:** the full epsilon grid remains unchanged; strict confirmatory
+  epsilons become `1e-4,3e-4,1e-3`; `3e-3,1e-2` become non-gating extended-local points;
+  `3e-2,1e-1` remain non-gating stress points; the low-sensitivity rule uses the new
+  maximum strict-confirmatory epsilon `1e-3`; tangent-mass tolerance is `2e-13`,
+  perturbed-simplex absolute tolerance is `5e-13`, row-Jacobian mass tolerance remains
+  `2e-14`, and the matrix-oracle maximum-absolute tolerance is `5e-13`; execution
+  requires completely empty `git status --porcelain`, including untracked files; the
+  oracle is `normalize(p0 @ matrix_power(D @ A_epsilon, T))`; for each regular target
+  and prediction layer, the landscape score is the maximum relative error across the
+  three strict-confirmatory epsilons; Type-7 median and Q0.90 are then applied across
+  landscape scores with the existing `0.10/0.20` conjunction. The max-score rule is
+  applied independently to zero-fit and calibrated layers.
+- **Allowed files:** `TASK_LEDGER.md`, `README.md`, `docs/experiments.md`,
+  `src/adaptive_correspondence/acl002.py`, `tests/test_acl002.py`, and files under
+  `preregistrations/ACL-002/`.
+- **Acceptance tests:** toy fixtures must first fail, then verify the exact region
+  partition, separate numerical guards, matrix-power oracle parity at multiple epsilon
+  values and horizons, oracle disagreement failure, completely clean worktree guard,
+  locked manifest/registry recomputation, deterministic-benchmark scope metadata, and
+  the confirmed maximum within-landscape reduction. Full tests, Ruff, wheel build,
+  and preregistration-only validation must pass.
+- **Risks:** treating extended-local points as gating; using the iterative function inside
+  the oracle; silently weakening a numerical guard; claiming population inference from
+  14 deterministic targets; finalizing an estimator that the reviewer did not state.
+- **Stop conditions:** any ACL-002 confirmatory outcome is generated; `acl002-run` is
+  invoked; outcome data influence an amendment; the baseline turns red.
+
+### ACL-002A completion record
+
+- **Implementation:** restricted strict confirmation to `1e-4,3e-4,1e-3`; made
+  `3e-3,1e-2` extended-local and non-gating; replaced the within-landscape median with
+  the confirmed maximum relative error; froze four separate numerical guards; required
+  full porcelain worktree cleanliness; added the independent normalized matrix-power
+  oracle, mismatch stop, and result provenance; removed the nonexistent additive-shift
+  claim; and froze deterministic-benchmark, descriptive-criterion, and within-family
+  transport scope.
+- **Regression sequence:** the max-score test first failed because the prior median
+  returned `0.02` instead of the required `0.03`; the new implementation returns the
+  maximum and a `1%,2%,100%` fixture scores as `100%`. Matrix-oracle tests cover four
+  epsilons and horizons `1,5,20,50`; an injected mismatch stops raw generation; an
+  untracked Python file makes the execution worktree dirty.
+- **Verification:** 79 tests passed; Ruff passed; measured coverage was 85%; wheel build
+  passed; manifest and clean analytic registry recomputation matched; the registry
+  retains `outcomes_generated=false`.
+- **Commands:** `python -m pytest tests/test_acl002.py -q`, `python -m pytest -q`,
+  `python -m ruff check .`, `python -m pytest --cov=adaptive_correspondence
+  --cov-report=term -q`, `python -m pip wheel . --no-deps --wheel-dir dist`, and clean
+  manifest/registry validation.
+- **Confirmatory status:** `acl002-run` was not invoked. No ACL-002 raw rows,
+  epsilon-positive confirmatory trajectory artifact, gate outcome, or confirmatory
+  result exists.
+- **Remaining uncertainty:** the replacement public SHA still requires final lock
+  review and explicit approval before the one-shot run; the deterministic benchmark
+  does not support population-confidence or cross-class transport claims.
+- **Regression risks:** any locked-file change invalidates `LOCK.json`; an untracked
+  file now blocks execution; oracle agreement verifies trajectory computation but does
+  not determine whether either scientific hypothesis passes.
+- **Recommended next action:** review the replacement public commit and, only if it is
+  accepted, explicitly approve that exact full SHA for one-shot ACL-002 execution.

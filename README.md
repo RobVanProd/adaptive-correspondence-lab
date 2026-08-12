@@ -88,4 +88,6 @@ pre-outcome sensitivity strata, an oriented-KL quadratic check, a fixed manifest
 file hashes. The checkpoint contains no confirmatory mutation outcomes.
 
 The future `acl acl002-run` command refuses to execute without an explicitly approved
-Git SHA, a clean tracked worktree, valid preregistration hashes, and a new output path.
+Git SHA, a completely clean worktree including no untracked files, valid preregistration
+hashes, and a new output path. The runner also checks its iterative trajectory against
+an independent normalized matrix-power oracle.

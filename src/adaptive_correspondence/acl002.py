@@ -2,7 +2,7 @@
 
 Importing this module never executes the preregistered experiment. Development tests
 use separate toy landscapes. The confirmatory runner requires an explicitly approved
-Git SHA, a clean tracked worktree, valid file locks, and a new output path.
+Git SHA, a completely clean worktree, valid file locks, and a new output path.
 """
 
 from __future__ import annotations
@@ -31,15 +31,20 @@ SensitivityStratum = Literal[
 INHERITED_TOLERANCE = 2e-14
 SAFETY_MULTIPLIER = 100
 DELTA_FLOOR = INHERITED_TOLERANCE * SAFETY_MULTIPLIER
-MAX_CONFIRMATORY_EPSILON = 1e-2
 MEDIAN_GATE = 0.10
 Q90_GATE = 0.20
+ROW_JACOBIAN_MASS_TOLERANCE = 2e-14
+TANGENT_MASS_TOLERANCE = 2e-13
+PERTURBED_SIMPLEX_ATOL = 5e-13
+MATRIX_ORACLE_MAX_ABS_TOLERANCE = 5e-13
 ACL002_ETA = 0.05
 ACL002_PRIMARY_HORIZON = 20
 ACL002_SECONDARY_HORIZONS = (1, 5, 50)
 ACL002_EPSILON_GRID = (0.0, 1e-4, 3e-4, 1e-3, 3e-3, 1e-2, 3e-2, 1e-1)
-ACL002_CONFIRMATORY_EPSILONS = (1e-4, 3e-4, 1e-3, 3e-3, 1e-2)
+ACL002_CONFIRMATORY_EPSILONS = (1e-4, 3e-4, 1e-3)
+ACL002_EXTENDED_LOCAL_EPSILONS = (3e-3, 1e-2)
 ACL002_STRESS_EPSILONS = (3e-2, 1e-1)
+MAX_CONFIRMATORY_EPSILON = max(ACL002_CONFIRMATORY_EPSILONS)
 
 
 @dataclass(frozen=True)
@@ -79,10 +84,14 @@ class ACL002Manifest:
     secondary_horizons: tuple[int, ...]
     epsilon_grid: tuple[float, ...]
     confirmatory_epsilons: tuple[float, ...]
+    extended_local_epsilons: tuple[float, ...]
     stress_epsilons: tuple[float, ...]
     landscapes: tuple[Landscape, ...]
     expected_zero_ids: tuple[str, ...]
     expected_low_ids: tuple[str, ...]
+    benchmark_scope: str
+    inference_scope: str
+    transport_scope: str
     raw: dict[str, Any]
 
     @property
@@ -131,7 +140,12 @@ def row_jacobian(probability: ArrayLike, reward: ArrayLike, eta: float) -> Float
     output = state * factors / normalizer
     scaled_factors = factors / normalizer
     jacobian = np.diag(scaled_factors) - np.outer(scaled_factors, output)
-    if not np.allclose(np.sum(jacobian, axis=1), 0.0, rtol=0.0, atol=2e-14):
+    if not np.allclose(
+        np.sum(jacobian, axis=1),
+        0.0,
+        rtol=0.0,
+        atol=ROW_JACOBIAN_MASS_TOLERANCE,
+    ):
         raise FloatingPointError("row Jacobian violates output-mass conservation")
     return jacobian
 
@@ -170,7 +184,7 @@ def sensitivity_trajectory(
         next_state = categorical_map(current, rewards, eta)
         sensitivity = sensitivities[step] @ row_jacobian(current, rewards, eta)
         sensitivity += next_state @ (matrix - identity)
-        if abs(float(np.sum(sensitivity))) > 2e-13:
+        if abs(float(np.sum(sensitivity))) > TANGENT_MASS_TOLERANCE:
             raise FloatingPointError("row sensitivity left the simplex tangent space")
         states[step + 1] = validate_simplex(next_state, strictly_positive=True)
         sensitivities[step + 1] = sensitivity
@@ -202,7 +216,47 @@ def mutation_trajectory(
             next_state,
             name="mutation state",
             strictly_positive=True,
-            atol=5e-13,
+            atol=PERTURBED_SIMPLEX_ATOL,
+        )
+    return states
+
+
+def matrix_power_oracle_trajectory(
+    p0: ArrayLike,
+    reward: ArrayLike,
+    mutation: ArrayLike,
+    *,
+    eta: float,
+    epsilon: float,
+    steps: int,
+) -> FloatArray:
+    """Independently evaluate normalize(p0 @ (D @ A_epsilon)^t)."""
+    initial = validate_simplex(p0, name="p0", strictly_positive=True)
+    rewards = validate_reward(reward, initial.size)
+    matrix = _validate_mutation(mutation, initial.size)
+    if not np.isfinite(eta) or eta < 0.0:
+        raise ValueError("eta must be finite and non-negative")
+    if not np.isfinite(epsilon) or not 0.0 <= epsilon <= 1.0:
+        raise ValueError("epsilon must be finite and in [0,1]")
+    if isinstance(steps, bool) or not isinstance(steps, (int, np.integer)) or steps < 0:
+        raise ValueError("steps must be a non-negative integer")
+    reward_gauge = rewards - float(np.max(rewards))
+    selection = np.diag(np.exp(eta * reward_gauge))
+    identity = np.eye(initial.size, dtype=np.float64)
+    mixing = (1.0 - epsilon) * identity + epsilon * matrix
+    transition = selection @ mixing
+    states = np.empty((steps + 1, initial.size), dtype=np.float64)
+    states[0] = initial
+    for step in range(1, steps + 1):
+        unnormalized = initial @ np.linalg.matrix_power(transition, step)
+        total = float(np.sum(unnormalized))
+        if not np.isfinite(total) or total <= 0.0:
+            raise FloatingPointError("matrix-power oracle has no finite positive mass")
+        states[step] = validate_simplex(
+            unnormalized / total,
+            name="matrix-power oracle state",
+            strictly_positive=True,
+            atol=PERTURBED_SIMPLEX_ATOL,
         )
     return states
 
@@ -290,7 +344,7 @@ def landscape_relative_score(
     if not np.all(np.isfinite(observed)) or np.any(observed < 0.0):
         raise ValueError("observed discrepancies must be finite and non-negative")
     errors = np.abs(observed - prediction) / prediction
-    return type7_quantile(errors, 0.5)
+    return float(np.max(errors))
 
 
 def evaluate_gate(landscape_scores: ArrayLike) -> GateResult:
@@ -332,6 +386,14 @@ def validate_manifest_dict(payload: dict[str, Any]) -> ACL002Manifest:
         raise ValueError("manifest experiment_id must be a non-empty string")
     if payload.get("randomness") != "none":
         raise ValueError("ACL-002 manifest must declare randomness as none")
+    benchmark_scope = payload.get("benchmark_scope")
+    inference_scope = payload.get("inference_scope")
+    transport_scope = payload.get("transport_scope")
+    if not all(
+        isinstance(value, str) and value
+        for value in (benchmark_scope, inference_scope, transport_scope)
+    ):
+        raise ValueError("manifest scope declarations must be non-empty strings")
     if payload.get("vector_convention") != "row":
         raise ValueError("ACL-002 manifest must use row vectors")
     expected_operation = "(1-epsilon)*F(p) + epsilon*(F(p) @ M)"
@@ -351,22 +413,42 @@ def validate_manifest_dict(payload: dict[str, Any]) -> ACL002Manifest:
     confirmatory = _finite_float_tuple(
         payload.get("confirmatory_epsilons"), "confirmatory_epsilons"
     )
+    extended_local = _finite_float_tuple(
+        payload.get("extended_local_epsilons"), "extended_local_epsilons"
+    )
     stress = _finite_float_tuple(payload.get("stress_epsilons"), "stress_epsilons")
     if epsilon_grid[0] != 0.0 or tuple(sorted(set(epsilon_grid))) != epsilon_grid:
         raise ValueError("epsilon_grid must be unique, sorted, and begin at zero")
-    if any(value <= 0.0 for value in confirmatory + stress):
-        raise ValueError("confirmatory and stress epsilons must be positive")
-    if set(confirmatory) & set(stress) or set(confirmatory + stress) != set(epsilon_grid[1:]):
-        raise ValueError("confirmatory and stress regions must partition positive epsilon_grid")
+    regions = (confirmatory, extended_local, stress)
+    if any(value <= 0.0 for region in regions for value in region):
+        raise ValueError("confirmatory, extended-local, and stress epsilons must be positive")
+    region_sets = tuple(set(region) for region in regions)
+    overlapping_regions = any(
+        region_sets[left] & region_sets[right]
+        for left in range(3)
+        for right in range(left + 1, 3)
+    )
+    if (
+        overlapping_regions
+        or set(confirmatory + extended_local + stress) != set(epsilon_grid[1:])
+    ):
+        raise ValueError("three epsilon regions must partition positive epsilon_grid")
     if experiment_id == "ACL-002" and (
         eta != ACL002_ETA
         or primary_horizon != ACL002_PRIMARY_HORIZON
         or secondary != ACL002_SECONDARY_HORIZONS
         or epsilon_grid != ACL002_EPSILON_GRID
         or confirmatory != ACL002_CONFIRMATORY_EPSILONS
+        or extended_local != ACL002_EXTENDED_LOCAL_EPSILONS
         or stress != ACL002_STRESS_EPSILONS
     ):
         raise ValueError("ACL-002 manifest design constants differ from the preregistration")
+    if experiment_id == "ACL-002" and (
+        benchmark_scope != "deterministic-held-out-benchmark"
+        or inference_scope != "descriptive-criteria-not-population-confidence"
+        or transport_scope != "within-family-combinatorial-held-out-transport"
+    ):
+        raise ValueError("ACL-002 scope declarations differ from the preregistration")
 
     numerical = payload.get("numerical_policy", {})
     expected_numerical = {
@@ -375,11 +457,16 @@ def validate_manifest_dict(payload: dict[str, Any]) -> ACL002Manifest:
         "delta_floor": DELTA_FLOOR,
         "quantile_method": "linear",
         "quantile_definition": "Hyndman-Fan Type 7",
+        "row_jacobian_mass_tolerance": ROW_JACOBIAN_MASS_TOLERANCE,
+        "tangent_mass_tolerance": TANGENT_MASS_TOLERANCE,
+        "perturbed_simplex_atol": PERTURBED_SIMPLEX_ATOL,
+        "matrix_oracle_max_abs_tolerance": MATRIX_ORACLE_MAX_ABS_TOLERANCE,
     }
     if numerical != expected_numerical:
         raise ValueError("manifest numerical policy differs from frozen ACL-002 constants")
     gates = payload.get("gates", {})
     if gates != {
+        "within_landscape_reduction": "maximum-over-strict-confirmatory-epsilons",
         "target_landscape_median_relative_error_max": MEDIAN_GATE,
         "target_landscape_q90_relative_error_max": Q90_GATE,
     }:
@@ -468,10 +555,14 @@ def validate_manifest_dict(payload: dict[str, Any]) -> ACL002Manifest:
         secondary_horizons=secondary,
         epsilon_grid=epsilon_grid,
         confirmatory_epsilons=confirmatory,
+        extended_local_epsilons=extended_local,
         stress_epsilons=stress,
         landscapes=tuple(landscapes),
         expected_zero_ids=zero_ids,
         expected_low_ids=low_ids,
+        benchmark_scope=benchmark_scope,
+        inference_scope=inference_scope,
+        transport_scope=transport_scope,
         raw=payload,
     )
 
@@ -551,6 +642,9 @@ def build_analytic_registry(manifest: ACL002Manifest) -> dict[str, Any]:
             canonical_manifest.encode("utf-8")
         ).hexdigest(),
         "row_vector_convention": True,
+        "benchmark_scope": manifest.benchmark_scope,
+        "inference_scope": manifest.inference_scope,
+        "transport_scope": manifest.transport_scope,
         "primary_horizon": manifest.primary_horizon,
         "delta_floor": DELTA_FLOOR,
         "landscapes": entries,
@@ -590,18 +684,18 @@ def assert_execution_context(
     *,
     approved_sha: str,
     current_sha: str,
-    tracked_dirty: bool,
+    worktree_dirty: bool,
     output_path: str | Path,
 ) -> None:
     if not approved_sha or current_sha != approved_sha:
         raise ValueError("current Git HEAD does not equal the explicitly approved SHA")
-    if tracked_dirty:
-        raise ValueError("tracked worktree must be clean before ACL-002 execution")
+    if worktree_dirty:
+        raise ValueError("worktree must be completely clean before ACL-002 execution")
     if Path(output_path).exists():
         raise FileExistsError("ACL-002 output already exists and will not be overwritten")
 
 
-def _git_execution_state(repo_path: str | Path) -> tuple[str, bool]:
+def git_execution_state(repo_path: str | Path) -> tuple[str, bool]:
     repo = Path(repo_path)
     try:
         current_sha = subprocess.run(
@@ -612,8 +706,8 @@ def _git_execution_state(repo_path: str | Path) -> tuple[str, bool]:
             text=True,
             timeout=3,
         ).stdout.strip()
-        tracked_status = subprocess.run(
-            ["git", "status", "--porcelain", "--untracked-files=no"],
+        worktree_status = subprocess.run(
+            ["git", "status", "--porcelain"],
             cwd=repo,
             check=True,
             capture_output=True,
@@ -622,7 +716,7 @@ def _git_execution_state(repo_path: str | Path) -> tuple[str, bool]:
         ).stdout.strip()
     except (FileNotFoundError, subprocess.SubprocessError) as error:
         raise ValueError("cannot verify Git execution state") from error
-    return current_sha, bool(tracked_status)
+    return current_sha, bool(worktree_status)
 
 
 def _oriented_kl_q_p(q: FloatArray, p: FloatArray) -> float:
@@ -656,11 +750,26 @@ def generate_raw_rows(manifest: ACL002Manifest) -> list[dict[str, Any]]:
                 epsilon=epsilon,
                 steps=max_horizon,
             )
+            oracle = matrix_power_oracle_trajectory(
+                landscape.p0,
+                landscape.reward,
+                landscape.mutation,
+                eta=manifest.eta,
+                epsilon=epsilon,
+                steps=max_horizon,
+            )
+            oracle_errors = np.max(np.abs(perturbed - oracle), axis=1)
+            if float(np.max(oracle_errors)) > MATRIX_ORACLE_MAX_ABS_TOLERANCE:
+                raise FloatingPointError(
+                    f"iterative trajectory and matrix oracle disagree for {landscape.identifier}"
+                )
             region = (
                 "zero"
                 if epsilon == 0.0
                 else "confirmatory"
                 if epsilon in manifest.confirmatory_epsilons
+                else "extended-local"
+                if epsilon in manifest.extended_local_epsilons
                 else "stress"
             )
             for horizon in manifest.horizons:
@@ -699,6 +808,9 @@ def generate_raw_rows(manifest: ACL002Manifest) -> list[dict[str, Any]]:
                         "zero_fit_l1_prediction": coefficients.endpoint_l1 * epsilon,
                         "zero_fit_max_path_l1_prediction": coefficients.path_l1 * epsilon,
                         "zero_fit_kl_prediction": coefficients.kl_q_p * epsilon**2,
+                        "oracle_max_absolute_error_through_horizon": float(
+                            np.max(oracle_errors[: horizon + 1])
+                        ),
                         "kl_over_epsilon_squared": (
                             None if epsilon == 0.0 else oriented_kl / epsilon**2
                         ),
@@ -790,7 +902,7 @@ def analyze_raw_rows(
                     entry["C_primary"], epsilons, deltas, alpha=alpha
                 )
                 layer_scores[layer].append(
-                    {"landscape_id": landscape.identifier, "relative_error_median": score}
+                    {"landscape_id": landscape.identifier, "relative_error_max": score}
                 )
                 for row in selected:
                     prediction = alpha * entry["C_primary"] * row["epsilon"]
@@ -824,7 +936,7 @@ def analyze_raw_rows(
             )
     gates = {}
     for layer, scores in layer_scores.items():
-        result = evaluate_gate([item["relative_error_median"] for item in scores])
+        result = evaluate_gate([item["relative_error_max"] for item in scores])
         gates[layer] = {
             "alpha": 1.0 if layer == "analytic" else alpha_source,
             "median": result.median,
@@ -837,7 +949,9 @@ def analyze_raw_rows(
         "experiment_id": manifest.experiment_id,
         "primary_horizon": manifest.primary_horizon,
         "confirmatory_epsilons": list(manifest.confirmatory_epsilons),
+        "extended_local_epsilons": list(manifest.extended_local_epsilons),
         "stress_results_gating": False,
+        "extended_local_results_gating": False,
         "source_landscape_alphas": source_alphas,
         "alpha_source": alpha_source,
         "primary_gates": gates,
@@ -916,6 +1030,13 @@ def validate_preregistration_bundle(bundle_path: str | Path) -> dict[str, Any]:
         "landscape_count": len(manifest.landscapes),
         "source_count": sum(item.split == "source" for item in manifest.landscapes),
         "target_count": sum(item.split == "target" for item in manifest.landscapes),
+        "benchmark_scope": manifest.benchmark_scope,
+        "inference_scope": manifest.inference_scope,
+        "transport_scope": manifest.transport_scope,
+        "confirmatory_epsilons": list(manifest.confirmatory_epsilons),
+        "extended_local_epsilons": list(manifest.extended_local_epsilons),
+        "stress_epsilons": list(manifest.stress_epsilons),
+        "numerical_policy": manifest.raw["numerical_policy"],
         "strata": strata,
         "locked_file_count": len(lock["files"]),
     }
@@ -931,11 +1052,11 @@ def execute_confirmatory(
     output_path: str | Path,
 ) -> Path:
     """Future one-shot runner. ACL-002 preregistration preparation must not call it."""
-    current_sha, tracked_dirty = _git_execution_state(repo_path)
+    current_sha, worktree_dirty = git_execution_state(repo_path)
     assert_execution_context(
         approved_sha=approved_sha,
         current_sha=current_sha,
-        tracked_dirty=tracked_dirty,
+        worktree_dirty=worktree_dirty,
         output_path=output_path,
     )
     lock = validate_lock(lock_path)
@@ -948,6 +1069,9 @@ def execute_confirmatory(
     validate_analytic_registry(locked_registry, computed_registry)
     raw_rows = generate_raw_rows(manifest)
     analysis = analyze_raw_rows(manifest, locked_registry, raw_rows)
+    oracle_max_absolute_error = max(
+        row["oracle_max_absolute_error_through_horizon"] for row in raw_rows
+    )
     payload = {
         "schema_version": 1,
         "experiment_id": manifest.experiment_id,
@@ -955,6 +1079,15 @@ def execute_confirmatory(
         "approved_preregistration_sha": approved_sha,
         "preregistration_lock": lock,
         "randomness_used": False,
+        "benchmark_scope": manifest.benchmark_scope,
+        "inference_scope": manifest.inference_scope,
+        "transport_scope": manifest.transport_scope,
+        "matrix_power_oracle": {
+            "formula": "normalize(p0 @ matrix_power(D @ A_epsilon, T))",
+            "maximum_absolute_error": oracle_max_absolute_error,
+            "tolerance": MATRIX_ORACLE_MAX_ABS_TOLERANCE,
+            "passed": True,
+        },
         "raw_rows": raw_rows,
         "analysis": analysis,
         "provenance": provenance(),

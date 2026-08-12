@@ -45,6 +45,21 @@ landscapes. The secondary oriented divergence is exactly `KL(q_T || p_T)` and us
 preregistered Fisher-curvature coefficient. Stress epsilons and secondary metrics are
 structurally absent from primary gate calculation.
 
+Within each regular target landscape, the primary score is the maximum relative error
+across the three strict-confirmatory epsilons. Across landscape scores, the frozen
+Type-7 median and Q0.90 gates are applied independently to zero-fit and calibrated
+predictions.
+
+The strict confirmatory epsilon set ends at `1e-3`; `3e-3` and `1e-2` are extended-local
+only, and `3e-2` and `1e-1` remain stress points. Iterative perturbed trajectories must
+agree with an independent normalized matrix-power oracle before analysis. All numerical
+guards are separately named and frozen in the manifest.
+
+The targets are a deterministic held-out benchmark assembled from recombinations of
+the same catalogs used by the source split. Its median and Q0.90 thresholds are
+descriptive criteria for within-family transport, not population confidence claims or
+evidence of transport across adaptive-system classes.
+
 Preparing or validating this bundle may recompute clean trajectories and their analytic
 tangents. It must not generate an epsilon-positive trajectory from the confirmatory
 manifest until the public preregistration SHA is reviewed and explicitly approved.

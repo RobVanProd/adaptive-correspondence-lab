@@ -3,22 +3,31 @@
   "experiment_id": "ACL-002",
   "title": "Stability of the categorical correspondence under deterministic mutation",
   "randomness": "none",
+  "benchmark_scope": "deterministic-held-out-benchmark",
+  "inference_scope": "descriptive-criteria-not-population-confidence",
+  "transport_scope": "within-family-combinatorial-held-out-transport",
   "vector_convention": "row",
   "mutation_operation": "(1-epsilon)*F(p) + epsilon*(F(p) @ M)",
   "eta": 0.05,
   "primary_horizon": 20,
   "secondary_horizons": [1, 5, 50],
   "epsilon_grid": [0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1],
-  "confirmatory_epsilons": [0.0001, 0.0003, 0.001, 0.003, 0.01],
+  "confirmatory_epsilons": [0.0001, 0.0003, 0.001],
+  "extended_local_epsilons": [0.003, 0.01],
   "stress_epsilons": [0.03, 0.1],
   "numerical_policy": {
     "inherited_tolerance": 2e-14,
     "safety_multiplier": 100,
     "delta_floor": 2e-12,
     "quantile_method": "linear",
-    "quantile_definition": "Hyndman-Fan Type 7"
+    "quantile_definition": "Hyndman-Fan Type 7",
+    "row_jacobian_mass_tolerance": 2e-14,
+    "tangent_mass_tolerance": 2e-13,
+    "perturbed_simplex_atol": 5e-13,
+    "matrix_oracle_max_abs_tolerance": 5e-13
   },
   "gates": {
+    "within_landscape_reduction": "maximum-over-strict-confirmatory-epsilons",
     "target_landscape_median_relative_error_max": 0.1,
     "target_landscape_q90_relative_error_max": 0.2
   },

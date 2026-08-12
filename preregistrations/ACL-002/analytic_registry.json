@@ -1,6 +1,8 @@
 {
+  "benchmark_scope": "deterministic-held-out-benchmark",
   "delta_floor": 2e-12,
   "experiment_id": "ACL-002",
+  "inference_scope": "descriptive-criteria-not-population-confidence",
   "kind": "pre-outcome-analytic-registry",
   "landscapes": [
     {
@@ -900,9 +902,10 @@
       "stratum": "low-sensitivity"
     }
   ],
-  "manifest_canonical_sha256": "59b7860737f3a13ad30aad025a811abb2565d74d25a5d08f9509d2553a6af487",
+  "manifest_canonical_sha256": "045589fe573cad9d9c6956a6303c7cfeb23bf1e3064dec2943530d9315657c13",
   "outcomes_generated": false,
   "primary_horizon": 20,
   "row_vector_convention": true,
-  "schema_version": 1
+  "schema_version": 1,
+  "transport_scope": "within-family-combinatorial-held-out-transport"
 }

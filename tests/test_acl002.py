@@ -1,9 +1,11 @@
 import json
+import subprocess
 from pathlib import Path
 
 import numpy as np
 import pytest
 
+import adaptive_correspondence.acl002 as acl002_module
 from adaptive_correspondence.acl002 import (
     DELTA_FLOOR,
     INHERITED_TOLERANCE,
@@ -16,7 +18,9 @@ from adaptive_correspondence.acl002 import (
     classify_sensitivity,
     evaluate_gate,
     generate_raw_rows,
+    git_execution_state,
     landscape_relative_score,
+    matrix_power_oracle_trajectory,
     median_source_alpha,
     mutation_trajectory,
     per_landscape_alpha,
@@ -45,13 +49,17 @@ def _toy_manifest() -> dict:
         "schema_version": 1,
         "experiment_id": "TOY-ONLY",
         "randomness": "none",
+        "benchmark_scope": "toy-development-fixture",
+        "inference_scope": "none",
+        "transport_scope": "none",
         "vector_convention": "row",
         "mutation_operation": "(1-epsilon)*F(p) + epsilon*(F(p) @ M)",
         "eta": 0.05,
         "primary_horizon": 3,
         "secondary_horizons": [1, 2],
-        "epsilon_grid": [0.0, 0.001, 0.01, 0.1],
-        "confirmatory_epsilons": [0.001, 0.01],
+        "epsilon_grid": [0.0, 0.001, 0.003, 0.01, 0.1],
+        "confirmatory_epsilons": [0.001, 0.003],
+        "extended_local_epsilons": [0.01],
         "stress_epsilons": [0.1],
         "numerical_policy": {
             "inherited_tolerance": 2e-14,
@@ -59,8 +67,13 @@ def _toy_manifest() -> dict:
             "delta_floor": 2e-12,
             "quantile_method": "linear",
             "quantile_definition": "Hyndman-Fan Type 7",
+            "row_jacobian_mass_tolerance": 2e-14,
+            "tangent_mass_tolerance": 2e-13,
+            "perturbed_simplex_atol": 5e-13,
+            "matrix_oracle_max_abs_tolerance": 5e-13,
         },
         "gates": {
+            "within_landscape_reduction": "maximum-over-strict-confirmatory-epsilons",
             "target_landscape_median_relative_error_max": 0.1,
             "target_landscape_q90_relative_error_max": 0.2,
         },
@@ -103,6 +116,20 @@ def test_row_sensitivity_matches_one_sided_epsilon_difference() -> None:
     np.testing.assert_allclose(np.sum(trace.sensitivities, axis=1), 0.0, atol=2e-14)
 
 
+@pytest.mark.parametrize("epsilon", [0.0, 1e-4, 0.01, 0.1])
+@pytest.mark.parametrize("steps", [1, 5, 20, 50])
+def test_matrix_power_oracle_matches_iterative_toy_trajectory(
+    epsilon: float, steps: int
+) -> None:
+    iterative = mutation_trajectory(
+        P0, REWARD, MUTATION, eta=0.05, epsilon=epsilon, steps=steps
+    )
+    oracle = matrix_power_oracle_trajectory(
+        P0, REWARD, MUTATION, eta=0.05, epsilon=epsilon, steps=steps
+    )
+    np.testing.assert_allclose(iterative, oracle, atol=5e-13, rtol=0.0)
+
+
 def test_analytic_l1_and_oriented_kl_coefficients_match_local_behavior() -> None:
     trace = sensitivity_trajectory(P0, REWARD, MUTATION, eta=0.05, steps=5)
     coefficients = analytic_coefficients(trace, horizon=5)
@@ -129,7 +156,11 @@ def test_relative_scores_and_gates_reduce_by_landscape() -> None:
     coefficient = 3.0
     observed = coefficient * epsilons * np.array([1.01, 0.99, 1.03, 0.97, 1.02])
     score = landscape_relative_score(coefficient, epsilons, observed, alpha=1.0)
-    assert score == pytest.approx(0.02)
+    assert score == pytest.approx(0.03)
+    hidden_failure = coefficient * epsilons[:3] * np.array([1.01, 1.02, 2.0])
+    assert landscape_relative_score(
+        coefficient, epsilons[:3], hidden_failure, alpha=1.0
+    ) == pytest.approx(1.0)
     passing = evaluate_gate([0.02, 0.04, 0.08, 0.1])
     assert passing.passed is True
     assert passing.median <= 0.1
@@ -170,8 +201,24 @@ def test_frozen_analysis_keeps_two_gates_and_stress_non_gating_on_toy_data() -> 
     assert zero_row["kl_over_epsilon_squared"] is None
     assert set(analysis["primary_gates"]) == {"analytic", "transport"}
     assert analysis["stress_results_gating"] is False
+    assert analysis["extended_local_results_gating"] is False
     assert analysis["alpha_source"] > 0.0
     assert len(analysis["target_prediction_rows"]) == 4
+
+
+def test_raw_generation_stops_if_matrix_oracle_disagrees(monkeypatch) -> None:
+    manifest = validate_manifest_dict(_toy_manifest())
+    original = matrix_power_oracle_trajectory
+
+    def wrong_oracle(*args, **kwargs):
+        states = original(*args, **kwargs)
+        states[-1, 0] += 1e-6
+        states[-1, 1] -= 1e-6
+        return states
+
+    monkeypatch.setattr(acl002_module, "matrix_power_oracle_trajectory", wrong_oracle)
+    with pytest.raises(FloatingPointError, match="matrix oracle disagree"):
+        generate_raw_rows(manifest)
 
 
 def test_manifest_rejects_non_row_stochastic_mutation() -> None:
@@ -185,6 +232,35 @@ def test_acl002_id_activates_exact_frozen_design_constants() -> None:
     payload = _toy_manifest()
     payload["experiment_id"] = "ACL-002"
     with pytest.raises(ValueError, match="design constants"):
+        validate_manifest_dict(payload)
+
+
+def test_acl002_regions_and_numerical_guards_are_exactly_frozen() -> None:
+    payload = _toy_manifest()
+    payload.update(
+        {
+            "experiment_id": "ACL-002",
+            "primary_horizon": 20,
+            "secondary_horizons": [1, 5, 50],
+            "epsilon_grid": [0.0, 1e-4, 3e-4, 1e-3, 3e-3, 1e-2, 3e-2, 1e-1],
+            "confirmatory_epsilons": [1e-4, 3e-4, 1e-3],
+            "extended_local_epsilons": [3e-3, 1e-2],
+            "stress_epsilons": [3e-2, 1e-1],
+            "benchmark_scope": "deterministic-held-out-benchmark",
+            "inference_scope": "descriptive-criteria-not-population-confidence",
+            "transport_scope": "within-family-combinatorial-held-out-transport",
+        }
+    )
+    payload["numerical_policy"].update(
+        {
+            "row_jacobian_mass_tolerance": 2e-14,
+            "tangent_mass_tolerance": 2e-13,
+            "perturbed_simplex_atol": 5e-13,
+            "matrix_oracle_max_abs_tolerance": 5e-13,
+        }
+    )
+    payload["landscapes"] = []
+    with pytest.raises(ValueError, match="landscapes"):
         validate_manifest_dict(payload)
 
 
@@ -241,21 +317,21 @@ def test_execution_context_requires_exact_sha_clean_tree_and_new_output(tmp_path
     assert_execution_context(
         approved_sha="abc123",
         current_sha="abc123",
-        tracked_dirty=False,
+        worktree_dirty=False,
         output_path=output,
     )
     with pytest.raises(ValueError, match="approved SHA"):
         assert_execution_context(
             approved_sha="abc123",
             current_sha="different",
-            tracked_dirty=False,
+            worktree_dirty=False,
             output_path=output,
         )
     with pytest.raises(ValueError, match="clean"):
         assert_execution_context(
             approved_sha="abc123",
             current_sha="abc123",
-            tracked_dirty=True,
+            worktree_dirty=True,
             output_path=output,
         )
     output.write_text("preserve", encoding="utf-8")
@@ -263,6 +339,29 @@ def test_execution_context_requires_exact_sha_clean_tree_and_new_output(tmp_path
         assert_execution_context(
             approved_sha="abc123",
             current_sha="abc123",
-            tracked_dirty=False,
+            worktree_dirty=False,
             output_path=output,
         )
+
+
+def test_git_execution_state_marks_untracked_python_file_dirty(tmp_path: Path) -> None:
+    subprocess.run(["git", "init", "-b", "main"], cwd=tmp_path, check=True, capture_output=True)
+    subprocess.run(
+        ["git", "config", "user.name", "ACL-002 Test"],
+        cwd=tmp_path,
+        check=True,
+    )
+    subprocess.run(
+        ["git", "config", "user.email", "acl002@example.invalid"],
+        cwd=tmp_path,
+        check=True,
+    )
+    tracked = tmp_path / "tracked.txt"
+    tracked.write_text("frozen\n", encoding="utf-8")
+    subprocess.run(["git", "add", "tracked.txt"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "commit", "-m", "fixture"], cwd=tmp_path, check=True)
+    _, clean = git_execution_state(tmp_path)
+    assert clean is False
+    (tmp_path / "untracked.py").write_text("raise SystemExit\n", encoding="utf-8")
+    _, dirty = git_execution_state(tmp_path)
+    assert dirty is True
