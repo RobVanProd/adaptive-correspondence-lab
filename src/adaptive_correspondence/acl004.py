@@ -573,7 +573,10 @@ def execute_confirmatory(
         output_path=canonical,
     )
     validation = validate_preregistration_bundle(bundle_path)
-    manifest = load_manifest(Path(bundle_path) / "manifest.json")
+    bundle = Path(bundle_path)
+    manifest = load_manifest(bundle / "manifest.json")
+    locked_registry = json.loads((bundle / "analytic_registry.json").read_text(encoding="utf-8"))
+    locked_bundle = json.loads((bundle / "LOCK.json").read_text(encoding="utf-8"))
     results = [estimate_landscape(manifest, landscape) for landscape in manifest.landscapes]
     for result in results:
         reproduced = reproduce_stopped_mean(result)
@@ -593,6 +596,8 @@ def execute_confirmatory(
         "inference_scope": manifest.inference_scope,
         "transport_scope": manifest.transport_scope,
         "frozen_design": manifest.raw,
+        "locked_analytic_registry": locked_registry,
+        "preregistration_bundle_lock": locked_bundle,
         "landscape_results": results,
         "analysis": analysis,
         "provenance": provenance(),

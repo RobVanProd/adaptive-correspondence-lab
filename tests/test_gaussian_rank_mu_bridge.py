@@ -30,6 +30,18 @@ def test_expected_rank_utility_matches_rank_extremes() -> None:
     assert worst == pytest.approx(0.0, rel=0.0, abs=1e-14)
 
 
+def test_expected_rank_utility_matches_conditional_rank_monte_carlo() -> None:
+    sample_count = 8
+    weights = logarithmic_rank_weights(sample_count, 4)
+    fixed_t = 0.37
+    predicted = expected_rank_utility(np.array([fixed_t]), sample_count, weights)[0]
+    rng = np.random.Generator(np.random.PCG64(9931))
+    others = rng.normal(size=(200_000, sample_count - 1))
+    better_counts = np.sum(others > fixed_t, axis=1)
+    realized = np.where(better_counts < weights.size, weights[better_counts.clip(max=3)], 0.0)
+    assert float(np.mean(realized)) == pytest.approx(predicted, abs=5e-4)
+
+
 def test_closed_comparator_matches_independent_tensor_score_integral() -> None:
     state = GaussianLinearBridgeState(
         mean=(0.4, -0.7), log_std=np.log((0.6, 1.4)), objective=(1.2, -0.5)

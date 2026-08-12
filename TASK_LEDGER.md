@@ -635,3 +635,10 @@
 - **Stop conditions:** any proposed confirmatory landscape is sampled before its public
   lock; the analytic block is zero/near-zero; quadrature fails; a threshold changes
   after shadows; or the implementation introduces hidden Gaussian optimizer state.
+- **First public checkpoint and audit hold:** commit
+  `bf5df09c1c3d58c3e1892234cbdd3da2b921c66b` froze the full design with zero
+  shadows. Exact-head audit held execution because the future evidence referenced but
+  did not embed the locked analytic registry and bundle hashes, weakening standalone
+  inspection. Before outcomes, embed both frozen objects and add an independent toy
+  Monte Carlo check of the conditional binomial rank-utility calculation. The
+  scientific design, landscapes, stopping rule, and gates do not change.
