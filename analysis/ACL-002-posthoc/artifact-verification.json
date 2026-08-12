@@ -1,0 +1,175 @@
+{
+  "alpha_transcription_absolute_difference": 2.0811933287845363e-09,
+  "approved_preregistration_sha": "3f6a935942f43c7d3055582d123e58af5bf3f38b",
+  "artifact_path": "evidence/ACL-002-confirmatory-3f6a935942f43c7d3055582d123e58af5bf3f38b.json",
+  "artifact_sha256": "4d08e85b927a5d78a29078ff0d6549225d98069b20186b754629464739f29d74",
+  "evidence_commit": "5caf47b510d70564415354f34ba729ff505f7ed4",
+  "frozen_alpha_source": 0.9951356698171323,
+  "frozen_primary_results": {
+    "analytic": {
+      "alpha": 1.0,
+      "landscape_count": 12,
+      "landscape_scores": [
+        {
+          "landscape_id": "T01",
+          "relative_error_max": 0.002797685705405237
+        },
+        {
+          "landscape_id": "T02",
+          "relative_error_max": 0.0038017138120624975
+        },
+        {
+          "landscape_id": "T03",
+          "relative_error_max": 0.012642831215652125
+        },
+        {
+          "landscape_id": "T04",
+          "relative_error_max": 0.008417613168015993
+        },
+        {
+          "landscape_id": "T05",
+          "relative_error_max": 0.0018788301100968628
+        },
+        {
+          "landscape_id": "T06",
+          "relative_error_max": 0.009443241476736652
+        },
+        {
+          "landscape_id": "T07",
+          "relative_error_max": 0.002287030201856805
+        },
+        {
+          "landscape_id": "T08",
+          "relative_error_max": 0.014962123699671766
+        },
+        {
+          "landscape_id": "T09",
+          "relative_error_max": 0.0019053081524134704
+        },
+        {
+          "landscape_id": "T10",
+          "relative_error_max": 0.00474791698212387
+        },
+        {
+          "landscape_id": "T11",
+          "relative_error_max": 0.0015798618837721801
+        },
+        {
+          "landscape_id": "T12",
+          "relative_error_max": 0.021864168185146807
+        }
+      ],
+      "median": 0.004274815397093183,
+      "passed": true,
+      "q90": 0.014730194451269803
+    },
+    "transport": {
+      "alpha": 0.9951356698171323,
+      "landscape_count": 12,
+      "landscape_scores": [
+        {
+          "landscape_id": "T01",
+          "relative_error_max": 0.0046065041670287936
+        },
+        {
+          "landscape_id": "T02",
+          "relative_error_max": 0.004505474220921811
+        },
+        {
+          "landscape_id": "T03",
+          "relative_error_max": 0.007816523182425742
+        },
+        {
+          "landscape_id": "T04",
+          "relative_error_max": 0.00403845188945915
+        },
+        {
+          "landscape_id": "T05",
+          "relative_error_max": 0.004699217687517743
+        },
+        {
+          "landscape_id": "T06",
+          "relative_error_max": 0.0046012935047442475
+        },
+        {
+          "landscape_id": "T07",
+          "relative_error_max": 0.004658122524623749
+        },
+        {
+          "landscape_id": "T08",
+          "relative_error_max": 0.010147152617551662
+        },
+        {
+          "landscape_id": "T09",
+          "relative_error_max": 0.004696642306247561
+        },
+        {
+          "landscape_id": "T10",
+          "relative_error_max": 0.004409682692596881
+        },
+        {
+          "landscape_id": "T11",
+          "relative_error_max": 0.004729361181012869
+        },
+        {
+          "landscape_id": "T12",
+          "relative_error_max": 0.017082935038800432
+        }
+      ],
+      "median": 0.004677382415435655,
+      "passed": true,
+      "q90": 0.00991408967403907
+    }
+  },
+  "horizons": [
+    1,
+    5,
+    20,
+    50
+  ],
+  "landscape_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08",
+    "T09",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14"
+  ],
+  "matrix_oracle": {
+    "formula": "normalize(p0 @ matrix_power(D @ A_epsilon, T))",
+    "maximum_absolute_error": 1.5543122344752192e-15,
+    "passed": true,
+    "tolerance": 5e-13
+  },
+  "prompt_alpha_transcription": 0.9951356718983256,
+  "randomness_used": false,
+  "region_counts": {
+    "confirmatory": 336,
+    "extended-local": 224,
+    "stress": 224,
+    "zero": 112
+  },
+  "row_count": 896
+}

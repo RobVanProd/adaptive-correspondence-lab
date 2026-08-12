@@ -1,0 +1,1954 @@
+{
+  "analysis_code_commit": "f85eb1bef950285ac80123eed89ed862a775d441",
+  "analysis_id": "ACL-002-posthoc",
+  "classification": "deterministic-post-confirmatory-exploratory-analysis",
+  "confirmed_findings": {
+    "acl002_primary_gates": {
+      "analytic": {
+        "alpha": 1.0,
+        "landscape_count": 12,
+        "landscape_scores": [
+          {
+            "landscape_id": "T01",
+            "relative_error_max": 0.002797685705405237
+          },
+          {
+            "landscape_id": "T02",
+            "relative_error_max": 0.0038017138120624975
+          },
+          {
+            "landscape_id": "T03",
+            "relative_error_max": 0.012642831215652125
+          },
+          {
+            "landscape_id": "T04",
+            "relative_error_max": 0.008417613168015993
+          },
+          {
+            "landscape_id": "T05",
+            "relative_error_max": 0.0018788301100968628
+          },
+          {
+            "landscape_id": "T06",
+            "relative_error_max": 0.009443241476736652
+          },
+          {
+            "landscape_id": "T07",
+            "relative_error_max": 0.002287030201856805
+          },
+          {
+            "landscape_id": "T08",
+            "relative_error_max": 0.014962123699671766
+          },
+          {
+            "landscape_id": "T09",
+            "relative_error_max": 0.0019053081524134704
+          },
+          {
+            "landscape_id": "T10",
+            "relative_error_max": 0.00474791698212387
+          },
+          {
+            "landscape_id": "T11",
+            "relative_error_max": 0.0015798618837721801
+          },
+          {
+            "landscape_id": "T12",
+            "relative_error_max": 0.021864168185146807
+          }
+        ],
+        "median": 0.004274815397093183,
+        "passed": true,
+        "q90": 0.014730194451269803
+      },
+      "transport": {
+        "alpha": 0.9951356698171323,
+        "landscape_count": 12,
+        "landscape_scores": [
+          {
+            "landscape_id": "T01",
+            "relative_error_max": 0.0046065041670287936
+          },
+          {
+            "landscape_id": "T02",
+            "relative_error_max": 0.004505474220921811
+          },
+          {
+            "landscape_id": "T03",
+            "relative_error_max": 0.007816523182425742
+          },
+          {
+            "landscape_id": "T04",
+            "relative_error_max": 0.00403845188945915
+          },
+          {
+            "landscape_id": "T05",
+            "relative_error_max": 0.004699217687517743
+          },
+          {
+            "landscape_id": "T06",
+            "relative_error_max": 0.0046012935047442475
+          },
+          {
+            "landscape_id": "T07",
+            "relative_error_max": 0.004658122524623749
+          },
+          {
+            "landscape_id": "T08",
+            "relative_error_max": 0.010147152617551662
+          },
+          {
+            "landscape_id": "T09",
+            "relative_error_max": 0.004696642306247561
+          },
+          {
+            "landscape_id": "T10",
+            "relative_error_max": 0.004409682692596881
+          },
+          {
+            "landscape_id": "T11",
+            "relative_error_max": 0.004729361181012869
+          },
+          {
+            "landscape_id": "T12",
+            "relative_error_max": 0.017082935038800432
+          }
+        ],
+        "median": 0.004677382415435655,
+        "passed": true,
+        "q90": 0.00991408967403907
+      }
+    },
+    "interpretive_limit": "ACL-002 confirms first-order prediction only on its frozen deterministic within-family benchmark; posthoc results do not alter that verdict.",
+    "matrix_power_oracle": {
+      "formula": "normalize(p0 @ matrix_power(D @ A_epsilon, T))",
+      "maximum_absolute_error": 1.5543122344752192e-15,
+      "passed": true,
+      "tolerance": 5e-13
+    },
+    "special_target_strata": [
+      {
+        "checks": {
+          "analytic": {
+            "absolute_errors": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "passed": true
+          },
+          "transport": {
+            "absolute_errors": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "passed": true
+          }
+        },
+        "landscape_id": "T13",
+        "stratum": "analytic-zero"
+      },
+      {
+        "checks": {
+          "analytic": {
+            "absolute_errors": [
+              2.1904874895992566e-17,
+              1.2122577591923572e-16,
+              1.6952930965887913e-16
+            ],
+            "passed": true
+          },
+          "transport": {
+            "absolute_errors": [
+              2.3418469762403697e-17,
+              1.2576656051846907e-16,
+              1.5439336099476772e-16
+            ],
+            "passed": true
+          }
+        },
+        "landscape_id": "T14",
+        "stratum": "low-sensitivity"
+      }
+    ]
+  },
+  "derived_table_sha256": {
+    "artifact-verification.json": "8674cf2972881daf8313f9c621c744ab83acdcae5042f11d6023f35b59ef0175",
+    "empirical-stability-radii.csv": "e87150f01523418598a095817043aa6f18b5d1b0b05e3991648ea56702b8f64d",
+    "horizon-features.csv": "423d658f1b5de256e10827e3f03386a805e2f90b17309aa1a3aa58abd78167a4",
+    "horizon-model-comparison.csv": "6582c17aea2279b57b4e7111809162612f127b1b7bc6f4b79712c4b0f24126c5",
+    "kl-residual-summary.csv": "580855de5384eee8c42ec5b7529ff2df7920ade06b718648b94a09cc572ef557",
+    "kl-residuals.csv": "9d6264bfbfe2050539b6c0b8374f1252790dffb3e10d5670c567d648a57c9854",
+    "l1-cross-landscape-summary.csv": "74a1d668a8dd21bbabab48b730978fb8386800fbd641ba039d44fa1e3dfb8978",
+    "l1-residual-summary.csv": "d415bcd78eaf14da300ade7c7247f2a57fdd9918f3cd5fb42d78ee06762188d1",
+    "l1-residuals.csv": "6f3e84e72a4077c90d5394a44ca3f7f4e865166aad7a14479d610ae844ffa8dd",
+    "l1-source-target-comparison.csv": "21a8f6779b2ed4c6f5e837ee9eb58aabe9bca8e37cbf7fcf826d007bedec0cbe",
+    "source-alphas.csv": "a920cab79873e87e905c6a22c3c56df5257dd4ad35619ed917cbd47656736656"
+  },
+  "exploratory_observations": {
+    "artifact_identifiability": {
+      "mutation_measure": "nominal catalog ID only",
+      "numeric_mutation_matrix_available": false,
+      "reward_measure": "per-step clean log-odds spread inferred from artifact states; equals eta times reward spread"
+    },
+    "best_exploratory_horizon_models_by_lolo_r_squared": {
+      "C_endpoint_l1": {
+        "features": "log_horizon+selection_log_factor_spread_per_step+clean_boundary_pressure+mutation_id=asymmetric_b+mutation_id=backward_cycle+mutation_id=forward_cycle+mutation_id=uniform_mix+mutation_id=uniform_off_diagonal",
+        "in_sample_r_squared": 0.8511344138838569,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.7695188477168985,
+        "leave_one_landscape_out_rmse_log_units": 0.9017992225645632,
+        "model": "additive",
+        "observation_count": 96,
+        "response": "C_endpoint_l1",
+        "response_transform": "natural-log"
+      },
+      "C_max_path_l1": {
+        "features": "log_horizon+selection_log_factor_spread_per_step+clean_boundary_pressure+mutation_id=asymmetric_b+mutation_id=backward_cycle+mutation_id=forward_cycle+mutation_id=uniform_mix+mutation_id=uniform_off_diagonal",
+        "in_sample_r_squared": 0.8548006627231438,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.774385299135555,
+        "leave_one_landscape_out_rmse_log_units": 0.8911669547435939,
+        "model": "additive",
+        "observation_count": 96,
+        "response": "C_max_path_l1",
+        "response_transform": "natural-log"
+      }
+    },
+    "empirical_stability_radius": [
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.01,
+        "split": "source"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.05,
+        "split": "source"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.1,
+        "split": "source"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.2,
+        "split": "source"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.01,
+        "split": "source"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.05,
+        "split": "source"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.1,
+        "split": "source"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.2,
+        "split": "source"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.01,
+        "median_radius_type7": 0.003,
+        "metric": "endpoint",
+        "minimum_radius": 0.001,
+        "radius_counts": {
+          "0.001": 1,
+          "0.003": 7,
+          "0.01": 4
+        },
+        "relative_error_level": 0.01,
+        "split": "source"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "endpoint",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 4,
+          "0.03": 6,
+          "0.1": 2
+        },
+        "relative_error_level": 0.05,
+        "split": "source"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "endpoint",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 1,
+          "0.03": 7,
+          "0.1": 4
+        },
+        "relative_error_level": 0.1,
+        "split": "source"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.03,
+        "radius_counts": {
+          "0.03": 2,
+          "0.1": 10
+        },
+        "relative_error_level": 0.2,
+        "split": "source"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.01,
+        "median_radius_type7": 0.003,
+        "metric": "max_path",
+        "minimum_radius": 0.001,
+        "radius_counts": {
+          "0.001": 1,
+          "0.003": 7,
+          "0.01": 4
+        },
+        "relative_error_level": 0.01,
+        "split": "source"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "max_path",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 4,
+          "0.03": 6,
+          "0.1": 2
+        },
+        "relative_error_level": 0.05,
+        "split": "source"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "max_path",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 1,
+          "0.03": 7,
+          "0.1": 4
+        },
+        "relative_error_level": 0.1,
+        "split": "source"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.03,
+        "radius_counts": {
+          "0.03": 2,
+          "0.1": 10
+        },
+        "relative_error_level": 0.2,
+        "split": "source"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.001,
+        "metric": "endpoint",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 2,
+          "0.001": 6,
+          "0.003": 3,
+          "0.03": 1
+        },
+        "relative_error_level": 0.01,
+        "split": "source"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.003,
+        "metric": "endpoint",
+        "minimum_radius": 0.001,
+        "radius_counts": {
+          "0.001": 1,
+          "0.003": 7,
+          "0.01": 2,
+          "0.03": 1,
+          "0.1": 1
+        },
+        "relative_error_level": 0.05,
+        "split": "source"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.01,
+        "metric": "endpoint",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 2,
+          "0.01": 6,
+          "0.03": 3,
+          "0.1": 1
+        },
+        "relative_error_level": 0.1,
+        "split": "source"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "endpoint",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 5,
+          "0.03": 3,
+          "0.1": 4
+        },
+        "relative_error_level": 0.2,
+        "split": "source"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.003,
+        "median_radius_type7": 0.001,
+        "metric": "max_path",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 1,
+          "0.001": 8,
+          "0.003": 3
+        },
+        "relative_error_level": 0.01,
+        "split": "source"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.003,
+        "metric": "max_path",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 8,
+          "0.01": 3,
+          "0.03": 1
+        },
+        "relative_error_level": 0.05,
+        "split": "source"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.01,
+        "metric": "max_path",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 1,
+          "0.01": 6,
+          "0.03": 4,
+          "0.1": 1
+        },
+        "relative_error_level": 0.1,
+        "split": "source"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "max_path",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 4,
+          "0.03": 4,
+          "0.1": 4
+        },
+        "relative_error_level": 0.2,
+        "split": "source"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.003,
+        "median_radius_type7": 0.0003,
+        "metric": "endpoint",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 7,
+          "0.001": 1,
+          "0.003": 4
+        },
+        "relative_error_level": 0.01,
+        "split": "source"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.003,
+        "metric": "endpoint",
+        "minimum_radius": 0.001,
+        "radius_counts": {
+          "0.001": 4,
+          "0.003": 4,
+          "0.01": 3,
+          "0.03": 1
+        },
+        "relative_error_level": 0.05,
+        "split": "source"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.003,
+        "metric": "endpoint",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 7,
+          "0.01": 1,
+          "0.03": 4
+        },
+        "relative_error_level": 0.1,
+        "split": "source"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.01,
+        "metric": "endpoint",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 3,
+          "0.01": 5,
+          "0.03": 3,
+          "0.1": 1
+        },
+        "relative_error_level": 0.2,
+        "split": "source"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.003,
+        "median_radius_type7": 0.0003,
+        "metric": "max_path",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 7,
+          "0.001": 1,
+          "0.003": 4
+        },
+        "relative_error_level": 0.01,
+        "split": "source"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.003,
+        "metric": "max_path",
+        "minimum_radius": 0.001,
+        "radius_counts": {
+          "0.001": 4,
+          "0.003": 4,
+          "0.01": 3,
+          "0.03": 1
+        },
+        "relative_error_level": 0.05,
+        "split": "source"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.003,
+        "metric": "max_path",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 7,
+          "0.01": 1,
+          "0.03": 4
+        },
+        "relative_error_level": 0.1,
+        "split": "source"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.01,
+        "metric": "max_path",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 3,
+          "0.01": 5,
+          "0.03": 3,
+          "0.1": 1
+        },
+        "relative_error_level": 0.2,
+        "split": "source"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.01,
+        "split": "target"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.05,
+        "split": "target"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.1,
+        "split": "target"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.2,
+        "split": "target"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.01,
+        "split": "target"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.05,
+        "split": "target"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.1,
+        "split": "target"
+      },
+      {
+        "horizon": 1,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.1,
+        "radius_counts": {
+          "0.1": 12
+        },
+        "relative_error_level": 0.2,
+        "split": "target"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.01,
+        "median_radius_type7": 0.003,
+        "metric": "endpoint",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 7,
+          "0.01": 5
+        },
+        "relative_error_level": 0.01,
+        "split": "target"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "endpoint",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 5,
+          "0.03": 5,
+          "0.1": 2
+        },
+        "relative_error_level": 0.05,
+        "split": "target"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.065,
+        "metric": "endpoint",
+        "minimum_radius": 0.03,
+        "radius_counts": {
+          "0.03": 6,
+          "0.1": 6
+        },
+        "relative_error_level": 0.1,
+        "split": "target"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "endpoint",
+        "minimum_radius": 0.03,
+        "radius_counts": {
+          "0.03": 3,
+          "0.1": 9
+        },
+        "relative_error_level": 0.2,
+        "split": "target"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.01,
+        "median_radius_type7": 0.003,
+        "metric": "max_path",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 7,
+          "0.01": 5
+        },
+        "relative_error_level": 0.01,
+        "split": "target"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "max_path",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 5,
+          "0.03": 5,
+          "0.1": 2
+        },
+        "relative_error_level": 0.05,
+        "split": "target"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.065,
+        "metric": "max_path",
+        "minimum_radius": 0.03,
+        "radius_counts": {
+          "0.03": 6,
+          "0.1": 6
+        },
+        "relative_error_level": 0.1,
+        "split": "target"
+      },
+      {
+        "horizon": 5,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.1,
+        "metric": "max_path",
+        "minimum_radius": 0.03,
+        "radius_counts": {
+          "0.03": 3,
+          "0.1": 9
+        },
+        "relative_error_level": 0.2,
+        "split": "target"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.003,
+        "median_radius_type7": 0.001,
+        "metric": "endpoint",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 3,
+          "0.001": 4,
+          "0.003": 5
+        },
+        "relative_error_level": 0.01,
+        "split": "target"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.01,
+        "metric": "endpoint",
+        "minimum_radius": 0.001,
+        "radius_counts": {
+          "0.001": 1,
+          "0.003": 4,
+          "0.01": 6,
+          "0.03": 1
+        },
+        "relative_error_level": 0.05,
+        "split": "target"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.01,
+        "metric": "endpoint",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 3,
+          "0.01": 4,
+          "0.03": 5
+        },
+        "relative_error_level": 0.1,
+        "split": "target"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "endpoint",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 5,
+          "0.03": 4,
+          "0.1": 3
+        },
+        "relative_error_level": 0.2,
+        "split": "target"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.003,
+        "median_radius_type7": 0.001,
+        "metric": "max_path",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 3,
+          "0.001": 4,
+          "0.003": 5
+        },
+        "relative_error_level": 0.01,
+        "split": "target"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.01,
+        "metric": "max_path",
+        "minimum_radius": 0.001,
+        "radius_counts": {
+          "0.001": 1,
+          "0.003": 4,
+          "0.01": 6,
+          "0.03": 1
+        },
+        "relative_error_level": 0.05,
+        "split": "target"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.03,
+        "median_radius_type7": 0.01,
+        "metric": "max_path",
+        "minimum_radius": 0.003,
+        "radius_counts": {
+          "0.003": 3,
+          "0.01": 4,
+          "0.03": 5
+        },
+        "relative_error_level": 0.1,
+        "split": "target"
+      },
+      {
+        "horizon": 20,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.03,
+        "metric": "max_path",
+        "minimum_radius": 0.01,
+        "radius_counts": {
+          "0.01": 5,
+          "0.03": 4,
+          "0.1": 3
+        },
+        "relative_error_level": 0.2,
+        "split": "target"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.003,
+        "median_radius_type7": 0.001,
+        "metric": "endpoint",
+        "minimum_radius": 0.0001,
+        "radius_counts": {
+          "0.0001": 1,
+          "0.0003": 4,
+          "0.001": 1,
+          "0.003": 5,
+          "none": 1
+        },
+        "relative_error_level": 0.01,
+        "split": "target"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.01,
+        "median_radius_type7": 0.003,
+        "metric": "endpoint",
+        "minimum_radius": 0.0001,
+        "radius_counts": {
+          "0.0001": 1,
+          "0.001": 4,
+          "0.003": 2,
+          "0.01": 5
+        },
+        "relative_error_level": 0.05,
+        "split": "target"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.006500000000000001,
+        "metric": "endpoint",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 1,
+          "0.001": 1,
+          "0.003": 4,
+          "0.01": 1,
+          "0.03": 4,
+          "0.1": 1
+        },
+        "relative_error_level": 0.1,
+        "split": "target"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.01,
+        "metric": "endpoint",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 1,
+          "0.003": 3,
+          "0.01": 3,
+          "0.03": 3,
+          "0.1": 2
+        },
+        "relative_error_level": 0.2,
+        "split": "target"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.003,
+        "median_radius_type7": 0.001,
+        "metric": "max_path",
+        "minimum_radius": 0.0001,
+        "radius_counts": {
+          "0.0001": 1,
+          "0.0003": 4,
+          "0.001": 1,
+          "0.003": 5,
+          "none": 1
+        },
+        "relative_error_level": 0.01,
+        "split": "target"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.01,
+        "median_radius_type7": 0.003,
+        "metric": "max_path",
+        "minimum_radius": 0.0001,
+        "radius_counts": {
+          "0.0001": 1,
+          "0.001": 4,
+          "0.003": 2,
+          "0.01": 5
+        },
+        "relative_error_level": 0.05,
+        "split": "target"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.006500000000000001,
+        "metric": "max_path",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 1,
+          "0.001": 1,
+          "0.003": 4,
+          "0.01": 1,
+          "0.03": 4,
+          "0.1": 1
+        },
+        "relative_error_level": 0.1,
+        "split": "target"
+      },
+      {
+        "horizon": 50,
+        "landscape_count": 12,
+        "maximum_radius": 0.1,
+        "median_radius_type7": 0.01,
+        "metric": "max_path",
+        "minimum_radius": 0.0003,
+        "radius_counts": {
+          "0.0003": 1,
+          "0.003": 3,
+          "0.01": 3,
+          "0.03": 3,
+          "0.1": 2
+        },
+        "relative_error_level": 0.2,
+        "split": "target"
+      }
+    ],
+    "endpoint_equals_max_path_row_count": 759,
+    "horizon_model_comparison": [
+      {
+        "features": "log_horizon",
+        "in_sample_r_squared": 0.6946185931414554,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.6687210805819372,
+        "leave_one_landscape_out_rmse_log_units": 1.0811577075913177,
+        "model": "horizon-only",
+        "observation_count": 96,
+        "response": "C_endpoint_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "selection_log_factor_spread_per_step",
+        "in_sample_r_squared": 0.031268771131869655,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": -0.007061412911007814,
+        "leave_one_landscape_out_rmse_log_units": 1.8850380723274252,
+        "model": "reward-intensity-only",
+        "observation_count": 96,
+        "response": "C_endpoint_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "clean_boundary_pressure",
+        "in_sample_r_squared": 0.11303962477135276,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.07072152777314011,
+        "leave_one_landscape_out_rmse_log_units": 1.8107774874798126,
+        "model": "boundary-only",
+        "observation_count": 96,
+        "response": "C_endpoint_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "mutation_id=asymmetric_b+mutation_id=backward_cycle+mutation_id=forward_cycle+mutation_id=uniform_mix+mutation_id=uniform_off_diagonal",
+        "in_sample_r_squared": 0.10834021936485516,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": -0.001145856719667826,
+        "leave_one_landscape_out_rmse_log_units": 1.8794934887009014,
+        "model": "mutation-id-only",
+        "observation_count": 96,
+        "response": "C_endpoint_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "log_horizon+selection_log_factor_spread_per_step+clean_boundary_pressure+mutation_id=asymmetric_b+mutation_id=backward_cycle+mutation_id=forward_cycle+mutation_id=uniform_mix+mutation_id=uniform_off_diagonal",
+        "in_sample_r_squared": 0.8511344138838569,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.7695188477168985,
+        "leave_one_landscape_out_rmse_log_units": 0.9017992225645632,
+        "model": "additive",
+        "observation_count": 96,
+        "response": "C_endpoint_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "log_horizon+selection_log_factor_spread_per_step+clean_boundary_pressure+mutation_id=asymmetric_b+mutation_id=backward_cycle+mutation_id=forward_cycle+mutation_id=uniform_mix+mutation_id=uniform_off_diagonal+horizon_x_reward+horizon_x_boundary+horizon_x_mutation_id=asymmetric_b+horizon_x_mutation_id=backward_cycle+horizon_x_mutation_id=forward_cycle+horizon_x_mutation_id=uniform_mix+horizon_x_mutation_id=uniform_off_diagonal",
+        "in_sample_r_squared": 0.8849952446760678,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.7465624628625558,
+        "leave_one_landscape_out_rmse_log_units": 0.94564388398416,
+        "model": "additive-plus-interactions",
+        "observation_count": 96,
+        "response": "C_endpoint_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "log_horizon",
+        "in_sample_r_squared": 0.698957182504516,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.6732171948559722,
+        "leave_one_landscape_out_rmse_log_units": 1.072518951891008,
+        "model": "horizon-only",
+        "observation_count": 96,
+        "response": "C_max_path_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "selection_log_factor_spread_per_step",
+        "in_sample_r_squared": 0.030421127321396124,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": -0.007839682936357395,
+        "leave_one_landscape_out_rmse_log_units": 1.8835237643284883,
+        "model": "reward-intensity-only",
+        "observation_count": 96,
+        "response": "C_max_path_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "clean_boundary_pressure",
+        "in_sample_r_squared": 0.11187152379260334,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.06974163504679776,
+        "leave_one_landscape_out_rmse_log_units": 1.8095774214623754,
+        "model": "boundary-only",
+        "observation_count": 96,
+        "response": "C_max_path_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "mutation_id=asymmetric_b+mutation_id=backward_cycle+mutation_id=forward_cycle+mutation_id=uniform_mix+mutation_id=uniform_off_diagonal",
+        "in_sample_r_squared": 0.1088551748340233,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.0008122249763761191,
+        "leave_one_landscape_out_rmse_log_units": 1.8754216826110455,
+        "model": "mutation-id-only",
+        "observation_count": 96,
+        "response": "C_max_path_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "log_horizon+selection_log_factor_spread_per_step+clean_boundary_pressure+mutation_id=asymmetric_b+mutation_id=backward_cycle+mutation_id=forward_cycle+mutation_id=uniform_mix+mutation_id=uniform_off_diagonal",
+        "in_sample_r_squared": 0.8548006627231438,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.774385299135555,
+        "leave_one_landscape_out_rmse_log_units": 0.8911669547435939,
+        "model": "additive",
+        "observation_count": 96,
+        "response": "C_max_path_l1",
+        "response_transform": "natural-log"
+      },
+      {
+        "features": "log_horizon+selection_log_factor_spread_per_step+clean_boundary_pressure+mutation_id=asymmetric_b+mutation_id=backward_cycle+mutation_id=forward_cycle+mutation_id=uniform_mix+mutation_id=uniform_off_diagonal+horizon_x_reward+horizon_x_boundary+horizon_x_mutation_id=asymmetric_b+horizon_x_mutation_id=backward_cycle+horizon_x_mutation_id=forward_cycle+horizon_x_mutation_id=uniform_mix+horizon_x_mutation_id=uniform_off_diagonal",
+        "in_sample_r_squared": 0.8892019982095808,
+        "landscape_count": 24,
+        "leave_one_landscape_out_r_squared": 0.7529543155280982,
+        "leave_one_landscape_out_rmse_log_units": 0.9325325778837352,
+        "model": "additive-plus-interactions",
+        "observation_count": 96,
+        "response": "C_max_path_l1",
+        "response_transform": "natural-log"
+      }
+    ],
+    "kl_target_absolute_relative_error_by_horizon_region": [
+      {
+        "count": 35,
+        "horizon": 1,
+        "maximum": 0.08729552055152653,
+        "mean": 0.003830358584223511,
+        "median_type7": 0.00011149523447217884,
+        "minimum": 6.668468122678195e-08,
+        "population_standard_deviation": 0.015154834632061869,
+        "q10_type7": 6.551864333583767e-06,
+        "q90_type7": 0.0015925035576150055,
+        "region": "confirmatory"
+      },
+      {
+        "count": 24,
+        "horizon": 1,
+        "maximum": 0.43281670329581723,
+        "mean": 0.029921763637974694,
+        "median_type7": 0.0022053867885536097,
+        "minimum": 1.4070916452571201e-05,
+        "population_standard_deviation": 0.09375405509272562,
+        "q10_type7": 8.517291329971522e-05,
+        "q90_type7": 0.015746813068836994,
+        "region": "extended-local"
+      },
+      {
+        "count": 24,
+        "horizon": 1,
+        "maximum": 0.8243367496741925,
+        "mean": 0.08870856733438041,
+        "median_type7": 0.02120426490939019,
+        "minimum": 0.00014092262782357918,
+        "population_standard_deviation": 0.20008481430875621,
+        "q10_type7": 0.0008444531401536425,
+        "q90_type7": 0.12813633126796392,
+        "region": "stress"
+      },
+      {
+        "count": 36,
+        "horizon": 5,
+        "maximum": 0.2683714226445913,
+        "mean": 0.013933041739780251,
+        "median_type7": 0.0012505203150930434,
+        "minimum": 0.00010841243872013191,
+        "population_standard_deviation": 0.04677161635428561,
+        "q10_type7": 0.00031854551114548726,
+        "q90_type7": 0.011197041221801155,
+        "region": "confirmatory"
+      },
+      {
+        "count": 24,
+        "horizon": 5,
+        "maximum": 0.7171599010445661,
+        "mean": 0.08131318277606987,
+        "median_type7": 0.029686407466701342,
+        "minimum": 0.0032462293457749974,
+        "population_standard_deviation": 0.16281595933801873,
+        "q10_type7": 0.008618116578454134,
+        "q90_type7": 0.09981532611762618,
+        "region": "extended-local"
+      },
+      {
+        "count": 24,
+        "horizon": 5,
+        "maximum": 0.9498907558782645,
+        "mean": 0.292079792163301,
+        "median_type7": 0.23239945130964035,
+        "minimum": 0.03193868161572831,
+        "population_standard_deviation": 0.23628012300073742,
+        "q10_type7": 0.08030083535211573,
+        "q90_type7": 0.542504259041619,
+        "region": "stress"
+      },
+      {
+        "count": 36,
+        "horizon": 20,
+        "maximum": 0.4438507485754213,
+        "mean": 0.032019486955838145,
+        "median_type7": 0.007727225662593309,
+        "minimum": 0.0007499555994172988,
+        "population_standard_deviation": 0.07926759104179695,
+        "q10_type7": 0.0014924613789248885,
+        "q90_type7": 0.05968610554013827,
+        "region": "confirmatory"
+      },
+      {
+        "count": 24,
+        "horizon": 20,
+        "maximum": 0.8638348905105787,
+        "mean": 0.1865071287049148,
+        "median_type7": 0.11241019152297801,
+        "minimum": 0.022065474673563085,
+        "population_standard_deviation": 0.20294962244669784,
+        "q10_type7": 0.03669164820621188,
+        "q90_type7": 0.3730373541901467,
+        "region": "extended-local"
+      },
+      {
+        "count": 24,
+        "horizon": 20,
+        "maximum": 0.9936103433987334,
+        "mean": 0.5891434521747152,
+        "median_type7": 0.5981394825723367,
+        "minimum": 0.18787968335267338,
+        "population_standard_deviation": 0.2412818994602449,
+        "q10_type7": 0.26421697106756903,
+        "q90_type7": 0.9123401427326346,
+        "region": "stress"
+      },
+      {
+        "count": 36,
+        "horizon": 50,
+        "maximum": 0.6140749880233947,
+        "mean": 0.07696451134895053,
+        "median_type7": 0.029848296324553436,
+        "minimum": 0.003035129362938779,
+        "population_standard_deviation": 0.1250874426080338,
+        "q10_type7": 0.005913959555330486,
+        "q90_type7": 0.1651744883947278,
+        "region": "confirmatory"
+      },
+      {
+        "count": 24,
+        "horizon": 50,
+        "maximum": 0.9734774911110705,
+        "mean": 0.38299509240244994,
+        "median_type7": 0.28651978209349066,
+        "minimum": 0.08455253225605454,
+        "population_standard_deviation": 0.24395978331949908,
+        "q10_type7": 0.12152852033335214,
+        "q90_type7": 0.7608539595303195,
+        "region": "extended-local"
+      },
+      {
+        "count": 24,
+        "horizon": 50,
+        "maximum": 0.9998370172131312,
+        "mean": 0.8148007837842782,
+        "median_type7": 0.8516865587074358,
+        "minimum": 0.44874292693063744,
+        "population_standard_deviation": 0.15916644106647518,
+        "q10_type7": 0.5681401685280352,
+        "q90_type7": 0.9849444730916151,
+        "region": "stress"
+      }
+    ],
+    "kl_target_residual_sign_counts": {
+      "1|confirmatory|negative": 10,
+      "1|confirmatory|numerical-zero": 2,
+      "1|extended-local|negative": 11,
+      "1|extended-local|numerical-zero": 1,
+      "1|stress|negative": 12,
+      "20|confirmatory|negative": 12,
+      "20|extended-local|negative": 12,
+      "20|stress|negative": 12,
+      "50|confirmatory|negative": 12,
+      "50|extended-local|negative": 12,
+      "50|stress|negative": 12,
+      "5|confirmatory|negative": 12,
+      "5|extended-local|negative": 12,
+      "5|stress|negative": 12
+    },
+    "l1_target_absolute_relative_error_by_horizon_region": [
+      {
+        "count": 36,
+        "horizon": 1,
+        "maximum": 2.4200703866593403e-11,
+        "mean": 1.4865210872301352e-12,
+        "median_type7": 1.6178247051008475e-13,
+        "minimum": 5.863909927384288e-15,
+        "population_standard_deviation": 4.185569194889264e-12,
+        "q10_type7": 4.779947282764982e-14,
+        "q90_type7": 2.618467532020537e-12,
+        "region": "confirmatory"
+      },
+      {
+        "count": 24,
+        "horizon": 1,
+        "maximum": 2.3442081699114643e-13,
+        "mean": 3.558916339810079e-14,
+        "median_type7": 5.824324923021424e-15,
+        "minimum": 4.541266539090485e-16,
+        "population_standard_deviation": 7.046090048244413e-14,
+        "q10_type7": 9.344412125389126e-16,
+        "q90_type7": 1.5893530585628444e-13,
+        "region": "extended-local"
+      },
+      {
+        "count": 24,
+        "horizon": 1,
+        "maximum": 2.3428523525777966e-14,
+        "mean": 3.4680436763271914e-15,
+        "median_type7": 1.351222824460259e-15,
+        "minimum": 1.2332990323946189e-16,
+        "population_standard_deviation": 5.180730960356024e-15,
+        "q10_type7": 2.2263051557117497e-16,
+        "q90_type7": 8.536825448056871e-15,
+        "region": "stress"
+      },
+      {
+        "count": 36,
+        "horizon": 5,
+        "maximum": 0.003041333472778363,
+        "mean": 0.0006883246823592905,
+        "median_type7": 0.0003120373518654412,
+        "minimum": 4.871234970551022e-05,
+        "population_standard_deviation": 0.0007867627552206122,
+        "q10_type7": 7.931333071017273e-05,
+        "q90_type7": 0.001969967756071091,
+        "region": "confirmatory"
+      },
+      {
+        "count": 24,
+        "horizon": 5,
+        "maximum": 0.02999577899838288,
+        "mean": 0.009513566889908707,
+        "median_type7": 0.007353530181291588,
+        "minimum": 0.0014612669820956473,
+        "population_standard_deviation": 0.008280219388789747,
+        "q10_type7": 0.002282855555938888,
+        "q90_type7": 0.022590134133499883,
+        "region": "extended-local"
+      },
+      {
+        "count": 24,
+        "horizon": 5,
+        "maximum": 0.261397183194694,
+        "mean": 0.08825698818383602,
+        "median_type7": 0.07141884181556933,
+        "minimum": 0.014602363418276728,
+        "population_standard_deviation": 0.07201041523146072,
+        "q10_type7": 0.02266794072239724,
+        "q90_type7": 0.2013413218463941,
+        "region": "stress"
+      },
+      {
+        "count": 36,
+        "horizon": 20,
+        "maximum": 0.021864168185146807,
+        "mean": 0.003363810671679135,
+        "median_type7": 0.0015445789563737185,
+        "minimum": 0.00015797417619346996,
+        "population_standard_deviation": 0.004667436991485105,
+        "q10_type7": 0.00025454993866601364,
+        "q90_type7": 0.008930427322376321,
+        "region": "confirmatory"
+      },
+      {
+        "count": 24,
+        "horizon": 20,
+        "maximum": 0.18672119128362358,
+        "mean": 0.04391236704428348,
+        "median_type7": 0.026260159153139628,
+        "minimum": 0.004740358469731027,
+        "population_standard_deviation": 0.04605822267025537,
+        "q10_type7": 0.0060559992955672845,
+        "q90_type7": 0.10939985242566398,
+        "region": "extended-local"
+      },
+      {
+        "count": 24,
+        "horizon": 20,
+        "maximum": 0.7421682489848417,
+        "mean": 0.2872725117092345,
+        "median_type7": 0.22639526978097363,
+        "minimum": 0.04746861980144209,
+        "population_standard_deviation": 0.20756060864648654,
+        "q10_type7": 0.06000440643628396,
+        "q90_type7": 0.6216524577856873,
+        "region": "stress"
+      },
+      {
+        "count": 36,
+        "horizon": 50,
+        "maximum": 0.22498691660379475,
+        "mean": 0.014896503839326876,
+        "median_type7": 0.0027826749648115863,
+        "minimum": 0.00016706549602167267,
+        "population_standard_deviation": 0.03865092983824433,
+        "q10_type7": 0.00028923601965902685,
+        "q90_type7": 0.027833038167945516,
+        "region": "confirmatory"
+      },
+      {
+        "count": 24,
+        "horizon": 50,
+        "maximum": 0.7577882086365252,
+        "mean": 0.12145707637686383,
+        "median_type7": 0.04432395223789123,
+        "minimum": 0.00504606693070913,
+        "population_standard_deviation": 0.1743701904242461,
+        "q10_type7": 0.007700655941706537,
+        "q90_type7": 0.29981022203894236,
+        "region": "extended-local"
+      },
+      {
+        "count": 24,
+        "horizon": 50,
+        "maximum": 0.9823664121746389,
+        "mean": 0.43021380132378456,
+        "median_type7": 0.34730960199208305,
+        "minimum": 0.05348353269176844,
+        "population_standard_deviation": 0.3044842702499583,
+        "q10_type7": 0.0718318197093739,
+        "q90_type7": 0.8709380825334911,
+        "region": "stress"
+      }
+    ],
+    "l1_target_quadratic_scale_relative_range_horizons_gt_one": [
+      {
+        "count": 12,
+        "horizon": 5,
+        "maximum": 0.0013823820339500335,
+        "mean": 0.0006342285437961561,
+        "median_type7": 0.00046879809325745317,
+        "minimum": 2.189337600555182e-05,
+        "population_standard_deviation": 0.00047047798633497427,
+        "q10_type7": 0.00016092252853918413,
+        "q90_type7": 0.0013044321259832647,
+        "region": "confirmatory"
+      },
+      {
+        "count": 12,
+        "horizon": 5,
+        "maximum": 0.010751534455977999,
+        "mean": 0.004932553380015298,
+        "median_type7": 0.0036474440607959313,
+        "minimum": 0.0001748934637461535,
+        "population_standard_deviation": 0.0036539295843609747,
+        "q10_type7": 0.0012553990901931012,
+        "q90_type7": 0.010148103512526619,
+        "region": "extended-local"
+      },
+      {
+        "count": 12,
+        "horizon": 5,
+        "maximum": 0.1068115105576414,
+        "mean": 0.04909815169896961,
+        "median_type7": 0.0365375262920956,
+        "minimum": 0.0022207155857559484,
+        "population_standard_deviation": 0.03584619941420513,
+        "q10_type7": 0.012748889143233778,
+        "q90_type7": 0.1011091910903279,
+        "region": "stress"
+      },
+      {
+        "count": 12,
+        "horizon": 20,
+        "maximum": 0.017089062262840196,
+        "mean": 0.004159270974974185,
+        "median_type7": 0.00220232304210443,
+        "minimum": 1.6166768317626213e-05,
+        "population_standard_deviation": 0.0047592849681454925,
+        "q10_type7": 0.0001152708108041705,
+        "q90_type7": 0.008521207739243078,
+        "region": "confirmatory"
+      },
+      {
+        "count": 12,
+        "horizon": 20,
+        "maximum": 0.12049428388957652,
+        "mean": 0.031070723049824226,
+        "median_type7": 0.017035296336675682,
+        "minimum": 0.0003070487551765745,
+        "population_standard_deviation": 0.034037604355183444,
+        "q10_type7": 0.0008292761714829706,
+        "q90_type7": 0.06465365431274821,
+        "region": "extended-local"
+      },
+      {
+        "count": 12,
+        "horizon": 20,
+        "maximum": 0.6178360081459185,
+        "mean": 0.2335525648453786,
+        "median_type7": 0.1598479484582782,
+        "minimum": 0.00435703660830019,
+        "population_standard_deviation": 0.19675168082910896,
+        "q10_type7": 0.022858059882345894,
+        "q90_type7": 0.48870327151785314,
+        "region": "stress"
+      },
+      {
+        "count": 12,
+        "horizon": 50,
+        "maximum": 0.20731042168310404,
+        "mean": 0.023865540659264592,
+        "median_type7": 0.006010075967380758,
+        "minimum": 0.0001799885005223549,
+        "population_standard_deviation": 0.0558037666441256,
+        "q10_type7": 0.00023973131269541137,
+        "q90_type7": 0.02417805012546547,
+        "region": "confirmatory"
+      },
+      {
+        "count": 12,
+        "horizon": 50,
+        "maximum": 0.6953453030493449,
+        "mean": 0.10709591788343246,
+        "median_type7": 0.04574574900380536,
+        "minimum": 0.0009106798388122997,
+        "population_standard_deviation": 0.18530758437908312,
+        "q10_type7": 0.0023643604829013723,
+        "q90_type7": 0.1724197444580359,
+        "region": "extended-local"
+      },
+      {
+        "count": 12,
+        "horizon": 50,
+        "maximum": 1.0269077640019482,
+        "mean": 0.4708399139740797,
+        "median_type7": 0.5015384153225373,
+        "minimum": 0.019984888185814915,
+        "population_standard_deviation": 0.3315468311854569,
+        "q10_type7": 0.040476386862540015,
+        "q90_type7": 0.8178977534141886,
+        "region": "stress"
+      }
+    ],
+    "l1_target_residual_sign_counts": {
+      "1|confirmatory|numerical-zero": 12,
+      "1|extended-local|numerical-zero": 12,
+      "1|stress|numerical-zero": 12,
+      "20|confirmatory|negative": 12,
+      "20|extended-local|negative": 12,
+      "20|stress|negative": 12,
+      "50|confirmatory|negative": 12,
+      "50|extended-local|negative": 12,
+      "50|stress|negative": 12,
+      "5|confirmatory|negative": 12,
+      "5|extended-local|negative": 12,
+      "5|stress|negative": 12
+    },
+    "positive_epsilon_row_count": 784,
+    "source_alpha": {
+      "count_above_one": 1,
+      "count_below_one": 11,
+      "count_equal_one": 0,
+      "frozen_alpha_source": 0.9951356698171323,
+      "heterogeneous_correction_signs": true,
+      "landscape_count": 12,
+      "maximum": 1.018112088514794,
+      "maximum_absolute_deviation_from_one": 0.018112088514794067,
+      "mean": 0.9965693406146571,
+      "median_absolute_deviation": 0.0031431117948555465,
+      "median_type7": 0.9951356698171323,
+      "minimum": 0.9862526429434814,
+      "q25_type7": 0.9924442752531879,
+      "q75_type7": 0.9982615402109132,
+      "recomputed_median_for_verification": 0.9951356698171323,
+      "sample_standard_deviation": 0.007782633826459588
+    }
+  },
+  "new_hypotheses": [
+    {
+      "id": "ACL-PH1-H1",
+      "statement": "For horizons above one, an analytically derived second-order sensitivity predicts the predominantly negative L1 correction and extends the useful epsilon radius on new categorical landscapes.",
+      "status": "exploratory-candidate"
+    },
+    {
+      "id": "ACL-PH1-H2",
+      "statement": "Second-order coefficients are landscape dependent; a universal scalar correction will not transport as well as a state-aware analytic recurrence.",
+      "status": "exploratory-candidate"
+    },
+    {
+      "id": "ACL-PH1-H3",
+      "statement": "The oriented-KL cubic remainder is structured but more heterogeneous than the L1 quadratic remainder.",
+      "status": "exploratory-candidate"
+    }
+  ],
+  "next_decision": "Derive and independently verify the second-order row sensitivity recurrence before deciding whether it earns a new-landscape ACL-003 preregistration.",
+  "plot_sha256": {
+    "target-t20-kl-relative-residual.svg": "91ee474e4fff84a017e1c1abeb57afe3e16472b43f1e339095d48cd44cefa2bd",
+    "target-t20-l1-quadratic-scale.svg": "3d7aa7bf39a4d8f79c5876b2894934e516625b1dcf0bde2e594edc56e2986645",
+    "target-t20-l1-relative-residual.svg": "e1275ead642ad2a1de351ebed09717891541d0ae30df2b7f6d179ba649e05dde"
+  },
+  "schema_version": 1,
+  "source_artifact_verification": {
+    "alpha_transcription_absolute_difference": 2.0811933287845363e-09,
+    "approved_preregistration_sha": "3f6a935942f43c7d3055582d123e58af5bf3f38b",
+    "artifact_path": "evidence/ACL-002-confirmatory-3f6a935942f43c7d3055582d123e58af5bf3f38b.json",
+    "artifact_sha256": "4d08e85b927a5d78a29078ff0d6549225d98069b20186b754629464739f29d74",
+    "evidence_commit": "5caf47b510d70564415354f34ba729ff505f7ed4",
+    "frozen_alpha_source": 0.9951356698171323,
+    "frozen_primary_results": {
+      "analytic": {
+        "alpha": 1.0,
+        "landscape_count": 12,
+        "landscape_scores": [
+          {
+            "landscape_id": "T01",
+            "relative_error_max": 0.002797685705405237
+          },
+          {
+            "landscape_id": "T02",
+            "relative_error_max": 0.0038017138120624975
+          },
+          {
+            "landscape_id": "T03",
+            "relative_error_max": 0.012642831215652125
+          },
+          {
+            "landscape_id": "T04",
+            "relative_error_max": 0.008417613168015993
+          },
+          {
+            "landscape_id": "T05",
+            "relative_error_max": 0.0018788301100968628
+          },
+          {
+            "landscape_id": "T06",
+            "relative_error_max": 0.009443241476736652
+          },
+          {
+            "landscape_id": "T07",
+            "relative_error_max": 0.002287030201856805
+          },
+          {
+            "landscape_id": "T08",
+            "relative_error_max": 0.014962123699671766
+          },
+          {
+            "landscape_id": "T09",
+            "relative_error_max": 0.0019053081524134704
+          },
+          {
+            "landscape_id": "T10",
+            "relative_error_max": 0.00474791698212387
+          },
+          {
+            "landscape_id": "T11",
+            "relative_error_max": 0.0015798618837721801
+          },
+          {
+            "landscape_id": "T12",
+            "relative_error_max": 0.021864168185146807
+          }
+        ],
+        "median": 0.004274815397093183,
+        "passed": true,
+        "q90": 0.014730194451269803
+      },
+      "transport": {
+        "alpha": 0.9951356698171323,
+        "landscape_count": 12,
+        "landscape_scores": [
+          {
+            "landscape_id": "T01",
+            "relative_error_max": 0.0046065041670287936
+          },
+          {
+            "landscape_id": "T02",
+            "relative_error_max": 0.004505474220921811
+          },
+          {
+            "landscape_id": "T03",
+            "relative_error_max": 0.007816523182425742
+          },
+          {
+            "landscape_id": "T04",
+            "relative_error_max": 0.00403845188945915
+          },
+          {
+            "landscape_id": "T05",
+            "relative_error_max": 0.004699217687517743
+          },
+          {
+            "landscape_id": "T06",
+            "relative_error_max": 0.0046012935047442475
+          },
+          {
+            "landscape_id": "T07",
+            "relative_error_max": 0.004658122524623749
+          },
+          {
+            "landscape_id": "T08",
+            "relative_error_max": 0.010147152617551662
+          },
+          {
+            "landscape_id": "T09",
+            "relative_error_max": 0.004696642306247561
+          },
+          {
+            "landscape_id": "T10",
+            "relative_error_max": 0.004409682692596881
+          },
+          {
+            "landscape_id": "T11",
+            "relative_error_max": 0.004729361181012869
+          },
+          {
+            "landscape_id": "T12",
+            "relative_error_max": 0.017082935038800432
+          }
+        ],
+        "median": 0.004677382415435655,
+        "passed": true,
+        "q90": 0.00991408967403907
+      }
+    },
+    "horizons": [
+      1,
+      5,
+      20,
+      50
+    ],
+    "landscape_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14"
+    ],
+    "matrix_oracle": {
+      "formula": "normalize(p0 @ matrix_power(D @ A_epsilon, T))",
+      "maximum_absolute_error": 1.5543122344752192e-15,
+      "passed": true,
+      "tolerance": 5e-13
+    },
+    "prompt_alpha_transcription": 0.9951356718983256,
+    "randomness_used": false,
+    "region_counts": {
+      "confirmatory": 336,
+      "extended-local": 224,
+      "stress": 224,
+      "zero": 112
+    },
+    "row_count": 896
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "program_question": "Do restricted correspondences between adaptive dynamical systems support quantitative stability laws and no-refit cross-class transport, or only local coordinate equivalences?",
+  "status_vocabulary": [
+    "theorem-reproduction",
+    "exploratory",
+    "preregistered-confirmation",
+    "failure",
+    "unresolved"
+  ],
+  "edges": [
+    {
+      "id": "categorical-simplex-correspondence",
+      "classes": [
+        "multiplicative-weights",
+        "replicator-dynamics",
+        "categorical-natural-gradient"
+      ],
+      "map": {
+        "state": "interior categorical probability vector p on the simplex",
+        "driving_quantity": "reward = fitness = categorical objective gradient",
+        "geometry": "negative-entropy mirror geometry = categorical Fisher/Shahshahani geometry",
+        "clean_update": "p_i' proportional to p_i exp(eta r_i)"
+      },
+      "scope": [
+        "fixed categorical support",
+        "strictly interior clean states for KL/Fisher expressions",
+        "shared fixed reward vector",
+        "exact exponential categorical update or its stated continuous-time limit",
+        "float64 numerical comparisons at declared horizons and tolerances"
+      ],
+      "content": "Within scope, the mapped clean probability trajectories must agree; ACL-002 additionally predicts the first-order L1 response to a frozen row-stochastic mutation perturbation.",
+      "stability": {
+        "status": "preregistered-confirmation",
+        "law": "delta_L1(epsilon,T) = C_analytic(T) epsilon + O(epsilon^2)",
+        "result": "ACL-002 zero-fit analytic target gate passed. Posthoc residuals are predominantly negative, locally quadratic for T>1, and landscape dependent.",
+        "artifact": "evidence/ACL-002-confirmatory-3f6a935942f43c7d3055582d123e58af5bf3f38b.json",
+        "artifact_sha256": "4d08e85b927a5d78a29078ff0d6549225d98069b20186b754629464739f29d74",
+        "posthoc_summary": "analysis/ACL-002-posthoc/summary.json",
+        "posthoc_summary_sha256": "116b8c6ec092dfdcff6a53e39f07a46fbbf8b75615d6f36e11bfed1abff14922"
+      },
+      "transport": {
+        "status": "preregistered-confirmation",
+        "quantity": "median source-landscape alpha multiplying the analytic first-order coefficient",
+        "target_refit": false,
+        "result": "Passed on 12 deterministic held-out target combinations with frozen alpha_source = 0.9951356698171323.",
+        "scope_limit": "within-family combinatorial held-out transport, not a different adaptive-system class"
+      },
+      "failure_boundary": {
+        "status": "exploratory",
+        "result": "At T=20, pooled regular-target median absolute zero-fit error is 0.154% strict, 2.626% extended-local, and 22.640% stress; landscape radii vary substantially.",
+        "unresolved": "Whether an analytic second-order recurrence extends the radius on entirely new catalog values."
+      },
+      "evidence_status": [
+        "theorem-reproduction",
+        "preregistered-confirmation",
+        "exploratory"
+      ],
+      "what_would_change_interpretation": "A preregistered second-order prediction that fails on new categorical landscapes would bound the bridge to first-order locality; success would establish a stronger within-class stability law."
+    },
+    {
+      "id": "gaussian-natural-gradient-rank-mu",
+      "classes": [
+        "gaussian-natural-gradient",
+        "finite-sample-rank-mu-update"
+      ],
+      "map": {
+        "state": "Gaussian mean and covariance parameters",
+        "driving_quantity": "score-function objective gradient",
+        "geometry": "Gaussian Fisher metric",
+        "candidate_update": "separate mean and covariance rank-mu tangent blocks"
+      },
+      "scope": [
+        "pure Gaussian family",
+        "no evolution paths",
+        "no cumulative step-size adaptation",
+        "frozen lambda, mu, weights, parameterization, and learning rates"
+      ],
+      "content": "The conditional expected finite-lambda rank-mu update should align with an independently constructed analytic Fisher-natural direction in each tangent block.",
+      "stability": {
+        "status": "unresolved",
+        "law": null,
+        "result": null
+      },
+      "transport": {
+        "status": "unresolved",
+        "quantity": null,
+        "target_refit": null,
+        "result": null
+      },
+      "failure_boundary": {
+        "status": "unresolved",
+        "result": null
+      },
+      "evidence_status": [
+        "unresolved"
+      ],
+      "what_would_change_interpretation": "A preregistered conditional-mean Fisher cosine failure after shadow convergence would reject the proposed Gaussian bridge under its frozen finite-lambda scope."
+    },
+    {
+      "id": "categorical-natural-gradient-control",
+      "classes": [
+        "categorical-natural-gradient",
+        "finite-state-contextual-bandit-natural-policy-gradient"
+      ],
+      "map": {
+        "state": "categorical policy probabilities",
+        "driving_quantity": "expected contextual reward advantage",
+        "geometry": "categorical policy Fisher metric",
+        "candidate_update": "exact finite-state natural policy-gradient tangent"
+      },
+      "scope": [
+        "finite contexts and actions",
+        "analytic categorical policies",
+        "no PPO clipping",
+        "no neural network function approximation"
+      ],
+      "content": "A control-class bridge would require a preregistered quantity from an earlier class to predict a held-out policy response without control-target refitting.",
+      "stability": {
+        "status": "unresolved",
+        "law": null,
+        "result": null
+      },
+      "transport": {
+        "status": "unresolved",
+        "quantity": null,
+        "target_refit": null,
+        "result": null
+      },
+      "failure_boundary": {
+        "status": "unresolved",
+        "result": null
+      },
+      "evidence_status": [
+        "unresolved"
+      ],
+      "what_would_change_interpretation": "If no source-class law can be stated before observing control outcomes, this edge remains a coordinate relationship rather than evidence of reusable transport."
+    }
+  ]
+}

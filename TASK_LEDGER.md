@@ -210,7 +210,7 @@
 
 ## ACL-002-PH1 — Deterministic post-confirmatory analysis
 
-- **Status:** in progress. This task derives analyses only from the immutable ACL-002
+- **Status:** complete. This task derives analyses only from the immutable ACL-002
   evidence artifact; it is not a new experiment and cannot change ACL-002's frozen
   confirmatory verdict.
 - **Observed behavior:** the approved preregistration
@@ -277,3 +277,48 @@
   `2.0811933287845363e-09`. Consistent with evidence-before-narrative, all analysis
   uses the artifact value and records the mismatch without altering either historical
   artifact or verdict.
+
+### ACL-002-PH1 completion record
+
+- **Implementation:** added a fail-closed, read-only posthoc analyzer that validates the
+  source artifact bytes and evidence commit before deriving 784 positive-epsilon L1
+  rows, 784 KL rows, grouped residual summaries, cumulative-prefix empirical radii,
+  clean-state feature reconstructions, exploratory leave-one-landscape-out model
+  comparisons, 10 CSV tables, three dependency-free SVG plots, a machine-readable
+  summary, and `ACL-002_POSTHOC.md`. The analysis engine is frozen at
+  `f85eb1bef950285ac80123eed89ed862a775d441`.
+- **Evidence integrity:** the source artifact remains byte-identical at SHA-256
+  `4d08e85b927a5d78a29078ff0d6549225d98069b20186b754629464739f29d74`.
+  All 11 recorded derived-table/verification hashes and all three plot hashes
+  recompute exactly. The posthoc `summary.json` SHA-256 is
+  `116b8c6ec092dfdcff6a53e39f07a46fbbf8b75615d6f36e11bfed1abff14922`.
+- **Confirmed findings:** only the immutable ACL-002 verdict is restated: analytic and
+  calibrated primary gates pass, special strata pass, and the independent oracle
+  passes. No confirmatory interpretation was added.
+- **Exploratory findings:** at `T=20`, all 12 regular targets have negative first-order
+  L1 residuals at every positive epsilon. Median target absolute relative error grows
+  from `0.154%` in the pooled strict region to `2.626%` extended-local and `22.640%`
+  stress. `T=1` has numerical-zero L1 remainder; at `T=5,20,50`, the strict-region
+  quadratic scale is sign-coherent and locally stable but strongly landscape-specific.
+  The additive horizon/reward-intensity/boundary/mutation-ID model has exploratory
+  LOLO R-squared `0.770` for endpoint sensitivity; adding the fixed interactions lowers
+  it to `0.747`. KL has a predominantly negative but more heterogeneous remainder.
+  Eleven of 12 frozen source alphas are below one and one is above.
+- **Regression sequence:** the first focused test failed at import because the posthoc
+  module did not exist. Subsequent fixtures cover immutable identity, tamper failure,
+  signed L1 scaling, zero-sensitivity guards, cumulative-prefix radius semantics, KL
+  normalization, no-refit alpha summaries, artifact-only clean log-odds inference,
+  and byte-deterministic full-package generation.
+- **Verification:** nine focused posthoc tests pass; the last complete baseline before
+  package publication passed 87 tests and Ruff, and the package integration test was
+  then added. Final full-suite counts are recorded with the package commit. All three
+  SVG files parse as XML and the generated Markdown passed a status-language audit.
+- **No-new-outcome guarantee:** neither `acl002-run`, `generate_raw_rows`, nor any
+  trajectory generator was called. Every output is a deterministic transformation of
+  the preserved artifact.
+- **Remaining uncertainty:** the artifact cannot identify numeric mutation-matrix
+  covariates, and all second-order patterns are posthoc. A second-order recurrence must
+  be derived and verified independently before deciding whether ACL-003 is warranted.
+- **Recommended next action:** derive the row-vector second-order sensitivity,
+  explicitly handle L1 coordinates with zero first derivative, and test it only on toy
+  fixtures plus the already-exploratory ACL-002 rows before any new preregistration.
