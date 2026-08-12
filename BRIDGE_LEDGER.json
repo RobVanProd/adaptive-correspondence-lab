@@ -37,7 +37,14 @@
         "artifact": "evidence/ACL-002-confirmatory-3f6a935942f43c7d3055582d123e58af5bf3f38b.json",
         "artifact_sha256": "4d08e85b927a5d78a29078ff0d6549225d98069b20186b754629464739f29d74",
         "posthoc_summary": "analysis/ACL-002-posthoc/summary.json",
-        "posthoc_summary_sha256": "116b8c6ec092dfdcff6a53e39f07a46fbbf8b75615d6f36e11bfed1abff14922"
+        "posthoc_summary_sha256": "116b8c6ec092dfdcff6a53e39f07a46fbbf8b75615d6f36e11bfed1abff14922",
+        "second_order_exploratory": {
+          "status": "exploratory",
+          "law": "q_T-p_T = epsilon s_T + (epsilon^2/2) u_T + O(epsilon^3)",
+          "result": "The frozen posthoc earning rule passed with no target refit; all 12 regular T=20 targets gained 5% and 10% radius, but stress stability failed.",
+          "summary": "analysis/ACL-002-second-order/summary.json",
+          "summary_sha256": "d7533c3f3b5e0941e28cddcba58ce4106825c938f7244c24bd8f98c8e9403474"
+        }
       },
       "transport": {
         "status": "preregistered-confirmation",
@@ -48,15 +55,15 @@
       },
       "failure_boundary": {
         "status": "exploratory",
-        "result": "At T=20, pooled regular-target median absolute zero-fit error is 0.154% strict, 2.626% extended-local, and 22.640% stress; landscape radii vary substantially.",
-        "unresolved": "Whether an analytic second-order recurrence extends the radius on entirely new catalog values."
+        "result": "At T=20, pooled regular-target median absolute zero-fit error is 0.154% strict, 2.626% extended-local, and 22.640% stress. Exploratory second order lowers local errors but worsens stress Q90 from 62.17% to 77.66%, with a 778.42% worst case.",
+        "unresolved": "Whether the analytic second-order recurrence extends the radius on entirely new catalog values in a preregistered test."
       },
       "evidence_status": [
         "theorem-reproduction",
         "preregistered-confirmation",
         "exploratory"
       ],
-      "what_would_change_interpretation": "A preregistered second-order prediction that fails on new categorical landscapes would bound the bridge to first-order locality; success would establish a stronger within-class stability law."
+      "what_would_change_interpretation": "ACL-003 failure on new categorical values would show that the strong ACL-002 second-order improvement was catalog-local; success would establish a stronger within-class stability law with an explicit stress boundary."
     },
     {
       "id": "gaussian-natural-gradient-rank-mu",

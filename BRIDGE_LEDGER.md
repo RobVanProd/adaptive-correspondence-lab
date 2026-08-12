@@ -24,13 +24,18 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   combinations. This is not cross-class transport.
 - **Failure boundary:** exploratory T=20 pooled target median absolute error grows from
   `0.154%` strict to `2.626%` extended-local and `22.640%` stress, with heterogeneous
-  empirical radii.
+  empirical radii. A state-aware second-order truncation sharply improves local errors
+  and every target's 5%/10% radius, but worsens stress Q90 from `62.17%` to `77.66%`
+  and reaches `778.42%` worst-case relative error.
 - **Evidence:** ACL-002 artifact SHA-256
   `4d08e85b927a5d78a29078ff0d6549225d98069b20186b754629464739f29d74`;
   posthoc summary SHA-256
-  `116b8c6ec092dfdcff6a53e39f07a46fbbf8b75615d6f36e11bfed1abff14922`.
+  `116b8c6ec092dfdcff6a53e39f07a46fbbf8b75615d6f36e11bfed1abff14922`;
+  second-order summary SHA-256
+  `d7533c3f3b5e0941e28cddcba58ce4106825c938f7244c24bd8f98c8e9403474`.
 - **Status:** theorem reproduction + preregistered first-order confirmation +
-  exploratory second-order hypothesis. Cross-class transport remains unresolved.
+  exploratory second-order mechanism that earned ACL-003. Cross-class transport
+  remains unresolved.
 
 ## Gaussian natural gradient ↔ finite-sample rank-mu
 
