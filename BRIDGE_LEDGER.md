@@ -57,10 +57,10 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   inverse Fisher blocks. ACL-004 passed on 12 landscapes: all converged at 4096
   shadows, with minimum mean/covariance Fisher cosines `0.999952324` and `0.999552200`
   against the frozen `0.99` gates.
-- **Transport:** unresolved, with ACL-005 now frozen as a pre-outcome test. It carries
-  the complete ACL-004 normalized rule: disjoint-half block cosine `0.98`, analytic
-  block cosine `0.99`, and the same replication scheduleâ€”into finite-state control
-  without target refitting. This preregistration is not evidence of transport.
+- **Transport:** **preregistered cross-class confirmation.** ACL-005 carried the
+  complete ACL-004 normalized rule—disjoint-half block cosine `0.98`, analytic block
+  cosine `0.99`, and the same replication schedule—into finite-state control without
+  target refitting. All 20 regular target blocks passed; the minimum was `0.999841630`.
 - **Failure boundary:** H2 is an expected-direction result, not a guarantee for one
   finite population. Descriptive H1 single-shadow median cosine spans `0.953–0.957`
   for mean and `0.534–0.717` for covariance; covariance alignment is positive in
@@ -70,7 +70,7 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   report SHA-256
   `b4d9864b6ab935aa39bc98ab1c144e13030ebad57931eaf4bc1cbcbaf3d2e019`.
 - **Status:** theorem reproduction + preregistered finite-lambda conditional-mean
-  confirmation. Cross-class transported prediction remains unresolved.
+  confirmation + one successful restricted cross-class transported diagnostic.
 
 ## Categorical natural gradient ↔ finite-state control
 
@@ -78,16 +78,39 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   categorical policy Fisher tangent.
 - **Scope:** exact finite contexts/actions, analytic policies, no PPO, and no neural
   function approximation.
-- **Content:** ACL-005 declares before control outcomes that the ACL-004 blockwise
-  stopping/alignment rule will predict held-out control conditional means without
+- **Content:** ACL-005 declared before control outcomes that the ACL-004 blockwise
+  stopping/alignment rule would predict held-out control conditional means without
   target refitting.
-- **Stability:** fixed-count plug-in directions match an independent direct
-  score/Fisher accumulation on toy fixtures, and a large toy conditional mean aligns
-  with the exact context blocks. This is theorem/software reproduction only;
-  empirical-pseudoinverse bias remains a confirmatory question.
-- **Transport:** unresolved. ACL-005 is a preregistration-only test with 10 regular and
-  four non-gating rare-cell stress targets; its analytic registry has zero shadows.
-- **Failure boundary:** if no earlier-class quantity can be frozen before control
-  outcomes, this remains a coordinate relation rather than a reusable law.
-- **Status:** mechanism validated; cross-class normalized-law transport is
-  preregistered but remains unresolved until a one-shot artifact exists.
+- **Stability:** **preregistered confirmation within the regular support scope.** All
+  10 regular landscapes stopped at 4096 and all 20 context blocks exceeded `0.99`;
+  the minimum was `0.999841630`.
+- **Transport:** **PASS without target refit.** The source `0.98` convergence and
+  `0.99` analytic-alignment rule was copied unchanged from ACL-004.
+- **Failure boundary:** all four rare-cell stress landscapes also met the stopping
+  rule, yet 5 of 8 stress context blocks fell below `0.99`; the minimum was
+  `0.055699373`. Half-mean self-consistency is not enough when empirical Fisher blocks
+  are support-deficient or nearly so.
+- **Evidence:** ACL-005 evidence SHA-256
+  `5400a12392609f5cdf79a8b4b380f84ad11e68330f8ee93f653439129aa5db5b`;
+  report SHA-256
+  `b5d310e9a32c059cb192e4f1001556b7a9d60ca98cc6319a1d67326246c13084`.
+- **Status:** theorem reproduction + preregistered cross-class confirmation with a
+  predeclared rare-cell boundary.
+
+## Gaussian rank-mu → contextual-bandit normalized law
+
+- **Map:** in both classes, compare the conditional mean of a finite-sample stochastic
+  tangent with an independently constructed analytic Fisher-natural tangent. Normalize
+  each independent Fisher block by Fisher cosine and diagnose estimator convergence by
+  the cosine between disjoint-half means.
+- **Scope:** ACL-004's pure diagonal-Gaussian rank-mu source; ACL-005's two-context,
+  three-action categorical-policy target at `N=128`; undamped empirical-Fisher
+  pseudoinverse; regular minimum expected joint-cell count at least 4; frozen schedule.
+- **Content:** after every target block reaches disjoint-half cosine `0.98`, every
+  regular analytic block cosine should reach `0.99`.
+- **Stability:** all regular targets passed, with minimum `0.999841630`.
+- **Transport:** the complete diagnostic and schedule moved from Gaussian to control
+  without target refitting.
+- **Failure boundary:** the same statement is false without adequate support. Five of
+  eight rare-cell stress blocks failed despite apparent convergence.
+- **Status:** preregistered cross-class confirmation, restricted by support coverage.

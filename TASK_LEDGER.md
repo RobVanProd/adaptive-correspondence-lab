@@ -765,3 +765,65 @@
   canonical in-repository bundle and directly verify the frozen ACL-004 evidence and
   report hashes. The hypothesis, target landscapes, thresholds, and schedule do not
   change; the first checkpoint is superseded pre-outcome.
+
+## ACL-005-POST — Artifact-only cross-class transport report
+
+- **Status:** post-confirmatory analysis only; no additional shadows or RNG calls.
+- **Immutable input:** evidence commit
+  `24d577f8a1d7bc6f4f45250f4bab3d5b2b925aeb`, artifact
+  `evidence/ACL-005-confirmatory-c3ebc07a41e8dbb84a24c68cdbb4f75c36108c5b.json`,
+  SHA-256 `5400a12392609f5cdf79a8b4b380f84ad11e68330f8ee93f653439129aa5db5b`.
+- **Frozen result:** transport PASS; all 10 regular targets converged at 4096;
+  minimum regular context Fisher cosine `0.9998416299085249` versus `0.99`;
+  target refit false. Stress is non-gating and includes severe rotations.
+- **Analysis:** verify immutable bytes and envelope; reconstruct stopped and half means
+  from chunks; reproduce context/joint cosines, uncertainty, and H1 summaries; report
+  regular transport and rare-cell stress separately; make no target fit.
+- **Interpretation:** a PASS supports transport of the specific ACL-004 normalized
+  conditional-mean diagnostic into this control class. Stress failures bound the law's
+  scope and cannot be presented as a universal NPG result.
+- **Allowed files:** this ledger, an ACL-005 artifact-only analyzer and tests,
+  `analysis/ACL-005-confirmatory/`, bridge ledgers, README, and final synthesis.
+- **Acceptance tests:** wrong hash fails; chunk/half/cosine/uncertainty/H1 reconstruction
+  matches; regular and stress strata remain separate; report generation is deterministic;
+  full pytest, Ruff, coverage, and wheel pass.
+- **Stop conditions:** evidence bytes change; any new shadow/RNG call occurs; a target
+  coefficient is fit; stress is allowed to change the primary verdict; or PASS is
+  generalized to sequential/neural control.
+
+## SYNTHESIS-001 — Program termination assessment
+
+- **Question:** after ACL-005, does the evidence meet Outcome A, B, or C?
+- **Frozen decision rule:** apply the user-specified termination criteria without
+  adding a new experiment merely to strengthen a positive story.
+- **Candidate:** Outcome A in restricted form, because categorical, Gaussian, and
+  control classes now have explicit maps/scope; categorical quantitative degradation
+  laws; preregistered within-class predictions; one preregistered Gaussian-to-control
+  normalized-law transport without target refit; and categorical/control stress
+  boundaries. This remains conditional on exact ACL-005 artifact reconstruction.
+- **Output:** `FINAL_SYNTHESIS.md` with every preregistration/evidence hash, positive and
+  negative findings, complete bridge ledger, falsified/surviving claims, exclusions,
+  strongest supported statement, and open theorem.
+- **Stop condition:** if artifact reconstruction fails or the cross-class quantity was
+  not actually frozen before control outcomes, do not terminate under Outcome A.
+
+### ACL-005 posthoc and synthesis completion record
+
+- **Artifact reconstruction:** exact. Stored chunk statistics reproduce stopped means,
+  disjoint-half means, context/joint cosines, uncertainty, and H1 summaries with zero
+  maximum discrepancy. No new shadows or RNG calls were made.
+- **Report:** `analysis/ACL-005-confirmatory/summary.json`, SHA-256
+  `b5d310e9a32c059cb192e4f1001556b7a9d60ca98cc6319a1d67326246c13084`.
+- **Confirmed transport:** PASS; all regular targets stopped at 4096; minimum of 20
+  context cosines `0.9998416299085249`; target refit false.
+- **Boundary:** all stress targets stopped at 4096, but 5/8 stress blocks were below
+  `0.99` and the minimum was `0.05569937277874286`. Internal convergence is not a
+  support-free certificate of analytic alignment.
+- **Termination:** Outcome A, predictive unification in restricted form. The program
+  has a successful preregistered cross-class transported diagnostic and explicit local
+  and support-related breakdown regimes. `FINAL_SYNTHESIS.md` states the bounded claim.
+- **Verification:** 157 tests passed; Ruff passed; total coverage 83%; wheel build
+  passed. Immutable ACL-002 through ACL-005 evidence hashes remain unchanged.
+- **Recommended next action:** no additional experiment is required for the original
+  question. Future work should pursue the support-conditioned angular-bias theorem,
+  and any new empirical extension must begin as a separate preregistered program.

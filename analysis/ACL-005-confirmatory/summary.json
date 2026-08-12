@@ -1,0 +1,66 @@
+{
+  "analysis_kind": "artifact-only-post-confirmatory",
+  "confirmed": {
+    "all_regular_landscapes_converged": true,
+    "all_regular_stopped_replications": [
+      4096
+    ],
+    "approved_preregistration_sha": "c3ebc07a41e8dbb84a24c68cdbb4f75c36108c5b",
+    "convergence_threshold": 0.98,
+    "evidence_commit": "24d577f8a1d7bc6f4f45250f4bab3d5b2b925aeb",
+    "evidence_sha256": "5400a12392609f5cdf79a8b4b380f84ad11e68330f8ee93f653439129aa5db5b",
+    "joint_cosine_gating": false,
+    "maximum_final_cosine_reproduction_error": 0.0,
+    "maximum_h1_summary_reproduction_error": 0.0,
+    "maximum_stopped_mean_reproduction_error": 0.0,
+    "maximum_uncertainty_reproduction_error": 0.0,
+    "regular_minimum_context_fisher_cosine": 0.9998416299085249,
+    "stress_gating": false,
+    "transport_threshold": 0.99,
+    "transport_verdict": "PASS"
+  },
+  "descriptive_h1": {
+    "regular_context_median_range": [
+      0.9959110072707096,
+      0.9999987806606325
+    ],
+    "regular_undefined_fraction": 0.0,
+    "stress_context_median_range": [
+      0.016892396869483933,
+      0.9999998696023504
+    ],
+    "stress_undefined_fraction": 0.04388427734375
+  },
+  "experiment_id": "ACL-005",
+  "new_shadows_generated": false,
+  "schema_version": 1,
+  "stress_boundary": {
+    "all_stress_landscapes_converged": true,
+    "context_blocks_below_transport_threshold": 5,
+    "gating": false,
+    "landscape_count": 4,
+    "landscape_minimum_expected_cell_count_range": [
+      0.16068749967229845,
+      0.6863001357356037
+    ],
+    "landscapes_below_transport_threshold": [
+      "S02",
+      "S03",
+      "S04"
+    ],
+    "minimum_context_fisher_cosine": 0.05569937277874286
+  },
+  "target_refit": false,
+  "termination_assessment": {
+    "candidate": "Outcome A - predictive unification survives in restricted form",
+    "reason": "a preregistered normalized law transported from Gaussian rank-mu to contextual-bandit NPG without target refitting, while frozen stress targets identify a rare-cell breakdown regime",
+    "universal_claim_supported": false
+  },
+  "transport": {
+    "quantity": "unchanged blockwise rule: disjoint-half Fisher cosine >= 0.98 then analytic Fisher cosine >= 0.99",
+    "source_class": "Gaussian finite-lambda rank-mu (ACL-004)",
+    "source_evidence_sha256": "3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a",
+    "target_class": "finite-state contextual-bandit empirical-Fisher NPG",
+    "target_refit": false
+  }
+}

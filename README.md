@@ -79,17 +79,17 @@ source commit that produced them. The [mutation curve](evidence/mutation-stabili
 is intentionally labeled as a deterministic format example rather than a research
 result.
 
-## Research program state
+## Research program result
 
-ACL-002 through ACL-004 have immutable confirmatory artifacts in `evidence/`. Their
-claims remain restricted: categorical first- and second-order mutation stability and
-Gaussian finite-lambda conditional-mean alignment. The machine-readable
-[bridge ledger](BRIDGE_LEDGER.json) records their exact hashes and limits.
+ACL-002 through ACL-005 now have immutable confirmatory artifacts in `evidence/`.
+The result is a restricted positive answer with explicit boundaries: local categorical
+mutation laws predict held-out responses; a finite-lambda Gaussian expected direction
+is predictive; and ACL-004's normalized blockwise diagnostic transported without
+target refitting into regular finite-state contextual-bandit targets. The same control
+diagnostic failed badly in predeclared rare-cell stress targets despite apparent
+half-mean convergence.
 
-[ACL-005](preregistrations/ACL-005/PREREGISTRATION.md) is the current pre-outcome
-checkpoint. It asks whether ACL-004's normalized blockwise expected-direction rule
-transports unchanged, without target refitting, into a finite-state contextual-bandit
-control class. Its analytic registry contains no target shadows. The future
-`acl acl005-run` command requires an explicitly approved exact Git SHA, a completely
-clean worktree including untracked files, valid bundle hashes, and a previously
-nonexistent SHA-derived evidence path.
+[FINAL_SYNTHESIS.md](FINAL_SYNTHESIS.md) gives the terminating claim, exact hashes,
+negative results, exclusions, and open theorem. The machine-readable
+[bridge ledger](BRIDGE_LEDGER.json) records every edge. No result supports a universal
+identity among adaptive systems, sequential or neural RL, or support-free transport.
