@@ -703,12 +703,24 @@ def execute_confirmatory(
     output_path: str | Path,
 ) -> Path:
     """Execute ACL-003 once only after exact-SHA approval."""
+    repo = Path(repo_path).resolve()
+    requested_output = Path(output_path)
+    if not requested_output.is_absolute():
+        requested_output = repo / requested_output
+    requested_output = requested_output.resolve()
+    canonical_output = (
+        repo / "evidence" / f"ACL-003-confirmatory-{approved_sha}.json"
+    ).resolve()
+    if requested_output != canonical_output:
+        raise ValueError(
+            "ACL-003 output must equal the SHA-derived canonical evidence path"
+        )
     current_sha, worktree_dirty = git_execution_state(repo_path)
     assert_execution_context(
         approved_sha=approved_sha,
         current_sha=current_sha,
         worktree_dirty=worktree_dirty,
-        output_path=output_path,
+        output_path=canonical_output,
     )
     bundle = Path(bundle_path)
     validation = validate_preregistration_bundle(bundle, reference_path=reference_path)
@@ -731,4 +743,4 @@ def execute_confirmatory(
         "analysis": analysis,
         "provenance": provenance(),
     }
-    return write_json(output_path, payload)
+    return write_json(canonical_output, payload)

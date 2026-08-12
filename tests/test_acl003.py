@@ -10,6 +10,7 @@ from adaptive_correspondence.acl002 import sha256_file
 from adaptive_correspondence.acl003 import (
     analyze_raw_rows,
     build_analytic_registry,
+    execute_confirmatory,
     generate_raw_rows,
     validate_catalog_novelty,
     validate_manifest_dict,
@@ -237,3 +238,21 @@ def test_real_acl003_bundle_requires_exact_lock_file_set(tmp_path: Path) -> None
 
     with pytest.raises(ValueError, match="exact frozen file set"):
         validate_preregistration_bundle(bundle)
+
+
+def test_acl003_runner_requires_sha_derived_canonical_output(
+    tmp_path: Path, monkeypatch
+) -> None:
+    approved_sha = "a" * 40
+    monkeypatch.setattr(
+        acl003_module, "git_execution_state", lambda repo_path: (approved_sha, False)
+    )
+
+    with pytest.raises(ValueError, match="canonical evidence path"):
+        execute_confirmatory(
+            repo_path=tmp_path,
+            bundle_path=tmp_path / "missing-bundle",
+            reference_path=tmp_path / "missing-reference.json",
+            approved_sha=approved_sha,
+            output_path=tmp_path / "outside.json",
+        )

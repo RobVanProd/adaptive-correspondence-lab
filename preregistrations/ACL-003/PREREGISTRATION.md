@@ -146,7 +146,8 @@ Secondary results cannot rescue, reverse, or redefine the primary verdict.
 - completely empty `git status --porcelain`, including untracked files;
 - valid bundle hashes and exact analytic-registry recomputation;
 - exact six-file lock membership and the frozen ACL-002 novelty-reference hash;
-- previously nonexistent output path.
+- previously nonexistent canonical output path
+  `evidence/ACL-003-confirmatory-{approved_sha}.json`; no alternate output is allowed.
 
 Any guard failure aborts before analysis and produces no valid scientific artifact.
 

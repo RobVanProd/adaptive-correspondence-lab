@@ -22,4 +22,5 @@ acl acl003-validate
 
 The future `acl acl003-run` command requires an explicitly approved exact public SHA,
 a completely clean worktree including no untracked files, valid locks, and a new
-output path. It must not be invoked during preregistration construction or audit.
+SHA-derived canonical evidence path. It must not be invoked during preregistration
+construction or audit.

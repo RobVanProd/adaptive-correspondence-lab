@@ -45,7 +45,7 @@ No other row can affect this verdict.
 
 ## Failure behavior
 
-Abort before analysis for SHA/worktree/output/exact-lock-set/reference-hash/registry/
+Abort before analysis for SHA/worktree/canonical-output/exact-lock-set/reference-hash/registry/
 novelty/oracle failure. Never repair, filter, or rerun after the first outcome artifact
 exists. A post-generation identity-control failure is retained and reported as
 `INVALID`, not silently discarded.

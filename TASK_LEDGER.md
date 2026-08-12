@@ -498,3 +498,9 @@
   SHA-256 `6a9e4e0a931277b1f5c464807d0bcacee3ccb684269843f8245a83ae88110741`;
   require the exact narrative/derivation/plan/readme/manifest/registry lock set; and
   report `INVALID` if the identity control fails even when the hypothesis gate passes.
+- **Second public-checkpoint hold:** exact-SHA review of
+  `eabdb7eca082c4f5d87e193d73edd892a9260d4b` found that the runner still accepted an
+  arbitrary nonexistent output path. An out-of-repository first output would not dirty
+  the worktree and therefore weakened the one-shot guard. Before any outcome, freeze
+  the sole permitted destination as
+  `evidence/ACL-003-confirmatory-{approved_sha}.json` resolved under the repository.
