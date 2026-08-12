@@ -381,3 +381,13 @@
 - **Stop conditions:** either independent oracle disagrees beyond a frozen tolerance;
   coordinate-zero classification is unstable; existing-data evaluation requires
   target fitting; a new trajectory is generated; or baseline verification turns red.
+- **Clean-only numerical amendment:** the first frozen mechanism commit
+  `3f05fa663093163832bf33924d6167bf390534bf` stopped before reading stored outcome
+  errors because the Hessian mass guard used a scale-blind `2e-13` absolute limit. On
+  the high-curvature clean `edge/strong_ordered/uniform_mix` case, cancellation reached
+  `9.1e-13` while the Hessian L1 norm reached about `1.9e4` (relative residual below
+  `5e-17`); the independent polynomial path showed the same scaling issue. Freeze all
+  derivative mass checks as `absolute_tolerance + 2e-15 * vector_L1_norm`, retaining
+  absolute tolerances `2e-13` for first/Hessian and `2e-11` for second derivative. Add
+  the clean high-curvature 50-step case as a regression. No ACL-002 outcome comparison
+  or second-order package existed when this amendment was made.

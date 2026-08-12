@@ -113,6 +113,22 @@ def test_one_step_l1_second_order_coefficient_is_zero() -> None:
     assert coefficient == pytest.approx(0.0, abs=2e-14)
 
 
+def test_high_curvature_clean_case_uses_scale_aware_mass_guard() -> None:
+    p0 = np.array([0.001, 0.099, 0.9])
+    reward = np.array([1.5, 0.25, -0.4])
+    mutation = np.full((3, 3), 1.0 / 3.0)
+
+    recurrence = second_order_sensitivity_trajectory(
+        p0, reward, mutation, eta=0.05, steps=50
+    )
+    oracle = matrix_polynomial_second_order_trajectory(
+        p0, reward, mutation, eta=0.05, steps=50
+    )
+
+    assert np.allclose(recurrence.first, oracle.first, rtol=0.0, atol=5e-11)
+    assert np.allclose(recurrence.second, oracle.second, rtol=0.0, atol=2e-9)
+
+
 @pytest.mark.parametrize("epsilon", [float("nan"), float("inf")])
 def test_signed_matrix_oracle_rejects_nonfinite_epsilon(epsilon: float) -> None:
     with pytest.raises(ValueError, match="epsilon"):

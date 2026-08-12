@@ -109,3 +109,9 @@ The implementation freezes `|s_i| <= 2e-14` as the float64 zero-coordinate branc
 and reports every such coordinate. For finite epsilon it evaluates the truncated
 vector inside the absolute value directly, so a predicted sign crossing is not hidden
 inside a scalar coefficient.
+
+Derivative tangent-mass guards use an absolute-plus-relative criterion
+`absolute_tolerance + 2e-15 * vector_L1_norm`. The absolute tolerance is `2e-13` for
+first derivatives and Hessian contractions and `2e-11` for second derivatives. This
+keeps the guard meaningful when clean high-curvature coefficients grow by many orders
+of magnitude.

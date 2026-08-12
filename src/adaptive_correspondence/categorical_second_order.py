@@ -19,6 +19,7 @@ FloatArray = NDArray[np.float64]
 L1_COORDINATE_ZERO_TOLERANCE = 2e-14
 FIRST_ORDER_MASS_TOLERANCE = 2e-13
 SECOND_ORDER_MASS_TOLERANCE = 2e-11
+MASS_RELATIVE_TOLERANCE = 2e-15
 
 
 @dataclass(frozen=True)
@@ -57,6 +58,13 @@ def _selection_factors(reward: FloatArray, eta: float) -> FloatArray:
     return np.exp(eta * (reward - float(np.max(reward))))
 
 
+def _mass_within_tolerance(vector: FloatArray, absolute_tolerance: float) -> bool:
+    allowed = absolute_tolerance + MASS_RELATIVE_TOLERANCE * float(
+        np.linalg.norm(vector, ord=1)
+    )
+    return abs(float(np.sum(vector))) <= allowed
+
+
 def row_hessian_quadratic(
     probability: ArrayLike,
     reward: ArrayLike,
@@ -75,7 +83,7 @@ def row_hessian_quadratic(
     beta = float(np.dot(tangent, factors) / normalizer)
     first_direction = tangent @ row_jacobian(state, rewards, eta_value)
     contracted = -2.0 * beta * first_direction
-    if abs(float(np.sum(contracted))) > FIRST_ORDER_MASS_TOLERANCE:
+    if not _mass_within_tolerance(contracted, FIRST_ORDER_MASS_TOLERANCE):
         raise FloatingPointError("row Hessian contraction left the simplex tangent space")
     return contracted
 
@@ -111,9 +119,9 @@ def second_order_sensitivity_trajectory(
         second_next = second[step] @ jacobian
         second_next += row_hessian_quadratic(current, rewards, eta_value, first[step])
         second_next += 2.0 * (selected_first @ perturbation)
-        if abs(float(np.sum(first_next))) > FIRST_ORDER_MASS_TOLERANCE:
+        if not _mass_within_tolerance(first_next, FIRST_ORDER_MASS_TOLERANCE):
             raise FloatingPointError("first derivative left the simplex tangent space")
-        if abs(float(np.sum(second_next))) > SECOND_ORDER_MASS_TOLERANCE:
+        if not _mass_within_tolerance(second_next, SECOND_ORDER_MASS_TOLERANCE):
             raise FloatingPointError("second derivative left the simplex tangent space")
         states[step + 1] = validate_simplex(clean_next, strictly_positive=True)
         first[step + 1] = first_next
@@ -168,9 +176,9 @@ def matrix_polynomial_second_order_trajectory(
             mass_one**2 / mass_zero**3 - mass_two / mass_zero**2
         )
         curvature = 2.0 * quadratic_coefficient
-        if abs(float(np.sum(tangent))) > FIRST_ORDER_MASS_TOLERANCE:
+        if not _mass_within_tolerance(tangent, FIRST_ORDER_MASS_TOLERANCE):
             raise FloatingPointError("polynomial first derivative violates tangent mass")
-        if abs(float(np.sum(curvature))) > SECOND_ORDER_MASS_TOLERANCE:
+        if not _mass_within_tolerance(curvature, SECOND_ORDER_MASS_TOLERANCE):
             raise FloatingPointError("polynomial second derivative violates tangent mass")
         states[step] = validate_simplex(clean, strictly_positive=True)
         first[step] = tangent
