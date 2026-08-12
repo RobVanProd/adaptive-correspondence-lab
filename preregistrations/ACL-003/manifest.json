@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ACL-003",
+  "title": "New-value confirmation of categorical second-order mutation sensitivity",
+  "randomness": "none",
+  "benchmark_scope": "deterministic-new-value-held-out-benchmark",
+  "inference_scope": "descriptive-criteria-not-population-confidence",
+  "transport_scope": "zero-fit-new-value-within-categorical-class",
+  "vector_convention": "row",
+  "eta": 0.05,
+  "primary_horizon": 20,
+  "secondary_horizons": [1, 5, 50],
+  "epsilon_grid": [0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1],
+  "numerical_control_epsilons": [0.0001, 0.0003],
+  "confirmatory_epsilons": [0.001, 0.003, 0.01],
+  "stress_epsilons": [0.03, 0.1],
+  "numerical_policy": {
+    "delta_floor": 2e-12,
+    "quantile_method": "linear",
+    "quantile_definition": "Hyndman-Fan Type 7",
+    "matrix_oracle_max_abs_tolerance": 5e-13,
+    "second_order_state_oracle_tolerance": 5e-13,
+    "second_order_first_oracle_tolerance": 5e-11,
+    "second_order_curvature_oracle_tolerance": 2e-9
+  },
+  "gates": {
+    "within_landscape_reduction": "maximum-over-confirmatory-epsilons",
+    "target_landscape_median_relative_error_max": 0.1,
+    "target_landscape_q90_relative_error_max": 0.2
+  },
+  "states": {
+    "new_state_01": [0.27, 0.18, 0.55],
+    "new_state_02": [0.62, 0.27, 0.11],
+    "new_state_03": [0.08, 0.37, 0.55],
+    "new_state_04": [0.015, 0.185, 0.8],
+    "new_state_05": [0.42, 0.51, 0.07],
+    "new_state_06": [0.125, 0.475, 0.4],
+    "new_state_07": [0.73, 0.06, 0.21],
+    "new_state_08": [0.31, 0.58, 0.11]
+  },
+  "rewards": {
+    "new_reward_01": [0.85, -0.35, 0.15],
+    "new_reward_02": [-0.65, 0.9, 0.25],
+    "new_reward_03": [0.2, -1.05, 0.7],
+    "new_reward_04": [0.32, 0.28, -0.6],
+    "new_reward_05": [1.2, 0.1, -0.55],
+    "new_reward_06": [-0.15, 0.45, -0.3],
+    "new_reward_07": [0.55, -0.8, 0.05],
+    "new_reward_08": [-0.9, 0.2, 0.65]
+  },
+  "mutation_matrices": {
+    "new_mutation_01": [
+      [0.55, 0.3, 0.15],
+      [0.2, 0.5, 0.3],
+      [0.25, 0.15, 0.6]
+    ],
+    "new_mutation_02": [
+      [0.4, 0.6, 0.0],
+      [0.0, 0.4, 0.6],
+      [0.6, 0.0, 0.4]
+    ],
+    "new_mutation_03": [
+      [0.35, 0.0, 0.65],
+      [0.65, 0.35, 0.0],
+      [0.0, 0.65, 0.35]
+    ],
+    "new_mutation_04": [
+      [0.7, 0.2, 0.1],
+      [0.05, 0.8, 0.15],
+      [0.25, 0.15, 0.6]
+    ],
+    "new_mutation_05": [
+      [0.2, 0.45, 0.35],
+      [0.3, 0.2, 0.5],
+      [0.4, 0.4, 0.2]
+    ],
+    "new_mutation_06": [
+      [0.82, 0.11, 0.07],
+      [0.09, 0.84, 0.07],
+      [0.05, 0.13, 0.82]
+    ],
+    "identity_control": [
+      [1.0, 0.0, 0.0],
+      [0.0, 1.0, 0.0],
+      [0.0, 0.0, 1.0]
+    ]
+  },
+  "landscapes": [
+    {"id": "N01", "role": "confirmatory-target", "p0": "new_state_01", "reward": "new_reward_01", "mutation": "new_mutation_01"},
+    {"id": "N02", "role": "confirmatory-target", "p0": "new_state_02", "reward": "new_reward_02", "mutation": "new_mutation_02"},
+    {"id": "N03", "role": "confirmatory-target", "p0": "new_state_03", "reward": "new_reward_03", "mutation": "new_mutation_03"},
+    {"id": "N04", "role": "confirmatory-target", "p0": "new_state_04", "reward": "new_reward_04", "mutation": "new_mutation_04"},
+    {"id": "N05", "role": "confirmatory-target", "p0": "new_state_05", "reward": "new_reward_05", "mutation": "new_mutation_05"},
+    {"id": "N06", "role": "confirmatory-target", "p0": "new_state_06", "reward": "new_reward_06", "mutation": "new_mutation_06"},
+    {"id": "N07", "role": "confirmatory-target", "p0": "new_state_07", "reward": "new_reward_07", "mutation": "new_mutation_01"},
+    {"id": "N08", "role": "confirmatory-target", "p0": "new_state_08", "reward": "new_reward_08", "mutation": "new_mutation_02"},
+    {"id": "N09", "role": "confirmatory-target", "p0": "new_state_01", "reward": "new_reward_05", "mutation": "new_mutation_03"},
+    {"id": "N10", "role": "confirmatory-target", "p0": "new_state_02", "reward": "new_reward_06", "mutation": "new_mutation_04"},
+    {"id": "N11", "role": "confirmatory-target", "p0": "new_state_03", "reward": "new_reward_07", "mutation": "new_mutation_05"},
+    {"id": "N12", "role": "confirmatory-target", "p0": "new_state_04", "reward": "new_reward_08", "mutation": "new_mutation_06"},
+    {"id": "N13", "role": "confirmatory-target", "p0": "new_state_05", "reward": "new_reward_01", "mutation": "new_mutation_02"},
+    {"id": "N14", "role": "confirmatory-target", "p0": "new_state_06", "reward": "new_reward_02", "mutation": "new_mutation_03"},
+    {"id": "N15", "role": "confirmatory-target", "p0": "new_state_07", "reward": "new_reward_03", "mutation": "new_mutation_04"},
+    {"id": "N16", "role": "confirmatory-target", "p0": "new_state_08", "reward": "new_reward_04", "mutation": "new_mutation_01"},
+    {"id": "C01", "role": "software-control", "p0": "new_state_01", "reward": "new_reward_01", "mutation": "identity_control"}
+  ],
+  "identity_control_ids": ["C01"],
+  "predeclared_low_sensitivity_ids": []
+}

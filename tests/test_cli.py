@@ -2,6 +2,7 @@ import csv
 import json
 from pathlib import Path
 
+import adaptive_correspondence.cli as cli_module
 from adaptive_correspondence.cli import main
 
 
@@ -41,3 +42,31 @@ def test_invalid_gaussian_std_returns_usage_error(capsys) -> None:
     return_code = main(["gaussian", "--std=-1,1"])
     assert return_code == 2
     assert "strictly positive" in capsys.readouterr().err
+
+
+def test_acl003_validation_command_never_invokes_runner(monkeypatch, capsys) -> None:
+    expected = {"valid": True, "outcomes_generated": False}
+    monkeypatch.setattr(
+        cli_module,
+        "validate_acl003_preregistration_bundle",
+        lambda bundle, reference_path: {
+            **expected,
+            "bundle": bundle,
+            "reference": reference_path,
+        },
+    )
+
+    return_code = main(
+        [
+            "acl003-validate",
+            "--bundle",
+            "frozen",
+            "--reference-manifest",
+            "reference.json",
+        ]
+    )
+
+    assert return_code == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["outcomes_generated"] is False
+    assert payload["bundle"] == "frozen"

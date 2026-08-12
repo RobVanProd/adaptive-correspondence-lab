@@ -424,3 +424,66 @@
   reward, and mutation catalog values; freeze second-order-versus-first-order local
   predictions and stress failure expectations; audit the checkpoint adversarially
   before any outcome generation.
+
+## ACL-003 — New-value confirmation of the categorical second-order law
+
+- **Status:** preregistration construction only; outcomes forbidden.
+- **Observed behavior:** the no-fit analytic second-order truncation passed its frozen
+  ACL-002 posthoc earning rule and failed visibly in stress. Because that mechanism was
+  selected after ACL-002 outcomes, it requires an entirely new confirmatory benchmark.
+- **Hypothesis:** on new categorical states, rewards, mutation matrices, and landscape
+  combinations, the zero-fit truncated-vector prediction
+  `||epsilon*s_T+(epsilon^2/2)*u_T||_1` remains quantitatively accurate through
+  `epsilon=0.01` without any fitted source or target coefficient.
+- **Scope:** deterministic three-state categorical systems; row-stochastic mutation;
+  fixed reward and `eta=0.05`; primary endpoint `T=20`; float64; strictly interior
+  clean states. This is a stronger within-class test, not cross-class transport.
+- **Frozen experimental regions:** retain the grid
+  `0,1e-4,3e-4,1e-3,3e-3,1e-2,3e-2,1e-1`. The numerical-control region
+  `1e-4,3e-4` is reported but non-gating. The strict local confirmatory region is
+  `1e-3,3e-3,1e-2`. Stress `3e-2,1e-1` is reported and incapable of changing the
+  confirmatory verdict. Primary horizon is `20`; `T=1,5,50` are secondary, with `T=1`
+  serving as the affine one-step control.
+- **Frozen primary estimand and gate:** for each of 16 regular new-value landscapes,
+  compute the maximum second-order absolute relative endpoint-L1 error across the
+  three local confirmatory epsilons. Apply the inherited ACL-002 Type-7 criteria
+  unchanged: median landscape score at most `0.10` and Q90 at most `0.20`. Reusing
+  these pre-outcome historical criteria avoids choosing thresholds from ACL-002 target
+  outcomes. The conjunction is the ACL-003 verdict.
+- **Paired secondary content:** report first-order and second-order errors, count the
+  landscapes on which second order improves at each epsilon, and compare empirical
+  `1%,5%,10%,20%` cumulative-prefix radii. These comparisons are secondary and cannot
+  rescue or reverse the primary verdict.
+- **Special handling:** include one identity-mutation software control outside the 16
+  hypothesis-bearing landscapes. It is judged only by the inherited absolute
+  numerical floor. Any other analytically near-zero case discovered before outcomes
+  is frozen into a separate stratum. Relative errors are never evaluated when the
+  analytic prediction is below the frozen floor.
+- **New-value requirement:** every hypothesis-bearing state vector, reward vector, and
+  mutation matrix must be numerically distinct from every ACL-002 catalog value;
+  validation compares arrays, not names. Landscape triplets are new as a consequence.
+  The identity control is exempt because its purpose is theorem/software validation.
+- **No fitting:** ACL-003 has no source split, alpha, regression, or target calibration.
+  Both `s_T` and `u_T` are computed from the analytic recurrence before perturbed
+  outcomes. No ACL-002 outcome-derived coefficient enters the prediction.
+- **Implementation contract:** freeze narrative preregistration, derivation reference,
+  analysis plan, manifest, clean analytic registry, SHA-256 lock, guarded validator,
+  and future one-shot runner. Execution requires an exact approved SHA, completely
+  clean full porcelain worktree, valid locks/registry, and a nonexistent output path.
+  Raw generation must compare iterative trajectories with the independent matrix-power
+  oracle and abort above `5e-13`.
+- **Allowed files:** `TASK_LEDGER.md`, `src/adaptive_correspondence/acl003.py`, CLI
+  wiring, `tests/test_acl003.py`, and files under `preregistrations/ACL-003/`. Bridge
+  ledgers may be updated only for preregistration status.
+- **Acceptance tests:** fail first; then validate exact regions/gates, numeric novelty,
+  analytic registry recomputation, identity control, second-order recurrence/oracle
+  parity, full worktree/output guards, lock integrity, deterministic analysis order,
+  special-stratum separation, and stress non-gating behavior. Full pytest, Ruff,
+  coverage, wheel build, and preregistration-only validation must pass.
+- **Risks:** tuning the new catalog using perturbed outcomes; accidentally inheriting
+  an ACL-002 numeric value; allowing stress failures to alter the gate; silently
+  turning a near-zero analytic case into a relative-error case; interpreting a pass as
+  cross-class evidence.
+- **Stop conditions:** any ACL-003 perturbed trajectory or outcome is generated before
+  the lock audit; numeric novelty fails; the registry depends on outcomes; a threshold
+  changes after outcomes; or the baseline is red.

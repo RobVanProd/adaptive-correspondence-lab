@@ -1,0 +1,722 @@
+{
+  "experiment_id": "ACL-003",
+  "kind": "clean-second-order-analytic-registry",
+  "landscapes": [
+    {
+      "C_primary": 3.6775571669471443,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.24949069141001,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 3.6775571669471443,
+          "second_derivative_l1": 48.09482918179526,
+          "second_order_l1_coefficient": -15.8442554097062,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.2063156248050342,
+          "second_derivative_l1": 3.1252796370110945,
+          "second_order_l1_coefficient": -1.5626398185055472,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 8.264430744487342,
+          "second_derivative_l1": 131.06162860947398,
+          "second_order_l1_coefficient": -65.53081430473699,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N01",
+      "mutation": "new_mutation_01",
+      "oracle_max_absolute_errors": {
+        "first": 1.7763568394002505e-15,
+        "second": 3.907985046680551e-14,
+        "state": 1.1102230246251565e-16
+      },
+      "p0": "new_state_01",
+      "reward": "new_reward_01",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 48.09482918179526,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 6.99466060534336,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.5900977432531437,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 6.99466060534336,
+          "second_derivative_l1": 164.62816969644618,
+          "second_order_l1_coefficient": -21.441181850025686,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.7649837946551292,
+          "second_derivative_l1": 11.887067309227014,
+          "second_order_l1_coefficient": -5.178493916392769,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 22.584306537269672,
+          "second_derivative_l1": 611.1478722901418,
+          "second_order_l1_coefficient": -305.5739361450709,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N02",
+      "mutation": "new_mutation_02",
+      "oracle_max_absolute_errors": {
+        "first": 5.329070518200751e-15,
+        "second": 3.979039320256561e-13,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_02",
+      "reward": "new_reward_02",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 164.62816969644618,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 12.45281662462557,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.6344895707137506,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 12.45281662462557,
+          "second_derivative_l1": 150.85722424766874,
+          "second_order_l1_coefficient": -47.73547574736717,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 3.3644250668748046,
+          "second_derivative_l1": 11.862429210108118,
+          "second_order_l1_coefficient": -5.901616872472465,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 17.018876407358803,
+          "second_derivative_l1": 339.0137694789642,
+          "second_order_l1_coefficient": 41.72544509081542,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N03",
+      "mutation": "new_mutation_03",
+      "oracle_max_absolute_errors": {
+        "first": 5.329070518200751e-15,
+        "second": 3.872457909892546e-13,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_03",
+      "reward": "new_reward_03",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 150.85722424766874,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 11.708012198091836,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.5736831297842313,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 11.708012198091836,
+          "second_derivative_l1": 173.00102736176598,
+          "second_order_l1_coefficient": -86.50051368088299,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.934321000059335,
+          "second_derivative_l1": 6.762150212250175,
+          "second_order_l1_coefficient": -3.3810751061250874,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 29.183679834658832,
+          "second_derivative_l1": 1651.7532751080637,
+          "second_order_l1_coefficient": -825.8766375540318,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N04",
+      "mutation": "new_mutation_04",
+      "oracle_max_absolute_errors": {
+        "first": 8.881784197001252e-15,
+        "second": 5.684341886080801e-13,
+        "state": 2.7755575615628914e-16
+      },
+      "p0": "new_state_04",
+      "reward": "new_reward_04",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 173.00102736176598,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 10.01036783270957,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.6972084284556539,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 10.01036783270957,
+          "second_derivative_l1": 128.01670798221318,
+          "second_order_l1_coefficient": -64.00835399110659,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 3.1873075146525887,
+          "second_derivative_l1": 13.832518107139453,
+          "second_order_l1_coefficient": -6.916259053569727,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 21.50692074749025,
+          "second_derivative_l1": 294.2446120988806,
+          "second_order_l1_coefficient": -147.1223060494403,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N05",
+      "mutation": "new_mutation_05",
+      "oracle_max_absolute_errors": {
+        "first": 5.329070518200751e-15,
+        "second": 2.2737367544323206e-13,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_05",
+      "reward": "new_reward_05",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 128.01670798221318,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 1.6885080503660341,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.08186540531038586,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 1.6885080503660341,
+          "second_derivative_l1": 7.121913759359156,
+          "second_order_l1_coefficient": -3.560956879679578,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 0.4137220756717701,
+          "second_derivative_l1": 0.3932413932869515,
+          "second_order_l1_coefficient": -0.19662069664347576,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 5.3238406324153615,
+          "second_derivative_l1": 38.08379853854537,
+          "second_order_l1_coefficient": -19.041899269272687,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N06",
+      "mutation": "new_mutation_06",
+      "oracle_max_absolute_errors": {
+        "first": 1.1102230246251565e-15,
+        "second": 1.2434497875801753e-14,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_06",
+      "reward": "new_reward_06",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 7.121913759359156,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 8.745508302518752,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.5370467938876721,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 8.745508302518752,
+          "second_derivative_l1": 64.63386070155514,
+          "second_order_l1_coefficient": -32.31693035077757,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.583131987702661,
+          "second_derivative_l1": 6.0856932967730195,
+          "second_order_l1_coefficient": -2.9867590402159907,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 15.598441289499096,
+          "second_derivative_l1": 147.14891570582554,
+          "second_order_l1_coefficient": -73.57445785291277,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N07",
+      "mutation": "new_mutation_01",
+      "oracle_max_absolute_errors": {
+        "first": 3.552713678800501e-15,
+        "second": 2.2737367544323206e-13,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_07",
+      "reward": "new_reward_07",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 64.63386070155514,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 14.669239624582294,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.5690117481452656,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 14.669239624582294,
+          "second_derivative_l1": 367.39810897083146,
+          "second_order_l1_coefficient": -183.69905448541573,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 3.0615027286534113,
+          "second_derivative_l1": 13.012636875184246,
+          "second_order_l1_coefficient": -6.506318437592123,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 42.89375163717126,
+          "second_derivative_l1": 3163.099552580534,
+          "second_order_l1_coefficient": -1313.7032446361459,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N08",
+      "mutation": "new_mutation_02",
+      "oracle_max_absolute_errors": {
+        "first": 1.4210854715202004e-14,
+        "second": 2.0463630789890885e-12,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_08",
+      "reward": "new_reward_08",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 367.39810897083146,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 7.926506666659858,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.4592021751801493,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 7.926506666659858,
+          "second_derivative_l1": 138.73391442005382,
+          "second_order_l1_coefficient": -69.36695721002691,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.0716934073035986,
+          "second_derivative_l1": 9.080228531798436,
+          "second_order_l1_coefficient": -4.540114265899218,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 16.174015102783923,
+          "second_derivative_l1": 247.4508531632294,
+          "second_order_l1_coefficient": -46.0903647034346,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N09",
+      "mutation": "new_mutation_03",
+      "oracle_max_absolute_errors": {
+        "first": 4.440892098500626e-15,
+        "second": 1.7763568394002505e-13,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_01",
+      "reward": "new_reward_05",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 138.73391442005382,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 5.053696423572619,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.2874612385028885,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 5.053696423572619,
+          "second_derivative_l1": 46.096828506611374,
+          "second_order_l1_coefficient": -23.048414253305687,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.4128362696606587,
+          "second_derivative_l1": 2.5031572825629134,
+          "second_order_l1_coefficient": -1.2515786412814567,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 7.713549593917901,
+          "second_derivative_l1": 210.12413334282564,
+          "second_order_l1_coefficient": -105.06206667141282,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N10",
+      "mutation": "new_mutation_04",
+      "oracle_max_absolute_errors": {
+        "first": 3.552713678800501e-15,
+        "second": 1.1368683772161603e-13,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_02",
+      "reward": "new_reward_06",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 46.096828506611374,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 14.972970442858614,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.5285897611779606,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 14.972970442858614,
+          "second_derivative_l1": 362.68581333969746,
+          "second_order_l1_coefficient": -181.34290666984873,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.7740395121824255,
+          "second_derivative_l1": 14.109600684006846,
+          "second_order_l1_coefficient": -7.054800342003423,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 42.751298909197516,
+          "second_derivative_l1": 3207.5094609741773,
+          "second_order_l1_coefficient": -1603.7547304870886,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N11",
+      "mutation": "new_mutation_05",
+      "oracle_max_absolute_errors": {
+        "first": 1.5987211554602254e-14,
+        "second": 2.5011104298755527e-12,
+        "state": 1.6653345369377348e-16
+      },
+      "p0": "new_state_03",
+      "reward": "new_reward_07",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 362.68581333969746,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 4.290976496121983,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.26210486445796355,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 4.290976496121983,
+          "second_derivative_l1": 14.351612651766928,
+          "second_order_l1_coefficient": -7.175806325883464,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.252849920896165,
+          "second_derivative_l1": 1.1323373927892941,
+          "second_order_l1_coefficient": -0.5661686963946471,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 8.247323568773142,
+          "second_derivative_l1": 50.970072157002264,
+          "second_order_l1_coefficient": -24.640821911358238,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N12",
+      "mutation": "new_mutation_06",
+      "oracle_max_absolute_errors": {
+        "first": 1.7763568394002505e-15,
+        "second": 3.197442310920451e-14,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_04",
+      "reward": "new_reward_08",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 14.351612651766928,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 11.61908186938895,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.5116778427278743,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 11.61908186938895,
+          "second_derivative_l1": 168.34238159908904,
+          "second_order_l1_coefficient": -84.17119079954452,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.423719583099137,
+          "second_derivative_l1": 11.399338881029003,
+          "second_order_l1_coefficient": -5.699669440514501,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 22.16149975869382,
+          "second_derivative_l1": 435.24898943791504,
+          "second_order_l1_coefficient": -108.78775922255556,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N13",
+      "mutation": "new_mutation_02",
+      "oracle_max_absolute_errors": {
+        "first": 7.105427357601002e-15,
+        "second": 2.1316282072803006e-13,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_05",
+      "reward": "new_reward_01",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 168.34238159908904,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 8.386695700828595,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.4776808951692124,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 8.386695700828595,
+          "second_derivative_l1": 134.63737838302882,
+          "second_order_l1_coefficient": -40.82113499427766,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.3666849154377676,
+          "second_derivative_l1": 9.801098177700222,
+          "second_order_l1_coefficient": -3.341279157758972,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 14.395319643743978,
+          "second_derivative_l1": 422.41821320731174,
+          "second_order_l1_coefficient": -103.56819211351248,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N14",
+      "mutation": "new_mutation_03",
+      "oracle_max_absolute_errors": {
+        "first": 5.773159728050814e-15,
+        "second": 1.9895196601282805e-13,
+        "state": 3.3306690738754696e-16
+      },
+      "p0": "new_state_06",
+      "reward": "new_reward_02",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 134.63737838302882,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 4.001083040871587,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.33348835880106864,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 4.001083040871587,
+          "second_derivative_l1": 17.403686895262684,
+          "second_order_l1_coefficient": -8.701843447631342,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.498364295331797,
+          "second_derivative_l1": 2.066299674967742,
+          "second_order_l1_coefficient": -1.033149837483871,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 4.8987224591817915,
+          "second_derivative_l1": 31.673317235529094,
+          "second_order_l1_coefficient": -12.551123806947059,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N15",
+      "mutation": "new_mutation_04",
+      "oracle_max_absolute_errors": {
+        "first": 3.1086244689504383e-15,
+        "second": 4.440892098500626e-14,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_07",
+      "reward": "new_reward_03",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 17.403686895262684,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 6.211126485773491,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.3635439283862808,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 6.211126485773491,
+          "second_derivative_l1": 61.214472811142855,
+          "second_order_l1_coefficient": -30.607236405571427,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.7644641989660181,
+          "second_derivative_l1": 4.458262535227279,
+          "second_order_l1_coefficient": -2.1666077441569804,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 11.975057572456546,
+          "second_derivative_l1": 245.24903799846692,
+          "second_order_l1_coefficient": -122.62451899923346,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "N16",
+      "mutation": "new_mutation_01",
+      "oracle_max_absolute_errors": {
+        "first": 3.552713678800501e-15,
+        "second": 5.684341886080802e-14,
+        "state": 2.220446049250313e-16
+      },
+      "p0": "new_state_08",
+      "reward": "new_reward_04",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 61.214472811142855,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 0.0,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.0,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": [
+            0,
+            1,
+            2
+          ]
+        },
+        "20": {
+          "C_endpoint_l1": 0.0,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": [
+            0,
+            1,
+            2
+          ]
+        },
+        "5": {
+          "C_endpoint_l1": 0.0,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": [
+            0,
+            1,
+            2
+          ]
+        },
+        "50": {
+          "C_endpoint_l1": 0.0,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "id": "C01",
+      "mutation": "identity_control",
+      "oracle_max_absolute_errors": {
+        "first": 0.0,
+        "second": 0.0,
+        "state": 1.1102230246251565e-16
+      },
+      "p0": "new_state_01",
+      "reward": "new_reward_01",
+      "role": "software-control",
+      "second_derivative_l1_primary": 0.0,
+      "stratum": "identity-control"
+    }
+  ],
+  "outcomes_generated": false,
+  "prediction_kind": "zero-fit-second-order-truncated-vector",
+  "schema_version": 1
+}
