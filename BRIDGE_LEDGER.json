@@ -103,9 +103,9 @@
       ],
       "content": "The conditional expected finite-lambda rank-mu update should align with an independently constructed analytic Fisher-natural direction in each tangent block.",
       "stability": {
-        "status": "unresolved",
-        "law": null,
-        "result": null
+        "status": "theorem-reproduction",
+        "law": "finite-lambda expected rank-mu tangent from conditional binomial rank utility, Gaussian score, and inverse Fisher metric",
+        "result": "The independent closed block comparator matches a tensor-product Gaussian score integral on toy fixtures; confirmatory conditional-mean alignment remains unresolved."
       },
       "transport": {
         "status": "unresolved",
@@ -118,6 +118,7 @@
         "result": null
       },
       "evidence_status": [
+        "theorem-reproduction",
         "unresolved"
       ],
       "what_would_change_interpretation": "A preregistered conditional-mean Fisher cosine failure after shadow convergence would reject the proposed Gaussian bridge under its frozen finite-lambda scope."

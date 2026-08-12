@@ -52,7 +52,10 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   parents, weights, parameterization, and learning rates.
 - **Content:** the independently constructed analytic Fisher direction should align
   with the converged conditional expected finite-lambda rank-mu update in each block.
-- **Stability:** unresolved.
+- **Stability:** the finite-lambda conditional expected direction has now been derived
+  independently from binomial rank utility, Gaussian score, and inverse Fisher blocks.
+  It matches a tensor-product score integral on toy fixtures. This is theorem/software
+  reproduction; confirmatory shadow alignment remains unresolved.
 - **Transport:** unresolved; no quantity has yet been frozen for no-refit transfer.
 - **Failure boundary:** unresolved.
 - **Status:** unresolved. Existing software is an escalation rung, not scientific

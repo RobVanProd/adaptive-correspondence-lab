@@ -535,3 +535,44 @@
 - **Stop conditions:** evidence hash changes; derived primary values disagree with the
   artifact; analysis requires refitting or a new outcome; categorical interpretation
   remains ambiguous after stored-row summaries.
+
+## GNG-MECH — Independent finite-lambda Gaussian rank-mu comparator
+
+- **Status:** clean mathematical/software mechanism only; no confirmatory landscapes or
+  Gaussian scientific outcomes.
+- **Observed behavior:** the existing Gaussian rung computes analytic quadratic natural
+  gradient and finite-sample rank-mu updates, but its recorded analytic field is not the
+  finite-lambda expected rank direction required by H2.
+- **Hypothesis:** for a diagonal Gaussian and a nonzero linear objective, the exact
+  finite-lambda conditional expected rank-mu tangent can be constructed independently
+  from the Gaussian score, Fisher inverse, and conditional binomial rank law.
+- **Frozen semantics:** parameterization `(mean, log_std)` in dimension at least two;
+  linear objective `a dot x`; `lambda=32`, `mu=16`; logarithmic positive rank weights
+  `log(mu+0.5)-log(rank)` normalized over selected ranks; no evolution paths, CSA,
+  clipping, antithetic sampling, or state iteration. For standardized objective axis
+  `v=(a*std)/||a*std||`, define conditional expected rank utility `h_lambda(t)`. The
+  independent analytic blocks are `lambda*(std*v)*E[h(t)t]` and
+  `(lambda/2)*(v^2)*E[h(t)(t^2-1)]`.
+- **Geometry:** compare mean and covariance/log-scale blocks separately using the
+  Gaussian Fisher metric. A joint cosine is secondary only.
+- **Implementation:** evaluate the one-dimensional expectations by deterministic
+  Gauss-Hermite integration under the standard-normal measure; verify convergence at
+  frozen order `160` against doubled order `320` at relative tolerance `2e-9` and
+  absolute tolerance `5e-12`, and compare with a separate tensor
+  Gauss-Hermite score integral on toy
+  fixtures. Sampling code returns raw independent shadow directions and does not use
+  the analytic comparator.
+- **Allowed files:** `TASK_LEDGER.md`, a new Gaussian bridge mechanism module, its
+  tests, derivation documentation, and bridge-ledger mechanism status. No
+  preregistration or evidence directory.
+- **Acceptance tests:** rank weights and conditional utility normalize correctly;
+  analytic blocks match independent multidimensional quadrature; large toy shadow mean
+  has high separate-block Fisher cosine; invalid dimensions/scales/objective fail;
+  full pytest, Ruff, and wheel build pass.
+- **Risks:** accidentally comparing to the quadratic-objective natural gradient rather
+  than finite-lambda rank expectation; replaying the update in the comparator; hiding
+  covariance-block noise in a joint cosine; treating a clean mechanism check as
+  scientific evidence.
+- **Stop conditions:** the comparator requires sampled rank-mu outcomes; block direction
+  is analytically zero for the proposed design; quadrature or independent oracle does
+  not converge; implementation requires optimizer machinery outside the frozen scope.
