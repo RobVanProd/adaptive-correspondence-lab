@@ -495,10 +495,10 @@ def _markdown(summary: dict[str, Any]) -> str:
     ]
     for row in t20:
         lines.append(
-            f"| {row['region']} | {100 * row['first_order']['median_type7']:.3f}% | "
-            f"{100 * row['second_order']['median_type7']:.3f}% | "
-            f"{100 * row['first_order']['q90_type7']:.3f}% | "
-            f"{100 * row['second_order']['q90_type7']:.3f}% |"
+            f"| {row['region']} | {100 * row['first_order']['median_type7']:.4f}% | "
+            f"{100 * row['second_order']['median_type7']:.4f}% | "
+            f"{100 * row['first_order']['q90_type7']:.4f}% | "
+            f"{100 * row['second_order']['q90_type7']:.4f}% |"
         )
     lines.extend(
         [
@@ -518,13 +518,21 @@ def _markdown(summary: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
+            "The local improvement does not extend uniformly into stress. At `T=20`, "
+            "stress Q90 worsens from 62.17% at first order to 77.66% at second order, "
+            "and the worst second-order relative error is 778.42%. This is a mapped "
+            "finite-truncation failure boundary, not a reason to suppress the local result.",
+            "",
             "## Interpretation",
             "",
-            "If the earning rule passes, the mechanism has earned an ACL-003 "
-            "preregistration on entirely new categorical catalog values. The ACL-002 "
-            "improvement remains exploratory because the mechanism was selected after "
-            "seeing ACL-002 residuals. If it fails, the second-order mechanism should not "
-            "be forced into a confirmatory experiment.",
+            (
+                "The earning rule passed, so the mechanism has earned an ACL-003 "
+                "preregistration on entirely new categorical catalog values."
+                if rule["passed"]
+                else "The earning rule failed, so this mechanism does not earn ACL-003."
+            ),
+            "The ACL-002 improvement remains exploratory because the mechanism was "
+            "selected after seeing ACL-002 residuals.",
             "",
         ]
     )
@@ -595,6 +603,21 @@ def generate_second_order_package(
             "prepare-new-landscape-ACL-003-preregistration"
             if earning_rule["passed"]
             else "do-not-preregister-second-order-ACL-003"
+        ),
+    }
+    stress_t20 = next(
+        row
+        for row in summary["target_error_overview"]
+        if row["horizon"] == 20 and row["region"] == "stress"
+    )
+    summary["exploratory_failure_boundary"] = {
+        "horizon": 20,
+        "region": "stress",
+        "first_order_q90_absolute_relative_error": stress_t20["first_order"]["q90_type7"],
+        "second_order_q90_absolute_relative_error": stress_t20["second_order"]["q90_type7"],
+        "second_order_maximum_absolute_relative_error": stress_t20["second_order"]["maximum"],
+        "interpretation": (
+            "second-order truncation is locally useful but not uniformly stress-stable"
         ),
     }
     _write_json(temporary / "summary.json", summary)
