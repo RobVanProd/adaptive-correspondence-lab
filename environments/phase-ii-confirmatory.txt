@@ -1,0 +1,6 @@
+# Python itself is pinned in phase-ii-confirmatory.json.
+numpy==2.5.2
+pytest==9.1.1
+pytest-cov==7.1.0
+ruff==0.16.2
+coverage==7.15.4

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "environment_id": "phase-ii-cpython313-numpy252-win-amd64",
+  "purpose": "Pinned reference environment for future Phase-II confirmatory execution",
+  "canonical_phase_i_merge_sha": "bea465f034f48fd7e38118c22edd90b10cb25219",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.13.14",
+    "architecture": "64bit"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64"
+  },
+  "runtime_packages": {
+    "numpy": "2.5.2"
+  },
+  "verification_packages": {
+    "coverage": "7.15.4",
+    "pytest": "9.1.1",
+    "pytest-cov": "7.1.0",
+    "ruff": "0.16.2"
+  },
+  "scientific_numeric_policy": {
+    "dtype": "float64",
+    "rng": "NumPy PCG64 with explicit independent seeds",
+    "artifact_identity": "SHA-256 byte identity",
+    "analytic_recomputation": "frozen per-experiment absolute and relative tolerances; never cross-version bitwise equality"
+  }
+}

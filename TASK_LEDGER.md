@@ -827,3 +827,75 @@
 - **Recommended next action:** no additional experiment is required for the original
   question. Future work should pursue the support-conditioned angular-bias theorem,
   and any new empirical extension must begin as a separate preregistered program.
+
+## PHASE-II-AUDIT — Canonicalize and reclassify Phase I
+
+- **Task ID:** `PHASE-II-AUDIT`.
+- **Status:** in progress; audit/protocol only, no new scientific outcomes.
+- **Observed state:** Phase I ended on branch `agent/acl003-preregistration` at synthesis
+  commit `358e18baccf29fd2959054be6bb25dd3869d8f77`; public `main` previously stopped at
+  `50ad814138e783f036ca4acdf95ce9ebbf644a90`, before ACL-003 through ACL-005.
+- **Hypothesis:** the public history, preregistration locks, immutable evidence bytes,
+  and artifact-only reconstructions are internally consistent and support the narrower
+  Phase-I classification required for Phase II.
+- **Frozen classification:** ACL-002 confirms its amended strict first-order region;
+  ACL-003 confirms the zero-fit second-order law on new categorical values and maps a
+  nonuniform stress boundary; ACL-004 is primarily theorem/software positive control
+  plus finite-population SNR evidence; ACL-005 is the load-bearing cross-estimator
+  transport result and falsifies the support-free diagnostic in its frozen stress
+  stratum.
+- **Canonicalization:** merge reviewed PR #1 without rewriting history or publishing a
+  release. Record the merge SHA as the canonical Phase-I public state.
+- **Numerical semantics:** immutable artifacts and lock files retain byte-level SHA-256
+  identity. Future analytic registries additionally use pinned CPython/NumPy and frozen
+  absolute/relative numerical tolerances; independent environments need mathematical
+  equivalence within tolerance, not cross-version bit identity.
+- **Allowed files:** `TASK_LEDGER.md`, Phase-II audit/protocol/environment files,
+  structural-distance ledgers, and README status. No evidence or old preregistration
+  file may change.
+- **Acceptance checks:** inspect complete history; verify each ACL-002–005 artifact hash,
+  approved SHA, evidence commit bytes, and bundle lock; run all artifact-only verifiers;
+  run full pytest, Ruff, coverage, and wheel build; confirm public merge and clean tree.
+- **Risks:** promoting ACL-004 from positive control to independent unification evidence;
+  conflating byte identity with numerical equivalence; silently changing an old claim;
+  publishing a release contrary to repository rules.
+- **Stop conditions:** any evidence hash or lock mismatch, public history divergence,
+  failing baseline, or need to alter Phase-I evidence.
+
+## ACL-006-MECH — Support-conditioned angular bias and consistency converse
+
+- **Task ID:** `ACL-006-MECH`.
+- **Status:** derivation/mechanism construction only; ACL-006 confirmatory targets and
+  random streams are forbidden until a later locked public preregistration is audited.
+- **Observed mechanism:** ACL-005 split-half means can converge to the estimator's own
+  biased expectation. Five of eight rare-cell stress blocks missed truth alignment even
+  though all stress landscapes satisfied the stopping rule.
+- **Hypothesis:** for the frozen undamped empirical-Fisher plug-in estimator, finite
+  categorical support permits an exact zero-fit decomposition of conditional-mean bias
+  into missing-identifiable-subspace and observed-support perturbation components, and
+  these quantities predict angular error across `N`, joint-cell support, Fisher
+  conditioning, and reward geometry.
+- **Frozen estimator semantics:** deterministic rewards; true-policy categorical scores;
+  fixed-`N` joint multinomial counts; empirical score gradient and Fisher from the same
+  counts; centered Moore-Penrose direction with `rcond=1e-12`; no damping, baseline fit,
+  clipping, target fit, or state update.
+- **Derivation target:** for support pattern `S` and Fisher-range projector `P_S`, use
+  the exact identity `hat(d)-d = -(I-P_S)d + (hat(d)-P_S d)`, then average over exact
+  multinomial support/count probabilities. Prove separately that two independent sample
+  means converge in Fisher cosine to one whenever their common nonzero mean exists,
+  whether or not that mean equals the analytic tangent.
+- **Independent oracle:** direct count-table score/Fisher accumulation and exhaustive
+  enumeration on small fixtures must agree with optimized support enumeration and
+  closed-form support probabilities before any preregistration.
+- **Allowed files:** this ledger, Phase-II theory/mechanism modules, tests, derivation
+  documents, and non-outcome software fixtures. No `preregistrations/ACL-006/` manifest
+  or evidence until the mechanism earns a frozen design.
+- **Acceptance checks:** failing tests first; exact probability mass; exhaustive versus
+  optimized expectation agreement; projector decomposition closure; analytic tangent
+  identity; self-consistency converse fixtures; float64 guards; full repository gate.
+- **Risks:** treating exact target enumeration as post-outcome fitting; defining support
+  only by `Np_min` when context/action factorization matters; hiding reward-offset bias;
+  producing a vacuous bound; confusing theorem reproduction with confirmatory breadth.
+- **Stop conditions:** damping enters the estimator; an analytic comparator calls sampled
+  code; a target outcome is generated; support decomposition fails to close; or a new
+  semantic choice is needed after data exist.
