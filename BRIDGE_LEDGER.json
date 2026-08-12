@@ -44,6 +44,17 @@
           "result": "The frozen posthoc earning rule passed with no target refit; all 12 regular T=20 targets gained 5% and 10% radius, but stress stability failed.",
           "summary": "analysis/ACL-002-second-order/summary.json",
           "summary_sha256": "d7533c3f3b5e0941e28cddcba58ce4106825c938f7244c24bd8f98c8e9403474"
+        },
+        "second_order_confirmation": {
+          "status": "preregistered-confirmation",
+          "law": "delta_L1^(2)(epsilon,T) = ||epsilon s_T + (epsilon^2/2) u_T||_1 with O(epsilon^3) state remainder",
+          "result": "ACL-003 passed on 16 landscapes using entirely new state, reward, and mutation catalog values. At T=20, the maximum relative error per landscape over epsilon 0.001, 0.003, and 0.01 had median 0.148431% and Type-7 Q90 0.738712% with no fitting.",
+          "approved_preregistration_sha": "501464f3f6be07f6d813d94aefb818c461a3d5c7",
+          "evidence_commit": "b15d77600369d559cb586a3bb54924737758e038",
+          "artifact": "evidence/ACL-003-confirmatory-501464f3f6be07f6d813d94aefb818c461a3d5c7.json",
+          "artifact_sha256": "1f80c3f5aba4089c67bbfec1ddd6eff53f7a6d42c658436dff0f7c82a1cf8c99",
+          "report": "analysis/ACL-003-confirmatory/summary.json",
+          "report_sha256": "eee21af8f75c7eb5d3a35fdb9d53b1549f275eca52c745a85c130538583128f4"
         }
       },
       "transport": {
@@ -51,19 +62,26 @@
         "quantity": "median source-landscape alpha multiplying the analytic first-order coefficient",
         "target_refit": false,
         "result": "Passed on 12 deterministic held-out target combinations with frozen alpha_source = 0.9951356698171323.",
-        "scope_limit": "within-family combinatorial held-out transport, not a different adaptive-system class"
+        "scope_limit": "within-family combinatorial held-out transport, not a different adaptive-system class",
+        "second_order_new_value": {
+          "status": "preregistered-confirmation",
+          "quantity": "zero-fit analytic second-order truncated state response",
+          "target_refit": false,
+          "result": "Passed on 16 new-value categorical landscapes through epsilon 0.01.",
+          "scope_limit": "stronger new-value transport within the categorical mutation class, not cross-class transport"
+        }
       },
       "failure_boundary": {
-        "status": "exploratory",
-        "result": "At T=20, pooled regular-target median absolute zero-fit error is 0.154% strict, 2.626% extended-local, and 22.640% stress. Exploratory second order lowers local errors but worsens stress Q90 from 62.17% to 77.66%, with a 778.42% worst case.",
-        "unresolved": "Whether the analytic second-order recurrence extends the radius on entirely new catalog values in a preregistered test."
+        "status": "preregistered-confirmation",
+        "result": "ACL-003 confirms second-order accuracy through epsilon 0.01 on new values. Stored non-gating stress rows show improvement on all 16 landscapes at epsilon 0.03 but only 13 at epsilon 0.1; T=20 second-order stress median is 3.652%, Q90 36.875%, and maximum 114.694%. The law is not uniformly stress-stable.",
+        "unresolved": "The exact analytic radius sufficient for uniform error control remains open; no cross-class stability transport has yet been tested."
       },
       "evidence_status": [
         "theorem-reproduction",
         "preregistered-confirmation",
         "exploratory"
       ],
-      "what_would_change_interpretation": "ACL-003 failure on new categorical values would show that the strong ACL-002 second-order improvement was catalog-local; success would establish a stronger within-class stability law with an explicit stress boundary."
+      "what_would_change_interpretation": "Failure of an independently defined Gaussian bridge would confine the present predictive law to the categorical class; successful no-refit cross-class transport would support a restricted reusable correspondence theory."
     },
     {
       "id": "gaussian-natural-gradient-rank-mu",

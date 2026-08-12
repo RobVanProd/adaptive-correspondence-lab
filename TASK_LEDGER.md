@@ -504,3 +504,34 @@
   the worktree and therefore weakened the one-shot guard. Before any outcome, freeze
   the sole permitted destination as
   `evidence/ACL-003-confirmatory-{approved_sha}.json` resolved under the repository.
+
+## ACL-003-POST — Artifact-only confirmatory report and categorical decision
+
+- **Status:** post-confirmatory analysis; no trajectory generation permitted.
+- **Immutable input:** evidence commit
+  `b15d77600369d559cb586a3bb54924737758e038`, artifact
+  `evidence/ACL-003-confirmatory-501464f3f6be07f6d813d94aefb818c461a3d5c7.json`,
+  SHA-256 `1f80c3f5aba4089c67bbfec1ddd6eff53f7a6d42c658436dff0f7c82a1cf8c99`.
+- **Observed frozen result:** valid instrument; primary PASS; median maximum local
+  second-order relative error `0.0014843120912351297`; Type-7 Q90
+  `0.007387117284289386`; no randomness or target refit.
+- **Hypothesis:** no new confirmatory hypothesis. Reproduce the locked verdict and
+  describe secondary/stress behavior solely from stored rows to decide whether the
+  categorical stability question is sufficiently mapped to advance classes.
+- **Frozen analysis:** verify artifact hash, approved SHA, row/region/horizon counts,
+  identity control, oracle maximum, and exact stored primary gate. For each horizon and
+  region, summarize first- and second-order absolute relative endpoint errors only
+  where predictions exceed the frozen floor. At `T=20`, report paired improvement
+  counts and cumulative-prefix empirical radii at `1%,5%,10%,20%`. Stress is
+  exploratory and cannot change ACL-003's verdict. Never fit target rows.
+- **Allowed files:** `TASK_LEDGER.md`, an artifact-only analysis module and tests,
+  `analysis/ACL-003-confirmatory/`, and bridge-ledger status updates.
+- **Acceptance tests:** corrupted hash/row count fails; stored primary scores are
+  reproduced exactly; stress cannot affect the verdict; derived output is deterministic;
+  full pytest, Ruff, and wheel build pass.
+- **Risks:** silently recomputing trajectories; presenting stress summaries as
+  preregistered gates; overclaiming new-value within-class confirmation as cross-class
+  transport; altering the evidence file.
+- **Stop conditions:** evidence hash changes; derived primary values disagree with the
+  artifact; analysis requires refitting or a new outcome; categorical interpretation
+  remains ambiguous after stored-row summaries.
