@@ -1,0 +1,136 @@
+{
+  "comparator_source": "exact-policy-gradient-and-categorical-fisher",
+  "experiment_id": "ACL-005",
+  "kind": "analytic-contextual-bandit-npg-registry",
+  "landscapes": [
+    {
+      "analytic_direction": [[0.7166666666666667, -0.033333333333333326, -0.6833333333333332], [-0.7500000000000001, 0.1, 0.65]],
+      "context_fisher_norms": [0.4234097776092799, 0.3464742660883531],
+      "id": "R01",
+      "minimum_expected_joint_cell_count_per_shadow": 14.458001732597861,
+      "role": "confirmatory-target",
+      "seed": 51001,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[-0.8, 0.7, 0.10000000000000003], [0.8166666666666667, -0.7833333333333333, -0.033333333333333326]],
+      "context_fisher_norms": [0.38470002987115265, 0.532997605246422],
+      "id": "R02",
+      "minimum_expected_joint_cell_count_per_shadow": 8.03261750730426,
+      "role": "confirmatory-target",
+      "seed": 51002,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[0.23333333333333336, -1.0666666666666667, 0.8333333333333334], [0.5833333333333334, 0.03333333333333333, -0.6166666666666668]],
+      "context_fisher_norms": [0.7064073066303506, 0.2887321246330924],
+      "id": "R03",
+      "minimum_expected_joint_cell_count_per_shadow": 8.763173280177561,
+      "role": "confirmatory-target",
+      "seed": 51003,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[0.85, -0.2, -0.65], [-1.0, 0.25000000000000006, 0.75]],
+      "context_fisher_norms": [0.3842865421730516, 0.5752675160545002],
+      "id": "R04",
+      "minimum_expected_joint_cell_count_per_shadow": 10.38688396644287,
+      "role": "confirmatory-target",
+      "seed": 51004,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[-0.7999999999999999, 0.95, -0.14999999999999997], [0.6833333333333333, -0.9166666666666667, 0.2333333333333333]],
+      "context_fisher_norms": [0.4762203433545607, 0.4750036378616545],
+      "id": "R05",
+      "minimum_expected_joint_cell_count_per_shadow": 10.812260562697801,
+      "role": "confirmatory-target",
+      "seed": 51005,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[0.03333333333333337, -0.7666666666666667, 0.7333333333333333], [-0.9666666666666667, 0.7333333333333333, 0.2333333333333333]],
+      "context_fisher_norms": [0.4209917831464806, 0.39985128392786967],
+      "id": "R06",
+      "minimum_expected_joint_cell_count_per_shadow": 10.578124076805041,
+      "role": "confirmatory-target",
+      "seed": 51006,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[-0.16666666666666669, 0.9333333333333333, -0.7666666666666666], [0.7666666666666666, 0.11666666666666663, -0.8833333333333334]],
+      "context_fisher_norms": [0.4420794741112743, 0.5870389471963763],
+      "id": "R07",
+      "minimum_expected_joint_cell_count_per_shadow": 10.5248640791611,
+      "role": "confirmatory-target",
+      "seed": 51007,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[0.7333333333333333, -1.0666666666666667, 0.33333333333333337], [-0.6833333333333333, 0.7666666666666666, -0.08333333333333331]],
+      "context_fisher_norms": [0.4877317575669354, 0.36100013445231255],
+      "id": "R08",
+      "minimum_expected_joint_cell_count_per_shadow": 10.906228164765013,
+      "role": "confirmatory-target",
+      "seed": 51008,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[1.0499999999999998, -0.29999999999999993, -0.75], [-0.10000000000000006, 0.9500000000000001, -0.8500000000000001]],
+      "context_fisher_norms": [0.43364231888152827, 0.4822635140784748],
+      "id": "R09",
+      "minimum_expected_joint_cell_count_per_shadow": 10.286701870104388,
+      "role": "confirmatory-target",
+      "seed": 51009,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[-1.1833333333333333, 0.26666666666666666, 0.9166666666666665], [0.8166666666666667, -0.1333333333333333, -0.6833333333333333]],
+      "context_fisher_norms": [0.7308619162938967, 0.34064443671781247],
+      "id": "R10",
+      "minimum_expected_joint_cell_count_per_shadow": 11.22548631937218,
+      "role": "confirmatory-target",
+      "seed": 51010,
+      "stratum": "regular"
+    },
+    {
+      "analytic_direction": [[0.6166666666666667, -0.5833333333333334, -0.033333333333333326], [-1.1166666666666667, 0.13333333333333333, 0.9833333333333333]],
+      "context_fisher_norms": [0.495963881565348, 0.127590101788758],
+      "id": "S01",
+      "minimum_expected_joint_cell_count_per_shadow": 0.6863001357356037,
+      "role": "stress-target",
+      "seed": 51901,
+      "stratum": "stress"
+    },
+    {
+      "analytic_direction": [[0.9, -1.1102230246251565e-16, -0.9], [-0.6666666666666667, 0.7333333333333334, -0.06666666666666671]],
+      "context_fisher_norms": [0.21709150238163163, 0.10843087829090066],
+      "id": "S02",
+      "minimum_expected_joint_cell_count_per_shadow": 0.2622343183429528,
+      "role": "stress-target",
+      "seed": 51902,
+      "stratum": "stress"
+    },
+    {
+      "analytic_direction": [[-0.8166666666666667, 0.7833333333333333, 0.033333333333333326], [0.6333333333333334, -0.9166666666666667, 0.28333333333333344]],
+      "context_fisher_norms": [0.193765751987673, 0.2753447520818533],
+      "id": "S03",
+      "minimum_expected_joint_cell_count_per_shadow": 0.25288347581512166,
+      "role": "stress-target",
+      "seed": 51903,
+      "stratum": "stress"
+    },
+    {
+      "analytic_direction": [[0.2166666666666666, -1.2333333333333334, 1.0166666666666666], [-0.6833333333333332, 0.6166666666666667, 0.06666666666666671]],
+      "context_fisher_norms": [0.9674732730893708, 0.052262049214850954],
+      "id": "S04",
+      "minimum_expected_joint_cell_count_per_shadow": 0.16068749967229845,
+      "role": "stress-target",
+      "seed": 51904,
+      "stratum": "stress"
+    }
+  ],
+  "outcomes_generated": false,
+  "schema_version": 1,
+  "shadow_count": 0
+}

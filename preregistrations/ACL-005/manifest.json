@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ACL-005",
+  "title": "No-refit transport of the Gaussian expected-direction law into contextual-bandit control",
+  "randomness": "PCG64-independent-landscape-streams",
+  "contexts": 2,
+  "actions": 3,
+  "interaction_sample_count": 128,
+  "empirical_fisher_rcond": 1e-12,
+  "replication_schedule": [4096, 8192, 16384, 32768, 65536],
+  "shadow_chunk_size": 2048,
+  "half_convergence_fisher_cosine_min": 0.98,
+  "h2_fisher_cosine_min": 0.99,
+  "h1_shadow_count": 2048,
+  "regular_min_expected_cell_count": 4.0,
+  "stress_max_expected_cell_count": 0.75,
+  "source_experiment": "ACL-004",
+  "source_rule": "unchanged-block-fisher-cosine-law",
+  "source_evidence": {
+    "approved_preregistration_sha": "3ba4be7ce1460a40c4ef0879018df58947c36edb",
+    "evidence_commit": "355dd97472da4230eff877b9a3c8c7c4626057cd",
+    "evidence_artifact": "evidence/ACL-004-confirmatory-3ba4be7ce1460a40c4ef0879018df58947c36edb.json",
+    "evidence_sha256": "3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a",
+    "report_commit": "5a3ef122a04bd6ec59aaa77c2493a5a9c0979f7a",
+    "report_summary": "analysis/ACL-004-confirmatory/summary.json",
+    "report_summary_sha256": "b4d9864b6ab935aa39bc98ab1c144e13030ebad57931eaf4bc1cbcbaf3d2e019",
+    "source_h2_verdict": "PASS",
+    "source_all_landscapes_converged": true,
+    "source_minimum_mean_block_fisher_cosine": 0.9999523237518517,
+    "source_minimum_covariance_block_fisher_cosine": 0.9995521999195026
+  },
+  "benchmark_scope": "deterministic-held-out-contextual-bandit-benchmark",
+  "inference_scope": "descriptive-criteria-not-population-confidence",
+  "transport_scope": "gaussian-to-control-unchanged-normalized-direction-law",
+  "landscapes": [
+    {
+      "id": "R01",
+      "role": "confirmatory-target",
+      "rewards": [[0.9, 0.15, -0.5], [-0.3, 0.55, 1.1]],
+      "context_probabilities": [0.55, 0.45],
+      "logits": [[0.4, -0.1, -0.3], [-0.25, 0.35, -0.1]],
+      "seed": 51001
+    },
+    {
+      "id": "R02",
+      "role": "confirmatory-target",
+      "rewards": [[-0.7, 0.8, 0.2], [1.2, -0.4, 0.35]],
+      "context_probabilities": [0.35, 0.65],
+      "logits": [[0.65, -0.15, -0.5], [0.3, -0.2, -0.1]],
+      "seed": 51002
+    },
+    {
+      "id": "R03",
+      "role": "confirmatory-target",
+      "rewards": [[0.4, -0.9, 1.0], [0.65, 0.1, -0.55]],
+      "context_probabilities": [0.7, 0.3],
+      "logits": [[-0.4, 0.1, 0.3], [0.2, -0.35, 0.15]],
+      "seed": 51003
+    },
+    {
+      "id": "R04",
+      "role": "confirmatory-target",
+      "rewards": [[1.3, 0.25, -0.2], [-0.8, 0.45, 0.95]],
+      "context_probabilities": [0.4, 0.6],
+      "logits": [[0.2, 0.25, -0.45], [-0.1, -0.25, 0.35]],
+      "seed": 51004
+    },
+    {
+      "id": "R05",
+      "role": "confirmatory-target",
+      "rewards": [[-0.6, 1.15, 0.05], [0.75, -0.85, 0.3]],
+      "context_probabilities": [0.5, 0.5],
+      "logits": [[-0.6, 0.3, 0.3], [0.45, -0.15, -0.3]],
+      "seed": 51005
+    },
+    {
+      "id": "R06",
+      "role": "confirmatory-target",
+      "rewards": [[0.55, -0.25, 1.25], [-1.0, 0.7, 0.2]],
+      "context_probabilities": [0.65, 0.35],
+      "logits": [[0.5, 0.1, -0.6], [-0.3, 0.4, -0.1]],
+      "seed": 51006
+    },
+    {
+      "id": "R07",
+      "role": "confirmatory-target",
+      "rewards": [[-0.15, 0.95, -0.75], [1.05, 0.4, -0.6]],
+      "context_probabilities": [0.38, 0.62],
+      "logits": [[-0.2, 0.55, -0.35], [0.15, -0.5, 0.35]],
+      "seed": 51007
+    },
+    {
+      "id": "R08",
+      "role": "confirmatory-target",
+      "rewards": [[0.7, -1.1, 0.3], [-0.45, 1.0, 0.15]],
+      "context_probabilities": [0.58, 0.42],
+      "logits": [[0.1, -0.5, 0.4], [-0.45, 0.2, 0.25]],
+      "seed": 51008
+    },
+    {
+      "id": "R09",
+      "role": "confirmatory-target",
+      "rewards": [[1.0, -0.35, -0.8], [0.25, 1.3, -0.5]],
+      "context_probabilities": [0.45, 0.55],
+      "logits": [[-0.55, 0.15, 0.4], [0.35, -0.4, 0.05]],
+      "seed": 51009
+    },
+    {
+      "id": "R10",
+      "role": "confirmatory-target",
+      "rewards": [[-0.95, 0.5, 1.15], [0.85, -0.1, -0.65]],
+      "context_probabilities": [0.6, 0.4],
+      "logits": [[0.45, -0.4, -0.05], [-0.15, 0.5, -0.35]],
+      "seed": 51010
+    },
+    {
+      "id": "S01",
+      "role": "stress-target",
+      "rewards": [[0.8, -0.4, 0.15], [-0.9, 0.35, 1.2]],
+      "context_probabilities": [0.98, 0.02],
+      "logits": [[0.2, -0.1, -0.1], [0.25, -0.2, -0.05]],
+      "seed": 51901
+    },
+    {
+      "id": "S02",
+      "role": "stress-target",
+      "rewards": [[1.1, 0.2, -0.7], [-0.5, 0.9, 0.1]],
+      "context_probabilities": [0.95, 0.05],
+      "logits": [[2.8, -0.2, -2.6], [1.6, -0.2, -1.4]],
+      "seed": 51902
+    },
+    {
+      "id": "S03",
+      "role": "stress-target",
+      "rewards": [[-0.6, 1.0, 0.25], [0.75, -0.8, 0.4]],
+      "context_probabilities": [0.5, 0.5],
+      "logits": [[3.0, -0.5, -2.5], [-2.8, 0.4, 2.4]],
+      "seed": 51903
+    },
+    {
+      "id": "S04",
+      "role": "stress-target",
+      "rewards": [[0.45, -1.0, 1.25], [-0.7, 0.6, 0.05]],
+      "context_probabilities": [0.99, 0.01],
+      "logits": [[-0.2, 0.35, -0.15], [1.0, -0.3, -0.7]],
+      "seed": 51904
+    }
+  ]
+}

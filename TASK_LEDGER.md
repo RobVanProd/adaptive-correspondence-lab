@@ -703,3 +703,58 @@
   reusing the product-of-simplexes coordinate map as proof of a new class.
 - **Stop conditions:** comparator calls sampled code; empirical damping/clipping is
   introduced; toy oracles disagree; a transported threshold is modified for control.
+
+## ACL-005 — Cross-class transport of the normalized expected-direction law
+
+- **Status:** preregistration construction only; control target shadows forbidden.
+- **Source law:** ACL-004 confirmed that, after every Fisher block's disjoint-half
+  conditional-mean cosine reaches `0.98`, every source block's Fisher cosine with its
+  independent analytic direction exceeds `0.99`. ACL-005 transports this dimensionless
+  law, the thresholds, the replication schedule `4096,8192,16384,32768,65536`, chunk
+  size `2048`, and H1 count `2048` unchanged into control. No control target fit or
+  threshold adjustment is permitted.
+- **Control system:** two-context, three-action exact contextual bandits; deterministic
+  rewards; categorical policies in centered logits; fixed within-shadow interaction
+  count `N=128`; independent PCG64 stream per landscape; empirical score gradient and
+  empirical score Fisher; undamped pseudoinverse `rcond=1e-12`; one frozen state only.
+- **Comparator:** exact centered natural policy direction from analytic advantage and
+  categorical-policy Fisher. It must not call the plug-in estimator.
+- **Landscapes and strata:** 10 regular confirmatory targets with pre-outcome minimum
+  expected joint cell count `N*rho(c)*pi(a|c) >= 4`; four stress targets with minimum
+  expected joint cell count `<=0.75`. Strata are computed from manifest-only analytic
+  quantities. Stress is reported and non-gating.
+- **Stopping:** per landscape, compare first/second disjoint-half conditional means in
+  each context Fisher block. Stop at the first scheduled count where every context is
+  at least `0.98`. A regular landscape not converged by `65536` makes the transported
+  H2 verdict `INCONCLUSIVE`. Stress nonconvergence is descriptive only.
+- **Primary transported gate:** for every stopped regular target, compute each context's
+  Fisher cosine against the exact analytic NPG. PASS only if all 10 regular landscapes
+  converge and the minimum over all 20 context blocks is at least `0.99`. A converged
+  regular block below `0.99` is FAIL. Joint cosine cannot rescue a context.
+- **Secondary/stress:** H1 first-2048 single-shadow context cosine quantiles and
+  fraction positive; joint cosine; coordinate standard errors; stress context
+  convergence/alignment. Stress cannot rescue or reverse primary transport.
+- **Evidence:** fixed 2048-shadow chunk counts, direction sums, and outer-product sums
+  reproduce stopped/half means; raw H1 cosines are retained. Embed manifest, analytic
+  registry, lock, seeds, and terminal RNG states.
+- **Scope:** this is a no-refit transport of a normalized score/Fisher expected-direction
+  law from Gaussian rank-mu into finite-state control. It does not transport ACL-003's
+  epsilon coefficient, claim product-of-simplexes is a new geometry, study sample-count
+  scaling, or imply PPO/neural-policy behavior.
+- **Execution guards:** exact approved SHA; full clean porcelain; exact lock and
+  directory membership; analytic registry recomputation and stratum validation;
+  previously nonexistent canonical
+  `evidence/ACL-005-confirmatory-{approved_sha}.json`; one execution only.
+- **Allowed files:** ACL-005 module/tests/CLI, this ledger, `README.md`,
+  `preregistrations/ACL-005/`, and machine/human bridge-ledger preregistration status.
+  No target evidence.
+- **Acceptance tests:** fail first; exact transported constants; analytic strata;
+  first qualifying stop; primary context-block gate; stress non-gating; nonconvergence
+  semantics; sufficient-statistic reproduction; canonical/lock/worktree guards; full
+  pytest, Ruff, coverage, wheel, and analytic-only validation.
+- **Risks:** calling copied thresholds a fitted control result; target landscape pilots;
+  hiding rare-context failure in joint geometry; changing N after outcomes; treating a
+  control pass as evidence for neural or sequential RL.
+- **Stop conditions:** any manifest target is sampled before public approval; regular or
+  stress analytic stratum disagrees; source thresholds/schedule change; the comparator
+  depends on sampled outcomes; or baseline turns red.

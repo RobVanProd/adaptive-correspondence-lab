@@ -79,15 +79,17 @@ source commit that produced them. The [mutation curve](evidence/mutation-stabili
 is intentionally labeled as a deterministic format example rather than a research
 result.
 
-## Current preregistration
+## Research program state
 
-[ACL-002](preregistrations/ACL-002/PREREGISTRATION.md) freezes a deterministic,
-held-out test of categorical mutation stability. It includes an explicit row-vector
-Jacobian, zero-fit and source-calibrated predictions, landscape-balanced estimators,
-pre-outcome sensitivity strata, an oriented-KL quadratic check, a fixed manifest, and
-file hashes. The checkpoint contains no confirmatory mutation outcomes.
+ACL-002 through ACL-004 have immutable confirmatory artifacts in `evidence/`. Their
+claims remain restricted: categorical first- and second-order mutation stability and
+Gaussian finite-lambda conditional-mean alignment. The machine-readable
+[bridge ledger](BRIDGE_LEDGER.json) records their exact hashes and limits.
 
-The future `acl acl002-run` command refuses to execute without an explicitly approved
-Git SHA, a completely clean worktree including no untracked files, valid preregistration
-hashes, and a new output path. The runner also checks its iterative trajectory against
-an independent normalized matrix-power oracle.
+[ACL-005](preregistrations/ACL-005/PREREGISTRATION.md) is the current pre-outcome
+checkpoint. It asks whether ACL-004's normalized blockwise expected-direction rule
+transports unchanged, without target refitting, into a finite-state contextual-bandit
+control class. Its analytic registry contains no target shadows. The future
+`acl acl005-run` command requires an explicitly approved exact Git SHA, a completely
+clean worktree including untracked files, valid bundle hashes, and a previously
+nonexistent SHA-derived evidence path.

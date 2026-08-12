@@ -57,7 +57,10 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   inverse Fisher blocks. ACL-004 passed on 12 landscapes: all converged at 4096
   shadows, with minimum mean/covariance Fisher cosines `0.999952324` and `0.999552200`
   against the frozen `0.99` gates.
-- **Transport:** unresolved; no quantity has yet been frozen for no-refit transfer.
+- **Transport:** unresolved, with ACL-005 now frozen as a pre-outcome test. It carries
+  the complete ACL-004 normalized rule: disjoint-half block cosine `0.98`, analytic
+  block cosine `0.99`, and the same replication scheduleâ€”into finite-state control
+  without target refitting. This preregistration is not evidence of transport.
 - **Failure boundary:** H2 is an expected-direction result, not a guarantee for one
   finite population. Descriptive H1 single-shadow median cosine spans `0.953–0.957`
   for mean and `0.534–0.717` for covariance; covariance alignment is positive in
@@ -75,14 +78,16 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   categorical policy Fisher tangent.
 - **Scope:** exact finite contexts/actions, analytic policies, no PPO, and no neural
   function approximation.
-- **Content:** this becomes a predictive bridge only if a quantity declared before
-  control outcomes predicts a held-out control response without target refitting.
+- **Content:** ACL-005 declares before control outcomes that the ACL-004 blockwise
+  stopping/alignment rule will predict held-out control conditional means without
+  target refitting.
 - **Stability:** fixed-count plug-in directions match an independent direct
   score/Fisher accumulation on toy fixtures, and a large toy conditional mean aligns
   with the exact context blocks. This is theorem/software reproduction only;
   empirical-pseudoinverse bias remains a confirmatory question.
-- **Transport:** unresolved.
+- **Transport:** unresolved. ACL-005 is a preregistration-only test with 10 regular and
+  four non-gating rare-cell stress targets; its analytic registry has zero shadows.
 - **Failure boundary:** if no earlier-class quantity can be frozen before control
   outcomes, this remains a coordinate relation rather than a reusable law.
-- **Status:** mechanism validated; confirmatory cross-class normalized-law transport is
-  unresolved.
+- **Status:** mechanism validated; cross-class normalized-law transport is
+  preregistered but remains unresolved until a one-shot artifact exists.

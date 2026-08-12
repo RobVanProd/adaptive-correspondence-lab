@@ -117,7 +117,15 @@
         "status": "unresolved",
         "quantity": null,
         "target_refit": null,
-        "result": null
+        "result": null,
+        "active_preoutcome_test": {
+          "experiment": "ACL-005",
+          "status": "preregistration-only; no target shadows",
+          "source_quantity": "ACL-004 unchanged blockwise conditional-mean rule: disjoint-half Fisher cosine >= 0.98 followed by analytic Fisher cosine >= 0.99",
+          "target_class": "finite-state contextual-bandit empirical-Fisher natural-policy-gradient shadows",
+          "target_refit": false,
+          "stress_gating": false
+        }
       },
       "failure_boundary": {
         "status": "preregistered-confirmation",
@@ -128,7 +136,7 @@
         "preregistered-confirmation",
         "unresolved"
       ],
-      "what_would_change_interpretation": "A no-refit quantity declared from categorical/Gaussian source evidence and then tested in a finite-state control class would distinguish reusable cross-class structure from separate within-class correspondences."
+      "what_would_change_interpretation": "ACL-005 PASS would support reuse of the normalized expected-direction law in control; FAIL would bound it at empirical-Fisher control sampling; INCONCLUSIVE would show that the unchanged source estimation budget cannot resolve the target."
     },
     {
       "id": "categorical-natural-gradient-control",
@@ -158,7 +166,16 @@
         "status": "unresolved",
         "quantity": null,
         "target_refit": null,
-        "result": null
+        "result": null,
+        "active_preoutcome_test": {
+          "experiment": "ACL-005",
+          "status": "preregistration-only; no target shadows",
+          "source_class": "Gaussian finite-lambda rank-mu (ACL-004)",
+          "source_quantity": "unchanged blockwise 0.98 convergence and 0.99 analytic-alignment rule",
+          "regular_targets": 10,
+          "stress_targets": 4,
+          "target_refit": false
+        }
       },
       "failure_boundary": {
         "status": "unresolved",
@@ -168,7 +185,7 @@
         "theorem-reproduction",
         "unresolved"
       ],
-      "what_would_change_interpretation": "If no source-class law can be stated before observing control outcomes, this edge remains a coordinate relationship rather than evidence of reusable transport."
+      "what_would_change_interpretation": "The one-shot ACL-005 result will decide whether the frozen Gaussian normalized law survives in this control class, fails under empirical-Fisher inversion, or is unresolved at the unchanged source budget."
     }
   ]
 }
