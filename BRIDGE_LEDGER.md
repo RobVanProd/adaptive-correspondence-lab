@@ -144,3 +144,25 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   `740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918`.
 - **Status:** theorem/software reproduction plus preregistered mechanism validation. It
   remains inside the ACL-005 estimator family and adds no independent breadth class.
+
+## ACL-006 diagnostic → sequential Bayesian particle filtering
+
+- **State map:** a frozen-state stochastic adaptive tangent maps to a terminal posterior-
+  belief displacement from the initial belief.
+- **Native geometry:** categorical Fisher in the source, centered Euclidean belief
+  geometry in the target.
+- **Ideal tangent:** source analytic natural direction versus target exact true-model
+  Bayes posterior displacement.
+- **Realized estimator:** empirical-Fisher pseudoinverse shadows versus a finite labeled-
+  particle bootstrap-filter displacement.
+- **Scope:** independent shadows, nonzero ideal and mean directions, finite native-metric
+  second moments, independently exact mean/covariance, fixed schedule, and no target fit.
+- **Transported prediction:** mechanism candidate, not yet preregistered. Copy ACL-006's
+  complete standardized mean-error and split-consistency/truth-dissociation rule without
+  changing thresholds.
+- **Failure boundary:** unresolved; sequential resampling, misspecification, particle
+  support, changed geometry, or non-Gaussian finite-mean behavior may break transport.
+- **Falsifier:** any locked target outside the copied gates after exact target moments and
+  the independent labeled-particle simulator have been verified.
+- **Status:** theorem construction plus unresolved cross-class candidate. This would be
+  the first Phase-II test outside the Fisher-natural estimator family.

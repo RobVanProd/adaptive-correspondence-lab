@@ -270,6 +270,47 @@
         "preregistered-confirmation"
       ],
       "structural_distance_note": "ACL-006 remains inside the ACL-005 contextual-bandit empirical-Fisher estimator family and adds mechanism, not an independent adaptive class."
+    },
+    {
+      "id": "acl006-plugin-npg-to-sequential-particle-filter-diagnostic",
+      "classes": [
+        "contextual-bandit-empirical-fisher-plugin-npg",
+        "sequential-bayesian-bootstrap-particle-filter"
+      ],
+      "state_map": "adaptive tangent at a frozen state maps to terminal belief displacement from an initial belief",
+      "native_geometry": "source categorical Fisher tangent versus target centered Euclidean belief tangent",
+      "ideal_vector_field": "source analytic natural direction versus target exact true-model Bayes posterior displacement",
+      "realized_estimator": "source empirical-Fisher pseudoinverse shadow versus target finite labeled-particle bootstrap-filter displacement",
+      "scope_assumptions": [
+        "independent estimator shadows around one frozen specification",
+        "nonzero ideal and estimator-mean directions",
+        "finite second moment in the declared native metric",
+        "exact or independently computed estimator expectation and covariance",
+        "fixed schedule and no target refit"
+      ],
+      "transported_prediction": {
+        "status": "mechanism-candidate-not-preregistered",
+        "quantity": "ACL-006 unchanged standardized mean-error gates and split-consistency/truth-dissociation thresholds",
+        "source": "ACL-006",
+        "target": "ACL-007 sequential inference",
+        "target_refit": false
+      },
+      "failure_boundary": {
+        "status": "unresolved",
+        "candidate_mechanisms": [
+          "sequential resampling dependence",
+          "model misspecification",
+          "particle support loss",
+          "changed native metric",
+          "non-Gaussian finite-mean fluctuations"
+        ]
+      },
+      "falsifying_observation": "A preregistered target violates the unchanged ACL-006 normalized mean or dissociation gates despite exact target moments and an independently verified particle simulator.",
+      "evidence_status": [
+        "theorem-reproduction",
+        "unresolved"
+      ],
+      "structural_distance_note": "Different estimator family, native metric, objective semantics, temporal structure, data generation, and adaptation role; this is the first Phase-II candidate outside the Fisher-natural family."
     }
   ]
 }

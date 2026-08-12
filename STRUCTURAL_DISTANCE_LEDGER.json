@@ -47,6 +47,18 @@
       "adaptation_role": "policy learning",
       "phase_i_evidential_weight": "cross-estimator transport, but still inside the Fisher-natural family",
       "phase_ii_status": "ACL-006 confirmed the exact support-conditioned mechanism and self-consistency dissociation in this same class; it adds no structural-class count"
+    },
+    {
+      "id": "sequential-bootstrap-particle-filter",
+      "systems": ["exact-hidden-markov-bayes-filter", "finite-bootstrap-particle-filter"],
+      "estimator_family": "sequential finite-particle importance weighting and multinomial resampling",
+      "native_geometry": "centered Euclidean belief tangent",
+      "objective_semantics": "posterior inference rather than reward or fitness optimization",
+      "temporal_structure": "multi-observation hidden-state filtering with repeated propagation and resampling",
+      "state_space": "finite belief simplex with explicit particle-count support",
+      "data_generation": "hidden-state transition and observation-likelihood sequence",
+      "adaptation_role": "belief estimation",
+      "phase_ii_status": "mechanism candidate; no confirmatory evidence yet"
     }
   ],
   "phase_i_assessment": {
@@ -59,7 +71,7 @@
   "phase_ii_current_assessment": {
     "acl006_adds_independent_class": false,
     "acl006_role": "resolve the support/bias mechanism before breadth testing",
-    "next_breadth_requirement": "at least one class outside the Fisher-natural estimator family"
+    "next_breadth_requirement": "confirm or falsify no-refit transport in the sequential bootstrap particle-filter class"
   },
   "phase_ii_candidates": [
     {

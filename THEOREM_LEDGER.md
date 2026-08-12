@@ -23,3 +23,13 @@ perturbation remains open. ACL-006 confirmed the exact finite multinomial zero-f
 but falsified both `N p_min` alone and support plus analytic Fisher spectrum without
 reward/baseline geometry. Any surviving compact theorem must distinguish context/action
 support factorization and include reward geometry.
+
+## ACL-007 sequential inference mechanism
+
+For a finite three-state hidden Markov model and fixed particle count, the bootstrap
+particle filter is an exact finite Markov chain over count compositions. Grouped
+transition-polynomial convolution followed by likelihood-weighted multinomial
+resampling produces each count kernel. Propagating the initial multinomial count law
+therefore yields the exact terminal mean, covariance, and support-loss probabilities.
+Small fixtures verify the construction against brute-force labeled paths and a separate
+labeled-particle simulator.

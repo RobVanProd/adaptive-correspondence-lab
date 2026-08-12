@@ -35,6 +35,13 @@
       "statement": "A nonvacuous angular-bias bound should combine exact support-loss mass with full-rank whitened perturbation terms involving empirical Fisher deviation and score/reward residual.",
       "scope": "open after ACL-006; any compact bound must distinguish context/action support factorization and include reward/baseline geometry",
       "evidence": "ACL-006 exactly falsified N p_min-only and support-plus-Fisher-spectrum-only reductions while confirming the full finite multinomial prediction"
+    },
+    {
+      "id": "acl007-finite-particle-count-law",
+      "status": "proved-finite-state-construction",
+      "statement": "A three-state bootstrap particle filter with fixed particle count induces an exact Markov chain on count compositions; grouped transition convolution followed by likelihood-weighted multinomial resampling yields its transition kernels and exact terminal moments.",
+      "scope": "strictly positive finite HMM likelihoods, row-stochastic true and approximate transitions, multinomial resampling after every frozen observation",
+      "verification": "kernel row-mass checks, brute-force labeled-path enumeration at N=2, and an independent labeled-particle simulator"
     }
   ]
 }

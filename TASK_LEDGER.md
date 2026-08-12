@@ -1074,3 +1074,83 @@
 - **Decision:** move outside the Fisher-natural estimator family. The next experiment
   must freeze a nontrivial no-refit quantity from existing evidence before outcomes in
   a structurally distinct class; otherwise record non-transportability as a boundary.
+
+## ACL-007-MECH — Sequential Bayesian particle-filter bias
+
+- **Task ID:** `ACL-007-MECH`.
+- **Status:** derivation/mechanism construction only; no confirmatory particle-filter
+  streams or `preregistrations/ACL-007/` bundle until the exact oracle earns a design.
+- **Competing explanations:** (H-broad) ACL-006's dimensionless standardized-mean and
+  self-consistency/truth-dissociation law is estimator-agnostic enough to survive a
+  change to sequential inference and Euclidean belief geometry; (H-island) it depends
+  materially on Fisher-natural plug-in structure and does not furnish a useful frozen
+  prediction outside that island.
+- **Frozen substrate:** a standalone three-state hidden Markov model; row-stochastic
+  transition; strictly positive observation likelihood at each step; interior initial
+  belief; finite bootstrap particle filter with multinomial resampling after every
+  observation; centered Euclidean belief-update tangent; no reward, objective gradient,
+  Fisher metric, natural gradient, damping, or neural approximation.
+- **Ideal object:** exact Bayes-filter terminal belief under the true model, with ideal
+  update `d=b_T-b_0`.
+- **Realized estimator:** finite-particle terminal empirical belief under a separately
+  declared approximate model, with `hat(d)=hat(b_T)-b_0`. Model misspecification and
+  finite-particle noise are explicit and separate.
+- **Exact oracle:** enumerate all three-state particle-count compositions; form the
+  exact count-state Markov kernel from grouped transitions followed by likelihood
+  weighting and multinomial resampling; propagate the full count distribution to obtain
+  `m=E[hat(d)]`, covariance, support-loss probabilities, and truth cosine.
+- **Independent implementation:** simulate labeled particles with per-particle transition
+  uniforms and per-particle resampling uniforms. It must not call the count-state kernel
+  or use count-level multinomial resampling.
+- **Transport candidate:** copy ACL-006's complete dimensionless rule unchanged:
+  fixed checkpoints `8192,32768,131072,262144`; full/half standardized Euclidean mean
+  score maximum `5`; Type-7 full-score median `1.5`; Q90 `2.5`; dissociation membership
+  exact truth cosine at most `0.90` with five-score upper bound at most `0.95` and
+  two-half lower bound at least `0.995`; observed final half cosine at least `0.995`
+  while truth cosine remains at most `0.95`. No ACL-007 outcome may tune these values.
+- **Eight-box bridge:** state map = true/particle beliefs; native geometry = centered
+  Euclidean; ideal tangent = exact Bayes belief update; realized estimator = sequential
+  bootstrap PF update; scope = finite positive HMM and fixed observations; transported
+  prediction = ACL-006 diagnostic; boundary = support/misspecification/temporal coupling;
+  falsifier = frozen targets outside the copied gates.
+- **Structural distance:** different estimator family, native metric, objective semantics,
+  temporal structure, data generation, and adaptation role. This is inference rather
+  than reward optimization and qualifies as outside the Fisher-natural family.
+- **Allowed files:** this ledger, sequential-inference mechanism module/tests, derivation
+  docs, theorem/bridge/structural ledgers, and non-outcome toy fixtures. No ACL-007
+  evidence or target stream.
+- **Acceptance checks:** failing regression first; exact distribution mass; small-`N`
+  brute-force path oracle; grouped-transition kernel normalization; exact-vs-independent
+  Monte Carlo software fixture; model-validation failures; bias/covariance identities;
+  full pytest, Ruff, coverage, wheel, and immutable-evidence audit.
+- **Risks:** calling generic Monte Carlo convergence adaptive unification; hiding Fisher
+  geometry inside the metric; using count-level sampling in both paths; selecting
+  confirmatory models from sampled pilots; or mistaking misspecified Bayes truth for the
+  declared true comparator.
+- **Stop conditions:** a target outcome is sampled; reward/Fisher machinery enters; the
+  exact comparator calls the particle simulator; exact probability mass fails; or the
+  sequential semantics require an unfrozen choice.
+
+### ACL-007 mechanism completion record
+
+- **Outcome status:** theorem/mechanism checkpoint only. No ACL-007 manifest, target
+  seed, confirmatory particle stream, registry, lock, or evidence artifact exists.
+- **Exact construction:** the bootstrap particle filter is represented as a finite
+  Markov chain over three-state count compositions. Grouped transition convolution and
+  observation-weighted multinomial resampling yield exact terminal mean, covariance,
+  support distribution, and Euclidean truth alignment.
+- **Independent oracle:** brute-force labeled paths at `N=2,T=1` agree with count-state
+  moments; a labeled-particle simulator that uses individual transition/resampling
+  uniforms approaches the exact mean on a 200,000-shadow software fixture and never
+  calls count kernels.
+- **Transport candidate earned:** ACL-006's whole standardized-mean and dissociation
+  rule can be copied without coefficient or threshold changes. Only the declared native
+  metric changes from Fisher to centered Euclidean geometry.
+- **Classification:** exact particle moments are theorem/software reproduction. The
+  future hypothesis-bearing result is whether the unchanged ACL-006 diagnostic
+  transports across estimator, metric, semantics, and temporal structure.
+- **Verification:** 187 tests passed; Ruff passed; total coverage 84%; sdist and wheel
+  builds passed; ACL-002 through ACL-006 artifacts remain byte-identical.
+- **Recommended next action:** publish this mechanism checkpoint, then choose new HMM
+  target values exclusively by analytic count-state quantities, freeze ACL-007, and
+  audit its exact public SHA before generating any target particles.

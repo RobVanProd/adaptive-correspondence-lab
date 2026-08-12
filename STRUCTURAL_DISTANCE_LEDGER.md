@@ -20,6 +20,11 @@ ACL-006 remained in the contextual-bandit plug-in NPG class and confirmed the ex
 finite support/bias mechanism plus the split-consistency/truth dissociation. It did not
 increase the count of structurally independent adaptive classes.
 
+The ACL-007 candidate is a sequential bootstrap particle filter. Relative to ACL-006 it
+changes estimator family, native metric, objective semantics, temporal structure, data
+generation, and adaptation role. Exact Bayes filtering supplies the comparator; exact
+count-state dynamics and an independent labeled-particle path keep the substrate small.
+
 ## Candidate ordering after ACL-006
 
 1. **Minimal Bayesian state estimation:** highest semantic gain—belief inference and
