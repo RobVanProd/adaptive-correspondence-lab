@@ -667,3 +667,39 @@
   and H2 minima reproduce; report is deterministic; full pytest, Ruff, and wheel pass.
 - **Stop conditions:** evidence bytes change; reproduction disagrees; analysis requires
   new shadows/refitting; or Gaussian scope is overstated as cross-class transport.
+
+## CTRL-MECH — Finite-sample contextual-bandit NPG mechanism
+
+- **Status:** theorem/software mechanism only; no control confirmatory landscapes.
+- **Question:** does a plug-in natural-policy-gradient estimator that pseudoinverts its
+  empirical Fisher have a conditional mean aligned with the independently exact
+  contextual-bandit NPG, or can finite-sample inversion bias rotate it?
+- **Frozen estimator:** finite contexts/actions, exact categorical policy, deterministic
+  reward matrix, and independent joint context-action draws. From one frozen batch,
+  compute the empirical score gradient and empirical score outer-product Fisher, apply
+  an undamped Moore-Penrose pseudoinverse with `rcond=1e-12`, and center each context's
+  logit direction. No clipping, baseline fitting, damping, trajectories, or policy
+  update.
+- **Comparator:** exact expected policy gradient and analytic categorical-policy Fisher
+  at the frozen state. Construct the centered exact natural direction directly from
+  rewards and policy values; do not average or replay sampled plug-in updates.
+- **Geometry:** context blocks are primary; each uses its analytic categorical Fisher.
+  A context-probability-weighted joint Fisher cosine is secondary only.
+- **Transport candidate:** the ACL-004 normalized expected-direction law and exact
+  thresholds—disjoint-half block cosine `0.98` and target analytic block cosine
+  `0.99`—are eligible for unchanged no-refit application in control. This mechanism
+  task does not test them scientifically.
+- **Implementation and evidence:** vectorize shadows through multinomial joint counts;
+  retain counts-to-direction equivalence with a direct score-sum oracle on toy counts.
+- **Allowed files:** `TASK_LEDGER.md`, a new control bridge mechanism, tests,
+  derivation documentation, and theorem-reproduction ledger status. No control
+  preregistration or evidence.
+- **Acceptance tests:** fixed-count direction matches direct score/Fisher accumulation;
+  analytic Fisher maps exact direction to policy gradient; a large toy conditional
+  mean aligns in each context; empirical singular blocks remain explicit zero/pinv
+  behavior; invalid policies/counts fail; full pytest, Ruff, and wheel pass.
+- **Risks:** mistaking plug-in expectation for pseudoinverse of expected Fisher; hiding
+  a failed context in a joint cosine; treating sample count or shadow count as a fit;
+  reusing the product-of-simplexes coordinate map as proof of a new class.
+- **Stop conditions:** comparator calls sampled code; empirical damping/clipping is
+  introduced; toy oracles disagree; a transported threshold is modified for control.

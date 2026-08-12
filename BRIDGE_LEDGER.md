@@ -77,9 +77,12 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   function approximation.
 - **Content:** this becomes a predictive bridge only if a quantity declared before
   control outcomes predicts a held-out control response without target refitting.
-- **Stability:** unresolved.
+- **Stability:** fixed-count plug-in directions match an independent direct
+  score/Fisher accumulation on toy fixtures, and a large toy conditional mean aligns
+  with the exact context blocks. This is theorem/software reproduction only;
+  empirical-pseudoinverse bias remains a confirmatory question.
 - **Transport:** unresolved.
 - **Failure boundary:** if no earlier-class quantity can be frozen before control
   outcomes, this remains a coordinate relation rather than a reusable law.
-- **Status:** unresolved; control experimentation is deferred until the Gaussian edge
-  is understood.
+- **Status:** mechanism validated; confirmatory cross-class normalized-law transport is
+  unresolved.

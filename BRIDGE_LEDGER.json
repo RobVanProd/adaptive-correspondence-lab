@@ -150,9 +150,9 @@
       ],
       "content": "A control-class bridge would require a preregistered quantity from an earlier class to predict a held-out policy response without control-target refitting.",
       "stability": {
-        "status": "unresolved",
-        "law": null,
-        "result": null
+        "status": "theorem-reproduction",
+        "law": "conditional mean of undamped empirical-Fisher plug-in NPG compared blockwise with exact analytic NPG",
+        "result": "Fixed-count plug-in directions match a direct score/Fisher oracle and a large toy shadow mean aligns with exact context blocks. Finite-sample pseudoinverse bias remains a confirmatory question."
       },
       "transport": {
         "status": "unresolved",
@@ -165,6 +165,7 @@
         "result": null
       },
       "evidence_status": [
+        "theorem-reproduction",
         "unresolved"
       ],
       "what_would_change_interpretation": "If no source-class law can be stated before observing control outcomes, this edge remains a coordinate relationship rather than evidence of reusable transport."
