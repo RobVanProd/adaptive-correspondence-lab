@@ -2,7 +2,7 @@
 
 ## ACL-001 — Initial experimental substrate
 
-- **Status:** in progress
+- **Status:** complete
 - **Observed behavior:** no implementation exists; only a research design is available.
 - **Hypothesis:** under stationary shared rewards and an identity mapping on the
   interior of a finite simplex, exact replicator flow, multiplicative weights,
@@ -27,3 +27,28 @@
 - **Stop conditions:** an implementation requires an unfrozen semantic choice; the
   change crosses into neural policies or hardware acceleration; the baseline build
   is red; observed disagreement cannot be separated from a numerical defect.
+
+### ACL-001 completion record
+
+- **Implementation:** added three instrumented categorical worlds, nine named
+  assumption violations, bounded NumPy batches, epsilon-to-delta and coefficient-
+  transport protocols, analytic/rank-mu Gaussian optimization, exact/sampled
+  contextual-bandit natural policy gradient, strict artifact serialization, and CLI.
+- **Source checkpoint:** `48d3c5c5ef96c59fe18f6cd5b3d27a44d0fcccc6`.
+- **Verification:** 47 tests passed; Ruff passed; wheel build passed; measured test
+  coverage was 87%; `acl demo` and `examples/minimal.py` completed on the development
+  host.
+- **Immutable software evidence:** `evidence/software-verification.json` and
+  `evidence/categorical-equivalence.json` both record the clean source checkpoint and
+  pass. `evidence/mutation-stability.*` is a deterministic example curve, not a
+  scientific claim.
+- **Remaining uncertainty:** no independent scientific review has occurred; the
+  transported-coefficient command demonstrates protocol plumbing within the same
+  categorical correspondence and does not validate transport to a new system class;
+  sample estimators have reproducibility tests but no statistical calibration claim.
+- **Regression risks:** boundary states in finite populations cannot be represented
+  by categorical logits; large Euler steps deliberately fail instead of projecting;
+  long traces grow linearly because complete instrumentation and RNG states are kept.
+- **Recommended next action:** preregister one perturbation, metric, epsilon grid,
+  horizon, seed ensemble, and source/target split before treating any curve as research
+  evidence.

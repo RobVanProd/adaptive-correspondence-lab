@@ -71,3 +71,9 @@ This is research software at version `0.1.0`. Passing tests establishes that the
 matches the frozen equations and deterministic fixtures. It does not establish a new
 scientific law. The `evidence/` directory contains only labeled software verification
 artifacts until a preregistered experiment is reviewed.
+
+The bundled [software verification](evidence/software-verification.json) and
+[categorical trace](evidence/categorical-equivalence.json) identify the exact clean
+source commit that produced them. The [mutation curve](evidence/mutation-stability.csv)
+is intentionally labeled as a deterministic format example rather than a research
+result.

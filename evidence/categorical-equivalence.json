@@ -1,0 +1,3663 @@
+{
+  "claim_scope": "software reproduction under frozen assumptions only",
+  "kind": "categorical-exact-equivalence-verification",
+  "pairwise": {
+    "replicator-exact__categorical-natural-gradient": {
+      "endpoint_l1": 2.220446049250313e-16,
+      "max_path_l1": 2.7755575615628914e-16
+    },
+    "replicator-exact__multiplicative-weights": {
+      "endpoint_l1": 0.0,
+      "max_path_l1": 0.0
+    }
+  },
+  "passed": true,
+  "provenance": {
+    "created_utc": "2026-08-12T18:47:04.996350+00:00",
+    "git_commit": "48d3c5c5ef96c59fe18f6cd5b3d27a44d0fcccc6",
+    "git_tracked_files_dirty": false,
+    "numpy": "2.5.2",
+    "package_version": "0.1.0",
+    "pid": 15944,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "python": "3.13.14"
+  },
+  "tolerance": {
+    "absolute": 2e-14,
+    "relative": 0.0
+  },
+  "trajectories": [
+    {
+      "config": {
+        "common_schedule_amplitude": 0.0,
+        "common_schedule_frequency": 0.41,
+        "eta": 0.05,
+        "initial_state": [
+          0.2,
+          0.3,
+          0.5
+        ],
+        "mapping": "identity-on-simplex-probabilities",
+        "perturbation": {
+          "epsilon": 0.0,
+          "kind": "none"
+        },
+        "reward": [
+          0.7,
+          -0.2,
+          0.1
+        ],
+        "seed": 1729,
+        "steps": 10
+      },
+      "domain": "replicator-exact",
+      "records": [
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.2057566574315949,
+            0.2950542695625008,
+            0.4991890730059043
+          ],
+          "canonical_state_before": [
+            0.2,
+            0.3,
+            0.5
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2057566574315949,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.11399999999999999,
+            -0.099,
+            -0.015
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16,
+                -0.06,
+                -0.1
+              ],
+              [
+                -0.06,
+                0.21,
+                -0.15
+              ],
+              [
+                -0.1,
+                -0.15,
+                0.25
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012371506236031954,
+            "negative_entropy_hessian": [
+              [
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.3333333333333335,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.2057566574315949,
+              0.2950542695625008,
+              0.4991890730059043
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.2,
+              0.3,
+              0.5
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0322776650176442,
+            "entropy_before": 1.0296530140645737,
+            "expected_reward_after": 0.1349377135902067,
+            "expected_reward_before": 0.13
+          },
+          "realized_update": [
+            0.005756657431594897,
+            -0.004945730437499185,
+            -0.0008109269940956843
+          ],
+          "regret": {
+            "cumulative": 0.57,
+            "instantaneous": 0.57
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 0,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.21162641172297977,
+            0.2901179659510198,
+            0.49825562232600046
+          ],
+          "canonical_state_before": [
+            0.2057566574315949,
+            0.2950542695625008,
+            0.4991890730059043
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.21162641172297977,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.1162653272923336,
+            -0.09882480243229255,
+            -0.01744052486004107
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16342085535417222,
+                -0.06070938026610094,
+                -0.10271147508807127
+              ],
+              [
+                -0.06070938026610094,
+                0.20799724757543991,
+                -0.147287867309339
+              ],
+              [
+                -0.10271147508807127,
+                -0.147287867309339,
+                0.24999934239741026
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012533823313485844,
+            "negative_entropy_hessian": [
+              [
+                4.86011005662092,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.389207014298676,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0032489773432443
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.21162641172297977,
+              0.2901179659510198,
+              0.49825562232600046
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.2057566574315949,
+              0.2950542695625008,
+              0.4991890730059043
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0347590006857368,
+            "entropy_before": 1.0322776650176442,
+            "expected_reward_after": 0.13994045724848192,
+            "expected_reward_before": 0.1349377135902067
+          },
+          "realized_update": [
+            0.0058697542913848655,
+            -0.004936303611481008,
+            -0.0009334506799038578
+          ],
+          "regret": {
+            "cumulative": 1.1350622864097932,
+            "instantaneous": 0.5650622864097933
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 1,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.21760882657033526,
+            0.2851924414473958,
+            0.497198731982269
+          ],
+          "canonical_state_before": [
+            0.21162641172297977,
+            0.2901179659510198,
+            0.49825562232600046
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.21760882657033526,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.11852339138371655,
+            -0.09862283400138919,
+            -0.01990055738232737
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16684067358423563,
+                -0.06139662411058394,
+                -0.10544404947365169
+              ],
+              [
+                -0.06139662411058394,
+                0.2059495317834627,
+                -0.1445529076728788
+              ],
+              [
+                -0.10544404947365169,
+                -0.1445529076728788,
+                0.24999695714653045
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.0001269443157122139,
+            "negative_entropy_hessian": [
+              [
+                4.725308111867464,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.446873745726001,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.007001938747249
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.21760882657033526,
+              0.2851924414473958,
+              0.497198731982269
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.21162641172297977,
+              0.2901179659510198,
+              0.49825562232600046
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0370908928959945,
+            "entropy_before": 1.0347590006857368,
+            "expected_reward_after": 0.1450075635079824,
+            "expected_reward_before": 0.13994045724848192
+          },
+          "realized_update": [
+            0.005982414847355483,
+            -0.00492552450362399,
+            -0.0010568903437314647
+          ],
+          "regret": {
+            "cumulative": 1.6951218291613113,
+            "instantaneous": 0.560059542751518
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 2,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.2237033166984969,
+            0.28027907494823445,
+            0.49601760835326864
+          ],
+          "canonical_state_before": [
+            0.21760882657033526,
+            0.2851924414473958,
+            0.497198731982269
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2237033166984969,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.12077125286043926,
+            -0.09839354935465898,
+            -0.022377703505780295
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.170255225169017,
+                -0.06206039253009685,
+                -0.10819483263892017
+              ],
+              [
+                -0.06206039253009685,
+                0.20385771278866952,
+                -0.1417973202585727
+              ],
+              [
+                -0.10819483263892017,
+                -0.1417973202585727,
+                0.24999215289749283
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012853086769320436,
+            "negative_entropy_hessian": [
+              [
+                4.595401830710122,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.5064042894154035,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0112682025819444
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.2237033166984969,
+              0.28027907494823445,
+              0.49601760835326864
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.21760882657033526,
+              0.2851924414473958,
+              0.497198731982269
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0392672077375125,
+            "entropy_before": 1.0370908928959945,
+            "expected_reward_after": 0.15013826753462778,
+            "expected_reward_before": 0.1450075635079824
+          },
+          "realized_update": [
+            0.006094490128161656,
+            -0.0049133664991613535,
+            -0.001181123629000358
+          ],
+          "regret": {
+            "cumulative": 2.2501142656533286,
+            "instantaneous": 0.5549924364920176
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 3,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.22990914406385252,
+            0.27537927056410866,
+            0.4947115853720389
+          ],
+          "canonical_state_before": [
+            0.2237033166984969,
+            0.28027907494823445,
+            0.49601760835326864
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.22990914406385252,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.12300589327808534,
+            -0.09813642972858291,
+            -0.024869463549502403
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1736601427965889,
+                -0.06269935866710664,
+                -0.11096078412948226
+              ],
+              [
+                -0.06269935866710664,
+                0.20172271509439643,
+                -0.13902335642728977
+              ],
+              [
+                -0.11096078412948226,
+                -0.13902335642728977,
+                0.24998414055677204
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013009540119170203,
+            "negative_entropy_hessian": [
+              [
+                4.470206408909802,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.567872486323472,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0160574607823
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.22990914406385252,
+              0.27537927056410866,
+              0.4947115853720389
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.2237033166984969,
+              0.28027907494823445,
+              0.49601760835326864
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0412818212570645,
+            "entropy_before": 1.0392672077375125,
+            "expected_reward_after": 0.1553317052690789,
+            "expected_reward_before": 0.15013826753462778
+          },
+          "realized_update": [
+            0.006205827365355604,
+            -0.004899804384125794,
+            -0.0013060229812297264
+          ],
+          "regret": {
+            "cumulative": 2.799975998118701,
+            "instantaneous": 0.5498617324653722
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 4,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.2362254143863493,
+            0.2704944560756475,
+            0.4932801295380032
+          ],
+          "canonical_state_before": [
+            0.22990914406385252,
+            0.27537927056410866,
+            0.4947115853720389
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2362254143863493,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.1252242214403042,
+            -0.0978509858052998,
+            -0.027373235635004423
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1770509295396792,
+                -0.06331221238832228,
+                -0.11373871715135697
+              ],
+              [
+                -0.06331221238832228,
+                0.1995455279076881,
+                -0.13623331551936585
+              ],
+              [
+                -0.11373871715135697,
+                -0.13623331551936585,
+                0.24997203267072277
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013163538891984724,
+            "negative_entropy_hessian": [
+              [
+                4.34954426920171,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.631355395602294,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0213797888884453
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.2362254143863493,
+              0.2704944560756475,
+              0.4932801295380032
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.22990914406385252,
+              0.27537927056410866,
+              0.4947115853720389
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0431286357816019,
+            "entropy_before": 1.0412818212570645,
+            "expected_reward_after": 0.16058691180911533,
+            "expected_reward_before": 0.1553317052690789
+          },
+          "realized_update": [
+            0.006316270322496792,
+            -0.0048848144884611755,
+            -0.0014314558340356998
+          ],
+          "regret": {
+            "cumulative": 3.344644292849622,
+            "instantaneous": 0.544668294730921
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 5,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.24265107404068736,
+            0.2656260812464962,
+            0.4917228447128164
+          ],
+          "canonical_state_before": [
+            0.2362254143863493,
+            0.2704944560756475,
+            0.4932801295380032
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.24265107404068736,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.12742308028331212,
+            -0.09753676057780412,
+            -0.029886319705507983
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.18042296798434687,
+                -0.06389766497567999,
+                -0.11652530300866687
+              ],
+              [
+                -0.06389766497567999,
+                0.19732720530798709,
+                -0.1334295403323071
+              ],
+              [
+                -0.11652530300866687,
+                -0.1334295403323071,
+                0.24995484334097398
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013314827072552623,
+            "negative_entropy_hessian": [
+              [
+                4.23324477003346,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.6969334399975144,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0272456564114614
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.24265107404068736,
+              0.2656260812464962,
+              0.4917228447128164
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.2362254143863493,
+              0.2704944560756475,
+              0.4932801295380032
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0448015968170916,
+            "entropy_before": 1.0431286357816019,
+            "expected_reward_after": 0.16590282005046353,
+            "expected_reward_before": 0.16058691180911533
+          },
+          "realized_update": [
+            0.006425659654338056,
+            -0.004868374829151256,
+            -0.0015572848251868
+          ],
+          "regret": {
+            "cumulative": 3.8840573810405066,
+            "instantaneous": 0.5394130881908846
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 6,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.24918490733618476,
+            0.2607756159939896,
+            0.49003947666982567
+          ],
+          "canonical_state_before": [
+            0.24265107404068736,
+            0.2656260812464962,
+            0.4917228447128164
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.24918490733618476,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.1295992543568573,
+            -0.09719333220704651,
+            -0.03240592214981076
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.18377153030758822,
+                -0.06445445390768119,
+                -0.11931707639990703
+              ],
+              [
+                -0.06445445390768119,
+                0.19506886620812602,
+                -0.13061441230044482
+              ],
+              [
+                -0.11931707639990703,
+                -0.13061441230044482,
+                0.24993148870035184
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013463146055826478,
+            "negative_entropy_hessian": [
+              [
+                4.121143926329053,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.7646905578975054,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.033665937534457
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.24918490733618476,
+              0.2607756159939896,
+              0.49003947666982567
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.24265107404068736,
+              0.2656260812464962,
+              0.4917228447128164
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0462947104670737,
+            "entropy_before": 1.0448015968170916,
+            "expected_reward_after": 0.17127825960351398,
+            "expected_reward_before": 0.16590282005046353
+          },
+          "realized_update": [
+            0.006533833295497393,
+            -0.004850465252506653,
+            -0.0016833680429907405
+          ],
+          "regret": {
+            "cumulative": 4.418154560990043,
+            "instantaneous": 0.5340971799495364
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 7,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.25582553421395515,
+            0.25594454841928405,
+            0.48822991736676086
+          ],
+          "canonical_state_before": [
+            0.24918490733618476,
+            0.2607756159939896,
+            0.49003947666982567
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.25582553421395515,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.1317494778873247,
+            -0.09682031685328274,
+            -0.034929161034041964
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1870917892920418,
+                -0.06498134770699879,
+                -0.12211044158504299
+              ],
+              [
+                -0.06498134770699879,
+                0.19277169409694486,
+                -0.12779034638994607
+              ],
+              [
+                -0.12211044158504299,
+                -0.12779034638994607,
+                0.24990078797498905
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013608235385231295,
+            "negative_entropy_hessian": [
+              [
+                4.0130841417729295,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.8347143623391853,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.040651922158857
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.25582553421395515,
+              0.25594454841928405,
+              0.48822991736676086
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.24918490733618476,
+              0.2607756159939896,
+              0.49003947666982567
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0476020613082229,
+            "entropy_before": 1.0462947104670737,
+            "expected_reward_after": 0.17671195600258788,
+            "expected_reward_before": 0.17127825960351398
+          },
+          "realized_update": [
+            0.006640626877770395,
+            -0.004831067574705528,
+            -0.0018095593030648116
+          ],
+          "regret": {
+            "cumulative": 4.94687630138653,
+            "instantaneous": 0.528721740396486
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 8,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.26257140838892523,
+            0.25113438269963434,
+            0.4862942089114405
+          ],
+          "canonical_state_before": [
+            0.25582553421395515,
+            0.25594454841928405,
+            0.48822991736676086
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.25113438269963434,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "replicator-exact",
+          "expected_vector_field": [
+            0.1338704434034136,
+            -0.09641737146322756,
+            -0.03745307194018607
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1903788302580996,
+                -0.06547715082851285,
+                -0.12490167942958677
+              ],
+              [
+                -0.06547715082851285,
+                0.1904369365537328,
+                -0.12495978572521997
+              ],
+              [
+                -0.12490167942958677,
+                -0.12495978572521997,
+                0.24986146515480673
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013749833529581824,
+            "negative_entropy_hessian": [
+              [
+                3.908913952129844,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.907096307290034,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.04821532730612
+              ]
+            ]
+          },
+          "native_state_after": {
+            "probability": [
+              0.26257140838892523,
+              0.25113438269963434,
+              0.4862942089114405
+            ]
+          },
+          "native_state_before": {
+            "probability": [
+              0.25582553421395515,
+              0.25594454841928405,
+              0.48822991736676086
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0487178306542888,
+            "entropy_before": 1.0476020613082229,
+            "expected_reward_after": 0.18220253022346486,
+            "expected_reward_before": 0.17671195600258788
+          },
+          "realized_update": [
+            0.006745874174970079,
+            -0.004810165719649706,
+            -0.001935708455320373
+          ],
+          "regret": {
+            "cumulative": 5.4701643453839415,
+            "instantaneous": 0.5232880439974121
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 9,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "common_schedule_amplitude": 0.0,
+        "common_schedule_frequency": 0.41,
+        "eta": 0.05,
+        "initial_state": [
+          0.2,
+          0.3,
+          0.5
+        ],
+        "mapping": "identity-on-simplex-probabilities",
+        "perturbation": {
+          "epsilon": 0.0,
+          "kind": "none"
+        },
+        "reward": [
+          0.7,
+          -0.2,
+          0.1
+        ],
+        "seed": 1729,
+        "steps": 10
+      },
+      "domain": "multiplicative-weights",
+      "records": [
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.2057566574315949,
+            0.2950542695625008,
+            0.4991890730059043
+          ],
+          "canonical_state_before": [
+            0.2,
+            0.3,
+            0.5
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2057566574315949,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.11399999999999999,
+            -0.099,
+            -0.015
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16,
+                -0.06,
+                -0.1
+              ],
+              [
+                -0.06,
+                0.21,
+                -0.15
+              ],
+              [
+                -0.1,
+                -0.15,
+                0.25
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012371506236031954,
+            "negative_entropy_hessian": [
+              [
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.3333333333333335,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.2057566574315949,
+              0.2950542695625008,
+              0.4991890730059043
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.2,
+              0.3,
+              0.5
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0322776650176442,
+            "entropy_before": 1.0296530140645737,
+            "expected_reward_after": 0.1349377135902067,
+            "expected_reward_before": 0.13
+          },
+          "realized_update": [
+            0.005756657431594897,
+            -0.004945730437499185,
+            -0.0008109269940956843
+          ],
+          "regret": {
+            "cumulative": 0.57,
+            "instantaneous": 0.57
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 0,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.21162641172297977,
+            0.2901179659510198,
+            0.49825562232600046
+          ],
+          "canonical_state_before": [
+            0.2057566574315949,
+            0.2950542695625008,
+            0.4991890730059043
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.21162641172297977,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.1162653272923336,
+            -0.09882480243229255,
+            -0.01744052486004107
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16342085535417222,
+                -0.06070938026610094,
+                -0.10271147508807127
+              ],
+              [
+                -0.06070938026610094,
+                0.20799724757543991,
+                -0.147287867309339
+              ],
+              [
+                -0.10271147508807127,
+                -0.147287867309339,
+                0.24999934239741026
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012533823313485844,
+            "negative_entropy_hessian": [
+              [
+                4.86011005662092,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.389207014298676,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0032489773432443
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.21162641172297977,
+              0.2901179659510198,
+              0.49825562232600046
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.2057566574315949,
+              0.2950542695625008,
+              0.4991890730059043
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0347590006857368,
+            "entropy_before": 1.0322776650176442,
+            "expected_reward_after": 0.13994045724848192,
+            "expected_reward_before": 0.1349377135902067
+          },
+          "realized_update": [
+            0.0058697542913848655,
+            -0.004936303611481008,
+            -0.0009334506799038578
+          ],
+          "regret": {
+            "cumulative": 1.1350622864097932,
+            "instantaneous": 0.5650622864097933
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 1,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.21760882657033526,
+            0.2851924414473958,
+            0.497198731982269
+          ],
+          "canonical_state_before": [
+            0.21162641172297977,
+            0.2901179659510198,
+            0.49825562232600046
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.21760882657033526,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.11852339138371655,
+            -0.09862283400138919,
+            -0.01990055738232737
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16684067358423563,
+                -0.06139662411058394,
+                -0.10544404947365169
+              ],
+              [
+                -0.06139662411058394,
+                0.2059495317834627,
+                -0.1445529076728788
+              ],
+              [
+                -0.10544404947365169,
+                -0.1445529076728788,
+                0.24999695714653045
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.0001269443157122139,
+            "negative_entropy_hessian": [
+              [
+                4.725308111867464,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.446873745726001,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.007001938747249
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.21760882657033526,
+              0.2851924414473958,
+              0.497198731982269
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.21162641172297977,
+              0.2901179659510198,
+              0.49825562232600046
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0370908928959945,
+            "entropy_before": 1.0347590006857368,
+            "expected_reward_after": 0.1450075635079824,
+            "expected_reward_before": 0.13994045724848192
+          },
+          "realized_update": [
+            0.005982414847355483,
+            -0.00492552450362399,
+            -0.0010568903437314647
+          ],
+          "regret": {
+            "cumulative": 1.6951218291613113,
+            "instantaneous": 0.560059542751518
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 2,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.2237033166984969,
+            0.28027907494823445,
+            0.49601760835326864
+          ],
+          "canonical_state_before": [
+            0.21760882657033526,
+            0.2851924414473958,
+            0.497198731982269
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2237033166984969,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.12077125286043926,
+            -0.09839354935465898,
+            -0.022377703505780295
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.170255225169017,
+                -0.06206039253009685,
+                -0.10819483263892017
+              ],
+              [
+                -0.06206039253009685,
+                0.20385771278866952,
+                -0.1417973202585727
+              ],
+              [
+                -0.10819483263892017,
+                -0.1417973202585727,
+                0.24999215289749283
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012853086769320436,
+            "negative_entropy_hessian": [
+              [
+                4.595401830710122,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.5064042894154035,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0112682025819444
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.2237033166984969,
+              0.28027907494823445,
+              0.49601760835326864
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.21760882657033526,
+              0.2851924414473958,
+              0.497198731982269
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0392672077375125,
+            "entropy_before": 1.0370908928959945,
+            "expected_reward_after": 0.15013826753462778,
+            "expected_reward_before": 0.1450075635079824
+          },
+          "realized_update": [
+            0.006094490128161656,
+            -0.0049133664991613535,
+            -0.001181123629000358
+          ],
+          "regret": {
+            "cumulative": 2.2501142656533286,
+            "instantaneous": 0.5549924364920176
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 3,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.22990914406385252,
+            0.27537927056410866,
+            0.4947115853720389
+          ],
+          "canonical_state_before": [
+            0.2237033166984969,
+            0.28027907494823445,
+            0.49601760835326864
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.22990914406385252,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.12300589327808534,
+            -0.09813642972858291,
+            -0.024869463549502403
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1736601427965889,
+                -0.06269935866710664,
+                -0.11096078412948226
+              ],
+              [
+                -0.06269935866710664,
+                0.20172271509439643,
+                -0.13902335642728977
+              ],
+              [
+                -0.11096078412948226,
+                -0.13902335642728977,
+                0.24998414055677204
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013009540119170203,
+            "negative_entropy_hessian": [
+              [
+                4.470206408909802,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.567872486323472,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0160574607823
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.22990914406385252,
+              0.27537927056410866,
+              0.4947115853720389
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.2237033166984969,
+              0.28027907494823445,
+              0.49601760835326864
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0412818212570645,
+            "entropy_before": 1.0392672077375125,
+            "expected_reward_after": 0.1553317052690789,
+            "expected_reward_before": 0.15013826753462778
+          },
+          "realized_update": [
+            0.006205827365355604,
+            -0.004899804384125794,
+            -0.0013060229812297264
+          ],
+          "regret": {
+            "cumulative": 2.799975998118701,
+            "instantaneous": 0.5498617324653722
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 4,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.2362254143863493,
+            0.2704944560756475,
+            0.4932801295380032
+          ],
+          "canonical_state_before": [
+            0.22990914406385252,
+            0.27537927056410866,
+            0.4947115853720389
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2362254143863493,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.1252242214403042,
+            -0.0978509858052998,
+            -0.027373235635004423
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1770509295396792,
+                -0.06331221238832228,
+                -0.11373871715135697
+              ],
+              [
+                -0.06331221238832228,
+                0.1995455279076881,
+                -0.13623331551936585
+              ],
+              [
+                -0.11373871715135697,
+                -0.13623331551936585,
+                0.24997203267072277
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013163538891984724,
+            "negative_entropy_hessian": [
+              [
+                4.34954426920171,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.631355395602294,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0213797888884453
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.2362254143863493,
+              0.2704944560756475,
+              0.4932801295380032
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.22990914406385252,
+              0.27537927056410866,
+              0.4947115853720389
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0431286357816019,
+            "entropy_before": 1.0412818212570645,
+            "expected_reward_after": 0.16058691180911533,
+            "expected_reward_before": 0.1553317052690789
+          },
+          "realized_update": [
+            0.006316270322496792,
+            -0.0048848144884611755,
+            -0.0014314558340356998
+          ],
+          "regret": {
+            "cumulative": 3.344644292849622,
+            "instantaneous": 0.544668294730921
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 5,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.24265107404068736,
+            0.2656260812464962,
+            0.4917228447128164
+          ],
+          "canonical_state_before": [
+            0.2362254143863493,
+            0.2704944560756475,
+            0.4932801295380032
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.24265107404068736,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.12742308028331212,
+            -0.09753676057780412,
+            -0.029886319705507983
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.18042296798434687,
+                -0.06389766497567999,
+                -0.11652530300866687
+              ],
+              [
+                -0.06389766497567999,
+                0.19732720530798709,
+                -0.1334295403323071
+              ],
+              [
+                -0.11652530300866687,
+                -0.1334295403323071,
+                0.24995484334097398
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013314827072552623,
+            "negative_entropy_hessian": [
+              [
+                4.23324477003346,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.6969334399975144,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0272456564114614
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.24265107404068736,
+              0.2656260812464962,
+              0.4917228447128164
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.2362254143863493,
+              0.2704944560756475,
+              0.4932801295380032
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0448015968170916,
+            "entropy_before": 1.0431286357816019,
+            "expected_reward_after": 0.16590282005046353,
+            "expected_reward_before": 0.16058691180911533
+          },
+          "realized_update": [
+            0.006425659654338056,
+            -0.004868374829151256,
+            -0.0015572848251868
+          ],
+          "regret": {
+            "cumulative": 3.8840573810405066,
+            "instantaneous": 0.5394130881908846
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 6,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.24918490733618476,
+            0.2607756159939896,
+            0.49003947666982567
+          ],
+          "canonical_state_before": [
+            0.24265107404068736,
+            0.2656260812464962,
+            0.4917228447128164
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.24918490733618476,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.1295992543568573,
+            -0.09719333220704651,
+            -0.03240592214981076
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.18377153030758822,
+                -0.06445445390768119,
+                -0.11931707639990703
+              ],
+              [
+                -0.06445445390768119,
+                0.19506886620812602,
+                -0.13061441230044482
+              ],
+              [
+                -0.11931707639990703,
+                -0.13061441230044482,
+                0.24993148870035184
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013463146055826478,
+            "negative_entropy_hessian": [
+              [
+                4.121143926329053,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.7646905578975054,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.033665937534457
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.24918490733618476,
+              0.2607756159939896,
+              0.49003947666982567
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.24265107404068736,
+              0.2656260812464962,
+              0.4917228447128164
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0462947104670737,
+            "entropy_before": 1.0448015968170916,
+            "expected_reward_after": 0.17127825960351398,
+            "expected_reward_before": 0.16590282005046353
+          },
+          "realized_update": [
+            0.006533833295497393,
+            -0.004850465252506653,
+            -0.0016833680429907405
+          ],
+          "regret": {
+            "cumulative": 4.418154560990043,
+            "instantaneous": 0.5340971799495364
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 7,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.25582553421395515,
+            0.25594454841928405,
+            0.48822991736676086
+          ],
+          "canonical_state_before": [
+            0.24918490733618476,
+            0.2607756159939896,
+            0.49003947666982567
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.25582553421395515,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.1317494778873247,
+            -0.09682031685328274,
+            -0.034929161034041964
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1870917892920418,
+                -0.06498134770699879,
+                -0.12211044158504299
+              ],
+              [
+                -0.06498134770699879,
+                0.19277169409694486,
+                -0.12779034638994607
+              ],
+              [
+                -0.12211044158504299,
+                -0.12779034638994607,
+                0.24990078797498905
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013608235385231295,
+            "negative_entropy_hessian": [
+              [
+                4.0130841417729295,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.8347143623391853,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.040651922158857
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.25582553421395515,
+              0.25594454841928405,
+              0.48822991736676086
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.24918490733618476,
+              0.2607756159939896,
+              0.49003947666982567
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0476020613082229,
+            "entropy_before": 1.0462947104670737,
+            "expected_reward_after": 0.17671195600258788,
+            "expected_reward_before": 0.17127825960351398
+          },
+          "realized_update": [
+            0.006640626877770395,
+            -0.004831067574705528,
+            -0.0018095593030648116
+          ],
+          "regret": {
+            "cumulative": 4.94687630138653,
+            "instantaneous": 0.528721740396486
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 8,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.7,
+            -0.2,
+            0.1
+          ],
+          "canonical_state_after": [
+            0.26257140838892523,
+            0.25113438269963434,
+            0.4862942089114405
+          ],
+          "canonical_state_before": [
+            0.25582553421395515,
+            0.25594454841928405,
+            0.48822991736676086
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.25113438269963434,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "multiplicative-weights",
+          "expected_vector_field": [
+            0.1338704434034136,
+            -0.09641737146322756,
+            -0.03745307194018607
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1903788302580996,
+                -0.06547715082851285,
+                -0.12490167942958677
+              ],
+              [
+                -0.06547715082851285,
+                0.1904369365537328,
+                -0.12495978572521997
+              ],
+              [
+                -0.12490167942958677,
+                -0.12495978572521997,
+                0.24986146515480673
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013749833529581824,
+            "negative_entropy_hessian": [
+              [
+                3.908913952129844,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.907096307290034,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.04821532730612
+              ]
+            ]
+          },
+          "native_state_after": {
+            "normalized_weights": [
+              0.26257140838892523,
+              0.25113438269963434,
+              0.4862942089114405
+            ]
+          },
+          "native_state_before": {
+            "normalized_weights": [
+              0.25582553421395515,
+              0.25594454841928405,
+              0.48822991736676086
+            ]
+          },
+          "numerical_guards": [
+            "max-shifted-exponential-normalization"
+          ],
+          "potentials": {
+            "entropy_after": 1.0487178306542888,
+            "entropy_before": 1.0476020613082229,
+            "expected_reward_after": 0.18220253022346486,
+            "expected_reward_before": 0.17671195600258788
+          },
+          "realized_update": [
+            0.006745874174970079,
+            -0.004810165719649706,
+            -0.001935708455320373
+          ],
+          "regret": {
+            "cumulative": 5.4701643453839415,
+            "instantaneous": 0.5232880439974121
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 9,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "common_schedule_amplitude": 0.0,
+        "common_schedule_frequency": 0.41,
+        "eta": 0.05,
+        "initial_state": [
+          0.2,
+          0.3,
+          0.5
+        ],
+        "mapping": "identity-on-simplex-probabilities",
+        "perturbation": {
+          "epsilon": 0.0,
+          "kind": "none"
+        },
+        "reward": [
+          0.7,
+          -0.2,
+          0.1
+        ],
+        "seed": 1729,
+        "steps": 10
+      },
+      "domain": "categorical-natural-gradient",
+      "records": [
+        {
+          "analytic_gradient": [
+            0.11399999999999999,
+            -0.099,
+            -0.015
+          ],
+          "canonical_state_after": [
+            0.2057566574315949,
+            0.29505426956250075,
+            0.49918907300590437
+          ],
+          "canonical_state_before": [
+            0.2,
+            0.3,
+            0.5
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2057566574315949,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.11399999999999999,
+            -0.099,
+            -0.015
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16,
+                -0.06,
+                -0.1
+              ],
+              [
+                -0.06,
+                0.21,
+                -0.15
+              ],
+              [
+                -0.1,
+                -0.15,
+                0.25
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012371506236030978,
+            "negative_entropy_hessian": [
+              [
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.3333333333333335,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.41558527999410644,
+              -0.055120171885942204,
+              0.47070545188004864
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.44058527999410635,
+              -0.035120171885942186,
+              0.47570545188004865
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0322776650176442,
+            "entropy_before": 1.0296530140645737,
+            "expected_reward_after": 0.13493771359020673,
+            "expected_reward_before": 0.13
+          },
+          "realized_update": [
+            0.005756657431594897,
+            -0.004945730437499241,
+            -0.0008109269940956287
+          ],
+          "regret": {
+            "cumulative": 0.57,
+            "instantaneous": 0.57
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 0,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.11626532729233358,
+            -0.09882480243229252,
+            -0.017440524860041082
+          ],
+          "canonical_state_after": [
+            0.21162641172297977,
+            0.2901179659510197,
+            0.49825562232600057
+          ],
+          "canonical_state_before": [
+            0.2057566574315949,
+            0.29505426956250075,
+            0.49918907300590437
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.21162641172297977,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.11626532729233358,
+            -0.09882480243229252,
+            -0.017440524860041082
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16342085535417222,
+                -0.060709380266100926,
+                -0.10271147508807128
+              ],
+              [
+                -0.060709380266100926,
+                0.2079972475754399,
+                -0.147287867309339
+              ],
+              [
+                -0.10271147508807128,
+                -0.147287867309339,
+                0.24999934239741026
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012533823313485106,
+            "negative_entropy_hessian": [
+              [
+                4.86011005662092,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.3892070142986763,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0032489773432443
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.3905852799941065,
+              -0.07512017188594244,
+              0.4657054518800485
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.41558527999410644,
+              -0.055120171885942204,
+              0.47070545188004864
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0347590006857368,
+            "entropy_before": 1.0322776650176442,
+            "expected_reward_after": 0.13994045724848195,
+            "expected_reward_before": 0.13493771359020673
+          },
+          "realized_update": [
+            0.0058697542913848655,
+            -0.004936303611481063,
+            -0.0009334506799038023
+          ],
+          "regret": {
+            "cumulative": 1.1350622864097932,
+            "instantaneous": 0.5650622864097932
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 1,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.11852339138371655,
+            -0.09862283400138916,
+            -0.01990055738232739
+          ],
+          "canonical_state_after": [
+            0.21760882657033526,
+            0.2851924414473957,
+            0.49719873198226905
+          ],
+          "canonical_state_before": [
+            0.21162641172297977,
+            0.2901179659510197,
+            0.49825562232600057
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.21760882657033526,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.11852339138371655,
+            -0.09862283400138916,
+            -0.01990055738232739
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.16684067358423563,
+                -0.06139662411058392,
+                -0.10544404947365171
+              ],
+              [
+                -0.06139662411058392,
+                0.20594953178346265,
+                -0.14455290767287876
+              ],
+              [
+                -0.10544404947365171,
+                -0.14455290767287876,
+                0.24999695714653045
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00012694431571216034,
+            "negative_entropy_hessian": [
+              [
+                4.725308111867464,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.4468737457260024,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0070019387472486
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.36558527999410617,
+              -0.09512017188594202,
+              0.46070545188004874
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.3905852799941065,
+              -0.07512017188594244,
+              0.4657054518800485
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0370908928959945,
+            "entropy_before": 1.0347590006857368,
+            "expected_reward_after": 0.14500756350798244,
+            "expected_reward_before": 0.13994045724848195
+          },
+          "realized_update": [
+            0.005982414847355483,
+            -0.00492552450362399,
+            -0.0010568903437315202
+          ],
+          "regret": {
+            "cumulative": 1.6951218291613113,
+            "instantaneous": 0.560059542751518
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 2,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.12077125286043926,
+            -0.09839354935465894,
+            -0.022377703505780312
+          ],
+          "canonical_state_after": [
+            0.22370331669849694,
+            0.28027907494823434,
+            0.4960176083532687
+          ],
+          "canonical_state_before": [
+            0.21760882657033526,
+            0.2851924414473957,
+            0.49719873198226905
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.22370331669849694,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.12077125286043926,
+            -0.09839354935465894,
+            -0.022377703505780312
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.170255225169017,
+                -0.06206039253009682,
+                -0.10819483263892019
+              ],
+              [
+                -0.06206039253009682,
+                0.2038577127886695,
+                -0.14179732025857264
+              ],
+              [
+                -0.10819483263892019,
+                -0.14179732025857264,
+                0.24999215289749283
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.0001285308676932692,
+            "negative_entropy_hessian": [
+              [
+                4.595401830710122,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.506404289415405,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.011268202581944
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.34058527999410626,
+              -0.11512017188594204,
+              0.45570545188004874
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.36558527999410617,
+              -0.09512017188594202,
+              0.46070545188004874
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0392672077375122,
+            "entropy_before": 1.0370908928959945,
+            "expected_reward_after": 0.15013826753462783,
+            "expected_reward_before": 0.14500756350798244
+          },
+          "realized_update": [
+            0.006094490128161684,
+            -0.0049133664991613535,
+            -0.001181123629000358
+          ],
+          "regret": {
+            "cumulative": 2.2501142656533286,
+            "instantaneous": 0.5549924364920176
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 3,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.12300589327808532,
+            -0.09813642972858289,
+            -0.02486946354950243
+          ],
+          "canonical_state_after": [
+            0.22990914406385254,
+            0.27537927056410855,
+            0.49471158537203896
+          ],
+          "canonical_state_before": [
+            0.22370331669849694,
+            0.28027907494823434,
+            0.4960176083532687
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.22990914406385254,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.12300589327808532,
+            -0.09813642972858289,
+            -0.02486946354950243
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.17366014279658892,
+                -0.06269935866710663,
+                -0.11096078412948229
+              ],
+              [
+                -0.06269935866710663,
+                0.20172271509439638,
+                -0.13902335642728975
+              ],
+              [
+                -0.11096078412948229,
+                -0.13902335642728975,
+                0.24998414055677204
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.0001300954011916951,
+            "negative_entropy_hessian": [
+              [
+                4.470206408909801,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.5678724863234734,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0160574607822994
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.31558527999410635,
+              -0.13512017188594228,
+              0.4507054518800485
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.34058527999410626,
+              -0.11512017188594204,
+              0.45570545188004874
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0412818212570645,
+            "entropy_before": 1.0392672077375122,
+            "expected_reward_after": 0.15533170526907897,
+            "expected_reward_before": 0.15013826753462783
+          },
+          "realized_update": [
+            0.006205827365355604,
+            -0.004899804384125794,
+            -0.0013060229812297264
+          ],
+          "regret": {
+            "cumulative": 2.7999759981187005,
+            "instantaneous": 0.5498617324653721
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 4,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.1252242214403042,
+            -0.09785098580529977,
+            -0.027373235635004455
+          ],
+          "canonical_state_after": [
+            0.23622541438634936,
+            0.27049445607564737,
+            0.4932801295380033
+          ],
+          "canonical_state_before": [
+            0.22990914406385254,
+            0.27537927056410855,
+            0.49471158537203896
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.23622541438634936,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.1252242214403042,
+            -0.09785098580529977,
+            -0.027373235635004455
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.17705092953967924,
+                -0.06331221238832226,
+                -0.113738717151357
+              ],
+              [
+                -0.06331221238832226,
+                0.19954552790768804,
+                -0.1362333155193658
+              ],
+              [
+                -0.113738717151357,
+                -0.1362333155193658,
+                0.24997203267072277
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013163538891995804,
+            "negative_entropy_hessian": [
+              [
+                4.34954426920171,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.6313553956022955,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.021379788888445
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.29058527999410644,
+              -0.15512017188594251,
+              0.4457054518800483
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.31558527999410635,
+              -0.13512017188594228,
+              0.4507054518800485
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0431286357816016,
+            "entropy_before": 1.0412818212570645,
+            "expected_reward_after": 0.16058691180911538,
+            "expected_reward_before": 0.15533170526907897
+          },
+          "realized_update": [
+            0.00631627032249682,
+            -0.0048848144884611755,
+            -0.0014314558340356442
+          ],
+          "regret": {
+            "cumulative": 3.3446442928496216,
+            "instantaneous": 0.5446682947309209
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 5,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.12742308028331212,
+            -0.0975367605778041,
+            -0.029886319705508018
+          ],
+          "canonical_state_after": [
+            0.24265107404068742,
+            0.2656260812464961,
+            0.49172284471281646
+          ],
+          "canonical_state_before": [
+            0.23622541438634936,
+            0.27049445607564737,
+            0.4932801295380033
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.24265107404068742,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.12742308028331212,
+            -0.0975367605778041,
+            -0.029886319705508018
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1804229679843469,
+                -0.06389766497567997,
+                -0.11652530300866693
+              ],
+              [
+                -0.06389766497567997,
+                0.19732720530798703,
+                -0.13342954033230708
+              ],
+              [
+                -0.11652530300866693,
+                -0.13342954033230708,
+                0.24995484334097398
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013314827072542128,
+            "negative_entropy_hessian": [
+              [
+                4.233244770033458,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.696933439997516,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.027245656411461
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.2655852799941063,
+              -0.1751201718859423,
+              0.4407054518800485
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.29058527999410644,
+              -0.15512017188594251,
+              0.4457054518800483
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0448015968170916,
+            "entropy_before": 1.0431286357816016,
+            "expected_reward_after": 0.16590282005046358,
+            "expected_reward_before": 0.16058691180911538
+          },
+          "realized_update": [
+            0.006425659654338056,
+            -0.004868374829151256,
+            -0.0015572848251868554
+          ],
+          "regret": {
+            "cumulative": 3.884057381040506,
+            "instantaneous": 0.5394130881908845
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 6,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.12959925435685732,
+            -0.09719333220704648,
+            -0.03240592214981079
+          ],
+          "canonical_state_after": [
+            0.2491849073361848,
+            0.26077561599398946,
+            0.4900394766698258
+          ],
+          "canonical_state_before": [
+            0.24265107404068742,
+            0.2656260812464961,
+            0.49172284471281646
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2491849073361848,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.12959925435685732,
+            -0.09719333220704648,
+            -0.03240592214981079
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.18377153030758825,
+                -0.06445445390768118,
+                -0.11931707639990707
+              ],
+              [
+                -0.06445445390768118,
+                0.19506886620812597,
+                -0.13061441230044477
+              ],
+              [
+                -0.11931707639990707,
+                -0.13061441230044477,
+                0.24993148870035184
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013463146055832224,
+            "negative_entropy_hessian": [
+              [
+                4.121143926329052,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.764690557897507,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.033665937534457
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.24058527999410617,
+              -0.19512017188594233,
+              0.4357054518800485
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.2655852799941063,
+              -0.1751201718859423,
+              0.4407054518800485
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0462947104670737,
+            "entropy_before": 1.0448015968170916,
+            "expected_reward_after": 0.17127825960351403,
+            "expected_reward_before": 0.16590282005046358
+          },
+          "realized_update": [
+            0.006533833295497393,
+            -0.004850465252506653,
+            -0.001683368042990685
+          ],
+          "regret": {
+            "cumulative": 4.418154560990042,
+            "instantaneous": 0.5340971799495364
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 7,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.1317494778873247,
+            -0.0968203168532827,
+            -0.034929161034042
+          ],
+          "canonical_state_after": [
+            0.25582553421395515,
+            0.2559445484192839,
+            0.48822991736676086
+          ],
+          "canonical_state_before": [
+            0.2491849073361848,
+            0.26077561599398946,
+            0.4900394766698258
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.25582553421395515,
+            "sum_error": 2.220446049250313e-16,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.1317494778873247,
+            -0.0968203168532827,
+            -0.034929161034042
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1870917892920418,
+                -0.06498134770699877,
+                -0.12211044158504304
+              ],
+              [
+                -0.06498134770699877,
+                0.1927716940969448,
+                -0.12779034638994605
+              ],
+              [
+                -0.12211044158504304,
+                -0.12779034638994605,
+                0.24990078797498905
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.0001360823538520935,
+            "negative_entropy_hessian": [
+              [
+                4.013084141772929,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.834714362339187,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.0406519221588564
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.21558527999410626,
+              -0.21512017188594235,
+              0.4307054518800484
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.24058527999410617,
+              -0.19512017188594233,
+              0.4357054518800485
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0476020613082226,
+            "entropy_before": 1.0462947104670737,
+            "expected_reward_after": 0.1767119560025879,
+            "expected_reward_before": 0.17127825960351403
+          },
+          "realized_update": [
+            0.006640626877770339,
+            -0.004831067574705583,
+            -0.0018095593030649226
+          ],
+          "regret": {
+            "cumulative": 4.946876301386528,
+            "instantaneous": 0.5287217403964859
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 8,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "analytic_gradient": [
+            0.13387044340341359,
+            -0.0964173714632275,
+            -0.037453071940186086
+          ],
+          "canonical_state_after": [
+            0.26257140838892523,
+            0.2511343826996342,
+            0.48629420891144054
+          ],
+          "canonical_state_before": [
+            0.25582553421395515,
+            0.2559445484192839,
+            0.48822991736676086
+          ],
+          "constraint_violations": {
+            "finite": true,
+            "floor_shortfall": 0.0,
+            "min_probability": 0.2511343826996342,
+            "sum_error": 0.0,
+            "violated": false
+          },
+          "domain": "categorical-natural-gradient",
+          "expected_vector_field": [
+            0.13387044340341359,
+            -0.0964173714632275,
+            -0.037453071940186086
+          ],
+          "geometry": {
+            "bregman_generator": "negative-entropy",
+            "fisher": [
+              [
+                0.1903788302580996,
+                -0.06547715082851281,
+                -0.12490167942958677
+              ],
+              [
+                -0.06547715082851281,
+                0.19043693655373273,
+                -0.12495978572521989
+              ],
+              [
+                -0.12490167942958677,
+                -0.12495978572521989,
+                0.24986146515480673
+              ]
+            ],
+            "fisher_rank": 2,
+            "kl_after_before": 0.00013749833529587462,
+            "negative_entropy_hessian": [
+              [
+                3.908913952129844,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                3.9070963072900367,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                2.04821532730612
+              ]
+            ]
+          },
+          "native_state_after": {
+            "centered_logits": [
+              -0.19058527999410613,
+              -0.23512017188594214,
+              0.4257054518800485
+            ]
+          },
+          "native_state_before": {
+            "centered_logits": [
+              -0.21558527999410626,
+              -0.21512017188594235,
+              0.4307054518800484
+            ]
+          },
+          "numerical_guards": [
+            "centered-logit-gauge",
+            "max-shifted-softmax"
+          ],
+          "potentials": {
+            "entropy_after": 1.0487178306542888,
+            "entropy_before": 1.0476020613082226,
+            "expected_reward_after": 0.1822025302234649,
+            "expected_reward_before": 0.1767119560025879
+          },
+          "realized_update": [
+            0.006745874174970079,
+            -0.004810165719649706,
+            -0.0019357084553203174
+          ],
+          "regret": {
+            "cumulative": 5.47016434538394,
+            "instantaneous": 0.523288043997412
+          },
+          "rng_fingerprint": "402a279382dbc8135c9d",
+          "rng_state": {
+            "bit_generator": "PCG64",
+            "has_uint32": 0,
+            "state": {
+              "inc": 79125515514428683154904239957670779583,
+              "state": 260275080868705179941444768562716442507
+            },
+            "uinteger": 0
+          },
+          "step": 9,
+          "step_size": 0.05,
+          "stochastic_error": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

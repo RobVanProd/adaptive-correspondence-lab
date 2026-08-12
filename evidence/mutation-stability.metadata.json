@@ -1,0 +1,38 @@
+{
+  "baseline_world": "multiplicative-weights",
+  "config": {
+    "common_schedule_amplitude": 0.0,
+    "common_schedule_frequency": 0.41,
+    "eta": 0.05,
+    "initial_state": [
+      0.2,
+      0.3,
+      0.5
+    ],
+    "reward": [
+      0.7,
+      -0.2,
+      0.1
+    ],
+    "seed": 1729,
+    "steps": 20
+  },
+  "kind": "epsilon-to-delta-stability-sweep",
+  "metric": "endpoint-l1",
+  "perturbation": "mutation",
+  "provenance": {
+    "created_utc": "2026-08-12T18:47:05.421774+00:00",
+    "git_commit": "48d3c5c5ef96c59fe18f6cd5b3d27a44d0fcccc6",
+    "git_tracked_files_dirty": false,
+    "numpy": "2.5.2",
+    "package_version": "0.1.0",
+    "pid": 10000,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "python": "3.13.14"
+  },
+  "seeds": [
+    4287898826174246955
+  ],
+  "target_world": "replicator-exact"
+}

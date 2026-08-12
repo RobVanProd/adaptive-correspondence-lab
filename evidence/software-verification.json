@@ -1,0 +1,52 @@
+{
+  "batch_max_absolute_error": 0.0,
+  "config": {
+    "common_schedule_amplitude": 0.0,
+    "common_schedule_frequency": 0.41,
+    "eta": 0.05,
+    "initial_state": [
+      0.2,
+      0.3,
+      0.5
+    ],
+    "reward": [
+      0.7,
+      -0.2,
+      0.1
+    ],
+    "seed": 1729,
+    "steps": 10
+  },
+  "euler_halving_error_ratios": [
+    4.010991804644578,
+    4.005740855822552
+  ],
+  "euler_one_step_l1_errors": [
+    0.0004887553479990536,
+    0.00012185398819142268,
+    3.041983807172688e-05
+  ],
+  "exact_equivalence": {
+    "replicator-exact__categorical-natural-gradient": {
+      "endpoint_l1": 2.220446049250313e-16,
+      "max_path_l1": 2.7755575615628914e-16
+    },
+    "replicator-exact__multiplicative-weights": {
+      "endpoint_l1": 0.0,
+      "max_path_l1": 0.0
+    }
+  },
+  "kind": "software-verification-summary",
+  "passed": true,
+  "provenance": {
+    "created_utc": "2026-08-12T18:47:04.701554+00:00",
+    "git_commit": "48d3c5c5ef96c59fe18f6cd5b3d27a44d0fcccc6",
+    "git_tracked_files_dirty": false,
+    "numpy": "2.5.2",
+    "package_version": "0.1.0",
+    "pid": 20316,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "python": "3.13.14"
+  }
+}
