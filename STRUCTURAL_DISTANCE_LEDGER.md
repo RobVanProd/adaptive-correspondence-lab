@@ -16,9 +16,9 @@ Phase I therefore contains meaningful estimator and state-space distance, but no
 non-Fisher geometry, inference semantics, or genuinely sequential environment. Its
 cross-class result is real but cannot establish a broad adaptive-system theory.
 
-ACL-006 remains in the contextual-bandit plug-in NPG class. Its role is to explain and
-predict the ACL-005 support boundary; regardless of its verdict, it does not increase
-the count of structurally independent adaptive classes.
+ACL-006 remained in the contextual-bandit plug-in NPG class and confirmed the exact
+finite support/bias mechanism plus the split-consistency/truth dissociation. It did not
+increase the count of structurally independent adaptive classes.
 
 ## Candidate ordering after ACL-006
 

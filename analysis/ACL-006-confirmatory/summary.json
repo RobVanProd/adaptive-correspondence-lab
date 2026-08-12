@@ -1,0 +1,36 @@
+{
+  "analysis_kind": "artifact-only-post-confirmatory",
+  "boundary": {
+    "dissociation_target_count": 7,
+    "effective_minimum_count_only_law": "FALSIFIED_BY_EXACT_COUNTEREXAMPLE",
+    "maximum_dissociation_truth_cosine": 0.8806422349960198,
+    "minimum_dissociation_half_cosine": 0.9999958897534883,
+    "minimum_dissociation_truth_cosine": 0.483875704855481,
+    "resolvable_contrast_count": 4,
+    "support_and_fisher_spectrum_only_law": "FALSIFIED_BY_EXACT_REWARD_SHIFT_COUNTEREXAMPLE"
+  },
+  "classification": {
+    "adds_structurally_independent_class": false,
+    "next_required_step": "preregister no-refit transport into a structurally distinct non-Fisher class",
+    "result_type": "theorem-software-reproduction-and-mechanism-validation",
+    "supports_scalar_effective_count_law": false,
+    "supports_split_consistency_as_truth_certificate": false
+  },
+  "confirmed": {
+    "all_angular_residuals_within_frozen_envelopes": true,
+    "approved_preregistration_sha": "a8b42042e397f1422866a0ca9496ee07abe0a42a",
+    "direction_score_maximum": 1.7073805833110742,
+    "dissociation_prediction_verdict": "PASS",
+    "evidence_commit": "c94890dc8f361c0309802c0ef0173ec84e814d3d",
+    "evidence_sha256": "740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918",
+    "exact_mean_prediction_verdict": "PASS",
+    "full_direction_score_median_type7": 0.6095572205053943,
+    "full_direction_score_q90_type7": 1.272615265047392,
+    "maximum_checkpoint_reproduction_error": 0.0,
+    "stochastic_contrast_reproduction_verdict": "PASS"
+  },
+  "experiment_id": "ACL-006",
+  "new_shadows_generated": false,
+  "schema_version": 1,
+  "target_refit": false
+}

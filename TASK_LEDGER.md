@@ -1025,3 +1025,52 @@
 - **Execution hold:** do not invoke `acl006-run` until this exact public commit has been
   audited for manifest semantics, lock closure, canonical path/SHA binding, numerical
   guards, independent oracle, analysis order, and outcome-free state.
+
+## ACL-006-POST — Artifact-only support-bias report
+
+- **Task ID:** `ACL-006-POST`.
+- **Immutable input:** preregistration SHA
+  `a8b42042e397f1422866a0ca9496ee07abe0a42a`; evidence commit
+  `c94890dc8f361c0309802c0ef0173ec84e814d3d`; artifact
+  `evidence/ACL-006-confirmatory-a8b42042e397f1422866a0ca9496ee07abe0a42a.json`;
+  SHA-256 `740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918`.
+- **Observed frozen verdicts:** exact-mean prediction PASS; dissociation prediction
+  PASS; stochastic contrast reproduction PASS; no target refit.
+- **Hypothesis for reporting:** the stored sufficient statistics reproduce every frozen
+  checkpoint and verdict exactly; the result validates the finite estimator mechanism
+  but does not add a structurally independent adaptive class.
+- **Allowed files:** this ledger, artifact-only ACL-006 analyzer/tests,
+  `analysis/ACL-006-confirmatory/`, theorem/bridge/structural ledgers, README, and draft
+  PR metadata. No evidence or preregistration bytes may change; no RNG call is allowed.
+- **Acceptance tests:** wrong artifact hash fails; embedded approved SHA/lock/registry
+  match; every checkpoint reconstructs from chunks; score, cosine, dissociation, and
+  contrast summaries reproduce; deterministic report package; full pytest, Ruff,
+  coverage, wheel, and immutable-hash audit.
+- **Risks:** describing exact-law verification as broad discovery; treating split-half
+  consistency as truth certification; hiding exact scalar-law counterexamples behind a
+  PASS; or accidentally regenerating the one-shot artifact.
+- **Stop conditions:** evidence hash changes; any target shadow or RNG call occurs; a
+  verdict or threshold is recomputed under altered semantics; or a posthoc fit is added.
+
+### ACL-006 post-confirmatory completion record
+
+- **Artifact reconstruction:** exact. All 64 stored checkpoints reconstruct from chunk
+  sufficient statistics with zero maximum vector discrepancy; embedded registry, lock,
+  environment, approved SHA, and all three verdicts match.
+- **Confirmed:** exact-mean prediction PASS; dissociation PASS; contrast reproduction
+  PASS. Maximum full/half normalized direction score `1.7073805833110742`; Type-7
+  full-score median `0.6095572205053943`; Q90 `1.272615265047392`.
+- **Boundary:** seven predeclared targets ended with split-half Fisher cosine at least
+  `0.9999958897534883` while truth cosine ranged from `0.483875704855481` to
+  `0.8806422349960198`. Split consistency is not a truth certificate.
+- **Falsified reductions:** `N p_min` alone; and support probabilities plus analytic
+  Fisher spectrum without reward/baseline geometry. The exact finite count-table law
+  remains predictive; a useful compact bound remains open.
+- **Classification:** theorem/software reproduction and mechanism validation in the
+  existing contextual-bandit empirical-Fisher estimator class. Independent Phase-II
+  breadth remains unchanged.
+- **Report:** `analysis/ACL-006-confirmatory/summary.json`, SHA-256
+  `0748482b3796b861267fdb5781bab11605cfc82263e4a6fdbd206df4b96acd6c`.
+- **Decision:** move outside the Fisher-natural estimator family. The next experiment
+  must freeze a nontrivial no-refit quantity from existing evidence before outcomes in
+  a structurally distinct class; otherwise record non-transportability as a boundary.

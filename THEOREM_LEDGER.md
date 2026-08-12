@@ -19,6 +19,7 @@ The machine-readable source is [`THEOREM_LEDGER.json`](THEOREM_LEDGER.json).
 ## Candidate, not yet a theorem
 
 A compact nonvacuous angular bound combining support loss with whitened empirical-Fisher
-perturbation remains open. The exact finite multinomial sum is already a zero-fit law
-for the three-action system; ACL-006 will determine whether any simpler normalization
-survives controlled equal-effective-count and reward-geometry contrasts.
+perturbation remains open. ACL-006 confirmed the exact finite multinomial zero-fit law,
+but falsified both `N p_min` alone and support plus analytic Fisher spectrum without
+reward/baseline geometry. Any surviving compact theorem must distinguish context/action
+support factorization and include reward geometry.

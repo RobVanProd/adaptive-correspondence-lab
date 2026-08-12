@@ -31,9 +31,10 @@
     },
     {
       "id": "acl006-support-conditioned-angular-bound",
-      "status": "candidate",
+      "status": "candidate-narrowed-after-confirmation",
       "statement": "A nonvacuous angular-bias bound should combine exact support-loss mass with full-rank whitened perturbation terms involving empirical Fisher deviation and score/reward residual.",
-      "scope": "to be frozen only if a useful bound is derived before ACL-006 outcomes"
+      "scope": "open after ACL-006; any compact bound must distinguish context/action support factorization and include reward/baseline geometry",
+      "evidence": "ACL-006 exactly falsified N p_min-only and support-plus-Fisher-spectrum-only reductions while confirming the full finite multinomial prediction"
     }
   ]
 }

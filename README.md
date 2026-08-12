@@ -81,15 +81,19 @@ result.
 
 ## Research program result
 
-ACL-002 through ACL-005 now have immutable confirmatory artifacts in `evidence/`.
+ACL-002 through ACL-006 now have immutable confirmatory artifacts in `evidence/`.
 The result is a restricted positive answer with explicit boundaries: local categorical
 mutation laws predict held-out responses; a finite-lambda Gaussian expected direction
 is predictive; and ACL-004's normalized blockwise diagnostic transported without
 target refitting into regular finite-state contextual-bandit targets. The same control
 diagnostic failed badly in predeclared rare-cell stress targets despite apparent
-half-mean convergence.
+half-mean convergence. ACL-006 then confirmed the exact finite support-conditioned
+plug-in bias law and the split-consistency/truth dissociation, while falsifying
+`N p_min`-only and support/Fisher-spectrum-only reductions. ACL-006 is mechanism
+validation inside the same estimator family, not an additional breadth class.
 
 [FINAL_SYNTHESIS.md](FINAL_SYNTHESIS.md) gives the terminating claim, exact hashes,
 negative results, exclusions, and open theorem. The machine-readable
 [bridge ledger](BRIDGE_LEDGER.json) records every edge. No result supports a universal
 identity among adaptive systems, sequential or neural RL, or support-free transport.
+Phase II now proceeds to a structurally distinct non-Fisher class.

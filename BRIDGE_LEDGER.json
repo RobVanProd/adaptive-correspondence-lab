@@ -246,12 +246,19 @@
         "no damping, fitted baseline, clipping, state update, or target refit"
       ],
       "transported_prediction": {
-        "status": "preregistered-unexecuted",
+        "status": "preregistered-confirmation",
         "quantity": "exact finite multinomial conditional mean, covariance-normalized Fisher error, angular envelope, and split-half/truth dissociation",
         "source": "closed finite count-table law",
         "target": "independent PCG64 full-coordinate pseudoinverse implementation",
         "target_refit": false,
-        "bundle": "preregistrations/ACL-006"
+        "bundle": "preregistrations/ACL-006",
+        "result": "All exact-mean, dissociation, and stochastic contrast gates passed; maximum normalized direction score 1.707381, full-score median 0.609557, and Q90 1.272615.",
+        "approved_preregistration_sha": "a8b42042e397f1422866a0ca9496ee07abe0a42a",
+        "evidence_commit": "c94890dc8f361c0309802c0ef0173ec84e814d3d",
+        "artifact": "evidence/ACL-006-confirmatory-a8b42042e397f1422866a0ca9496ee07abe0a42a.json",
+        "artifact_sha256": "740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918",
+        "report": "analysis/ACL-006-confirmatory/summary.json",
+        "report_sha256": "0748482b3796b861267fdb5781bab11605cfc82263e4a6fdbd206df4b96acd6c"
       },
       "failure_boundary": {
         "status": "proved-before-outcomes",
@@ -260,7 +267,7 @@
       "falsifying_observation": "Any locked target whose sampled conditional mean violates its exact covariance-normalized five-score prediction or angular envelope; or any dissociation-stratum target that cannot become split-half aligned while remaining truth-misaligned at the fixed budget.",
       "evidence_status": [
         "theorem-reproduction",
-        "preregistered-unexecuted"
+        "preregistered-confirmation"
       ],
       "structural_distance_note": "ACL-006 remains inside the ACL-005 contextual-bandit empirical-Fisher estimator family and adds mechanism, not an independent adaptive class."
     }

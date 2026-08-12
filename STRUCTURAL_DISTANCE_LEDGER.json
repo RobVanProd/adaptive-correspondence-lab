@@ -46,7 +46,7 @@
       "data_generation": "joint context-action multinomial sampling",
       "adaptation_role": "policy learning",
       "phase_i_evidential_weight": "cross-estimator transport, but still inside the Fisher-natural family",
-      "phase_ii_status": "ACL-006 preregisters an exact support-conditioned mechanism test in this same class; it adds no structural-class count"
+      "phase_ii_status": "ACL-006 confirmed the exact support-conditioned mechanism and self-consistency dissociation in this same class; it adds no structural-class count"
     }
   ],
   "phase_i_assessment": {

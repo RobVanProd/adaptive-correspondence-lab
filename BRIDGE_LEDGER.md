@@ -127,14 +127,20 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   count table, using the same samples for both empirical objects and no damping.
 - **Scope:** deterministic rewards, true-policy scores, three interior actions, fixed
   context probability, no fitted baseline, clipping, state update, or target refit.
-- **Transported prediction:** **preregistered, unexecuted.** Exact count-table moments
+- **Transported prediction:** **preregistered confirmation.** Exact count-table moments
   freeze the conditional mean, covariance-normalized Fisher error, angular envelope,
   and split-half/truth dissociation before an independent PCG64 full-coordinate path.
+  All three gates passed: maximum standardized direction score `1.707381`, full-score
+  Type-7 median `0.609557`, and Q90 `1.272615`. Seven predeclared targets reached
+  half-mean cosine at least `0.999995890` while truth cosine was as low as `0.483875705`.
 - **Failure boundary:** proved pre-outcome counterexamples show that `N p_min` alone is
   insufficient across support factorizations and that support/Fisher spectrum without
   reward geometry is insufficient under additive reward shifts.
 - **Falsifier:** a locked target outside its five-score exact-mean/angular envelope, or
   failure of the predeclared split-consistent but truth-misaligned stratum at the fixed
   budget.
-- **Status:** theorem/mechanism checkpoint plus locked preregistration, not yet evidence.
-  It remains inside the ACL-005 estimator family and adds no independent breadth class.
+- **Evidence:** preregistration SHA `a8b42042e397f1422866a0ca9496ee07abe0a42a`;
+  evidence SHA-256
+  `740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918`.
+- **Status:** theorem/software reproduction plus preregistered mechanism validation. It
+  remains inside the ACL-005 estimator family and adds no independent breadth class.
