@@ -322,3 +322,62 @@
 - **Recommended next action:** derive the row-vector second-order sensitivity,
   explicitly handle L1 coordinates with zero first derivative, and test it only on toy
   fixtures plus the already-exploratory ACL-002 rows before any new preregistration.
+
+## ACL-CAT-S2 — Second-order categorical sensitivity mechanism
+
+- **Status:** in progress; derivation and software verification only. No new
+  confirmatory outcome is authorized by this task.
+- **Observed behavior:** ACL-002 posthoc analysis finds numerical-zero one-step L1
+  remainder and a negative, locally quadratic remainder for every regular target at
+  horizons `5,20,50` through the strict and extended-local regions. The scale is
+  strongly landscape-dependent.
+- **Hypothesis:** differentiating the frozen mutation recurrence twice produces a
+  state-aware zero-fit second-order predictor that explains the existing exploratory
+  residual and extends its descriptive epsilon radius better than any universal scalar
+  correction.
+- **Frozen semantics:** with row vectors, `B=M-I`, clean map `F`, row Jacobian `J`, and
+  expansion `q_t=p_t+epsilon*s_t+(epsilon^2/2)*u_t+O(epsilon^3)`, define
+  `a_t=s_t J_F^R(p_t)` and
+  `H_t=D^2F(p_t)[s_t,s_t]`. The recurrence is
+  `u_{t+1}=u_t J_F^R(p_t)+H_t+2*a_t*B`, with `u_0=0`. For the normalized linear
+  categorical map, verify independently that
+  `H_t=-2*((s_t dot d)/(p_t dot d))*a_t`, where
+  `d=exp(eta*(r-max(r)))`. The endpoint finite-epsilon truncated-vector prediction is
+  `sum_i |epsilon*s_i+(epsilon^2/2)*u_i|`. The asymptotic L1 quadratic coefficient is
+  one half of `sum sign(s_i)*u_i` over nonzero first derivatives plus
+  `sum |u_i|` over coordinates classified zero at the frozen absolute threshold
+  `2e-14`. Such zero coordinates are reported explicitly because L1 is not
+  differentiable there.
+- **Independent oracles:** compare the recurrence to (1) coefficient propagation of
+  the matrix polynomial `p0[D(I+epsilon B)]^T` followed by analytic normalization and
+  (2) five-point signed-epsilon finite differences on toy fixtures. The matrix-
+  polynomial path must not call the recurrence implementation.
+- **Existing-data evaluation:** after software verification, apply the analytic
+  second-order prediction to the already-exploratory ACL-002 raw rows. Do not generate
+  trajectories or refit source/target coefficients. Compare first- and second-order
+  cumulative-prefix radii at the fixed descriptive levels `1%,5%,10%,20%` and retain
+  all failures. This evaluation remains posthoc and cannot confirm ACL-CAT-S2.
+- **Frozen ACL-003 earning rule:** before evaluating the second-order predictor on
+  stored ACL-002 outcomes, require all independent derivative oracles to pass; at
+  target `T=20`, require the median discrete radius index to improve by at least one
+  epsilon-grid step at both the `5%` and `10%` descriptive levels, no more than two of
+  12 regular targets to lose radius at either level, median absolute relative error at
+  `epsilon=0.01` to fall by at least `50%`, and strict-region Type-7 Q90 absolute
+  relative error not to worsen. This rule only decides whether the mechanism is worth
+  preregistering on new landscapes; it is not a confirmatory scientific verdict.
+- **Allowed files:** `TASK_LEDGER.md`, new second-order source and tests, new derived
+  files under `analysis/ACL-002-second-order/`, and bridge-ledger updates. Do not change
+  the ACL-002 evidence artifact, preregistration bundle, or confirmatory runner.
+- **Acceptance tests:** Hessian-vector formula matches finite differences; recurrence
+  conserves first- and second-order tangent mass; recurrence matches the independent
+  polynomial oracle over multiple dimensions/horizons; five-point finite differences
+  recover both derivatives; L1 zero-coordinate fixtures use the nondifferentiable
+  branch; `T=1` second-order L1 coefficient is zero up to tolerance; invalid inputs
+  fail closed; full pytest and Ruff pass.
+- **Risks:** losing the factor of two from the expansion convention; using
+  `s_{t+1}B` instead of the pre-mutation `a_t B`; hiding an L1 sign crossing inside a
+  scalar Taylor coefficient; treating posthoc radius improvement as confirmation;
+  accidentally importing or calling an outcome generator.
+- **Stop conditions:** either independent oracle disagrees beyond a frozen tolerance;
+  coordinate-zero classification is unstable; existing-data evaluation requires
+  target fitting; a new trajectory is generated; or baseline verification turns red.
