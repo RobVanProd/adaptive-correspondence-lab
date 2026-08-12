@@ -1242,7 +1242,7 @@ def _posthoc_markdown(summary: dict[str, Any]) -> str:
         f"- Analysis-code commit: `{summary['analysis_code_commit']}`",
         f"- Stored rows: {summary['source_artifact_verification']['row_count']}",
         "- Classification: post-confirmatory and exploratory except where the immutable "
-        "  ACL-002 verdict is restated explicitly.",
+        "ACL-002 verdict is restated explicitly.",
         "",
         "The continuation prompt transcribed `alpha_source` as "
         f"`{ACL002_PROMPT_ALPHA_TRANSCRIPTION:.16f}`. The artifact stores "
@@ -1349,8 +1349,8 @@ def _posthoc_markdown(summary: dict[str, Any]) -> str:
         [
             "",
             "Horizon is the strongest single descriptor. The additive model improves "
-            "held-out-landscape description, while the predeclared interaction expansion "
-            "does not improve LOLO R2. This does not identify causal importance because "
+            "held-out-landscape description, while the fixed exploratory interaction "
+            "expansion does not improve LOLO R2. This does not identify causal importance because "
             "the deterministic catalog is small and covariates are correlated.",
             "",
             "## Exploratory observations: oriented KL",
@@ -1396,12 +1396,12 @@ def _posthoc_markdown(summary: dict[str, Any]) -> str:
             "## New hypotheses (not confirmed)",
             "",
             "1. For horizons above one, an analytic second-order sensitivity recurrence "
-            "   predicts the negative L1 correction and extends the usable epsilon radius "
-            "   on entirely new categorical landscapes.",
+            "predicts the negative L1 correction and extends the usable epsilon radius "
+            "on entirely new categorical landscapes.",
             "2. A state-aware second-order coefficient is necessary; a universal scalar "
-            "   correction will fail across heterogeneous landscapes.",
+            "correction will fail across heterogeneous landscapes.",
             "3. The oriented-KL cubic remainder is structured but less transportable than "
-            "   the L1 quadratic correction.",
+            "the L1 quadratic correction.",
             "",
             "The next step is derivation and independent finite-difference/symbolic "
             "verification of the second-order row sensitivity. No ACL-003 outcome should "
