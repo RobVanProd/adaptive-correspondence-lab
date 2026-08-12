@@ -1,0 +1,142 @@
+{
+  "analysis_kind": "artifact-only-post-confirmatory",
+  "confirmed": {
+    "approved_preregistration_sha": "501464f3f6be07f6d813d94aefb818c461a3d5c7",
+    "evidence_commit": "b15d77600369d559cb586a3bb54924737758e038",
+    "evidence_sha256": "1f80c3f5aba4089c67bbfec1ddd6eff53f7a6d42c658436dff0f7c82a1cf8c99",
+    "instrument_valid": true,
+    "matrix_oracle_max_absolute_error": 1.6653345369377348e-15,
+    "randomness_used": false,
+    "reproduced_primary_median": 0.0014843120912351297,
+    "reproduced_primary_q90": 0.007387117284289386,
+    "reproduced_score_max_difference": 0.0,
+    "stored_primary_gate": {
+      "landscape_count": 16,
+      "landscape_scores": [
+        {
+          "landscape_id": "N01",
+          "relative_error_max": 0.0011491787525273385
+        },
+        {
+          "landscape_id": "N02",
+          "relative_error_max": 0.0025391883766097884
+        },
+        {
+          "landscape_id": "N03",
+          "relative_error_max": 0.0015956157797932444
+        },
+        {
+          "landscape_id": "N04",
+          "relative_error_max": 0.00424797694316807
+        },
+        {
+          "landscape_id": "N05",
+          "relative_error_max": 0.0020431023900686
+        },
+        {
+          "landscape_id": "N06",
+          "relative_error_max": 0.00027949816497219935
+        },
+        {
+          "landscape_id": "N07",
+          "relative_error_max": 0.0004292129692860797
+        },
+        {
+          "landscape_id": "N08",
+          "relative_error_max": 0.010403360134456459
+        },
+        {
+          "landscape_id": "N09",
+          "relative_error_max": 0.004370874434122313
+        },
+        {
+          "landscape_id": "N10",
+          "relative_error_max": 0.001373008402677015
+        },
+        {
+          "landscape_id": "N11",
+          "relative_error_max": 0.010753169960367539
+        },
+        {
+          "landscape_id": "N12",
+          "relative_error_max": 0.00014346168701424375
+        },
+        {
+          "landscape_id": "N13",
+          "relative_error_max": 0.0017632405897373368
+        },
+        {
+          "landscape_id": "N14",
+          "relative_error_max": 0.00010490249640603784
+        },
+        {
+          "landscape_id": "N15",
+          "relative_error_max": 0.00019805677209566648
+        },
+        {
+          "landscape_id": "N16",
+          "relative_error_max": 0.0013436359092460757
+        }
+      ],
+      "median": 0.0014843120912351297,
+      "median_threshold": 0.1,
+      "passed": true,
+      "q90": 0.007387117284289386,
+      "q90_threshold": 0.2
+    },
+    "target_refit": false,
+    "verdict": "PASS"
+  },
+  "experiment_id": "ACL-003",
+  "exploratory": {
+    "interpretation_scope": "new-value transport within categorical mutation only",
+    "paired_improvement_by_epsilon": [
+      {
+        "epsilon": 0.0001,
+        "landscape_count": 16,
+        "region": "numerical-control",
+        "second_order_improvement_count": 16
+      },
+      {
+        "epsilon": 0.0003,
+        "landscape_count": 16,
+        "region": "numerical-control",
+        "second_order_improvement_count": 16
+      },
+      {
+        "epsilon": 0.001,
+        "landscape_count": 16,
+        "region": "confirmatory",
+        "second_order_improvement_count": 16
+      },
+      {
+        "epsilon": 0.003,
+        "landscape_count": 16,
+        "region": "confirmatory",
+        "second_order_improvement_count": 16
+      },
+      {
+        "epsilon": 0.01,
+        "landscape_count": 16,
+        "region": "confirmatory",
+        "second_order_improvement_count": 16
+      },
+      {
+        "epsilon": 0.03,
+        "landscape_count": 16,
+        "region": "stress",
+        "second_order_improvement_count": 16
+      },
+      {
+        "epsilon": 0.1,
+        "landscape_count": 16,
+        "region": "stress",
+        "second_order_improvement_count": 13
+      }
+    ],
+    "stress_gating": false
+  },
+  "new_outcomes_generated": false,
+  "schema_version": 1,
+  "target_refit": false
+}

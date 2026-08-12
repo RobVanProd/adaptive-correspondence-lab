@@ -424,3 +424,406 @@
   reward, and mutation catalog values; freeze second-order-versus-first-order local
   predictions and stress failure expectations; audit the checkpoint adversarially
   before any outcome generation.
+
+## ACL-003 — New-value confirmation of the categorical second-order law
+
+- **Status:** preregistration construction only; outcomes forbidden.
+- **Observed behavior:** the no-fit analytic second-order truncation passed its frozen
+  ACL-002 posthoc earning rule and failed visibly in stress. Because that mechanism was
+  selected after ACL-002 outcomes, it requires an entirely new confirmatory benchmark.
+- **Hypothesis:** on new categorical states, rewards, mutation matrices, and landscape
+  combinations, the zero-fit truncated-vector prediction
+  `||epsilon*s_T+(epsilon^2/2)*u_T||_1` remains quantitatively accurate through
+  `epsilon=0.01` without any fitted source or target coefficient.
+- **Scope:** deterministic three-state categorical systems; row-stochastic mutation;
+  fixed reward and `eta=0.05`; primary endpoint `T=20`; float64; strictly interior
+  clean states. This is a stronger within-class test, not cross-class transport.
+- **Frozen experimental regions:** retain the grid
+  `0,1e-4,3e-4,1e-3,3e-3,1e-2,3e-2,1e-1`. The numerical-control region
+  `1e-4,3e-4` is reported but non-gating. The strict local confirmatory region is
+  `1e-3,3e-3,1e-2`. Stress `3e-2,1e-1` is reported and incapable of changing the
+  confirmatory verdict. Primary horizon is `20`; `T=1,5,50` are secondary, with `T=1`
+  serving as the affine one-step control.
+- **Frozen primary estimand and gate:** for each of 16 regular new-value landscapes,
+  compute the maximum second-order absolute relative endpoint-L1 error across the
+  three local confirmatory epsilons. Apply the inherited ACL-002 Type-7 criteria
+  unchanged: median landscape score at most `0.10` and Q90 at most `0.20`. Reusing
+  these pre-outcome historical criteria avoids choosing thresholds from ACL-002 target
+  outcomes. The conjunction is the ACL-003 verdict.
+- **Paired secondary content:** report first-order and second-order errors, count the
+  landscapes on which second order improves at each epsilon, and compare empirical
+  `1%,5%,10%,20%` cumulative-prefix radii. These comparisons are secondary and cannot
+  rescue or reverse the primary verdict.
+- **Special handling:** include one identity-mutation software control outside the 16
+  hypothesis-bearing landscapes. It is judged only by the inherited absolute
+  numerical floor. Any other analytically near-zero case discovered before outcomes
+  is frozen into a separate stratum. Relative errors are never evaluated when the
+  analytic prediction is below the frozen floor.
+- **New-value requirement:** every hypothesis-bearing state vector, reward vector, and
+  mutation matrix must be numerically distinct from every ACL-002 catalog value;
+  validation compares arrays, not names. Landscape triplets are new as a consequence.
+  The identity control is exempt because its purpose is theorem/software validation.
+- **No fitting:** ACL-003 has no source split, alpha, regression, or target calibration.
+  Both `s_T` and `u_T` are computed from the analytic recurrence before perturbed
+  outcomes. No ACL-002 outcome-derived coefficient enters the prediction.
+- **Implementation contract:** freeze narrative preregistration, derivation reference,
+  analysis plan, manifest, clean analytic registry, SHA-256 lock, guarded validator,
+  and future one-shot runner. Execution requires an exact approved SHA, completely
+  clean full porcelain worktree, valid locks/registry, and a nonexistent output path.
+  Raw generation must compare iterative trajectories with the independent matrix-power
+  oracle and abort above `5e-13`.
+- **Allowed files:** `TASK_LEDGER.md`, `src/adaptive_correspondence/acl003.py`, CLI
+  wiring, `tests/test_acl003.py`, and files under `preregistrations/ACL-003/`. Bridge
+  ledgers may be updated only for preregistration status.
+- **Acceptance tests:** fail first; then validate exact regions/gates, numeric novelty,
+  analytic registry recomputation, identity control, second-order recurrence/oracle
+  parity, full worktree/output guards, lock integrity, deterministic analysis order,
+  special-stratum separation, and stress non-gating behavior. Full pytest, Ruff,
+  coverage, wheel build, and preregistration-only validation must pass.
+- **Risks:** tuning the new catalog using perturbed outcomes; accidentally inheriting
+  an ACL-002 numeric value; allowing stress failures to alter the gate; silently
+  turning a near-zero analytic case into a relative-error case; interpreting a pass as
+  cross-class evidence.
+- **Stop conditions:** any ACL-003 perturbed trajectory or outcome is generated before
+  the lock audit; numeric novelty fails; the registry depends on outcomes; a threshold
+  changes after outcomes; or the baseline is red.
+- **First public checkpoint and adversarial hold:** commit
+  `fecdd68809868280e3852d5bc23075db28ae2ff3` froze the intended design with no
+  outcomes, but pre-outcome source audit found that the validator accepted an arbitrary
+  caller-supplied novelty-reference manifest and did not require the lock to enumerate
+  the exact six frozen files. It also reported the identity control separately without
+  an explicit invalid-instrument verdict. That checkpoint is superseded before outcome
+  generation.
+- **Frozen audit amendments:** bind the numeric-novelty comparison to ACL-002 manifest
+  SHA-256 `6a9e4e0a931277b1f5c464807d0bcacee3ccb684269843f8245a83ae88110741`;
+  require the exact narrative/derivation/plan/readme/manifest/registry lock set; and
+  report `INVALID` if the identity control fails even when the hypothesis gate passes.
+- **Second public-checkpoint hold:** exact-SHA review of
+  `eabdb7eca082c4f5d87e193d73edd892a9260d4b` found that the runner still accepted an
+  arbitrary nonexistent output path. An out-of-repository first output would not dirty
+  the worktree and therefore weakened the one-shot guard. Before any outcome, freeze
+  the sole permitted destination as
+  `evidence/ACL-003-confirmatory-{approved_sha}.json` resolved under the repository.
+
+## ACL-003-POST — Artifact-only confirmatory report and categorical decision
+
+- **Status:** post-confirmatory analysis; no trajectory generation permitted.
+- **Immutable input:** evidence commit
+  `b15d77600369d559cb586a3bb54924737758e038`, artifact
+  `evidence/ACL-003-confirmatory-501464f3f6be07f6d813d94aefb818c461a3d5c7.json`,
+  SHA-256 `1f80c3f5aba4089c67bbfec1ddd6eff53f7a6d42c658436dff0f7c82a1cf8c99`.
+- **Observed frozen result:** valid instrument; primary PASS; median maximum local
+  second-order relative error `0.0014843120912351297`; Type-7 Q90
+  `0.007387117284289386`; no randomness or target refit.
+- **Hypothesis:** no new confirmatory hypothesis. Reproduce the locked verdict and
+  describe secondary/stress behavior solely from stored rows to decide whether the
+  categorical stability question is sufficiently mapped to advance classes.
+- **Frozen analysis:** verify artifact hash, approved SHA, row/region/horizon counts,
+  identity control, oracle maximum, and exact stored primary gate. For each horizon and
+  region, summarize first- and second-order absolute relative endpoint errors only
+  where predictions exceed the frozen floor. At `T=20`, report paired improvement
+  counts and cumulative-prefix empirical radii at `1%,5%,10%,20%`. Stress is
+  exploratory and cannot change ACL-003's verdict. Never fit target rows.
+- **Allowed files:** `TASK_LEDGER.md`, an artifact-only analysis module and tests,
+  `analysis/ACL-003-confirmatory/`, and bridge-ledger status updates.
+- **Acceptance tests:** corrupted hash/row count fails; stored primary scores are
+  reproduced exactly; stress cannot affect the verdict; derived output is deterministic;
+  full pytest, Ruff, and wheel build pass.
+- **Risks:** silently recomputing trajectories; presenting stress summaries as
+  preregistered gates; overclaiming new-value within-class confirmation as cross-class
+  transport; altering the evidence file.
+- **Stop conditions:** evidence hash changes; derived primary values disagree with the
+  artifact; analysis requires refitting or a new outcome; categorical interpretation
+  remains ambiguous after stored-row summaries.
+
+## GNG-MECH — Independent finite-lambda Gaussian rank-mu comparator
+
+- **Status:** clean mathematical/software mechanism only; no confirmatory landscapes or
+  Gaussian scientific outcomes.
+- **Observed behavior:** the existing Gaussian rung computes analytic quadratic natural
+  gradient and finite-sample rank-mu updates, but its recorded analytic field is not the
+  finite-lambda expected rank direction required by H2.
+- **Hypothesis:** for a diagonal Gaussian and a nonzero linear objective, the exact
+  finite-lambda conditional expected rank-mu tangent can be constructed independently
+  from the Gaussian score, Fisher inverse, and conditional binomial rank law.
+- **Frozen semantics:** parameterization `(mean, log_std)` in dimension at least two;
+  linear objective `a dot x`; `lambda=32`, `mu=16`; logarithmic positive rank weights
+  `log(mu+0.5)-log(rank)` normalized over selected ranks; no evolution paths, CSA,
+  clipping, antithetic sampling, or state iteration. For standardized objective axis
+  `v=(a*std)/||a*std||`, define conditional expected rank utility `h_lambda(t)`. The
+  independent analytic blocks are `lambda*(std*v)*E[h(t)t]` and
+  `(lambda/2)*(v^2)*E[h(t)(t^2-1)]`.
+- **Geometry:** compare mean and covariance/log-scale blocks separately using the
+  Gaussian Fisher metric. A joint cosine is secondary only.
+- **Implementation:** evaluate the one-dimensional expectations by deterministic
+  Gauss-Hermite integration under the standard-normal measure; verify convergence at
+  frozen order `160` against doubled order `320` at relative tolerance `2e-9` and
+  absolute tolerance `5e-12`, and compare with a separate tensor
+  Gauss-Hermite score integral on toy
+  fixtures. Sampling code returns raw independent shadow directions and does not use
+  the analytic comparator.
+- **Allowed files:** `TASK_LEDGER.md`, a new Gaussian bridge mechanism module, its
+  tests, derivation documentation, and bridge-ledger mechanism status. No
+  preregistration or evidence directory.
+- **Acceptance tests:** rank weights and conditional utility normalize correctly;
+  analytic blocks match independent multidimensional quadrature; large toy shadow mean
+  has high separate-block Fisher cosine; invalid dimensions/scales/objective fail;
+  full pytest, Ruff, and wheel build pass.
+- **Risks:** accidentally comparing to the quadratic-objective natural gradient rather
+  than finite-lambda rank expectation; replaying the update in the comparator; hiding
+  covariance-block noise in a joint cosine; treating a clean mechanism check as
+  scientific evidence.
+- **Stop conditions:** the comparator requires sampled rank-mu outcomes; block direction
+  is analytically zero for the proposed design; quadrature or independent oracle does
+  not converge; implementation requires optimizer machinery outside the frozen scope.
+
+## ACL-004 — Conditional-mean Gaussian finite-lambda bridge
+
+- **Status:** preregistration construction only; confirmatory shadows forbidden until
+  an exact public preregistration SHA passes adversarial review.
+- **Scientific question:** at a frozen finite population, does the independently
+  derived Gaussian score/Fisher comparator predict the conditional expected rank-mu
+  tangent in both mean and covariance blocks, or is apparent alignment a joint-metric
+  or infinite-population artifact?
+- **Scope:** 12 deterministic three-dimensional diagonal-Gaussian landscapes with
+  nonzero linear ranking objectives; parameterization `(mean, log_std)`; one state only
+  per shadow; `lambda=32`, `mu=16`; normalized logarithmic positive rank weights;
+  mean learning rate `0.2`, covariance/log-scale learning rate `0.1`; PCG64; float64;
+  no evolution paths, CSA, clipping, antithetic pairs, common random numbers across
+  landscapes, state iteration, or lambda scaling.
+- **Analytic comparator:** finite-lambda block direction derived in
+  `docs/gaussian_rank_mu_bridge.md` from conditional binomial rank utility, Gaussian
+  score, and inverse Fisher. It may not call or replay sampled rank-mu code. Freeze
+  Gauss-Hermite order `160`, doubled-order oracle `320`, relative tolerance `2e-9`,
+  and absolute tolerance `5e-12`.
+- **Shadow estimator:** independent shadows at the same frozen lambda. Check cumulative
+  replication counts `4096,8192,16384,32768,65536`. At each checkpoint, compare the
+  means of the first and second disjoint halves using separate Fisher cosines. Stop at
+  the first checkpoint where both are at least `0.98`. Failure to converge by `65536`
+  makes the H2 result `INCONCLUSIVE`, not PASS or FAIL.
+- **Primary H2 estimands and gate:** for each converged landscape, compare its full
+  stopped conditional-mean estimate with the independent analytic comparator. Report
+  separate mean-block and covariance-block Fisher cosines. H2 passes only if all 12
+  landscapes converge and the minimum landscape cosine is at least `0.99` in each
+  block. Any converged value below its block threshold is FAIL. Joint cosine is
+  secondary and cannot rescue a block.
+- **H1 descriptive layer:** retain the first `2048` single-shadow mean/covariance
+  cosines per landscape and report their quantiles/fraction positive. H1 cannot alter
+  H2. Learning-rate scaling is recorded but block cosines are computed on raw tangents.
+- **Evidence sufficiency:** retain for each fixed 2048-shadow chunk its count, tangent
+  sum, and tangent outer-product sum, plus the raw H1 cosines. These sufficient
+  statistics must exactly reproduce every stopped mean, half-mean convergence check,
+  and uncertainty summary without retaining a massive per-shadow JSON array.
+- **Units and inference:** landscapes are deterministic benchmark units, not a random
+  population sample. Shadows estimate conditional expectations at frozen landscapes;
+  they are not landscape replication. Minima are descriptive acceptance criteria, not
+  confidence statements.
+- **Execution guards:** exact approved SHA; full clean porcelain worktree; exact lock
+  membership and hashes; analytic-registry recomputation; previously nonexistent sole
+  canonical output `evidence/ACL-004-confirmatory-{approved_sha}.json`; independent
+  landscape seeds; valid chunk arithmetic and finite outputs. One execution only.
+- **Allowed files:** ACL-004 implementation and tests, CLI wiring, this ledger,
+  `preregistrations/ACL-004/`, and Gaussian bridge preregistration status. No evidence
+  file before approval.
+- **Acceptance tests:** fail first; then exact design validation, independent analytic
+  registry/oracle, stopping at first qualifying checkpoint, nonconvergence handling,
+  block-specific gates, joint-cosine non-rescue, sufficient-statistic reproduction,
+  canonical-path/worktree/lock guards, full pytest, Ruff, coverage, and wheel build.
+- **Risks:** confirmatory-landscape pilot leakage; covariance signal too weak to meet
+  the stopping rule; target-specific refitting; calling exact theorem reproduction a
+  cross-class transported law; changing lambda to improve noise.
+- **Stop conditions:** any proposed confirmatory landscape is sampled before its public
+  lock; the analytic block is zero/near-zero; quadrature fails; a threshold changes
+  after shadows; or the implementation introduces hidden Gaussian optimizer state.
+- **First public checkpoint and audit hold:** commit
+  `bf5df09c1c3d58c3e1892234cbdd3da2b921c66b` froze the full design with zero
+  shadows. Exact-head audit held execution because the future evidence referenced but
+  did not embed the locked analytic registry and bundle hashes, weakening standalone
+  inspection. Before outcomes, embed both frozen objects and add an independent toy
+  Monte Carlo check of the conditional binomial rank-utility calculation. The
+  scientific design, landscapes, stopping rule, and gates do not change.
+
+## ACL-004-POST — Artifact-only Gaussian bridge report
+
+- **Status:** post-confirmatory analysis; no additional shadows or RNG calls.
+- **Immutable input:** evidence commit
+  `355dd97472da4230eff877b9a3c8c7c4626057cd`, artifact
+  `evidence/ACL-004-confirmatory-3ba4be7ce1460a40c4ef0879018df58947c36edb.json`,
+  SHA-256 `3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a`.
+- **Frozen result:** H2 PASS; all 12 landscapes converged at 4096 shadows; minimum
+  mean Fisher cosine `0.9999523237518517`; minimum covariance Fisher cosine
+  `0.9995521999195026`; threshold `0.99`; target refit false; lambda scaling absent.
+- **Analysis:** verify immutable bytes/envelope; reconstruct every stopped mean from
+  stored chunk sums and every first/second half mean from disjoint chunks; reproduce
+  all separate-block and joint cosines; summarize stored H1 Q10/median/Q90/fraction
+  positive and coordinate standard errors; inspect no new lambda or objective class.
+- **Interpretation rule:** confirmation supports the restricted Gaussian finite-lambda
+  expected-direction bridge only. It is a second adaptive-system class with predictive
+  content, but no categorical quantity was transported into it, so it does not yet
+  satisfy cross-class no-refit transport.
+- **Allowed files:** `TASK_LEDGER.md`, an artifact-only analyzer and tests,
+  `analysis/ACL-004-confirmatory/`, and bridge-ledger status updates.
+- **Acceptance tests:** wrong hash fails; chunk reconstruction is exact; block cosines
+  and H2 minima reproduce; report is deterministic; full pytest, Ruff, and wheel pass.
+- **Stop conditions:** evidence bytes change; reproduction disagrees; analysis requires
+  new shadows/refitting; or Gaussian scope is overstated as cross-class transport.
+
+## CTRL-MECH — Finite-sample contextual-bandit NPG mechanism
+
+- **Status:** theorem/software mechanism only; no control confirmatory landscapes.
+- **Question:** does a plug-in natural-policy-gradient estimator that pseudoinverts its
+  empirical Fisher have a conditional mean aligned with the independently exact
+  contextual-bandit NPG, or can finite-sample inversion bias rotate it?
+- **Frozen estimator:** finite contexts/actions, exact categorical policy, deterministic
+  reward matrix, and independent joint context-action draws. From one frozen batch,
+  compute the empirical score gradient and empirical score outer-product Fisher, apply
+  an undamped Moore-Penrose pseudoinverse with `rcond=1e-12`, and center each context's
+  logit direction. No clipping, baseline fitting, damping, trajectories, or policy
+  update.
+- **Comparator:** exact expected policy gradient and analytic categorical-policy Fisher
+  at the frozen state. Construct the centered exact natural direction directly from
+  rewards and policy values; do not average or replay sampled plug-in updates.
+- **Geometry:** context blocks are primary; each uses its analytic categorical Fisher.
+  A context-probability-weighted joint Fisher cosine is secondary only.
+- **Transport candidate:** the ACL-004 normalized expected-direction law and exact
+  thresholds—disjoint-half block cosine `0.98` and target analytic block cosine
+  `0.99`—are eligible for unchanged no-refit application in control. This mechanism
+  task does not test them scientifically.
+- **Implementation and evidence:** vectorize shadows through multinomial joint counts;
+  retain counts-to-direction equivalence with a direct score-sum oracle on toy counts.
+- **Allowed files:** `TASK_LEDGER.md`, a new control bridge mechanism, tests,
+  derivation documentation, and theorem-reproduction ledger status. No control
+  preregistration or evidence.
+- **Acceptance tests:** fixed-count direction matches direct score/Fisher accumulation;
+  analytic Fisher maps exact direction to policy gradient; a large toy conditional
+  mean aligns in each context; empirical singular blocks remain explicit zero/pinv
+  behavior; invalid policies/counts fail; full pytest, Ruff, and wheel pass.
+- **Risks:** mistaking plug-in expectation for pseudoinverse of expected Fisher; hiding
+  a failed context in a joint cosine; treating sample count or shadow count as a fit;
+  reusing the product-of-simplexes coordinate map as proof of a new class.
+- **Stop conditions:** comparator calls sampled code; empirical damping/clipping is
+  introduced; toy oracles disagree; a transported threshold is modified for control.
+
+## ACL-005 — Cross-class transport of the normalized expected-direction law
+
+- **Status:** preregistration construction only; control target shadows forbidden.
+- **Source law:** ACL-004 confirmed that, after every Fisher block's disjoint-half
+  conditional-mean cosine reaches `0.98`, every source block's Fisher cosine with its
+  independent analytic direction exceeds `0.99`. ACL-005 transports this dimensionless
+  law, the thresholds, the replication schedule `4096,8192,16384,32768,65536`, chunk
+  size `2048`, and H1 count `2048` unchanged into control. No control target fit or
+  threshold adjustment is permitted.
+- **Control system:** two-context, three-action exact contextual bandits; deterministic
+  rewards; categorical policies in centered logits; fixed within-shadow interaction
+  count `N=128`; independent PCG64 stream per landscape; empirical score gradient and
+  empirical score Fisher; undamped pseudoinverse `rcond=1e-12`; one frozen state only.
+- **Comparator:** exact centered natural policy direction from analytic advantage and
+  categorical-policy Fisher. It must not call the plug-in estimator.
+- **Landscapes and strata:** 10 regular confirmatory targets with pre-outcome minimum
+  expected joint cell count `N*rho(c)*pi(a|c) >= 4`; four stress targets with minimum
+  expected joint cell count `<=0.75`. Strata are computed from manifest-only analytic
+  quantities. Stress is reported and non-gating.
+- **Stopping:** per landscape, compare first/second disjoint-half conditional means in
+  each context Fisher block. Stop at the first scheduled count where every context is
+  at least `0.98`. A regular landscape not converged by `65536` makes the transported
+  H2 verdict `INCONCLUSIVE`. Stress nonconvergence is descriptive only.
+- **Primary transported gate:** for every stopped regular target, compute each context's
+  Fisher cosine against the exact analytic NPG. PASS only if all 10 regular landscapes
+  converge and the minimum over all 20 context blocks is at least `0.99`. A converged
+  regular block below `0.99` is FAIL. Joint cosine cannot rescue a context.
+- **Secondary/stress:** H1 first-2048 single-shadow context cosine quantiles and
+  fraction positive; joint cosine; coordinate standard errors; stress context
+  convergence/alignment. Stress cannot rescue or reverse primary transport.
+- **Evidence:** fixed 2048-shadow chunk counts, direction sums, and outer-product sums
+  reproduce stopped/half means; raw H1 cosines are retained. Embed manifest, analytic
+  registry, lock, seeds, and terminal RNG states.
+- **Scope:** this is a no-refit transport of a normalized score/Fisher expected-direction
+  law from Gaussian rank-mu into finite-state control. It does not transport ACL-003's
+  epsilon coefficient, claim product-of-simplexes is a new geometry, study sample-count
+  scaling, or imply PPO/neural-policy behavior.
+- **Execution guards:** exact approved SHA; full clean porcelain; exact lock and
+  directory membership; analytic registry recomputation and stratum validation;
+  previously nonexistent canonical
+  `evidence/ACL-005-confirmatory-{approved_sha}.json`; one execution only.
+- **Allowed files:** ACL-005 module/tests/CLI, this ledger, `README.md`,
+  `preregistrations/ACL-005/`, and machine/human bridge-ledger preregistration status.
+  No target evidence.
+- **Acceptance tests:** fail first; exact transported constants; analytic strata;
+  first qualifying stop; primary context-block gate; stress non-gating; nonconvergence
+  semantics; sufficient-statistic reproduction; canonical/lock/worktree guards; full
+  pytest, Ruff, coverage, wheel, and analytic-only validation.
+- **Risks:** calling copied thresholds a fitted control result; target landscape pilots;
+  hiding rare-context failure in joint geometry; changing N after outcomes; treating a
+  control pass as evidence for neural or sequential RL.
+- **Stop conditions:** any manifest target is sampled before public approval; regular or
+  stress analytic stratum disagrees; source thresholds/schedule change; the comparator
+  depends on sampled outcomes; or baseline turns red.
+- **First public checkpoint and audit hold:** commit
+  `677086f` froze the design with zero target shadows. Exact-head audit held execution
+  because the runner accepted an arbitrary external self-consistent bundle, so the
+  approved SHA did not uniquely bind the target manifest. Before outcomes, require the
+  canonical in-repository bundle and directly verify the frozen ACL-004 evidence and
+  report hashes. The hypothesis, target landscapes, thresholds, and schedule do not
+  change; the first checkpoint is superseded pre-outcome.
+
+## ACL-005-POST — Artifact-only cross-class transport report
+
+- **Status:** post-confirmatory analysis only; no additional shadows or RNG calls.
+- **Immutable input:** evidence commit
+  `24d577f8a1d7bc6f4f45250f4bab3d5b2b925aeb`, artifact
+  `evidence/ACL-005-confirmatory-c3ebc07a41e8dbb84a24c68cdbb4f75c36108c5b.json`,
+  SHA-256 `5400a12392609f5cdf79a8b4b380f84ad11e68330f8ee93f653439129aa5db5b`.
+- **Frozen result:** transport PASS; all 10 regular targets converged at 4096;
+  minimum regular context Fisher cosine `0.9998416299085249` versus `0.99`;
+  target refit false. Stress is non-gating and includes severe rotations.
+- **Analysis:** verify immutable bytes and envelope; reconstruct stopped and half means
+  from chunks; reproduce context/joint cosines, uncertainty, and H1 summaries; report
+  regular transport and rare-cell stress separately; make no target fit.
+- **Interpretation:** a PASS supports transport of the specific ACL-004 normalized
+  conditional-mean diagnostic into this control class. Stress failures bound the law's
+  scope and cannot be presented as a universal NPG result.
+- **Allowed files:** this ledger, an ACL-005 artifact-only analyzer and tests,
+  `analysis/ACL-005-confirmatory/`, bridge ledgers, README, and final synthesis.
+- **Acceptance tests:** wrong hash fails; chunk/half/cosine/uncertainty/H1 reconstruction
+  matches; regular and stress strata remain separate; report generation is deterministic;
+  full pytest, Ruff, coverage, and wheel pass.
+- **Stop conditions:** evidence bytes change; any new shadow/RNG call occurs; a target
+  coefficient is fit; stress is allowed to change the primary verdict; or PASS is
+  generalized to sequential/neural control.
+
+## SYNTHESIS-001 — Program termination assessment
+
+- **Question:** after ACL-005, does the evidence meet Outcome A, B, or C?
+- **Frozen decision rule:** apply the user-specified termination criteria without
+  adding a new experiment merely to strengthen a positive story.
+- **Candidate:** Outcome A in restricted form, because categorical, Gaussian, and
+  control classes now have explicit maps/scope; categorical quantitative degradation
+  laws; preregistered within-class predictions; one preregistered Gaussian-to-control
+  normalized-law transport without target refit; and categorical/control stress
+  boundaries. This remains conditional on exact ACL-005 artifact reconstruction.
+- **Output:** `FINAL_SYNTHESIS.md` with every preregistration/evidence hash, positive and
+  negative findings, complete bridge ledger, falsified/surviving claims, exclusions,
+  strongest supported statement, and open theorem.
+- **Stop condition:** if artifact reconstruction fails or the cross-class quantity was
+  not actually frozen before control outcomes, do not terminate under Outcome A.
+
+### ACL-005 posthoc and synthesis completion record
+
+- **Artifact reconstruction:** exact. Stored chunk statistics reproduce stopped means,
+  disjoint-half means, context/joint cosines, uncertainty, and H1 summaries with zero
+  maximum discrepancy. No new shadows or RNG calls were made.
+- **Report:** `analysis/ACL-005-confirmatory/summary.json`, SHA-256
+  `b5d310e9a32c059cb192e4f1001556b7a9d60ca98cc6319a1d67326246c13084`.
+- **Confirmed transport:** PASS; all regular targets stopped at 4096; minimum of 20
+  context cosines `0.9998416299085249`; target refit false.
+- **Boundary:** all stress targets stopped at 4096, but 5/8 stress blocks were below
+  `0.99` and the minimum was `0.05569937277874286`. Internal convergence is not a
+  support-free certificate of analytic alignment.
+- **Termination:** Outcome A, predictive unification in restricted form. The program
+  has a successful preregistered cross-class transported diagnostic and explicit local
+  and support-related breakdown regimes. `FINAL_SYNTHESIS.md` states the bounded claim.
+- **Verification:** 157 tests passed; Ruff passed; total coverage 83%; wheel build
+  passed. Immutable ACL-002 through ACL-005 evidence hashes remain unchanged.
+- **Recommended next action:** no additional experiment is required for the original
+  question. Future work should pursue the support-conditioned angular-bias theorem,
+  and any new empirical extension must begin as a separate preregistered program.

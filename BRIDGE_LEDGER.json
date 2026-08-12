@@ -44,6 +44,17 @@
           "result": "The frozen posthoc earning rule passed with no target refit; all 12 regular T=20 targets gained 5% and 10% radius, but stress stability failed.",
           "summary": "analysis/ACL-002-second-order/summary.json",
           "summary_sha256": "d7533c3f3b5e0941e28cddcba58ce4106825c938f7244c24bd8f98c8e9403474"
+        },
+        "second_order_confirmation": {
+          "status": "preregistered-confirmation",
+          "law": "delta_L1^(2)(epsilon,T) = ||epsilon s_T + (epsilon^2/2) u_T||_1 with O(epsilon^3) state remainder",
+          "result": "ACL-003 passed on 16 landscapes using entirely new state, reward, and mutation catalog values. At T=20, the maximum relative error per landscape over epsilon 0.001, 0.003, and 0.01 had median 0.148431% and Type-7 Q90 0.738712% with no fitting.",
+          "approved_preregistration_sha": "501464f3f6be07f6d813d94aefb818c461a3d5c7",
+          "evidence_commit": "b15d77600369d559cb586a3bb54924737758e038",
+          "artifact": "evidence/ACL-003-confirmatory-501464f3f6be07f6d813d94aefb818c461a3d5c7.json",
+          "artifact_sha256": "1f80c3f5aba4089c67bbfec1ddd6eff53f7a6d42c658436dff0f7c82a1cf8c99",
+          "report": "analysis/ACL-003-confirmatory/summary.json",
+          "report_sha256": "eee21af8f75c7eb5d3a35fdb9d53b1549f275eca52c745a85c130538583128f4"
         }
       },
       "transport": {
@@ -51,19 +62,26 @@
         "quantity": "median source-landscape alpha multiplying the analytic first-order coefficient",
         "target_refit": false,
         "result": "Passed on 12 deterministic held-out target combinations with frozen alpha_source = 0.9951356698171323.",
-        "scope_limit": "within-family combinatorial held-out transport, not a different adaptive-system class"
+        "scope_limit": "within-family combinatorial held-out transport, not a different adaptive-system class",
+        "second_order_new_value": {
+          "status": "preregistered-confirmation",
+          "quantity": "zero-fit analytic second-order truncated state response",
+          "target_refit": false,
+          "result": "Passed on 16 new-value categorical landscapes through epsilon 0.01.",
+          "scope_limit": "stronger new-value transport within the categorical mutation class, not cross-class transport"
+        }
       },
       "failure_boundary": {
-        "status": "exploratory",
-        "result": "At T=20, pooled regular-target median absolute zero-fit error is 0.154% strict, 2.626% extended-local, and 22.640% stress. Exploratory second order lowers local errors but worsens stress Q90 from 62.17% to 77.66%, with a 778.42% worst case.",
-        "unresolved": "Whether the analytic second-order recurrence extends the radius on entirely new catalog values in a preregistered test."
+        "status": "preregistered-confirmation",
+        "result": "ACL-003 confirms second-order accuracy through epsilon 0.01 on new values. Stored non-gating stress rows show improvement on all 16 landscapes at epsilon 0.03 but only 13 at epsilon 0.1; T=20 second-order stress median is 3.652%, Q90 36.875%, and maximum 114.694%. The law is not uniformly stress-stable.",
+        "unresolved": "The exact analytic radius sufficient for uniform error control remains open; no cross-class stability transport has yet been tested."
       },
       "evidence_status": [
         "theorem-reproduction",
         "preregistered-confirmation",
         "exploratory"
       ],
-      "what_would_change_interpretation": "ACL-003 failure on new categorical values would show that the strong ACL-002 second-order improvement was catalog-local; success would establish a stronger within-class stability law with an explicit stress boundary."
+      "what_would_change_interpretation": "Failure of an independently defined Gaussian bridge would confine the present predictive law to the categorical class; successful no-refit cross-class transport would support a restricted reusable correspondence theory."
     },
     {
       "id": "gaussian-natural-gradient-rank-mu",
@@ -85,24 +103,39 @@
       ],
       "content": "The conditional expected finite-lambda rank-mu update should align with an independently constructed analytic Fisher-natural direction in each tangent block.",
       "stability": {
-        "status": "unresolved",
-        "law": null,
-        "result": null
+        "status": "preregistered-confirmation",
+        "law": "finite-lambda expected rank-mu tangent from conditional binomial rank utility, Gaussian score, and inverse Fisher metric",
+        "result": "ACL-004 passed on 12 deterministic 3D landscapes. All converged at 4096 shadows; minimum mean-block Fisher cosine was 0.999952324 and minimum covariance-block cosine was 0.999552200 against a 0.99 gate.",
+        "approved_preregistration_sha": "3ba4be7ce1460a40c4ef0879018df58947c36edb",
+        "evidence_commit": "355dd97472da4230eff877b9a3c8c7c4626057cd",
+        "artifact": "evidence/ACL-004-confirmatory-3ba4be7ce1460a40c4ef0879018df58947c36edb.json",
+        "artifact_sha256": "3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a",
+        "report": "analysis/ACL-004-confirmatory/summary.json",
+        "report_sha256": "b4d9864b6ab935aa39bc98ab1c144e13030ebad57931eaf4bc1cbcbaf3d2e019"
       },
       "transport": {
-        "status": "unresolved",
-        "quantity": null,
-        "target_refit": null,
-        "result": null
+        "status": "preregistered-confirmation",
+        "quantity": "unchanged blockwise conditional-mean rule: disjoint-half Fisher cosine >= 0.98 followed by analytic Fisher cosine >= 0.99",
+        "target_refit": false,
+        "result": "ACL-005 passed on 20 regular contextual-bandit context blocks; all stopped at 4096 and the minimum analytic Fisher cosine was 0.999841630.",
+        "target_class": "finite-state contextual-bandit empirical-Fisher natural-policy-gradient shadows",
+        "approved_preregistration_sha": "c3ebc07a41e8dbb84a24c68cdbb4f75c36108c5b",
+        "evidence_commit": "24d577f8a1d7bc6f4f45250f4bab3d5b2b925aeb",
+        "artifact": "evidence/ACL-005-confirmatory-c3ebc07a41e8dbb84a24c68cdbb4f75c36108c5b.json",
+        "artifact_sha256": "5400a12392609f5cdf79a8b4b380f84ad11e68330f8ee93f653439129aa5db5b",
+        "report": "analysis/ACL-005-confirmatory/summary.json",
+        "report_sha256": "b5d310e9a32c059cb192e4f1001556b7a9d60ca98cc6319a1d67326246c13084"
       },
       "failure_boundary": {
-        "status": "unresolved",
-        "result": null
+        "status": "preregistered-confirmation",
+        "result": "H2 concerns conditional expectations, not reliable individual steps. Stored H1 single-shadow median Fisher cosines span 0.953-0.957 for mean and 0.534-0.717 for covariance; covariance cosine is positive for 84.1%-87.9% of shadows. Lambda scaling was not studied."
       },
       "evidence_status": [
+        "theorem-reproduction",
+        "preregistered-confirmation",
         "unresolved"
       ],
-      "what_would_change_interpretation": "A preregistered conditional-mean Fisher cosine failure after shadow convergence would reject the proposed Gaussian bridge under its frozen finite-lambda scope."
+      "what_would_change_interpretation": "A support-conditioned theorem must explain why the rule survives all regular control targets but fails despite convergence in rare-cell stress; failure of such a bound on new classes would narrow reuse to this Gaussian-control pair."
     },
     {
       "id": "categorical-natural-gradient-control",
@@ -122,26 +155,78 @@
         "no PPO clipping",
         "no neural network function approximation"
       ],
-      "content": "A control-class bridge would require a preregistered quantity from an earlier class to predict a held-out policy response without control-target refitting.",
+      "content": "The ACL-004 blockwise conditional-mean rule predicts held-out contextual-bandit policy-direction alignment without control-target refitting.",
       "stability": {
-        "status": "unresolved",
-        "law": null,
-        "result": null
+        "status": "preregistered-confirmation",
+        "law": "conditional mean of undamped empirical-Fisher plug-in NPG compared blockwise with exact analytic NPG",
+        "result": "ACL-005 regular targets passed the transported 0.98/0.99 blockwise rule. Frozen rare-cell stress targets show that empirical-pseudoinverse bias can remain directionally wrong after disjoint-half convergence."
       },
       "transport": {
-        "status": "unresolved",
-        "quantity": null,
-        "target_refit": null,
-        "result": null
+        "status": "preregistered-confirmation",
+        "quantity": "ACL-004 unchanged blockwise 0.98 convergence and 0.99 analytic-alignment rule",
+        "target_refit": false,
+        "result": "PASS on 10 regular landscapes and 20 context blocks; minimum cosine 0.999841630."
       },
       "failure_boundary": {
-        "status": "unresolved",
-        "result": null
+        "status": "preregistered-confirmation",
+        "result": "All four non-gating rare-cell stress landscapes stopped at 4096, yet 5 of 8 context blocks were below 0.99 and the minimum was 0.055699373. Adequate cell coverage is a material scope condition; self-consistency alone is insufficient."
       },
       "evidence_status": [
-        "unresolved"
+        "theorem-reproduction",
+        "preregistered-confirmation"
       ],
-      "what_would_change_interpretation": "If no source-class law can be stated before observing control outcomes, this edge remains a coordinate relationship rather than evidence of reusable transport."
+      "what_would_change_interpretation": "A theorem relating minimum joint-cell mass, sample count, empirical-Fisher rank, and angular bias would turn the observed regular/stress split into a predictive radius; counterexamples inside its proposed scope would refute that extension."
+    },
+    {
+      "id": "gaussian-rank-mu-to-contextual-bandit-normalized-law",
+      "classes": [
+        "finite-lambda-gaussian-rank-mu",
+        "finite-state-contextual-bandit-empirical-fisher-npg"
+      ],
+      "map": {
+        "object": "conditional mean of a finite-sample stochastic tangent compared with an independently analytic Fisher-natural tangent",
+        "geometry": "separate nonzero Fisher blocks",
+        "normalization": "blockwise Fisher cosine",
+        "stability_diagnostic": "Fisher cosine between disjoint-half conditional-mean estimates"
+      },
+      "scope": [
+        "ACL-004 pure diagonal Gaussian linear-rank source with lambda=32 and mu=16",
+        "ACL-005 two-context three-action categorical-policy target with N=128",
+        "undamped empirical-Fisher pseudoinverse rcond=1e-12",
+        "regular target minimum expected joint-cell count at least 4",
+        "frozen replication schedule through 65536 and no target refit"
+      ],
+      "content": "Once every target block reaches disjoint-half Fisher cosine 0.98, every regular target block should reach Fisher cosine 0.99 with its independent analytic direction.",
+      "stability": {
+        "status": "preregistered-confirmation",
+        "law": "0.98 disjoint-half block convergence predicts at least 0.99 analytic block alignment under the frozen regular-support scope",
+        "result": "All 20 regular target blocks passed; minimum analytic cosine 0.999841630."
+      },
+      "transport": {
+        "status": "preregistered-confirmation",
+        "quantity": "the complete dimensionless 0.98-to-0.99 blockwise diagnostic and unchanged replication schedule",
+        "source": "ACL-004",
+        "target": "ACL-005",
+        "target_refit": false,
+        "result": "PASS"
+      },
+      "failure_boundary": {
+        "status": "preregistered-confirmation",
+        "result": "The law is not support-free: 5 of 8 rare-cell stress blocks failed the 0.99 target despite all stress landscapes satisfying the 0.98 stopping rule; minimum cosine 0.055699373."
+      },
+      "evidence": {
+        "approved_preregistration_sha": "c3ebc07a41e8dbb84a24c68cdbb4f75c36108c5b",
+        "evidence_commit": "24d577f8a1d7bc6f4f45250f4bab3d5b2b925aeb",
+        "artifact": "evidence/ACL-005-confirmatory-c3ebc07a41e8dbb84a24c68cdbb4f75c36108c5b.json",
+        "artifact_sha256": "5400a12392609f5cdf79a8b4b380f84ad11e68330f8ee93f653439129aa5db5b",
+        "report": "analysis/ACL-005-confirmatory/summary.json",
+        "report_sha256": "b5d310e9a32c059cb192e4f1001556b7a9d60ca98cc6319a1d67326246c13084"
+      },
+      "evidence_status": [
+        "theorem-reproduction",
+        "preregistered-confirmation"
+      ],
+      "what_would_change_interpretation": "A new adaptive class that fails the frozen rule despite adequate support would show pair-specific rather than reusable structure; a support-conditioned angular-bias theorem would strengthen the reusable-class interpretation."
     }
   ]
 }

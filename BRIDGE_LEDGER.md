@@ -18,24 +18,31 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
 - **Stability:** **preregistered confirmation within the frozen deterministic
   benchmark.** The zero-fit first-order target gate passed. Posthoc analysis finds a
   predominantly negative, locally quadratic, landscape-dependent remainder for
-  horizons above one.
+  horizons above one. ACL-003 then confirmed the analytic zero-fit second-order
+  truncation on 16 entirely new state, reward, and mutation catalog values: median
+  maximum-local error `0.148431%`, Type-7 Q90 `0.738712%` through epsilon `0.01`.
 - **Transport:** **preregistered confirmation within family, without target refit.**
   The frozen source-median alpha `0.9951356698171323` passed on 12 held-out target
-  combinations. This is not cross-class transport.
+  combinations. ACL-003 separately passed a no-fit second-order prediction on new
+  catalog values. Both are within the categorical class, not cross-class transport.
 - **Failure boundary:** exploratory T=20 pooled target median absolute error grows from
   `0.154%` strict to `2.626%` extended-local and `22.640%` stress, with heterogeneous
   empirical radii. A state-aware second-order truncation sharply improves local errors
   and every target's 5%/10% radius, but worsens stress Q90 from `62.17%` to `77.66%`
-  and reaches `778.42%` worst-case relative error.
+  and reaches `778.42%` worst-case relative error on ACL-002. On ACL-003's new values,
+  second order improves all 16 targets at epsilon `0.03` but only 13 at `0.1`; its
+  T=20 stress median is `3.652%`, Q90 `36.875%`, and maximum `114.694%`.
 - **Evidence:** ACL-002 artifact SHA-256
   `4d08e85b927a5d78a29078ff0d6549225d98069b20186b754629464739f29d74`;
   posthoc summary SHA-256
   `116b8c6ec092dfdcff6a53e39f07a46fbbf8b75615d6f36e11bfed1abff14922`;
   second-order summary SHA-256
-  `d7533c3f3b5e0941e28cddcba58ce4106825c938f7244c24bd8f98c8e9403474`.
-- **Status:** theorem reproduction + preregistered first-order confirmation +
-  exploratory second-order mechanism that earned ACL-003. Cross-class transport
-  remains unresolved.
+  `d7533c3f3b5e0941e28cddcba58ce4106825c938f7244c24bd8f98c8e9403474`;
+  ACL-003 evidence SHA-256
+  `1f80c3f5aba4089c67bbfec1ddd6eff53f7a6d42c658436dff0f7c82a1cf8c99`.
+- **Status:** theorem reproduction + preregistered first-order and second-order
+  confirmation within the categorical class, with an explicit nonuniform stress
+  boundary. Cross-class transport remains unresolved.
 
 ## Gaussian natural gradient ↔ finite-sample rank-mu
 
@@ -45,11 +52,25 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   parents, weights, parameterization, and learning rates.
 - **Content:** the independently constructed analytic Fisher direction should align
   with the converged conditional expected finite-lambda rank-mu update in each block.
-- **Stability:** unresolved.
-- **Transport:** unresolved; no quantity has yet been frozen for no-refit transfer.
-- **Failure boundary:** unresolved.
-- **Status:** unresolved. Existing software is an escalation rung, not scientific
-  evidence for this edge.
+- **Stability:** **preregistered confirmation.** The finite-lambda conditional expected
+  direction was derived independently from binomial rank utility, Gaussian score, and
+  inverse Fisher blocks. ACL-004 passed on 12 landscapes: all converged at 4096
+  shadows, with minimum mean/covariance Fisher cosines `0.999952324` and `0.999552200`
+  against the frozen `0.99` gates.
+- **Transport:** **preregistered cross-class confirmation.** ACL-005 carried the
+  complete ACL-004 normalized rule—disjoint-half block cosine `0.98`, analytic block
+  cosine `0.99`, and the same replication schedule—into finite-state control without
+  target refitting. All 20 regular target blocks passed; the minimum was `0.999841630`.
+- **Failure boundary:** H2 is an expected-direction result, not a guarantee for one
+  finite population. Descriptive H1 single-shadow median cosine spans `0.953–0.957`
+  for mean and `0.534–0.717` for covariance; covariance alignment is positive in
+  `84.1%–87.9%` of shadows. Lambda scaling was not studied.
+- **Evidence:** ACL-004 evidence SHA-256
+  `3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a`;
+  report SHA-256
+  `b4d9864b6ab935aa39bc98ab1c144e13030ebad57931eaf4bc1cbcbaf3d2e019`.
+- **Status:** theorem reproduction + preregistered finite-lambda conditional-mean
+  confirmation + one successful restricted cross-class transported diagnostic.
 
 ## Categorical natural gradient ↔ finite-state control
 
@@ -57,11 +78,39 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   categorical policy Fisher tangent.
 - **Scope:** exact finite contexts/actions, analytic policies, no PPO, and no neural
   function approximation.
-- **Content:** this becomes a predictive bridge only if a quantity declared before
-  control outcomes predicts a held-out control response without target refitting.
-- **Stability:** unresolved.
-- **Transport:** unresolved.
-- **Failure boundary:** if no earlier-class quantity can be frozen before control
-  outcomes, this remains a coordinate relation rather than a reusable law.
-- **Status:** unresolved; control experimentation is deferred until the Gaussian edge
-  is understood.
+- **Content:** ACL-005 declared before control outcomes that the ACL-004 blockwise
+  stopping/alignment rule would predict held-out control conditional means without
+  target refitting.
+- **Stability:** **preregistered confirmation within the regular support scope.** All
+  10 regular landscapes stopped at 4096 and all 20 context blocks exceeded `0.99`;
+  the minimum was `0.999841630`.
+- **Transport:** **PASS without target refit.** The source `0.98` convergence and
+  `0.99` analytic-alignment rule was copied unchanged from ACL-004.
+- **Failure boundary:** all four rare-cell stress landscapes also met the stopping
+  rule, yet 5 of 8 stress context blocks fell below `0.99`; the minimum was
+  `0.055699373`. Half-mean self-consistency is not enough when empirical Fisher blocks
+  are support-deficient or nearly so.
+- **Evidence:** ACL-005 evidence SHA-256
+  `5400a12392609f5cdf79a8b4b380f84ad11e68330f8ee93f653439129aa5db5b`;
+  report SHA-256
+  `b5d310e9a32c059cb192e4f1001556b7a9d60ca98cc6319a1d67326246c13084`.
+- **Status:** theorem reproduction + preregistered cross-class confirmation with a
+  predeclared rare-cell boundary.
+
+## Gaussian rank-mu → contextual-bandit normalized law
+
+- **Map:** in both classes, compare the conditional mean of a finite-sample stochastic
+  tangent with an independently constructed analytic Fisher-natural tangent. Normalize
+  each independent Fisher block by Fisher cosine and diagnose estimator convergence by
+  the cosine between disjoint-half means.
+- **Scope:** ACL-004's pure diagonal-Gaussian rank-mu source; ACL-005's two-context,
+  three-action categorical-policy target at `N=128`; undamped empirical-Fisher
+  pseudoinverse; regular minimum expected joint-cell count at least 4; frozen schedule.
+- **Content:** after every target block reaches disjoint-half cosine `0.98`, every
+  regular analytic block cosine should reach `0.99`.
+- **Stability:** all regular targets passed, with minimum `0.999841630`.
+- **Transport:** the complete diagnostic and schedule moved from Gaussian to control
+  without target refitting.
+- **Failure boundary:** the same statement is false without adequate support. Five of
+  eight rare-cell stress blocks failed despite apparent convergence.
+- **Status:** preregistered cross-class confirmation, restricted by support coverage.
