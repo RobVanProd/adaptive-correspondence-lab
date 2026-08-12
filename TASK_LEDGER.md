@@ -207,3 +207,73 @@
   not determine whether either scientific hypothesis passes.
 - **Recommended next action:** review the replacement public commit and, only if it is
   accepted, explicitly approve that exact full SHA for one-shot ACL-002 execution.
+
+## ACL-002-PH1 — Deterministic post-confirmatory analysis
+
+- **Status:** in progress. This task derives analyses only from the immutable ACL-002
+  evidence artifact; it is not a new experiment and cannot change ACL-002's frozen
+  confirmatory verdict.
+- **Observed behavior:** the approved preregistration
+  `3f6a935942f43c7d3055582d123e58af5bf3f38b` was executed once and preserved at
+  evidence commit `5caf47b510d70564415354f34ba729ff505f7ed4`. The artifact
+  `evidence/ACL-002-confirmatory-3f6a935942f43c7d3055582d123e58af5bf3f38b.json`
+  has SHA-256 `4d08e85b927a5d78a29078ff0d6549225d98069b20186b754629464739f29d74`,
+  contains 896 deterministic rows over 28 landscapes and four horizons, and records
+  passing zero-fit, calibrated-transport, special-stratum, and matrix-oracle checks.
+- **Hypotheses explored, not confirmed:** the L1 residual may have a landscape-local
+  second-order coefficient; dimensionless relative residuals may or may not reveal a
+  shared structure; usable first-order radius may depend on horizon, reward spread,
+  clean boundary proximity, mutation structure, or their interactions; oriented KL
+  residuals may exhibit the predicted cubic remainder; source alpha near one may be a
+  common finite-epsilon correction or an aggregate of heterogeneous errors.
+- **Frozen analysis semantics:** read and hash-check the existing artifact; never call
+  `acl002-run`, `generate_raw_rows`, `mutation_trajectory`, or any equivalent outcome
+  generator. Preserve every raw row. Define L1 residual as
+  `endpoint_l1 - C_endpoint_l1 * epsilon`, normalized residual as
+  `endpoint_l1 / (C_endpoint_l1 * epsilon) - 1` only where the denominator is
+  numerically valid, and quadratic scale as `residual / epsilon**2`. Define empirical
+  radius at each descriptive level `1%,5%,10%,20%` as the largest tested positive
+  epsilon for which every tested epsilon at or below it meets the level; this summary
+  is exploratory. Analyze endpoint and max-path L1 at horizons `1,5,20,50`. Define KL
+  residual as `kl_q_p - K_kl_q_p * epsilon**2`, and report its epsilon-squared and,
+  when numerically stable, epsilon-cubed normalizations. Keep analytic-zero and
+  low-sensitivity strata separate. Use the frozen source alpha values without refit.
+  Any regression or model selection is descriptive/exploratory and must not be called
+  population inference or confirmation.
+- **Artifact-identifiability constraint:** raw rows store `p0`, `reward`, and
+  `mutation` catalog IDs rather than their numeric arrays. To honor “use only the
+  immutable artifact,” reward intensity is represented by the per-step clean
+  log-odds spread inferred from stored clean terminal states (equal to `eta` times
+  reward spread, so it preserves comparisons under the globally fixed eta). Mutation
+  structure is represented as its frozen nominal catalog ID. Numeric mutation-matrix
+  features are not identifiable from this artifact and will be reported as such; the
+  analyzer must not load the external manifest to fill the gap.
+- **Required outputs:** deterministic analysis code; regression tests; raw derived CSV
+  tables; optional deterministic plots; a machine-readable summary; and
+  `analysis/ACL-002-posthoc/ACL-002_POSTHOC.md` separating confirmed findings,
+  exploratory observations, and new hypotheses. Every output records the source
+  artifact path and SHA-256.
+- **Allowed files:** `TASK_LEDGER.md`, `pyproject.toml` only if a required development
+  dependency must be declared, new analysis code under `src/adaptive_correspondence/`,
+  new tests under `tests/`, new files under `analysis/ACL-002-posthoc/`, and bridge
+  ledger files if introduced without changing any prior evidence or preregistration.
+- **Acceptance tests:** artifact identity and schema guards fail closed; toy fixtures
+  verify residual signs/scales, cumulative empirical-radius semantics, KL
+  normalizations, special-stratum separation, deterministic ordering, and summary
+  classification. The generated tables recompute exactly from the immutable artifact;
+  the evidence artifact hash remains unchanged; full pytest and Ruff pass.
+- **Risks:** accidentally regenerating outcomes; treating posthoc patterns as
+  confirmation; dividing by near-zero analytic coefficients; selecting only favorable
+  epsilons; confusing endpoint with max-path quantities; allowing a flexible
+  exploratory model to imply causal or population-level conclusions.
+- **Stop conditions:** the evidence hash or approved SHA does not match; any requested
+  statistic is ambiguous in a way that changes its interpretation; analysis requires
+  modifying or recomputing the evidence artifact; a new confirmatory trajectory would
+  be generated; or the baseline turns red.
+- **Historical-record clarification:** the continuation prompt transcribed
+  `alpha_source` as `0.9951356718983256`, while the byte-verified immutable artifact
+  stores `0.9951356698171323`. The stored value exactly equals the median of the 12
+  frozen per-source alphas; the absolute transcription discrepancy is
+  `2.0811933287845363e-09`. Consistent with evidence-before-narrative, all analysis
+  uses the artifact value and records the mismatch without altering either historical
+  artifact or verdict.
