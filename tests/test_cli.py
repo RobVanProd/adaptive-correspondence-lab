@@ -70,3 +70,19 @@ def test_acl003_validation_command_never_invokes_runner(monkeypatch, capsys) -> 
     payload = json.loads(capsys.readouterr().out)
     assert payload["outcomes_generated"] is False
     assert payload["bundle"] == "frozen"
+
+
+def test_acl004_validation_command_never_invokes_runner(monkeypatch, capsys) -> None:
+    monkeypatch.setattr(
+        cli_module,
+        "validate_acl004_preregistration_bundle",
+        lambda bundle: {"valid": True, "outcomes_generated": False, "bundle": bundle},
+    )
+    return_code = main(["acl004-validate", "--bundle", "gaussian-frozen"])
+    assert return_code == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload == {
+        "bundle": "gaussian-frozen",
+        "outcomes_generated": False,
+        "valid": True,
+    }

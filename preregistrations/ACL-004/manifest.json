@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ACL-004",
+  "title": "Conditional-mean alignment of finite-lambda Gaussian rank-mu updates",
+  "randomness": "PCG64-independent-landscape-streams",
+  "parameterization": "mean-and-log-standard-deviation",
+  "dimension": 3,
+  "sample_count": 32,
+  "parent_count": 16,
+  "mean_learning_rate": 0.2,
+  "covariance_learning_rate": 0.1,
+  "rank_weights": "log(parent_count+0.5)-log(rank), normalized",
+  "quadrature_order": 160,
+  "quadrature_oracle_order": 320,
+  "quadrature_relative_tolerance": 2e-9,
+  "quadrature_absolute_tolerance": 5e-12,
+  "replication_schedule": [4096, 8192, 16384, 32768, 65536],
+  "shadow_chunk_size": 2048,
+  "half_convergence_fisher_cosine_min": 0.98,
+  "h2_fisher_cosine_min": 0.99,
+  "h1_shadow_count": 2048,
+  "benchmark_scope": "deterministic-held-out-gaussian-linear-benchmark",
+  "inference_scope": "descriptive-criteria-not-population-confidence",
+  "transport_scope": "within-gaussian-class-no-target-refit",
+  "landscapes": [
+    {
+      "id": "G01",
+      "mean": [0.3, -0.7, 1.1],
+      "log_std": [-0.5978370007556204, -0.10536051565782628, 0.30010459245033816],
+      "objective": [1.0, -0.7, 0.45],
+      "seed": 41001
+    },
+    {
+      "id": "G02",
+      "mean": [-1.2, 0.4, 0.8],
+      "log_std": [0.22314355131420976, -0.4307829160924542, -0.2231435513142097],
+      "objective": [-0.6, 1.0, 0.75],
+      "seed": 41002
+    },
+    {
+      "id": "G03",
+      "mean": [0.0, 1.3, -0.5],
+      "log_std": [-0.2876820724517809, 0.3364722366212129, -0.6931471805599453],
+      "objective": [0.8, 0.55, -1.0],
+      "seed": 41003
+    },
+    {
+      "id": "G04",
+      "mean": [1.5, -1.0, 0.2],
+      "log_std": [0.47000362924573563, -0.16251892949777494, 0.09531017980432493],
+      "objective": [-0.9, -0.5, 0.7],
+      "seed": 41004
+    },
+    {
+      "id": "G05",
+      "mean": [-0.8, -0.2, 1.4],
+      "log_std": [-0.7339691750802004, 0.1823215567939546, 0.4382549309311553],
+      "objective": [0.65, -1.0, 0.55],
+      "seed": 41005
+    },
+    {
+      "id": "G06",
+      "mean": [0.9, 0.6, -1.1],
+      "log_std": [0.04879016416943204, -0.5447271754416722, 0.371563556432483],
+      "objective": [1.0, 0.4, -0.8],
+      "seed": 41006
+    },
+    {
+      "id": "G07",
+      "mean": [-1.4, 1.0, 0.5],
+      "log_std": [-0.19845093872383832, 0.5007752879124892, -0.3285040669720361],
+      "objective": [-0.55, 0.9, 1.0],
+      "seed": 41007
+    },
+    {
+      "id": "G08",
+      "mean": [0.7, -1.3, -0.4],
+      "log_std": [0.371563556432483, 0.09531017980432493, -0.6539264674066639],
+      "objective": [0.7, -0.65, -1.0],
+      "seed": 41008
+    },
+    {
+      "id": "G09",
+      "mean": [1.1, 0.1, -0.9],
+      "log_std": [-0.4780358009429998, -0.2484613592984996, 0.5306282510621704],
+      "objective": [-1.0, 0.8, -0.4],
+      "seed": 41009
+    },
+    {
+      "id": "G10",
+      "mean": [-0.3, 1.5, 0.6],
+      "log_std": [0.26236426446749106, -0.6931471805599453, 0.22314355131420976],
+      "objective": [0.45, 1.0, -0.75],
+      "seed": 41010
+    },
+    {
+      "id": "G11",
+      "mean": [0.4, -0.6, 1.7],
+      "log_std": [-0.10536051565782628, 0.4054651081081644, -0.5108256237659907],
+      "objective": [1.0, -0.45, 0.85],
+      "seed": 41011
+    },
+    {
+      "id": "G12",
+      "mean": [-1.0, 0.8, -0.1],
+      "log_std": [0.5306282510621704, -0.35667494393873245, -0.05129329438755058],
+      "objective": [-0.8, 1.0, -0.55],
+      "seed": 41012
+    }
+  ]
+}

@@ -17,6 +17,12 @@ from .acl003 import (
 from .acl003 import (
     validate_preregistration_bundle as validate_acl003_preregistration_bundle,
 )
+from .acl004 import (
+    execute_confirmatory as execute_acl004_confirmatory,
+)
+from .acl004 import (
+    validate_preregistration_bundle as validate_acl004_preregistration_bundle,
+)
 from .bandit import ContextualBandit, run_bandit_trajectory
 from .experiments import (
     CategoricalExperimentConfig,
@@ -195,6 +201,21 @@ def build_parser() -> argparse.ArgumentParser:
     )
     acl003_run.add_argument("--approved-sha", required=True)
     acl003_run.add_argument("--output", required=True)
+
+    acl004_validate = subparsers.add_parser(
+        "acl004-validate",
+        help="validate the locked ACL-004 bundle without generating shadows",
+    )
+    acl004_validate.add_argument("--bundle", default="preregistrations/ACL-004")
+    acl004_validate.add_argument("--output")
+
+    acl004_run = subparsers.add_parser(
+        "acl004-run",
+        help="execute ACL-004 only after explicit approval of its preregistration SHA",
+    )
+    acl004_run.add_argument("--bundle", default="preregistrations/ACL-004")
+    acl004_run.add_argument("--approved-sha", required=True)
+    acl004_run.add_argument("--output", required=True)
     return parser
 
 
@@ -357,6 +378,17 @@ def main(argv: list[str] | None = None) -> int:
                 repo_path=Path.cwd(),
                 bundle_path=args.bundle,
                 reference_path=args.reference_manifest,
+                approved_sha=args.approved_sha,
+                output_path=args.output,
+            )
+            print(destination.resolve())
+        elif args.command == "acl004-validate":
+            payload = validate_acl004_preregistration_bundle(args.bundle)
+            _emit_json(payload, args.output)
+        elif args.command == "acl004-run":
+            destination = execute_acl004_confirmatory(
+                repo_path=Path.cwd(),
+                bundle_path=args.bundle,
                 approved_sha=args.approved_sha,
                 output_path=args.output,
             )

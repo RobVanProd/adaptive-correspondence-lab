@@ -1,0 +1,191 @@
+{
+  "comparator_source": "conditional-rank-utility-gaussian-score-inverse-fisher",
+  "experiment_id": "ACL-004",
+  "kind": "analytic-finite-lambda-gaussian-registry",
+  "landscapes": [
+    {
+      "analytic_direction": [
+        0.3690284071307395,
+        -0.6916995267541464,
+        1.0004939583408188,
+        0.14316989521051635,
+        0.1878483682943932,
+        0.17467023021251613
+      ],
+      "covariance_block_fisher_norm": 0.4154378838958951,
+      "id": "G01",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 2.7536806168626526e-10,
+      "seed": 41001
+    },
+    {
+      "analytic_direction": [
+        -1.019349057733057,
+        0.4593866420183644,
+        0.5219067175593254,
+        0.21148682358070767,
+        0.1588501030450649,
+        0.13535156709165297
+      ],
+      "covariance_block_fisher_norm": 0.42019061983783346,
+      "id": "G02",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 3.1001981537492895e-10,
+      "seed": 41002
+    },
+    {
+      "analytic_direction": [
+        0.5173810798290652,
+        1.2394151201238492,
+        -0.28743393323836947,
+        0.15134080782963946,
+        0.24924990267275893,
+        0.10509778321502736
+      ],
+      "covariance_block_fisher_norm": 0.4383493997569075,
+      "id": "G03",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 3.6537695091709566e-10,
+      "seed": 41003
+    },
+    {
+      "analytic_direction": [
+        -1.7218368530058656,
+        -0.26997116456092396,
+        0.6329842944860972,
+        0.36829983248801995,
+        0.032081480151981374,
+        0.10530718107742429
+      ],
+      "covariance_block_fisher_norm": 0.543624117135947,
+      "id": "G04",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 5.398929636690752e-10,
+      "seed": 41004
+    },
+    {
+      "analytic_direction": [
+        0.12550493312599761,
+        -1.2067782031345924,
+        1.1073656584492864,
+        0.02174185561457761,
+        0.32162508305588183,
+        0.1623215550469662
+      ],
+      "covariance_block_fisher_norm": 0.5104188271784914,
+      "id": "G05",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 4.714721391074761e-10,
+      "seed": 41005
+    },
+    {
+      "analytic_direction": [
+        0.8789300908460195,
+        0.10727331793581892,
+        -1.3409164741977364,
+        0.22283713027392596,
+        0.01087889859398076,
+        0.27197246484951904
+      ],
+      "covariance_block_fisher_norm": 0.49748117290940697,
+      "id": "G06",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 3.9868608414650453e-10,
+      "seed": 41006
+    },
+    {
+      "analytic_direction": [
+        -0.2725774320581615,
+        1.8059673703437082,
+        0.38208896430412337,
+        0.03514063261160581,
+        0.3809863351258274,
+        0.08956152597999249
+      ],
+      "covariance_block_fisher_norm": 0.5557098497396245,
+      "id": "G07",
+      "mean_block_fisher_norm": 1.2609933363413992,
+      "quadrature_oracle_max_absolute_error": 5.584901985322688e-10,
+      "seed": 41007
+    },
+    {
+      "analytic_direction": [
+        1.378750604605306,
+        -0.7368013253080167,
+        -0.2533135134943264,
+        0.28753645635126235,
+        0.14268322443949058,
+        0.0754688129266727
+      ],
+      "covariance_block_fisher_norm": 0.46632876383953104,
+      "id": "G08",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 4.2150144485830765e-10,
+      "seed": 41008
+    },
+    {
+      "analytic_direction": [
+        -0.43596940888550334,
+        0.5520162088781275,
+        -1.3110838623091619,
+        0.15724836672527082,
+        0.1592839231061891,
+        0.1891562038859658
+      ],
+      "covariance_block_fisher_norm": 0.4144357283497953,
+      "id": "G09",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 2.77285194805188e-10,
+      "seed": 41009
+    },
+    {
+      "analytic_direction": [
+        0.790653685186256,
+        0.2599124540388744,
+        -1.2183396283072239,
+        0.11763684903195827,
+        0.08593531231788899,
+        0.3021163323675785
+      ],
+      "covariance_block_fisher_norm": 0.47433655654309004,
+      "id": "G10",
+      "mean_block_fisher_norm": 1.2609933363413992,
+      "quadrature_oracle_max_absolute_error": 4.428741262607616e-10,
+      "seed": 41010
+    },
+    {
+      "analytic_direction": [
+        0.8269127327217919,
+        -1.0336409159022397,
+        0.312389254583788,
+        0.2684675678193087,
+        0.15101300689836117,
+        0.0862079189997558
+      ],
+      "covariance_block_fisher_norm": 0.4523528899467053,
+      "id": "G11",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 3.9354824954429546e-10,
+      "seed": 41011
+    },
+    {
+      "analytic_direction": [
+        -1.8036972394406838,
+        0.3822714737568923,
+        -0.3872449036450559,
+        0.3580032153638729,
+        0.09484297984877688,
+        0.0528422985047758
+      ],
+      "covariance_block_fisher_norm": 0.5290629481427231,
+      "id": "G12",
+      "mean_block_fisher_norm": 1.260993336341399,
+      "quadrature_oracle_max_absolute_error": 5.247990375600864e-10,
+      "seed": 41012
+    }
+  ],
+  "outcomes_generated": false,
+  "schema_version": 1,
+  "shadow_count": 0
+}
+

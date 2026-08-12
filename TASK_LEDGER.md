@@ -576,3 +576,62 @@
 - **Stop conditions:** the comparator requires sampled rank-mu outcomes; block direction
   is analytically zero for the proposed design; quadrature or independent oracle does
   not converge; implementation requires optimizer machinery outside the frozen scope.
+
+## ACL-004 — Conditional-mean Gaussian finite-lambda bridge
+
+- **Status:** preregistration construction only; confirmatory shadows forbidden until
+  an exact public preregistration SHA passes adversarial review.
+- **Scientific question:** at a frozen finite population, does the independently
+  derived Gaussian score/Fisher comparator predict the conditional expected rank-mu
+  tangent in both mean and covariance blocks, or is apparent alignment a joint-metric
+  or infinite-population artifact?
+- **Scope:** 12 deterministic three-dimensional diagonal-Gaussian landscapes with
+  nonzero linear ranking objectives; parameterization `(mean, log_std)`; one state only
+  per shadow; `lambda=32`, `mu=16`; normalized logarithmic positive rank weights;
+  mean learning rate `0.2`, covariance/log-scale learning rate `0.1`; PCG64; float64;
+  no evolution paths, CSA, clipping, antithetic pairs, common random numbers across
+  landscapes, state iteration, or lambda scaling.
+- **Analytic comparator:** finite-lambda block direction derived in
+  `docs/gaussian_rank_mu_bridge.md` from conditional binomial rank utility, Gaussian
+  score, and inverse Fisher. It may not call or replay sampled rank-mu code. Freeze
+  Gauss-Hermite order `160`, doubled-order oracle `320`, relative tolerance `2e-9`,
+  and absolute tolerance `5e-12`.
+- **Shadow estimator:** independent shadows at the same frozen lambda. Check cumulative
+  replication counts `4096,8192,16384,32768,65536`. At each checkpoint, compare the
+  means of the first and second disjoint halves using separate Fisher cosines. Stop at
+  the first checkpoint where both are at least `0.98`. Failure to converge by `65536`
+  makes the H2 result `INCONCLUSIVE`, not PASS or FAIL.
+- **Primary H2 estimands and gate:** for each converged landscape, compare its full
+  stopped conditional-mean estimate with the independent analytic comparator. Report
+  separate mean-block and covariance-block Fisher cosines. H2 passes only if all 12
+  landscapes converge and the minimum landscape cosine is at least `0.99` in each
+  block. Any converged value below its block threshold is FAIL. Joint cosine is
+  secondary and cannot rescue a block.
+- **H1 descriptive layer:** retain the first `2048` single-shadow mean/covariance
+  cosines per landscape and report their quantiles/fraction positive. H1 cannot alter
+  H2. Learning-rate scaling is recorded but block cosines are computed on raw tangents.
+- **Evidence sufficiency:** retain for each fixed 2048-shadow chunk its count, tangent
+  sum, and tangent outer-product sum, plus the raw H1 cosines. These sufficient
+  statistics must exactly reproduce every stopped mean, half-mean convergence check,
+  and uncertainty summary without retaining a massive per-shadow JSON array.
+- **Units and inference:** landscapes are deterministic benchmark units, not a random
+  population sample. Shadows estimate conditional expectations at frozen landscapes;
+  they are not landscape replication. Minima are descriptive acceptance criteria, not
+  confidence statements.
+- **Execution guards:** exact approved SHA; full clean porcelain worktree; exact lock
+  membership and hashes; analytic-registry recomputation; previously nonexistent sole
+  canonical output `evidence/ACL-004-confirmatory-{approved_sha}.json`; independent
+  landscape seeds; valid chunk arithmetic and finite outputs. One execution only.
+- **Allowed files:** ACL-004 implementation and tests, CLI wiring, this ledger,
+  `preregistrations/ACL-004/`, and Gaussian bridge preregistration status. No evidence
+  file before approval.
+- **Acceptance tests:** fail first; then exact design validation, independent analytic
+  registry/oracle, stopping at first qualifying checkpoint, nonconvergence handling,
+  block-specific gates, joint-cosine non-rescue, sufficient-statistic reproduction,
+  canonical-path/worktree/lock guards, full pytest, Ruff, coverage, and wheel build.
+- **Risks:** confirmatory-landscape pilot leakage; covariance signal too weak to meet
+  the stopping rule; target-specific refitting; calling exact theorem reproduction a
+  cross-class transported law; changing lambda to improve noise.
+- **Stop conditions:** any proposed confirmatory landscape is sampled before its public
+  lock; the analytic block is zero/near-zero; quadrature fails; a threshold changes
+  after shadows; or the implementation introduces hidden Gaussian optimizer state.
