@@ -103,9 +103,15 @@
       ],
       "content": "The conditional expected finite-lambda rank-mu update should align with an independently constructed analytic Fisher-natural direction in each tangent block.",
       "stability": {
-        "status": "theorem-reproduction",
+        "status": "preregistered-confirmation",
         "law": "finite-lambda expected rank-mu tangent from conditional binomial rank utility, Gaussian score, and inverse Fisher metric",
-        "result": "The independent closed block comparator matches a tensor-product Gaussian score integral on toy fixtures; confirmatory conditional-mean alignment remains unresolved."
+        "result": "ACL-004 passed on 12 deterministic 3D landscapes. All converged at 4096 shadows; minimum mean-block Fisher cosine was 0.999952324 and minimum covariance-block cosine was 0.999552200 against a 0.99 gate.",
+        "approved_preregistration_sha": "3ba4be7ce1460a40c4ef0879018df58947c36edb",
+        "evidence_commit": "355dd97472da4230eff877b9a3c8c7c4626057cd",
+        "artifact": "evidence/ACL-004-confirmatory-3ba4be7ce1460a40c4ef0879018df58947c36edb.json",
+        "artifact_sha256": "3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a",
+        "report": "analysis/ACL-004-confirmatory/summary.json",
+        "report_sha256": "b4d9864b6ab935aa39bc98ab1c144e13030ebad57931eaf4bc1cbcbaf3d2e019"
       },
       "transport": {
         "status": "unresolved",
@@ -114,14 +120,15 @@
         "result": null
       },
       "failure_boundary": {
-        "status": "unresolved",
-        "result": null
+        "status": "preregistered-confirmation",
+        "result": "H2 concerns conditional expectations, not reliable individual steps. Stored H1 single-shadow median Fisher cosines span 0.953-0.957 for mean and 0.534-0.717 for covariance; covariance cosine is positive for 84.1%-87.9% of shadows. Lambda scaling was not studied."
       },
       "evidence_status": [
         "theorem-reproduction",
+        "preregistered-confirmation",
         "unresolved"
       ],
-      "what_would_change_interpretation": "A preregistered conditional-mean Fisher cosine failure after shadow convergence would reject the proposed Gaussian bridge under its frozen finite-lambda scope."
+      "what_would_change_interpretation": "A no-refit quantity declared from categorical/Gaussian source evidence and then tested in a finite-state control class would distinguish reusable cross-class structure from separate within-class correspondences."
     },
     {
       "id": "categorical-natural-gradient-control",

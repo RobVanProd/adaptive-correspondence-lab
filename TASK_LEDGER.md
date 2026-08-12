@@ -642,3 +642,28 @@
   inspection. Before outcomes, embed both frozen objects and add an independent toy
   Monte Carlo check of the conditional binomial rank-utility calculation. The
   scientific design, landscapes, stopping rule, and gates do not change.
+
+## ACL-004-POST — Artifact-only Gaussian bridge report
+
+- **Status:** post-confirmatory analysis; no additional shadows or RNG calls.
+- **Immutable input:** evidence commit
+  `355dd97472da4230eff877b9a3c8c7c4626057cd`, artifact
+  `evidence/ACL-004-confirmatory-3ba4be7ce1460a40c4ef0879018df58947c36edb.json`,
+  SHA-256 `3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a`.
+- **Frozen result:** H2 PASS; all 12 landscapes converged at 4096 shadows; minimum
+  mean Fisher cosine `0.9999523237518517`; minimum covariance Fisher cosine
+  `0.9995521999195026`; threshold `0.99`; target refit false; lambda scaling absent.
+- **Analysis:** verify immutable bytes/envelope; reconstruct every stopped mean from
+  stored chunk sums and every first/second half mean from disjoint chunks; reproduce
+  all separate-block and joint cosines; summarize stored H1 Q10/median/Q90/fraction
+  positive and coordinate standard errors; inspect no new lambda or objective class.
+- **Interpretation rule:** confirmation supports the restricted Gaussian finite-lambda
+  expected-direction bridge only. It is a second adaptive-system class with predictive
+  content, but no categorical quantity was transported into it, so it does not yet
+  satisfy cross-class no-refit transport.
+- **Allowed files:** `TASK_LEDGER.md`, an artifact-only analyzer and tests,
+  `analysis/ACL-004-confirmatory/`, and bridge-ledger status updates.
+- **Acceptance tests:** wrong hash fails; chunk reconstruction is exact; block cosines
+  and H2 minima reproduce; report is deterministic; full pytest, Ruff, and wheel pass.
+- **Stop conditions:** evidence bytes change; reproduction disagrees; analysis requires
+  new shadows/refitting; or Gaussian scope is overstated as cross-class transport.

@@ -1,0 +1,44 @@
+{
+  "analysis_kind": "artifact-only-post-confirmatory",
+  "confirmed": {
+    "all_landscapes_converged": true,
+    "approved_preregistration_sha": "3ba4be7ce1460a40c4ef0879018df58947c36edb",
+    "covariance_block_minimum_fisher_cosine": 0.9995521999195026,
+    "evidence_commit": "355dd97472da4230eff877b9a3c8c7c4626057cd",
+    "evidence_sha256": "3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a",
+    "h2_threshold": 0.99,
+    "h2_verdict": "PASS",
+    "joint_cosine_gating": false,
+    "maximum_final_cosine_reproduction_error": 0.0,
+    "maximum_h1_summary_reproduction_error": 0.0,
+    "maximum_stopped_mean_reproduction_error": 0.0,
+    "mean_block_minimum_fisher_cosine": 0.9999523237518517
+  },
+  "descriptive_h1": {
+    "covariance_fraction_positive_range": [
+      0.84130859375,
+      0.87939453125
+    ],
+    "covariance_median_range": [
+      0.5338286250140737,
+      0.7168815826986523
+    ],
+    "mean_fraction_positive_range": [
+      1.0,
+      1.0
+    ],
+    "mean_median_range": [
+      0.9530759417643984,
+      0.957030351149077
+    ]
+  },
+  "experiment_id": "ACL-004",
+  "new_shadows_generated": false,
+  "schema_version": 1,
+  "scope": {
+    "cross_class_quantity_transported": false,
+    "interpretation": "restricted finite-lambda Gaussian expected-direction bridge",
+    "lambda_scaling_studied": false
+  },
+  "target_refit": false
+}

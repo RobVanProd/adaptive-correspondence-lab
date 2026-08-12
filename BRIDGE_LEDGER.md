@@ -52,14 +52,22 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   parents, weights, parameterization, and learning rates.
 - **Content:** the independently constructed analytic Fisher direction should align
   with the converged conditional expected finite-lambda rank-mu update in each block.
-- **Stability:** the finite-lambda conditional expected direction has now been derived
-  independently from binomial rank utility, Gaussian score, and inverse Fisher blocks.
-  It matches a tensor-product score integral on toy fixtures. This is theorem/software
-  reproduction; confirmatory shadow alignment remains unresolved.
+- **Stability:** **preregistered confirmation.** The finite-lambda conditional expected
+  direction was derived independently from binomial rank utility, Gaussian score, and
+  inverse Fisher blocks. ACL-004 passed on 12 landscapes: all converged at 4096
+  shadows, with minimum mean/covariance Fisher cosines `0.999952324` and `0.999552200`
+  against the frozen `0.99` gates.
 - **Transport:** unresolved; no quantity has yet been frozen for no-refit transfer.
-- **Failure boundary:** unresolved.
-- **Status:** unresolved. Existing software is an escalation rung, not scientific
-  evidence for this edge.
+- **Failure boundary:** H2 is an expected-direction result, not a guarantee for one
+  finite population. Descriptive H1 single-shadow median cosine spans `0.953–0.957`
+  for mean and `0.534–0.717` for covariance; covariance alignment is positive in
+  `84.1%–87.9%` of shadows. Lambda scaling was not studied.
+- **Evidence:** ACL-004 evidence SHA-256
+  `3f97f7c4debbd65014e6ee337d9a8990500bad38ce0dfef2e8ad3048c74cd91a`;
+  report SHA-256
+  `b4d9864b6ab935aa39bc98ab1c144e13030ebad57931eaf4bc1cbcbaf3d2e019`.
+- **Status:** theorem reproduction + preregistered finite-lambda conditional-mean
+  confirmation. Cross-class transported prediction remains unresolved.
 
 ## Categorical natural gradient ↔ finite-state control
 
