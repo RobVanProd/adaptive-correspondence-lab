@@ -1,0 +1,10 @@
+conservative_absolute_gap,exact_signed_truth_cosine_gap,id,kind,left,resolvable,right,observed_signed_truth_cosine_gap,predicted_sign_reproduced,observed_gap_retains_minimum,gating_reproduced
+0.318132039038857,-0.34719767639481747,effective-count-N16,matched-effective-count-support-factorization,F01,True,F02,-0.34702159261631893,True,True,True
+0.25634886383323785,-0.2821636004725464,effective-count-N32,matched-effective-count-support-factorization,F03,True,F04,-0.2822862264038021,True,True,True
+0.11658916161638533,-0.14138383548836309,effective-count-N64,matched-effective-count-support-factorization,F05,True,F06,-0.14212551733423517,True,True,True
+0.001872136884627786,-0.019084113018402182,effective-count-N128,matched-effective-count-support-factorization,F07,False,F08,-0.018992123753145962,True,False,
+-0.01698001405972959,-0.03908140070481525,reward-shift-rare-context-N64,reward-shift,F05,False,O01,-0.03905103031322443,True,False,
+0.3199881663462255,-0.37479904533635516,reward-shift-rare-action-N64,reward-shift,F06,True,O02,-0.3739604485154499,True,True,True
+-0.031567217552478294,-0.001834579916428658,reward-shift-balanced-N32,reward-shift,O03,False,O04,-0.0016738062704935164,True,False,
+0.07791207709048537,-0.11115638806768713,conditioning-centered-N32,fisher-conditioning,K01,False,K02,-0.11057022220774015,True,True,
+0.04073281915826265,0.07492495234953123,conditioning-rotated-N64,fisher-conditioning,K03,False,K04,0.07613859353788832,True,False,

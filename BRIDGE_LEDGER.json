@@ -1,9 +1,12 @@
 {
   "schema_version": 1,
   "program_question": "Do restricted correspondences between adaptive dynamical systems support quantitative stability laws and no-refit cross-class transport, or only local coordinate equivalences?",
+  "phase_ii_outcome": "U3-correspondence-lattice",
+  "phase_ii_termination_reached": true,
   "status_vocabulary": [
     "theorem-reproduction",
     "exploratory",
+    "preregistered-unexecuted",
     "preregistered-confirmation",
     "failure",
     "unresolved"
@@ -227,6 +230,145 @@
         "preregistered-confirmation"
       ],
       "what_would_change_interpretation": "A new adaptive class that fails the frozen rule despite adequate support would show pair-specific rather than reusable structure; a support-conditioned angular-bias theorem would strengthen the reusable-class interpretation."
+    },
+    {
+      "id": "acl006-support-conditioned-plugin-bias",
+      "classes": [
+        "analytic-categorical-natural-direction",
+        "finite-sample-empirical-fisher-plugin-direction"
+      ],
+      "state_map": "one interior three-action policy block with an explicit outside-context sampling category",
+      "native_geometry": "analytic categorical Fisher metric on the centered-logit tangent",
+      "ideal_vector_field": "d = F^+ g = r - mean(r) 1, independently defined from the analytic score gradient and Fisher metric",
+      "realized_estimator": "hat(d) = hat(F)^+ hat(g) from the same fixed-N multinomial count table, undamped with rcond=1e-12",
+      "scope_assumptions": [
+        "three strictly positive action probabilities",
+        "fixed context probability and deterministic rewards",
+        "true-policy score rows",
+        "same-count empirical gradient and Fisher",
+        "no damping, fitted baseline, clipping, state update, or target refit"
+      ],
+      "transported_prediction": {
+        "status": "preregistered-confirmation",
+        "quantity": "exact finite multinomial conditional mean, covariance-normalized Fisher error, angular envelope, and split-half/truth dissociation",
+        "source": "closed finite count-table law",
+        "target": "independent PCG64 full-coordinate pseudoinverse implementation",
+        "target_refit": false,
+        "bundle": "preregistrations/ACL-006",
+        "result": "All exact-mean, dissociation, and stochastic contrast gates passed; maximum normalized direction score 1.707381, full-score median 0.609557, and Q90 1.272615.",
+        "approved_preregistration_sha": "a8b42042e397f1422866a0ca9496ee07abe0a42a",
+        "evidence_commit": "c94890dc8f361c0309802c0ef0173ec84e814d3d",
+        "artifact": "evidence/ACL-006-confirmatory-a8b42042e397f1422866a0ca9496ee07abe0a42a.json",
+        "artifact_sha256": "740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918",
+        "report": "analysis/ACL-006-confirmatory/summary.json",
+        "report_sha256": "0748482b3796b861267fdb5781bab11605cfc82263e4a6fdbd206df4b96acd6c"
+      },
+      "failure_boundary": {
+        "status": "proved-before-outcomes",
+        "result": "N p_min alone is insufficient when rare-context and rare-action support are factorized differently; support probabilities and Fisher spectrum without reward geometry are insufficient because additive reward shifts preserve d but generally change E[hat(d)]."
+      },
+      "falsifying_observation": "Any locked target whose sampled conditional mean violates its exact covariance-normalized five-score prediction or angular envelope; or any dissociation-stratum target that cannot become split-half aligned while remaining truth-misaligned at the fixed budget.",
+      "evidence_status": [
+        "theorem-reproduction",
+        "preregistered-confirmation"
+      ],
+      "structural_distance_note": "ACL-006 remains inside the ACL-005 contextual-bandit empirical-Fisher estimator family and adds mechanism, not an independent adaptive class."
+    },
+    {
+      "id": "acl006-plugin-npg-to-sequential-particle-filter-diagnostic",
+      "classes": [
+        "contextual-bandit-empirical-fisher-plugin-npg",
+        "sequential-bayesian-bootstrap-particle-filter"
+      ],
+      "state_map": "adaptive tangent at a frozen state maps to terminal belief displacement from an initial belief",
+      "native_geometry": "source categorical Fisher tangent versus target centered Euclidean belief tangent",
+      "ideal_vector_field": "source analytic natural direction versus target exact true-model Bayes posterior displacement",
+      "realized_estimator": "source empirical-Fisher pseudoinverse shadow versus target finite labeled-particle bootstrap-filter displacement",
+      "scope_assumptions": [
+        "independent estimator shadows around one frozen specification",
+        "nonzero ideal and estimator-mean directions",
+        "finite second moment in the declared native metric",
+        "exact or independently computed estimator expectation and covariance",
+        "fixed schedule and no target refit"
+      ],
+      "transported_prediction": {
+        "status": "preregistered-confirmation",
+        "quantity": "ACL-006 unchanged standardized mean-error gates and split-consistency/truth-dissociation thresholds",
+        "source": "ACL-006",
+        "target": "ACL-007 sequential inference",
+        "target_refit": false,
+        "bundle": "preregistrations/ACL-007",
+        "target_count": 16,
+        "dissociation_target_ids": ["A06", "A07", "A08"],
+        "resolvable_contrast_count": 9,
+        "outcomes_generated": true,
+        "result": "PASS: all standardized-mean, dissociation, and contrast gates passed; maximum score 1.815369, Type-7 median 0.796407, and Q90 1.212732"
+      },
+      "failure_boundary": {
+        "status": "preregistered-confirmation",
+        "result": "Three targets had negative truth alignment, down to -0.999797336, while locked dissociation targets reached half cosine at least 0.999994349. The transported rule predicts finite-mean estimation and bias/variance dissociation, not truth alignment or a common detailed bias mechanism."
+      },
+      "falsifying_observation": "A preregistered target violates the unchanged ACL-006 normalized mean or dissociation gates despite exact target moments and an independently verified particle simulator.",
+      "evidence_status": [
+        "theorem-reproduction",
+        "preregistered-confirmation"
+      ],
+      "evidence": {
+        "approved_preregistration_sha": "0b807af1d0428340f1e5267b1e41f6e636b49d29",
+        "evidence_commit": "c90954960b0fa099741ed9f35a61c5153b54c923",
+        "artifact": "evidence/ACL-007-confirmatory-0b807af1d0428340f1e5267b1e41f6e636b49d29.json",
+        "artifact_sha256": "54793bcb3a40d914bce2b5a567f6d25e638a75edf4a55ef724e156a93d372133",
+        "report": "analysis/ACL-007-confirmatory/summary.json",
+        "report_sha256": "b03ba716bcfd8bfbb1e73a64202b11d605812d081c88d2d9077f334032d34166"
+      },
+      "structural_distance_note": "Different estimator family, native metric, objective semantics, temporal structure, data generation, and adaptation role; ACL-007 is the first confirmed Phase-II class outside the Fisher-natural family."
+    },
+    {
+      "id": "entropy-fisher-to-burg-mirror-sensitivity",
+      "classes": [
+        "entropy-categorical-mirror-dynamics",
+        "burg-log-barrier-mirror-dynamics"
+      ],
+      "state_map": "shared interior finite simplex with different mirror retractions",
+      "native_geometry": "source Hessian diag(1/p) versus target Burg Hessian diag(1/p^2)",
+      "ideal_vector_field": "exact constrained linear-reward mirror step in each native geometry",
+      "realized_estimator": "deterministic post-step row-stochastic mutation I+epsilon(M-I)",
+      "scope_assumptions": [
+        "interior finite simplex",
+        "fixed reward and step size",
+        "smooth constrained mirror map",
+        "finite horizon",
+        "no projection or clipping"
+      ],
+      "transported_prediction": {
+        "status": "preregistered-confirmation",
+        "quantity": "ACL-003 zero-fit second-order truncated L1 prediction with unchanged epsilon regions and 10%/20% Type-7 median/Q90 gates",
+        "source": "ACL-003",
+        "target": "ACL-008 Burg mirror dynamics",
+        "target_refit": false,
+        "bundle": "preregistrations/ACL-008",
+        "confirmatory_target_count": 16,
+        "outcomes_generated": true,
+        "result": "PASS: Type-7 median 0.001965748 and Q90 0.005559435 against unchanged 0.10/0.20 gates"
+      },
+      "failure_boundary": {
+        "status": "preregistered-confirmation",
+        "result": "Nonuniform stress boundary: at epsilon 0.1 only 13/16 targets improved over first order; median second-order error 0.289224350 and maximum 2.772975981."
+      },
+      "falsifying_observation": "New-value Burg targets violate the copied gates or fail to improve over first order throughout the frozen local region.",
+      "evidence_status": [
+        "theorem-reproduction",
+        "preregistered-confirmation"
+      ],
+      "evidence": {
+        "approved_preregistration_sha": "086c8187caa641a7699ee07cff540a7d8e77ba18",
+        "evidence_commit": "c972d886edddc2dd36d60bd8229640a8eec405db",
+        "artifact": "evidence/ACL-008-confirmatory-086c8187caa641a7699ee07cff540a7d8e77ba18.json",
+        "artifact_sha256": "856be5ff685d65e19e029fc243a2ef40170ddf64a8b035dd1b543b484e0eba4f",
+        "report": "analysis/ACL-008-confirmatory/summary.json",
+        "report_sha256": "403c69904842d0d09ef6d9091b3e5133d684e0a25a084748b5e415770a84b0a1"
+      },
+      "structural_distance_note": "Same state space, objective semantics, and perturbation, but genuinely different native geometry and exact retraction; isolates geometry with minimal confounding."
     }
   ]
 }

@@ -827,3 +827,674 @@
 - **Recommended next action:** no additional experiment is required for the original
   question. Future work should pursue the support-conditioned angular-bias theorem,
   and any new empirical extension must begin as a separate preregistered program.
+
+## PHASE-II-AUDIT — Canonicalize and reclassify Phase I
+
+- **Task ID:** `PHASE-II-AUDIT`.
+- **Status:** complete; audit/protocol only, no new scientific outcomes.
+- **Observed state:** Phase I ended on branch `agent/acl003-preregistration` at synthesis
+  commit `358e18baccf29fd2959054be6bb25dd3869d8f77`; public `main` previously stopped at
+  `50ad814138e783f036ca4acdf95ce9ebbf644a90`, before ACL-003 through ACL-005.
+- **Hypothesis:** the public history, preregistration locks, immutable evidence bytes,
+  and artifact-only reconstructions are internally consistent and support the narrower
+  Phase-I classification required for Phase II.
+- **Frozen classification:** ACL-002 confirms its amended strict first-order region;
+  ACL-003 confirms the zero-fit second-order law on new categorical values and maps a
+  nonuniform stress boundary; ACL-004 is primarily theorem/software positive control
+  plus finite-population SNR evidence; ACL-005 is the load-bearing cross-estimator
+  transport result and falsifies the support-free diagnostic in its frozen stress
+  stratum.
+- **Canonicalization:** merge reviewed PR #1 without rewriting history or publishing a
+  release. Record the merge SHA as the canonical Phase-I public state.
+- **Numerical semantics:** immutable artifacts and lock files retain byte-level SHA-256
+  identity. Future analytic registries additionally use pinned CPython/NumPy and frozen
+  absolute/relative numerical tolerances; independent environments need mathematical
+  equivalence within tolerance, not cross-version bit identity.
+- **Allowed files:** `TASK_LEDGER.md`, Phase-II audit/protocol/environment files,
+  structural-distance ledgers, and README status. No evidence or old preregistration
+  file may change.
+- **Acceptance checks:** inspect complete history; verify each ACL-002–005 artifact hash,
+  approved SHA, evidence commit bytes, and bundle lock; run all artifact-only verifiers;
+  run full pytest, Ruff, coverage, and wheel build; confirm public merge and clean tree.
+- **Risks:** promoting ACL-004 from positive control to independent unification evidence;
+  conflating byte identity with numerical equivalence; silently changing an old claim;
+  publishing a release contrary to repository rules.
+- **Stop conditions:** any evidence hash or lock mismatch, public history divergence,
+  failing baseline, or need to alter Phase-I evidence.
+
+## ACL-006-MECH — Support-conditioned angular bias and consistency converse
+
+- **Task ID:** `ACL-006-MECH`.
+- **Status:** derivation/mechanism construction only; ACL-006 confirmatory targets and
+  random streams are forbidden until a later locked public preregistration is audited.
+- **Observed mechanism:** ACL-005 split-half means can converge to the estimator's own
+  biased expectation. Five of eight rare-cell stress blocks missed truth alignment even
+  though all stress landscapes satisfied the stopping rule.
+- **Hypothesis:** for the frozen undamped empirical-Fisher plug-in estimator, finite
+  categorical support permits an exact zero-fit decomposition of conditional-mean bias
+  into missing-identifiable-subspace and observed-support perturbation components, and
+  these quantities predict angular error across `N`, joint-cell support, Fisher
+  conditioning, and reward geometry.
+- **Frozen estimator semantics:** deterministic rewards; true-policy categorical scores;
+  fixed-`N` joint multinomial counts; empirical score gradient and Fisher from the same
+  counts; centered Moore-Penrose direction with `rcond=1e-12`; no damping, baseline fit,
+  clipping, target fit, or state update.
+- **Derivation target:** for support pattern `S` and Fisher-range projector `P_S`, use
+  the exact identity `hat(d)-d = -(I-P_S)d + (hat(d)-P_S d)`, then average over exact
+  multinomial support/count probabilities. Prove separately that two independent sample
+  means converge in Fisher cosine to one whenever their common nonzero mean exists,
+  whether or not that mean equals the analytic tangent.
+- **Independent oracle:** direct count-table score/Fisher accumulation and exhaustive
+  enumeration on small fixtures must agree with optimized support enumeration and
+  closed-form support probabilities before any preregistration.
+- **Allowed files:** this ledger, Phase-II theory/mechanism modules, tests, derivation
+  documents, and non-outcome software fixtures. No `preregistrations/ACL-006/` manifest
+  or evidence until the mechanism earns a frozen design.
+- **Acceptance checks:** failing tests first; exact probability mass; exhaustive versus
+  optimized expectation agreement; projector decomposition closure; analytic tangent
+  identity; self-consistency converse fixtures; float64 guards; full repository gate.
+- **Risks:** treating exact target enumeration as post-outcome fitting; defining support
+  only by `Np_min` when context/action factorization matters; hiding reward-offset bias;
+  producing a vacuous bound; confusing theorem reproduction with confirmatory breadth.
+- **Stop conditions:** damping enters the estimator; an analytic comparator calls sampled
+  code; a target outcome is generated; support decomposition fails to close; or a new
+  semantic choice is needed after data exist.
+
+### ACL-006 mechanism completion record
+
+- **Outcome status:** theorem/mechanism checkpoint only. No ACL-006 manifest, target
+  random stream, confirmatory row, or evidence artifact exists.
+- **Exact finite law:** exhaustive four-cell multinomial enumeration computes the
+  undamped plug-in direction's expectation, covariance, Fisher angular bias, support
+  distribution, and two-term error decomposition without fitted constants.
+- **Proved results:** exact support-pattern probabilities; Fisher-orthogonal support and
+  observed-support error decomposition; the split-half self-consistency converse; and
+  a reward-shift counterexample showing that `N p_min`, support probabilities, and the
+  analytic Fisher spectrum do not determine plug-in angular bias by themselves.
+- **Independent verification:** optimized tangent-coordinate enumeration agrees with
+  direct count-table score/Fisher accumulation; enumerated support mass agrees with
+  inclusion-exclusion; decomposition vectors and squared Fisher errors close at frozen
+  numerical tolerances.
+- **Classification:** the exact finite sum is a zero-fit law for this finite estimator
+  family. A compact nonvacuous angular bound remains a candidate, not a proved theorem.
+  Any subsequent stochastic execution is theorem/software verification plus a test of
+  the preregistered dissociation and reductions, not independent unification evidence.
+- **Design-only observations:** pre-preregistration fixtures show that equal `N p_min`
+  can have materially different bias when rarity is allocated to context versus action,
+  and additive reward shifts can rotate the plug-in expectation while preserving the
+  analytic tangent. These observations constrain ACL-006 design but are not outcomes.
+- **Verification:** 163 tests passed; Ruff passed; total coverage 84%; wheel build
+  passed. ACL-002 through ACL-005 artifact hashes remain unchanged.
+- **Recommended next action:** publish this mechanism checkpoint, then freeze new
+  ACL-006 values that independently vary effective count, support factorization,
+  conditioning, and reward offset before drawing any confirmatory shadows.
+
+## ACL-006 — Exact support-conditioned bias and consistency dissociation
+
+- **Task ID:** `ACL-006`.
+- **Status:** preregistration construction only; no target shadow may be generated until
+  the locked bundle is committed publicly and passes an adversarial exact-head audit.
+- **Question:** does the exact finite multinomial law predict the undamped empirical-
+  Fisher plug-in estimator's conditional-mean angular bias, and can an estimator become
+  internally split-half consistent while remaining stably misaligned with the analytic
+  natural direction?
+- **Frozen system:** one isolated three-action categorical Fisher block with an outside-
+  context category; fixed joint sample count per shadow; deterministic rewards;
+  true-policy scores; same-count empirical gradient and Fisher; centered Moore-Penrose
+  direction with `rcond=1e-12`; no damping, fitted baseline, clipping, state update, or
+  target refit.
+- **Zero-fit comparator:** exact four-cell multinomial enumeration from the published
+  ACL-006 mechanism checkpoint. For each target it freezes `m=E[hat(d)]`, covariance,
+  support probabilities, decomposition terms, and `cos_F(m,d)` before RNG outcomes.
+- **Independent realized path:** PCG64 multinomial draws followed by direct full three-
+  coordinate empirical Fisher/gradient construction and a Hermitian pseudoinverse. It
+  must not call the tangent-coordinate exact enumerator.
+- **Targets:** 16 new deterministic targets. Eight matched-support-factorization cells
+  cross `N={16,32,64,128}` with rare-context and rare-action families having identical
+  minimum joint-cell probability; four reward-offset cells include centered/shifted
+  pairs with the same analytic tangent; four conditioning/orientation cells vary the
+  positive Fisher condition number at fixed `N`, context probability, minimum action
+  probability, and reward. Values and seeds are frozen in `manifest.json`.
+- **Replication schedule:** fixed checkpoints `8192,32768,131072,262144`; chunk size
+  `4096`; every target reaches the final checkpoint. There is no outcome-dependent
+  stopping, exclusion, or budget increase.
+- **Primary estimand:** for full and disjoint-half means, Fisher error relative to the
+  exact finite expectation divided by its exact RMS Fisher standard error. Every score
+  must be at most `5`; across full-mean target scores the Type-7 median must be at most
+  `1.5` and Q90 at most `2.5`. Each observed truth cosine must lie inside the frozen
+  angular envelope implied by the five-score Fisher ball.
+- **Dissociation stratum:** computed only from the analytic registry. A target qualifies
+  when exact truth cosine is at most `0.90`, its frozen five-score angular upper bound is
+  at most `0.95`, and the two-half geometric lower bound is at least `0.995`. PASS for
+  the dissociation prediction requires every such target to end with split-half cosine
+  at least `0.995` while full-mean truth cosine is at most `0.95`.
+- **Reduction counterexamples:** matched contrasts are marked resolvable only when their
+  exact cosine gap minus both frozen angular envelopes is at least `0.10`. Every marked
+  contrast must reproduce the predicted sign and retain an observed gap of at least
+  `0.10`. Unresolvable contrasts remain reported and non-gating.
+- **Verdicts:** report exact-mean prediction PASS/FAIL, dissociation PASS/FAIL, and
+  stochastic contrast reproduction PASS/FAIL separately. Report the one-parameter
+  `N p_min` and support-only laws as falsified by exact counterexample, not as failed
+  stochastic fits. PASS is theorem/software reproduction and mechanism validation, not
+  a new cross-class unification result.
+- **Numerical/environment guards:** CPython `3.13.14`, NumPy `2.5.2`, Windows AMD64,
+  float64, and PCG64 are execution requirements. Artifact bytes remain SHA-256 exact;
+  independently recomputed analytic registry floats use frozen `2e-12` absolute and
+  relative tolerances. Non-finite values, invalid probability mass, insufficient mean
+  norm for an envelope, or failed independent-oracle checks abort before outcomes.
+- **Execution guards:** exact approved SHA; full clean porcelain including untracked
+  files; exact canonical bundle and locked directory membership; previously nonexistent
+  SHA-derived evidence path; exact environment; analytic-only registry; and embedded
+  terminal RNG state and sufficient statistics. Execute exactly once.
+- **Allowed files:** ACL-006 module/tests/CLI, this ledger, theorem and bridge ledgers,
+  `preregistrations/ACL-006/`, and preregistration documentation. No evidence artifact
+  or post-outcome analysis in this task.
+- **Acceptance tests:** failing regressions first; direct-count and optimized exact oracle
+  parity; target/contrast validation; tolerant registry reproduction; score/envelope and
+  dissociation verdicts; stress/non-gating semantics; clean-worktree/canonical-path/lock/
+  environment guards; sufficient-statistic reconstruction; full pytest, Ruff, coverage,
+  wheel, and analytic-only validation.
+- **Risks:** making stochastic theorem reproduction sound like independent discovery;
+  treating `N p_min` as sufficient after its exact counterexample; using target RNG to
+  choose values; a reward offset acting as an unacknowledged baseline change; or allowing
+  split consistency to rescue truth misalignment.
+- **Stop conditions:** any shadow is sampled before public approval; damping or baseline
+  fitting enters; the exact comparator calls the sampled path; thresholds or targets
+  change after outcomes; or a required definition remains ambiguous.
+
+### ACL-006 preregistration completion record
+
+- **Status:** frozen preregistration awaiting adversarial audit of the exact public
+  commit. `outcomes_generated` is false; the analytic registry has `shadow_count: 0`.
+- **Registry:** 16 targets, seven analytically predeclared dissociation targets, and four
+  analytically resolvable gating contrasts. All use values absent from ACL-005 and from
+  the ACL-006 mechanism fixtures.
+- **Pre-outcome defect corrected:** the initial design used a `4096` checkpoint with a
+  `4096` chunk, which cannot form two complete chunk-aligned halves. Before lock and
+  before any RNG use, the schedule was corrected to
+  `8192,32768,131072,262144`; the final precision and fixed budget were unchanged.
+- **Independent path:** tests compare the vectorized full-coordinate stochastic kernel
+  with a scalar direct Fisher/gradient/pseudoinverse oracle and forbid the stochastic
+  estimator from calling exact multinomial enumeration.
+- **Frozen analytic classification:** dissociation IDs are `F02,F04,F06,O02,K01,K02,K03`;
+  resolvable contrast IDs are `effective-count-N16`, `effective-count-N32`,
+  `effective-count-N64`, and `reward-shift-rare-action-N64`.
+- **Validation:** analytic-only `acl006-validate` passes with tolerant registry
+  reproduction (`atol=rtol=2e-12`); 179 tests pass; Ruff passes; total coverage is 84%;
+  sdist and wheel builds pass; all prior evidence hashes remain immutable.
+- **Execution hold:** do not invoke `acl006-run` until this exact public commit has been
+  audited for manifest semantics, lock closure, canonical path/SHA binding, numerical
+  guards, independent oracle, analysis order, and outcome-free state.
+
+## ACL-006-POST — Artifact-only support-bias report
+
+- **Task ID:** `ACL-006-POST`.
+- **Immutable input:** preregistration SHA
+  `a8b42042e397f1422866a0ca9496ee07abe0a42a`; evidence commit
+  `c94890dc8f361c0309802c0ef0173ec84e814d3d`; artifact
+  `evidence/ACL-006-confirmatory-a8b42042e397f1422866a0ca9496ee07abe0a42a.json`;
+  SHA-256 `740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918`.
+- **Observed frozen verdicts:** exact-mean prediction PASS; dissociation prediction
+  PASS; stochastic contrast reproduction PASS; no target refit.
+- **Hypothesis for reporting:** the stored sufficient statistics reproduce every frozen
+  checkpoint and verdict exactly; the result validates the finite estimator mechanism
+  but does not add a structurally independent adaptive class.
+- **Allowed files:** this ledger, artifact-only ACL-006 analyzer/tests,
+  `analysis/ACL-006-confirmatory/`, theorem/bridge/structural ledgers, README, and draft
+  PR metadata. No evidence or preregistration bytes may change; no RNG call is allowed.
+- **Acceptance tests:** wrong artifact hash fails; embedded approved SHA/lock/registry
+  match; every checkpoint reconstructs from chunks; score, cosine, dissociation, and
+  contrast summaries reproduce; deterministic report package; full pytest, Ruff,
+  coverage, wheel, and immutable-hash audit.
+- **Risks:** describing exact-law verification as broad discovery; treating split-half
+  consistency as truth certification; hiding exact scalar-law counterexamples behind a
+  PASS; or accidentally regenerating the one-shot artifact.
+- **Stop conditions:** evidence hash changes; any target shadow or RNG call occurs; a
+  verdict or threshold is recomputed under altered semantics; or a posthoc fit is added.
+
+### ACL-006 post-confirmatory completion record
+
+- **Artifact reconstruction:** exact. All 64 stored checkpoints reconstruct from chunk
+  sufficient statistics with zero maximum vector discrepancy; embedded registry, lock,
+  environment, approved SHA, and all three verdicts match.
+- **Confirmed:** exact-mean prediction PASS; dissociation PASS; contrast reproduction
+  PASS. Maximum full/half normalized direction score `1.7073805833110742`; Type-7
+  full-score median `0.6095572205053943`; Q90 `1.272615265047392`.
+- **Boundary:** seven predeclared targets ended with split-half Fisher cosine at least
+  `0.9999958897534883` while truth cosine ranged from `0.483875704855481` to
+  `0.8806422349960198`. Split consistency is not a truth certificate.
+- **Falsified reductions:** `N p_min` alone; and support probabilities plus analytic
+  Fisher spectrum without reward/baseline geometry. The exact finite count-table law
+  remains predictive; a useful compact bound remains open.
+- **Classification:** theorem/software reproduction and mechanism validation in the
+  existing contextual-bandit empirical-Fisher estimator class. Independent Phase-II
+  breadth remains unchanged.
+- **Report:** `analysis/ACL-006-confirmatory/summary.json`, SHA-256
+  `0748482b3796b861267fdb5781bab11605cfc82263e4a6fdbd206df4b96acd6c`.
+- **Decision:** move outside the Fisher-natural estimator family. The next experiment
+  must freeze a nontrivial no-refit quantity from existing evidence before outcomes in
+  a structurally distinct class; otherwise record non-transportability as a boundary.
+
+## ACL-007-MECH — Sequential Bayesian particle-filter bias
+
+- **Task ID:** `ACL-007-MECH`.
+- **Status:** derivation/mechanism construction only; no confirmatory particle-filter
+  streams or `preregistrations/ACL-007/` bundle until the exact oracle earns a design.
+- **Competing explanations:** (H-broad) ACL-006's dimensionless standardized-mean and
+  self-consistency/truth-dissociation law is estimator-agnostic enough to survive a
+  change to sequential inference and Euclidean belief geometry; (H-island) it depends
+  materially on Fisher-natural plug-in structure and does not furnish a useful frozen
+  prediction outside that island.
+- **Frozen substrate:** a standalone three-state hidden Markov model; row-stochastic
+  transition; strictly positive observation likelihood at each step; interior initial
+  belief; finite bootstrap particle filter with multinomial resampling after every
+  observation; centered Euclidean belief-update tangent; no reward, objective gradient,
+  Fisher metric, natural gradient, damping, or neural approximation.
+- **Ideal object:** exact Bayes-filter terminal belief under the true model, with ideal
+  update `d=b_T-b_0`.
+- **Realized estimator:** finite-particle terminal empirical belief under a separately
+  declared approximate model, with `hat(d)=hat(b_T)-b_0`. Model misspecification and
+  finite-particle noise are explicit and separate.
+- **Exact oracle:** enumerate all three-state particle-count compositions; form the
+  exact count-state Markov kernel from grouped transitions followed by likelihood
+  weighting and multinomial resampling; propagate the full count distribution to obtain
+  `m=E[hat(d)]`, covariance, support-loss probabilities, and truth cosine.
+- **Independent implementation:** simulate labeled particles with per-particle transition
+  uniforms and per-particle resampling uniforms. It must not call the count-state kernel
+  or use count-level multinomial resampling.
+- **Transport candidate:** copy ACL-006's complete dimensionless rule unchanged:
+  fixed checkpoints `8192,32768,131072,262144`; full/half standardized Euclidean mean
+  score maximum `5`; Type-7 full-score median `1.5`; Q90 `2.5`; dissociation membership
+  exact truth cosine at most `0.90` with five-score upper bound at most `0.95` and
+  two-half lower bound at least `0.995`; observed final half cosine at least `0.995`
+  while truth cosine remains at most `0.95`. No ACL-007 outcome may tune these values.
+- **Eight-box bridge:** state map = true/particle beliefs; native geometry = centered
+  Euclidean; ideal tangent = exact Bayes belief update; realized estimator = sequential
+  bootstrap PF update; scope = finite positive HMM and fixed observations; transported
+  prediction = ACL-006 diagnostic; boundary = support/misspecification/temporal coupling;
+  falsifier = frozen targets outside the copied gates.
+- **Structural distance:** different estimator family, native metric, objective semantics,
+  temporal structure, data generation, and adaptation role. This is inference rather
+  than reward optimization and qualifies as outside the Fisher-natural family.
+- **Allowed files:** this ledger, sequential-inference mechanism module/tests, derivation
+  docs, theorem/bridge/structural ledgers, and non-outcome toy fixtures. No ACL-007
+  evidence or target stream.
+- **Acceptance checks:** failing regression first; exact distribution mass; small-`N`
+  brute-force path oracle; grouped-transition kernel normalization; exact-vs-independent
+  Monte Carlo software fixture; model-validation failures; bias/covariance identities;
+  full pytest, Ruff, coverage, wheel, and immutable-evidence audit.
+- **Risks:** calling generic Monte Carlo convergence adaptive unification; hiding Fisher
+  geometry inside the metric; using count-level sampling in both paths; selecting
+  confirmatory models from sampled pilots; or mistaking misspecified Bayes truth for the
+  declared true comparator.
+- **Stop conditions:** a target outcome is sampled; reward/Fisher machinery enters; the
+  exact comparator calls the particle simulator; exact probability mass fails; or the
+  sequential semantics require an unfrozen choice.
+
+### ACL-007 mechanism completion record
+
+- **Outcome status:** theorem/mechanism checkpoint only. No ACL-007 manifest, target
+  seed, confirmatory particle stream, registry, lock, or evidence artifact exists.
+- **Exact construction:** the bootstrap particle filter is represented as a finite
+  Markov chain over three-state count compositions. Grouped transition convolution and
+  observation-weighted multinomial resampling yield exact terminal mean, covariance,
+  support distribution, and Euclidean truth alignment.
+- **Independent oracle:** brute-force labeled paths at `N=2,T=1` agree with count-state
+  moments; a labeled-particle simulator that uses individual transition/resampling
+  uniforms approaches the exact mean on a 200,000-shadow software fixture and never
+  calls count kernels.
+- **Transport candidate earned:** ACL-006's whole standardized-mean and dissociation
+  rule can be copied without coefficient or threshold changes. Only the declared native
+  metric changes from Fisher to centered Euclidean geometry.
+- **Classification:** exact particle moments are theorem/software reproduction. The
+  future hypothesis-bearing result is whether the unchanged ACL-006 diagnostic
+  transports across estimator, metric, semantics, and temporal structure.
+- **Verification:** 187 tests passed; Ruff passed; total coverage 84%; sdist and wheel
+  builds passed; ACL-002 through ACL-006 artifacts remain byte-identical.
+- **Recommended next action:** publish this mechanism checkpoint, then choose new HMM
+  target values exclusively by analytic count-state quantities, freeze ACL-007, and
+  audit its exact public SHA before generating any target particles.
+
+## ACL-007 — No-refit transport into sequential Bayesian inference
+
+- **Task ID:** `ACL-007`.
+- **Status:** preregistration construction only; no target particle stream until a locked
+  public checkpoint is adversarially audited and approved.
+- **Source:** ACL-006 preregistration
+  `a8b42042e397f1422866a0ca9496ee07abe0a42a`, evidence commit
+  `c94890dc8f361c0309802c0ef0173ec84e814d3d`, artifact SHA-256
+  `740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918`,
+  and report SHA-256
+  `0748482b3796b861267fdb5781bab11605cfc82263e4a6fdbd206df4b96acd6c`.
+- **Transported rule:** copy unchanged from ACL-006: fixed replication checkpoints
+  `8192,32768,131072,262144`; chunk `4096`; full and both half standardized native-
+  metric mean scores each at most `5`; Type-7 full-score median at most `1.5` and Q90
+  at most `2.5`; exact truth cosine at most `0.90`, five-score upper bound at most
+  `0.95`, and two-half lower bound at least `0.995` define dissociation; final observed
+  half cosine at least `0.995` with truth cosine at most `0.95`; contrast gap `0.10`.
+- **Target class:** two new three-state true HMMs and 16 deterministic target filters.
+  Model A crosses correct, reversed-observation, flat-observation, and missing-final-
+  observation filters over frozen particle counts. Model B supplies more adverse
+  direction/variance geometry. No model value is reused from ACL-007 mechanism fixtures.
+- **Primary estimand:** Euclidean centered-belief analogue of ACL-006's standardized
+  full/half mean error against exact count-state `m,Σ`, with all copied gates applied.
+  All targets gate; no target stratum can rescue another.
+- **Dissociation:** membership is frozen from the exact registry. PASS requires every
+  member to satisfy the copied half/truth thresholds. An empty real stratum is INVALID.
+- **Contrasts:** exact pre-outcome cosine gaps and copied five-score envelopes determine
+  resolvability. Every resolvable contrast must reproduce the predicted sign and retain
+  observed absolute gap at least `0.10`; other contrasts are non-gating.
+- **Independent path:** labeled particles and individual inverse-CDF uniforms only. The
+  confirmatory module may not call count-state kernels during RNG execution.
+- **Interpretation:** a full PASS is a preregistered no-refit transport across estimator
+  family, native metric, optimization-to-inference semantics, and sequential structure.
+  The exact target moments themselves remain theorem/software reproduction. A FAIL
+  narrows the diagnostic to the Fisher/plugin island or locates a sequential boundary.
+- **Environment/numerics:** same pinned Phase-II environment as ACL-006; float64 and
+  PCG64; registry recomputation uses `2e-12` absolute/relative tolerances; immutable
+  artifacts and bundle files use byte SHA-256 identity.
+- **Execution guards:** canonical bundle and nonexistent SHA-derived evidence path;
+  exact approved HEAD; fully clean porcelain including untracked files; exact bundle
+  membership/lock; source artifact/report hashes; pinned environment; frozen analytic
+  strata; sufficient statistics and terminal RNG states; exactly one run.
+- **Allowed files:** ACL-007 module/tests/CLI, this ledger, bridge/structural/theorem
+  ledgers, `preregistrations/ACL-007/`, and preregistration docs. No target evidence or
+  post-outcome report.
+- **Acceptance tests:** failing regressions first; exact target registry; source anchor;
+  target/contrast IDs and semantics; tolerant registry; copied thresholds; nonempty
+  dissociation; independent-path guard; chunk/checkpoint reconstruction; all verdicts;
+  environment/canonical SHA/path/worktree/lock failures; full repository gate.
+- **Risks:** claiming generic Monte Carlo normalization as a theory of adaptation;
+  allowing exact target moments to count as discovery; selecting only easy filters;
+  confusing approximate-filter truth with true-model Bayes truth; or silently changing
+  Euclidean geometry after outcomes.
+- **Stop conditions:** any labeled target particle is drawn before approval; a source
+  constant changes; target values or strata change after outcomes; the target simulator
+  calls exact kernels; or the evidence path already exists.
+
+### ACL-007 preregistration completion record
+
+- **Status:** frozen preregistration awaiting adversarial audit of the exact public
+  commit. `outcomes_generated` is false and the exact registry has `shadow_count: 0`.
+- **Frozen registry:** 16 targets from two new HMMs; dissociation IDs `A06,A07,A08`;
+  all nine declared contrasts are analytically resolvable and gating.
+- **No-refit source anchor:** ACL-006's checkpoints, chunk size, standardized-score
+  gates, Type-7 summaries, dissociation thresholds, and contrast gap are copied
+  unchanged, with source evidence/report hashes validated locally.
+- **Independent path:** the exact count-composition Markov law and the labeled-particle
+  simulator use different computational routes. The sampled path is tested to reject
+  calls into exact target moments; chunk statistics, target metadata, checkpoints,
+  terminal RNG state, and final summaries are reconstructively validated.
+- **Bundle:** six semantic/analytic files are SHA-256 locked; the lock is generated
+  last and full directory membership is enforced. The locked analytic registry uses
+  `2e-12` absolute/relative numerical-equivalence tolerances and byte hashes remain
+  authoritative for immutable files.
+- **Validation:** 198 tests pass; Ruff passes; total coverage is 84%; sdist and wheel
+  builds pass; analytic-only validation reports 16 targets, three dissociation cases,
+  nine resolvable contrasts, and no outcomes. ACL-002 through ACL-006 evidence hashes
+  remain byte-identical.
+- **Execution hold:** do not invoke `acl007-run` until this exact public commit has been
+  pushed, its public SHA and lock closure have been independently rechecked, and the
+  canonical SHA-derived evidence path is confirmed nonexistent.
+
+## ACL-007-POST — Artifact-only sequential-inference report
+
+- **Task ID:** `ACL-007-POST`.
+- **Immutable input:** preregistration SHA
+  `0b807af1d0428340f1e5267b1e41f6e636b49d29`; evidence commit
+  `c90954960b0fa099741ed9f35a61c5153b54c923`; artifact
+  `evidence/ACL-007-confirmatory-0b807af1d0428340f1e5267b1e41f6e636b49d29.json`;
+  SHA-256 `54793bcb3a40d914bce2b5a567f6d25e638a75edf4a55ef724e156a93d372133`.
+- **Observed frozen verdicts:** overall transport PASS; standardized-mean PASS;
+  dissociation PASS; contrast reproduction PASS; no target refit.
+- **Hypothesis for reporting:** stored chunk sufficient statistics reproduce every
+  target checkpoint and frozen verdict; the unchanged ACL-006 diagnostic transported
+  into sequential Euclidean Bayesian inference, but generic Monte Carlo normalization
+  alone is not yet a theory of adaptive dynamics.
+- **Allowed files:** this ledger, artifact-only ACL-007 analyzer/tests,
+  `analysis/ACL-007-confirmatory/`, README, theorem/bridge/structural ledgers, and draft
+  PR metadata. No evidence or preregistration byte may change; no RNG call is allowed.
+- **Acceptance tests:** wrong artifact hash fails; embedded SHA/lock/source/registry
+  identities match; every checkpoint reconstructs from chunks; all frozen component
+  verdicts reproduce; deterministic raw derived tables and summary; full pytest, Ruff,
+  coverage, wheel, and immutable-hash audit.
+- **Risks:** inflating a finite-mean diagnostic into a universal adaptive law; counting
+  exact target moments as discovery; ignoring adverse Model-B cases; or hiding the
+  operational shell timeout even though the canonical artifact completed atomically.
+- **Stop conditions:** evidence hash changes; any particle/RNG call occurs; a verdict is
+  recomputed under altered semantics; or a target coefficient/threshold is refit.
+
+### ACL-007 post-confirmatory completion record
+
+- **Artifact reconstruction:** exact. All 64 stored checkpoints reconstruct from chunk
+  sufficient statistics with zero maximum vector discrepancy; embedded registry, lock,
+  source evidence, environment, approved SHA, and all verdicts match.
+- **Confirmed:** overall no-refit transport PASS; standardized-mean PASS; dissociation
+  PASS; all nine contrasts PASS. Maximum full/half standardized score `1.8153685068`;
+  Type-7 full-score median `0.7964069189`; Q90 `1.2127316616`.
+- **Boundary retained:** the three dissociation targets reached minimum split-half
+  Euclidean cosine `0.9999943486` while truth cosine was only `0.3449067857` to
+  `0.3789702232`. Three full-benchmark targets had negative truth alignment, including
+  a minimum `-0.9997973360`; self-consistency still does not certify truth.
+- **Execution provenance:** the runner was invoked once. The shell harness timed out at
+  five seconds after the atomic canonical artifact had completed. The artifact was
+  preserved and committed untouched; no rerun occurred.
+- **Classification:** first preregistered no-refit transport outside the Fisher-natural
+  family, across estimator, metric, inference semantics, and temporal structure. The
+  exact target moments remain controls, and the transported finite-mean normalization
+  alone is not a unified adaptive-dynamics theory.
+- **Report:** `analysis/ACL-007-confirmatory/summary.json`, SHA-256
+  `b03ba716bcfd8bfbb1e73a64202b11d605812d081c88d2d9077f334032d34166`.
+- **Decision:** do not terminate Phase II yet. Test a mechanism-bearing normalization
+  in a third structurally distinct class, or obtain a controlled failure that maps the
+  breadth boundary.
+
+## ACL-008-MECH — Non-Fisher mirror-retraction sensitivity
+
+- **Task ID:** `ACL-008-MECH`.
+- **Observed behavior:** ACL-003 confirmed a zero-fit second-order mutation response in
+  Shannon-entropy/categorical-Fisher geometry. ACL-007 confirmed a different finite-mean
+  stochastic diagnostic in Euclidean sequential inference. No mechanism-bearing local
+  curvature law has yet crossed into a non-Fisher optimization geometry.
+- **Competing explanations:** (H-geometry-general) the second-order response is a local
+  retraction law whose derivative recurrence and practical radius survive a change of
+  mirror geometry; (H-entropy-island) ACL-003's useful radius depends on exponential/
+  Fisher structure even though a formal Taylor expansion exists elsewhere.
+- **Frozen substrate:** three-state simplex, linear reward, Burg log-barrier mirror map
+  `h(p)=-sum(log p_i)`, exact equality constraint, fixed step size, and the same post-step
+  row-stochastic mutation operator. No Fisher metric or exponential update is used.
+- **Map and ideal field:** the clean constrained mirror step solves
+  `q_i^{-1}=p_i^{-1}-eta*r_i+nu`, with `nu` fixed by `sum(q)=1`. The perturbed recurrence
+  is `q_{t+1}=F_B(q_t)(I+epsilon(M-I))`.
+- **Mechanism prediction:** differentiate the implicit normalization to construct
+  `D F_B[p]v` and `D^2 F_B[p][v,v]`, then propagate the same abstract first/second
+  recurrence as ACL-003. The finite-epsilon prediction is the zero-fit norm of
+  `epsilon*s + epsilon^2*u/2`.
+- **Independent oracle:** a direct signed-epsilon Burg trajectory and symmetric five-
+  point finite differences; it must not call the sensitivity recurrence.
+- **Allowed files:** this ledger, a standalone Burg-mirror module/tests, derivation and
+  bridge/structural/theorem ledgers. No ACL-008 manifest, seed, epsilon-positive target
+  outcome, lock, or evidence artifact.
+- **Acceptance tests:** failing regression first; simplex/duality residuals; analytic
+  first/second derivatives versus five-point differences; non-equivalence to the
+  entropy map; identity mutation; full pytest, Ruff, coverage, and build.
+- **Risks:** relabeling an equivalent coordinate map as a new geometry; using finite
+  differences as the scientific comparator; choosing target values from epsilon-positive
+  pilots; or mistaking the existence of Taylor expansion for a useful transported radius.
+- **Stop conditions:** the Burg step is algebraically identical to entropy MWU; an
+  implicit root is nonunique in the frozen interior scope; an epsilon-positive target is
+  evaluated before preregistration; or a derivative definition remains ambiguous.
+
+### ACL-008 mechanism completion record
+
+- **Outcome status:** derivation/mechanism checkpoint only. No ACL-008 manifest,
+  target catalog, epsilon-positive target row, lock, or evidence artifact exists.
+- **Geometry:** Burg Hessian `diag(1/p^2)` and its rational constrained retraction are
+  demonstrably different from entropy/Fisher MWU at the same state, reward, and step.
+- **Derivatives:** implicit first and second directional formulas preserve tangent mass
+  and induce the general post-step mutation recurrence.
+- **Independent oracle:** direct signed-epsilon trajectories plus symmetric five-point
+  differences agree with the analytic recurrence on the frozen software fixture.
+- **Transport candidate earned:** ACL-003's complete zero-fit second-order L1 rule,
+  local/stress regions, within-landscape maximum, and 10%/20% Type-7 gates can be copied
+  without fitting. The formal Taylor law is proved; the practical radius remains open.
+- **Verification:** 205 tests pass; Ruff passes; total coverage 84%; sdist and wheel
+  build; ACL-002 through ACL-007 artifacts remain immutable.
+- **Recommended next action:** publish this mechanism checkpoint, select entirely new
+  Burg targets using only clean/derivative quantities, then freeze and audit ACL-008
+  before any epsilon-positive trajectory.
+
+## ACL-008 — Non-Fisher second-order radius transport
+
+- **Task ID:** `ACL-008`.
+- **Status:** preregistration construction only; no epsilon-positive target trajectory
+  until a locked public checkpoint is adversarially audited and approved.
+- **Source:** ACL-003 preregistration `501464f3f6be07f6d813d94aefb818c461a3d5c7`,
+  evidence commit `b15d77600369d559cb586a3bb54924737758e038`, artifact
+  SHA-256 `1f80c3f5aba4089c67bbfec1ddd6eff53f7a6d42c658436dff0f7c82a1cf8c99`,
+  and report summary SHA-256
+  `eee21af8f75c7eb5d3a35fdb9d53b1549f275eca52c745a85c130538583128f4`.
+- **Transported rule:** copy unchanged `eta=0.05`, horizons `1,5,20,50`, the entire
+  epsilon grid/regions, zero-fit second-order truncated-vector L1 prediction, maximum
+  local within-landscape reducer, Type-7 median `<=0.10`, Q90 `<=0.20`, prediction
+  floor, and identity-control semantics.
+- **Target class:** deterministic constrained Burg log-barrier mirror dynamics with
+  post-step mutation, using new state/reward/mutation catalog values not present in
+  ACL-003 and not selected from epsilon-positive target outcomes.
+- **Primary estimand:** each regular target's maximum relative error over
+  `epsilon=0.001,0.003,0.01` between actual endpoint L1 and the analytic zero-fit Burg
+  second-order prediction at `T=20`.
+- **Independent oracle:** the runner compares bisection-normalized iterative trajectories
+  with a polynomial-root Burg-normalizer path at every stored row.
+- **Interpretation:** PASS means ACL-003's practical local curvature radius transported
+  across a genuinely changed mirror geometry; FAIL bounds that radius or identifies an
+  entropy/Fisher island. The formal Taylor recurrence is a control, not the claim.
+- **Allowed files:** ACL-008 module/tests/CLI, this ledger, bridge/structural/theorem
+  ledgers, and `preregistrations/ACL-008/`. No evidence or post-outcome report.
+- **Acceptance tests:** failing regressions first; exact source hashes and copied values;
+  numeric catalog novelty; analytic-only registry; no low-sensitivity target; polynomial
+  oracle; controls and verdict order; canonical SHA/path/clean tree/lock guards; full
+  repository gate.
+- **Risks:** target selection via actual epsilon response; accidentally changing a
+  source gate; a shared root solver creating a common-mode oracle; or treating same
+  simplex state space as greater structural distance than it provides.
+- **Stop conditions:** any epsilon-positive target path is evaluated before approval;
+  a source constant changes; target catalog/strata change after outcomes; oracle and
+  primary paths share a normalizer; or the canonical evidence path already exists.
+
+### ACL-008 preregistration completion record
+
+- **Status:** frozen preregistration awaiting adversarial audit of the exact public
+  commit. `outcomes_generated` is false; no positive-epsilon target path exists.
+- **Frozen registry:** 16 regular confirmatory targets and one identity control. All
+  eight states, eight rewards, and six hypothesis-bearing mutation matrices have zero
+  numeric overlap with ACL-003 at absolute tolerance `1e-15`.
+- **No-refit source anchor:** every source schedule, epsilon region, predictor, reducer,
+  Type-7 gate, numerical floor, and control rule is copied from ACL-003. Source evidence
+  and report hashes validate.
+- **Independent path:** target generation uses the monotone-bisection Burg normalizer;
+  its oracle constructs and solves the constraint polynomial and is tested not to call
+  the bisection normalizer.
+- **Bundle:** six files are byte-locked; clean registry reproduction uses frozen
+  `2e-12` absolute/relative tolerances. Lock SHA-256 is
+  `af8495e7b6b1ac4b5d88a174da1d74a53d5a38590eebeb8073b4742318982136`.
+- **Validation:** 215 tests pass; Ruff passes; total coverage is 84%; sdist and wheel
+  build; analytic-only validation confirms all strata/novelty and no outcomes.
+- **Execution hold:** do not invoke `acl008-run` until this exact public commit is
+  pushed and passes public-SHA, lock, source, environment, canonical path, clean-tree,
+  and outcome-absence audit.
+
+## ACL-008-POST — Artifact-only non-Fisher curvature report
+
+- **Task ID:** `ACL-008-POST`.
+- **Immutable input:** preregistration SHA
+  `086c8187caa641a7699ee07cff540a7d8e77ba18`; evidence commit
+  `c972d886edddc2dd36d60bd8229640a8eec405db`; artifact
+  `evidence/ACL-008-confirmatory-086c8187caa641a7699ee07cff540a7d8e77ba18.json`;
+  SHA-256 `856be5ff685d65e19e029fc243a2ef40170ddf64a8b035dd1b543b484e0eba4f`.
+- **Observed frozen verdict:** PASS; median `0.0019657477`; Type-7 Q90
+  `0.0055594354`; identity control PASS; no target refit; randomness none.
+- **Hypothesis for reporting:** stored rows reproduce the frozen verdict and polynomial
+  oracle; the practical second-order radius transports across mirror geometry locally
+  but remains nonuniform in stress.
+- **Allowed files:** this ledger, artifact-only analyzer/tests,
+  `analysis/ACL-008-confirmatory/`, README and ledgers. No evidence/preregistration byte
+  may change and no perturbed trajectory may be recomputed.
+- **Acceptance tests:** wrong hash fails; embedded identities match; 544 rows and verdict
+  reproduce; stress/improvement summaries derive only from stored rows; deterministic
+  output; full test, Ruff, coverage, build, and immutable-hash audit.
+- **Risks:** hiding stress failures behind local PASS; overstating same-simplex geometry
+  distance; or forcing one law across deterministic-curvature and stochastic-estimator
+  islands where its estimand is undefined.
+- **Stop conditions:** evidence hash changes; any new target trajectory is evaluated;
+  a threshold changes; or a posthoc fit is introduced.
+
+### ACL-008 post-confirmatory completion record
+
+- **Artifact reconstruction:** exact. All 544 stored rows reproduce the frozen primary
+  gate; the maximum bisection-versus-polynomial discrepancy is
+  `2.3314683517128287e-15`.
+- **Confirmed:** PASS with median `0.0019657476987589772`, Type-7 Q90
+  `0.005559435449126814`, 16 regular targets, and a passing identity control. Second
+  order improves every target at every epsilon through `0.03`.
+- **Boundary:** at stress epsilon `0.1`, only 13/16 targets improve over first order;
+  median second-order relative error is `0.2892243502` and maximum is
+  `2.7729759805` on `B05`. No uniform stress radius is supported.
+- **Classification:** preregistered no-refit local curvature transport across entropy/
+  Fisher and Burg mirror geometries, with the same state space and objective semantics.
+  This forms a different predictive island from ACL-006/007's stochastic finite-mean
+  diagnostic.
+- **Report:** `analysis/ACL-008-confirmatory/summary.json`, SHA-256
+  `403c69904842d0d09ef6d9091b3e5133d684e0a25a084748b5e415770a84b0a1`.
+- **Decision:** evaluate the Phase-II stopping rule as Outcome U3, a correspondence
+  lattice. The two confirmed transported laws have different non-overlapping estimands;
+  forcing either across every node would be undefined or vacuous.
+
+## PHASE-II-SYNTHESIS — Breadth stopping decision
+
+- **Task ID:** `PHASE-II-SYNTHESIS`.
+- **Observed evidence:** ACL-006 mapped exact support-conditioned estimator bias and
+  falsified scalar reductions; ACL-007 transported its normalized finite-mean/
+  dissociation rule into sequential Euclidean inference; ACL-008 transported ACL-003's
+  local second-order mutation law into Burg mirror geometry and found a nonuniform
+  stress boundary.
+- **Frozen interpretation:** Outcome U3, correspondence lattice. The deterministic
+  retraction-sensitivity and stochastic conditional-mean subgraphs each have predictive
+  content, but no nontrivial common estimand spans them: stochastic normalization is
+  undefined at zero variance, while the epsilon-curvature law requires a smooth
+  perturbation trajectory absent from the fixed-state estimator experiments.
+- **Allowed files:** this ledger, `PHASE_II_SYNTHESIS.md`, a machine-readable Phase-II
+  outcome record and its validation test, README, protocol, bridge/structural/theorem
+  ledgers, and draft PR metadata. No evidence or preregistration file may change.
+- **Acceptance tests:** every listed evidence/report hash is live; every evidence commit
+  and preregistration SHA is named; classification matches the machine ledgers; all
+  positive/negative findings, structural distances, boundaries, exclusions, surviving
+  claims, and open theorem are explicit; full test/Ruff/coverage/build gate.
+- **Risks:** calling connected pairwise bridges one global law; counting exact oracles
+  as discovery; ignoring that ACL-008 retained state/objective semantics; or implying
+  an LLM experiment has been earned.
+- **Stop conditions:** any immutable hash fails; a synthesis claim lacks an inspectable
+  artifact; U1/U2/U3 cannot be distinguished under the frozen rule; or new experiment
+  outcomes would be needed to justify a claim already written.
+
+### Phase-II synthesis completion record
+
+- **Stopping outcome:** U3, correspondence lattice. U1 is not supported because no
+  single no-refit quantitative law spans three structurally distinct classes; U2 is too
+  narrow because successful transport crossed both Fisher-to-Euclidean semantics and
+  entropy/Fisher-to-Burg geometry.
+- **Predictive subgraphs:** local deterministic retraction sensitivity (categorical
+  entropy/Fisher and Burg) and finite-sample conditional-mean diagnostics (Gaussian,
+  contextual control, and sequential particle inference via pairwise bridges).
+- **Global boundary:** covariance-normalized scores are undefined at deterministic zero
+  variance; epsilon-curvature laws are undefined without a specified smooth perturbed
+  trajectory. A shared slogan or additive error decomposition is not yet a shared
+  numerical prediction.
+- **Deliverables:** `PHASE_II_SYNTHESIS.md` and `PHASE_II_OUTCOME.json`, with bridge,
+  structural-distance, theorem, protocol, and README synchronization.
+- **Validation:** all machine records parse; synthesis tests verify live Phase-II
+  evidence/report hashes; 220 tests pass; Ruff passes; total coverage 84%; sdist and
+  wheel build; all immutable evidence files remain unchanged.
+- **Next action:** stop experimental expansion. Any future phase should begin from the
+  open typed-local-error-atlas theorem and must preregister a quantity that crosses the
+  current subgraph boundary before earning neural or LLM work.

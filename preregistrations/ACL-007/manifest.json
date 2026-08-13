@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ACL-007",
+  "title": "No-refit transport of a normalized bias diagnostic into sequential Bayesian inference",
+  "randomness": "PCG64-independent-target-streams",
+  "states": 3,
+  "replication_schedule": [8192, 32768, 131072, 262144],
+  "shadow_chunk_size": 4096,
+  "direction_score_max": 5.0,
+  "full_score_median_max": 1.5,
+  "full_score_q90_max": 2.5,
+  "dissociation_exact_truth_cosine_max": 0.9,
+  "dissociation_observed_truth_cosine_max": 0.95,
+  "dissociation_half_cosine_min": 0.995,
+  "resolvable_contrast_gap_min": 0.1,
+  "analytic_registry_atol": 2e-12,
+  "analytic_registry_rtol": 2e-12,
+  "source_experiment": "ACL-006",
+  "source_rule": "unchanged-native-metric-standardized-mean-and-dissociation-law",
+  "source_evidence": {
+    "approved_preregistration_sha": "a8b42042e397f1422866a0ca9496ee07abe0a42a",
+    "evidence_commit": "c94890dc8f361c0309802c0ef0173ec84e814d3d",
+    "evidence_artifact": "evidence/ACL-006-confirmatory-a8b42042e397f1422866a0ca9496ee07abe0a42a.json",
+    "evidence_sha256": "740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918",
+    "report_commit": "c8d599fe09887e22fe02f92a27bcc8c13ac4baf4",
+    "report_summary": "analysis/ACL-006-confirmatory/summary.json",
+    "report_summary_sha256": "0748482b3796b861267fdb5781bab11605cfc82263e4a6fdbd206df4b96acd6c",
+    "source_exact_mean_verdict": "PASS",
+    "source_dissociation_verdict": "PASS",
+    "source_contrast_verdict": "PASS",
+    "source_direction_score_maximum": 1.7073805833110742,
+    "source_full_score_median_type7": 0.6095572205053943,
+    "source_full_score_q90_type7": 1.272615265047392
+  },
+  "benchmark_scope": "deterministic-held-out-sequential-inference-benchmark",
+  "inference_scope": "descriptive-criteria-not-population-confidence",
+  "transport_scope": "ACL-006-to-particle-filter-unchanged-native-metric-diagnostic",
+  "confirmatory_environment": {
+    "python_implementation": "CPython",
+    "python_version": "3.13.14",
+    "numpy_version": "2.5.2",
+    "platform_system": "Windows",
+    "platform_machine": "AMD64"
+  },
+  "models": {
+    "A": {
+      "initial_belief": [0.46, 0.34, 0.2],
+      "true_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "true_likelihoods": [[0.82, 0.38, 0.14], [0.28, 0.66, 0.88], [0.71, 0.48, 0.2]]
+    },
+    "B": {
+      "initial_belief": [0.28, 0.47, 0.25],
+      "true_transition": [[0.68, 0.24, 0.08], [0.16, 0.69, 0.15], [0.09, 0.27, 0.64]],
+      "true_likelihoods": [[0.25, 0.75, 0.45], [0.8, 0.3, 0.18], [0.22, 0.55, 0.9]]
+    }
+  },
+  "targets": [
+    {
+      "id": "A01", "family": "A-correct-N3", "model": "A", "particle_count": 3,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.82, 0.38, 0.14], [0.28, 0.66, 0.88], [0.71, 0.48, 0.2]],
+      "seed": 71001
+    },
+    {
+      "id": "A02", "family": "A-correct-N4", "model": "A", "particle_count": 4,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.82, 0.38, 0.14], [0.28, 0.66, 0.88], [0.71, 0.48, 0.2]],
+      "seed": 71002
+    },
+    {
+      "id": "A03", "family": "A-correct-N6", "model": "A", "particle_count": 6,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.82, 0.38, 0.14], [0.28, 0.66, 0.88], [0.71, 0.48, 0.2]],
+      "seed": 71003
+    },
+    {
+      "id": "A04", "family": "A-correct-N8", "model": "A", "particle_count": 8,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.82, 0.38, 0.14], [0.28, 0.66, 0.88], [0.71, 0.48, 0.2]],
+      "seed": 71004
+    },
+    {
+      "id": "A05", "family": "A-reversed-N3", "model": "A", "particle_count": 3,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.14, 0.38, 0.82], [0.88, 0.66, 0.28], [0.2, 0.48, 0.71]],
+      "seed": 71005
+    },
+    {
+      "id": "A06", "family": "A-reversed-N4", "model": "A", "particle_count": 4,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.14, 0.38, 0.82], [0.88, 0.66, 0.28], [0.2, 0.48, 0.71]],
+      "seed": 71006
+    },
+    {
+      "id": "A07", "family": "A-reversed-N6", "model": "A", "particle_count": 6,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.14, 0.38, 0.82], [0.88, 0.66, 0.28], [0.2, 0.48, 0.71]],
+      "seed": 71007
+    },
+    {
+      "id": "A08", "family": "A-reversed-N8", "model": "A", "particle_count": 8,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.14, 0.38, 0.82], [0.88, 0.66, 0.28], [0.2, 0.48, 0.71]],
+      "seed": 71008
+    },
+    {
+      "id": "A09", "family": "A-flat-N4", "model": "A", "particle_count": 4,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0], [1.0, 1.0, 1.0]],
+      "seed": 71009
+    },
+    {
+      "id": "A10", "family": "A-flat-N8", "model": "A", "particle_count": 8,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0], [1.0, 1.0, 1.0]],
+      "seed": 71010
+    },
+    {
+      "id": "A11", "family": "A-missing-final-N4", "model": "A", "particle_count": 4,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.82, 0.38, 0.14], [0.28, 0.66, 0.88], [1.0, 1.0, 1.0]],
+      "seed": 71011
+    },
+    {
+      "id": "A12", "family": "A-missing-final-N8", "model": "A", "particle_count": 8,
+      "filter_transition": [[0.74, 0.2, 0.06], [0.11, 0.76, 0.13], [0.08, 0.22, 0.7]],
+      "filter_likelihoods": [[0.82, 0.38, 0.14], [0.28, 0.66, 0.88], [1.0, 1.0, 1.0]],
+      "seed": 71012
+    },
+    {
+      "id": "B01", "family": "B-correct-N4", "model": "B", "particle_count": 4,
+      "filter_transition": [[0.68, 0.24, 0.08], [0.16, 0.69, 0.15], [0.09, 0.27, 0.64]],
+      "filter_likelihoods": [[0.25, 0.75, 0.45], [0.8, 0.3, 0.18], [0.22, 0.55, 0.9]],
+      "seed": 71101
+    },
+    {
+      "id": "B02", "family": "B-reversed-N4", "model": "B", "particle_count": 4,
+      "filter_transition": [[0.68, 0.24, 0.08], [0.16, 0.69, 0.15], [0.09, 0.27, 0.64]],
+      "filter_likelihoods": [[0.45, 0.75, 0.25], [0.18, 0.3, 0.8], [0.9, 0.55, 0.22]],
+      "seed": 71102
+    },
+    {
+      "id": "B03", "family": "B-flat-N4", "model": "B", "particle_count": 4,
+      "filter_transition": [[0.68, 0.24, 0.08], [0.16, 0.69, 0.15], [0.09, 0.27, 0.64]],
+      "filter_likelihoods": [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0], [1.0, 1.0, 1.0]],
+      "seed": 71103
+    },
+    {
+      "id": "B04", "family": "B-missing-final-N4", "model": "B", "particle_count": 4,
+      "filter_transition": [[0.68, 0.24, 0.08], [0.16, 0.69, 0.15], [0.09, 0.27, 0.64]],
+      "filter_likelihoods": [[0.25, 0.75, 0.45], [0.8, 0.3, 0.18], [1.0, 1.0, 1.0]],
+      "seed": 71104
+    }
+  ],
+  "contrasts": [
+    {"id": "A-correct-vs-reversed-N3", "kind": "observation-misspecification", "left": "A01", "right": "A05"},
+    {"id": "A-correct-vs-reversed-N4", "kind": "observation-misspecification", "left": "A02", "right": "A06"},
+    {"id": "A-correct-vs-reversed-N6", "kind": "observation-misspecification", "left": "A03", "right": "A07"},
+    {"id": "A-correct-vs-reversed-N8", "kind": "observation-misspecification", "left": "A04", "right": "A08"},
+    {"id": "A-correct-vs-flat-N4", "kind": "observation-misspecification", "left": "A02", "right": "A09"},
+    {"id": "A-correct-vs-flat-N8", "kind": "observation-misspecification", "left": "A04", "right": "A10"},
+    {"id": "A-correct-vs-missing-N4", "kind": "missing-observation", "left": "A02", "right": "A11"},
+    {"id": "A-correct-vs-missing-N8", "kind": "missing-observation", "left": "A04", "right": "A12"},
+    {"id": "B-correct-vs-reversed-N4", "kind": "observation-misspecification", "left": "B01", "right": "B02"}
+  ]
+}

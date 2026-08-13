@@ -1,0 +1,97 @@
+{
+  "analysis_kind": "artifact-only-post-confirmatory",
+  "boundary": {
+    "paired_improvement_by_epsilon": [
+      {
+        "epsilon": 0.0001,
+        "landscape_count": 16,
+        "region": "numerical-control",
+        "second_order_improvement_count": 16,
+        "second_order_maximum_relative_error": 1.0587613871905705e-06,
+        "second_order_median_relative_error": 1.9423117582028962e-07
+      },
+      {
+        "epsilon": 0.0003,
+        "landscape_count": 16,
+        "region": "numerical-control",
+        "second_order_improvement_count": 16,
+        "second_order_maximum_relative_error": 9.533851517342286e-06,
+        "second_order_median_relative_error": 1.7469854785016858e-06
+      },
+      {
+        "epsilon": 0.001,
+        "landscape_count": 16,
+        "region": "confirmatory",
+        "second_order_improvement_count": 16,
+        "second_order_maximum_relative_error": 0.00010613185902602007,
+        "second_order_median_relative_error": 1.9368822822500735e-05
+      },
+      {
+        "epsilon": 0.003,
+        "landscape_count": 16,
+        "region": "confirmatory",
+        "second_order_improvement_count": 16,
+        "second_order_maximum_relative_error": 0.0009607843277044446,
+        "second_order_median_relative_error": 0.0001732566718826328
+      },
+      {
+        "epsilon": 0.01,
+        "landscape_count": 16,
+        "region": "confirmatory",
+        "second_order_improvement_count": 16,
+        "second_order_maximum_relative_error": 0.010956883593698733,
+        "second_order_median_relative_error": 0.0019657476987589772
+      },
+      {
+        "epsilon": 0.03,
+        "landscape_count": 16,
+        "region": "stress",
+        "second_order_improvement_count": 16,
+        "second_order_maximum_relative_error": 0.11270285301890927,
+        "second_order_median_relative_error": 0.019429726945396686
+      },
+      {
+        "epsilon": 0.1,
+        "landscape_count": 16,
+        "region": "stress",
+        "second_order_improvement_count": 13,
+        "second_order_maximum_relative_error": 2.7729759805109766,
+        "second_order_median_relative_error": 0.28922435017839215
+      }
+    ],
+    "stress_argmax": {
+      "epsilon": 0.1,
+      "first_order_absolute_relative_error": 0.5678769867070979,
+      "landscape_id": "B05",
+      "region": "stress",
+      "second_order_absolute_relative_error": 2.7729759805109766
+    },
+    "stress_maximum_relative_error": 2.7729759805109766,
+    "stress_results_gating": false
+  },
+  "classification": {
+    "adds_distinct_geometry": true,
+    "phase_ii_outcome_candidate": "U3-correspondence-lattice",
+    "reason": "local retraction curvature transports across entropy and Burg, while the ACL-006/007 stochastic diagnostic links a different set of systems; neither estimand is nontrivially defined across the entire graph",
+    "result_type": "preregistered-no-refit-cross-geometry-transport",
+    "same_state_space_as_source": true,
+    "supports_formal_taylor_law_only": false,
+    "supports_uniform_stress_radius": false
+  },
+  "confirmed": {
+    "approved_preregistration_sha": "086c8187caa641a7699ee07cff540a7d8e77ba18",
+    "evidence_commit": "c972d886edddc2dd36d60bd8229640a8eec405db",
+    "evidence_sha256": "856be5ff685d65e19e029fc243a2ef40170ddf64a8b035dd1b543b484e0eba4f",
+    "identity_control_passed": true,
+    "instrument_valid": true,
+    "polynomial_oracle_max_absolute_error": 2.3314683517128287e-15,
+    "regular_target_count": 16,
+    "reproduced_primary_median": 0.0019657476987589772,
+    "reproduced_primary_q90": 0.005559435449126814,
+    "verdict": "PASS"
+  },
+  "experiment_id": "ACL-008",
+  "new_trajectories_generated": false,
+  "schema_version": 1,
+  "target_refit": false
+}

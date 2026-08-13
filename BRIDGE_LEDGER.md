@@ -114,3 +114,90 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
 - **Failure boundary:** the same statement is false without adequate support. Five of
   eight rare-cell stress blocks failed despite apparent convergence.
 - **Status:** preregistered cross-class confirmation, restricted by support coverage.
+
+## ACL-006 support-conditioned plug-in bias
+
+- **State map:** one interior three-action policy block plus an explicit outside-context
+  sampling category.
+- **Native geometry:** the analytic categorical Fisher metric on the centered-logit
+  tangent.
+- **Ideal tangent:** `d = F^+ g = r - mean(r) 1`, independently constructed from the
+  analytic score gradient and Fisher metric.
+- **Realized estimator:** `hat(d) = hat(F)^+ hat(g)` from one fixed-`N` multinomial
+  count table, using the same samples for both empirical objects and no damping.
+- **Scope:** deterministic rewards, true-policy scores, three interior actions, fixed
+  context probability, no fitted baseline, clipping, state update, or target refit.
+- **Transported prediction:** **preregistered confirmation.** Exact count-table moments
+  freeze the conditional mean, covariance-normalized Fisher error, angular envelope,
+  and split-half/truth dissociation before an independent PCG64 full-coordinate path.
+  All three gates passed: maximum standardized direction score `1.707381`, full-score
+  Type-7 median `0.609557`, and Q90 `1.272615`. Seven predeclared targets reached
+  half-mean cosine at least `0.999995890` while truth cosine was as low as `0.483875705`.
+- **Failure boundary:** proved pre-outcome counterexamples show that `N p_min` alone is
+  insufficient across support factorizations and that support/Fisher spectrum without
+  reward geometry is insufficient under additive reward shifts.
+- **Falsifier:** a locked target outside its five-score exact-mean/angular envelope, or
+  failure of the predeclared split-consistent but truth-misaligned stratum at the fixed
+  budget.
+- **Evidence:** preregistration SHA `a8b42042e397f1422866a0ca9496ee07abe0a42a`;
+  evidence SHA-256
+  `740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918`.
+- **Status:** theorem/software reproduction plus preregistered mechanism validation. It
+  remains inside the ACL-005 estimator family and adds no independent breadth class.
+
+## ACL-006 diagnostic → sequential Bayesian particle filtering
+
+- **State map:** a frozen-state stochastic adaptive tangent maps to a terminal posterior-
+  belief displacement from the initial belief.
+- **Native geometry:** categorical Fisher in the source, centered Euclidean belief
+  geometry in the target.
+- **Ideal tangent:** source analytic natural direction versus target exact true-model
+  Bayes posterior displacement.
+- **Realized estimator:** empirical-Fisher pseudoinverse shadows versus a finite labeled-
+  particle bootstrap-filter displacement.
+- **Scope:** independent shadows, nonzero ideal and mean directions, finite native-metric
+  second moments, independently exact mean/covariance, fixed schedule, and no target fit.
+- **Transported prediction:** **preregistered confirmation.** ACL-007 copied ACL-006's
+  complete standardized mean-error and split-consistency/truth-dissociation rule without
+  changing thresholds, schedule, or contrast gap. Sixteen frozen targets span two new
+  HMMs and correct, reversed-observation, flat-observation, and missing-observation
+  particle filters. All three components passed; the maximum score was `1.815369`,
+  Type-7 median `0.796407`, and Q90 `1.212732`.
+- **Failure boundary:** stable estimator bias survives the diagnostic by design. Three
+  targets had negative truth alignment, down to `-0.999797336`, while the locked
+  dissociation cases reached half cosine at least `0.999994349`. The rule predicts
+  finite-mean estimation and bias/variance dissociation, not truth alignment or a common
+  detailed bias mechanism.
+- **Falsifier:** any locked target outside the copied gates after exact target moments and
+  the independent labeled-particle simulator have been verified.
+- **Evidence:** preregistration SHA `0b807af1d0428340f1e5267b1e41f6e636b49d29`;
+  evidence commit `c90954960b0fa099741ed9f35a61c5153b54c923`; artifact SHA-256
+  `54793bcb3a40d914bce2b5a567f6d25e638a75edf4a55ef724e156a93d372133`.
+- **Status:** preregistered no-refit cross-class confirmation outside the Fisher-natural
+  family. It adds real breadth but is not alone a general theory of adaptive dynamics.
+
+## Entropy/Fisher mirror sensitivity â†’ Burg mirror sensitivity
+
+- **State map:** retain the interior probability simplex while changing the mirror
+  potential from Shannon negative entropy to the Burg log barrier.
+- **Native geometry:** `diag(1/p)` entropy/Fisher Hessian in the source versus
+  `diag(1/p^2)` Burg Hessian in the target; the target update is not exponential.
+- **Ideal vector field:** exact constrained linear-reward mirror step in each geometry.
+- **Realized perturbation:** the same post-step row-stochastic mutation operator
+  `I+epsilon(M-I)`.
+- **Scope:** interior finite simplex, fixed reward and step size, smooth constrained
+  mirror map, finite horizon, and no projection or clipping.
+- **Transported prediction:** **preregistered confirmation.** ACL-008 copied ACL-003's
+  zero-fit second-order L1 prediction, epsilon regions, maximum-within-landscape reducer,
+  and 10%/20% Type-7 median/Q90 gates unchanged. Sixteen new-value Burg targets and an
+  identity software control passed; median error was `0.001966` and Q90 `0.005559`.
+- **Failure boundary:** the radius is not uniform. At epsilon `0.1`, only 13/16 targets
+  improve over first order; median second-order error is `28.92%` and maximum is
+  `277.30%` on `B05`.
+- **Falsifier:** new-value Burg targets violate the copied gates or fail to improve over
+  first order throughout the frozen local region.
+- **Evidence:** preregistration SHA `086c8187caa641a7699ee07cff540a7d8e77ba18`;
+  evidence commit `c972d886edddc2dd36d60bd8229640a8eec405db`; artifact SHA-256
+  `856be5ff685d65e19e029fc243a2ef40170ddf64a8b035dd1b543b484e0eba4f`.
+- **Status:** preregistered no-refit cross-geometry confirmation with a nonuniform stress
+  boundary.

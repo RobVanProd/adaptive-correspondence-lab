@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "purpose": "Prevent repeated members of one estimator family from being counted as independent breadth evidence",
+  "dimensions": [
+    "estimator_family",
+    "native_geometry",
+    "objective_semantics",
+    "temporal_structure",
+    "state_space",
+    "data_generation",
+    "adaptation_role"
+  ],
+  "classes": [
+    {
+      "id": "categorical-fixed-reward",
+      "systems": ["multiplicative-weights", "replicator-dynamics", "categorical-natural-gradient"],
+      "estimator_family": "exact deterministic mapped vector fields",
+      "native_geometry": "negative-entropy / categorical Fisher / Shahshahani",
+      "objective_semantics": "fixed reward or fitness maximization",
+      "temporal_structure": "state iteration without environment state",
+      "state_space": "finite simplex",
+      "data_generation": "none in the clean system; explicit mutation perturbation",
+      "adaptation_role": "learning/evolution/optimization",
+      "phase_i_evidential_weight": "one tightly coupled correspondence island"
+    },
+    {
+      "id": "gaussian-rank-mu",
+      "systems": ["gaussian-natural-gradient", "finite-lambda-rank-mu"],
+      "estimator_family": "finite-sample Fisher-natural score/rank estimator",
+      "native_geometry": "Gaussian Fisher",
+      "objective_semantics": "ranking-based optimization",
+      "temporal_structure": "one frozen-state update",
+      "state_space": "continuous distribution parameters",
+      "data_generation": "finite Gaussian population",
+      "adaptation_role": "optimization",
+      "phase_i_evidential_weight": "positive control inside the Fisher-natural family"
+    },
+    {
+      "id": "contextual-bandit-plugin-npg",
+      "systems": ["finite-state-contextual-bandit-empirical-fisher-npg"],
+      "estimator_family": "finite-sample Fisher-natural plug-in estimator",
+      "native_geometry": "block categorical Fisher",
+      "objective_semantics": "expected reward control",
+      "temporal_structure": "one-step contextual interaction; no transition dynamics",
+      "state_space": "product of finite policy simplexes",
+      "data_generation": "joint context-action multinomial sampling",
+      "adaptation_role": "policy learning",
+      "phase_i_evidential_weight": "cross-estimator transport, but still inside the Fisher-natural family",
+      "phase_ii_status": "ACL-006 confirmed the exact support-conditioned mechanism and self-consistency dissociation in this same class; it adds no structural-class count"
+    },
+    {
+      "id": "sequential-bootstrap-particle-filter",
+      "systems": ["exact-hidden-markov-bayes-filter", "finite-bootstrap-particle-filter"],
+      "estimator_family": "sequential finite-particle importance weighting and multinomial resampling",
+      "native_geometry": "centered Euclidean belief tangent",
+      "objective_semantics": "posterior inference rather than reward or fitness optimization",
+      "temporal_structure": "multi-observation hidden-state filtering with repeated propagation and resampling",
+      "state_space": "finite belief simplex with explicit particle-count support",
+      "data_generation": "hidden-state transition and observation-likelihood sequence",
+      "adaptation_role": "belief estimation",
+      "phase_ii_status": "preregistered no-refit transport confirmed; adds one class outside the Fisher-natural family but is not alone a terminal breadth result"
+    },
+    {
+      "id": "burg-log-barrier-mirror-optimizer",
+      "systems": ["constrained-burg-mirror-descent-with-post-step-mutation"],
+      "estimator_family": "deterministic exact mirror retraction with controlled mutation",
+      "native_geometry": "Burg log-barrier Hessian diag(1/p^2), not categorical Fisher",
+      "objective_semantics": "linear-reward optimization",
+      "temporal_structure": "finite repeated state updates without environment dynamics",
+      "state_space": "interior finite simplex",
+      "data_generation": "none; deterministic mutation perturbation",
+      "adaptation_role": "optimization",
+      "phase_ii_status": "preregistered no-refit local curvature transport confirmed; distinct non-Fisher geometry with same state space/objective and nonuniform stress boundary"
+    }
+  ],
+  "phase_i_assessment": {
+    "independent_structural_classes": 2,
+    "outside_fisher_natural_family": false,
+    "genuinely_sequential_environment": false,
+    "inference_semantics_present": false,
+    "conclusion": "Phase I establishes restricted Fisher-geometric transport, not broad adaptive-system unification"
+  },
+  "phase_ii_current_assessment": {
+    "acl006_adds_independent_class": false,
+    "acl006_role": "resolve the support/bias mechanism before breadth testing",
+    "acl007_adds_independent_class": true,
+    "acl007_role": "confirmed unchanged finite-mean and dissociation diagnostic in sequential Euclidean Bayesian inference",
+    "acl008_adds_distinct_geometry": true,
+    "acl008_role": "confirmed unchanged local second-order rule in non-Fisher Burg mirror geometry",
+    "termination_reached": true,
+    "outcome": "U3-correspondence-lattice",
+    "conclusion": "The deterministic retraction-sensitivity and stochastic conditional-mean subgraphs support different predictive laws; neither law is nontrivially defined on all nodes."
+  },
+  "phase_ii_candidates": [
+    {
+      "rank": 1,
+      "class": "minimal Bayesian state estimation",
+      "distance_gain": ["different objective semantics", "inference rather than reward optimization", "sequential observations"],
+      "transparent_comparator": true
+    },
+    {
+      "rank": 2,
+      "class": "non-Fisher mirror descent",
+      "distance_gain": ["different native geometry"],
+      "transparent_comparator": true
+    },
+    {
+      "rank": 3,
+      "class": "frequency-dependent evolutionary dynamics",
+      "distance_gain": ["state-dependent fitness", "population feedback"],
+      "transparent_comparator": true
+    },
+    {
+      "rank": 4,
+      "class": "tiny sequential tabular MDP",
+      "distance_gain": ["transition dependence", "visitation coupling", "temporal credit assignment"],
+      "transparent_comparator": true
+    }
+  ]
+}

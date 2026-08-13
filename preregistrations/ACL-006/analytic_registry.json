@@ -1,0 +1,1841 @@
+{
+  "comparator_source": "exact-four-cell-multinomial-enumeration",
+  "contrasts": [
+    {
+      "conservative_absolute_gap": 0.318132039038857,
+      "exact_signed_truth_cosine_gap": -0.34719767639481747,
+      "id": "effective-count-N16",
+      "kind": "matched-effective-count-support-factorization",
+      "left": "F01",
+      "resolvable": true,
+      "right": "F02"
+    },
+    {
+      "conservative_absolute_gap": 0.25634886383323785,
+      "exact_signed_truth_cosine_gap": -0.2821636004725464,
+      "id": "effective-count-N32",
+      "kind": "matched-effective-count-support-factorization",
+      "left": "F03",
+      "resolvable": true,
+      "right": "F04"
+    },
+    {
+      "conservative_absolute_gap": 0.11658916161638533,
+      "exact_signed_truth_cosine_gap": -0.14138383548836309,
+      "id": "effective-count-N64",
+      "kind": "matched-effective-count-support-factorization",
+      "left": "F05",
+      "resolvable": true,
+      "right": "F06"
+    },
+    {
+      "conservative_absolute_gap": 0.001872136884627786,
+      "exact_signed_truth_cosine_gap": -0.019084113018402182,
+      "id": "effective-count-N128",
+      "kind": "matched-effective-count-support-factorization",
+      "left": "F07",
+      "resolvable": false,
+      "right": "F08"
+    },
+    {
+      "conservative_absolute_gap": -0.01698001405972959,
+      "exact_signed_truth_cosine_gap": -0.03908140070481525,
+      "id": "reward-shift-rare-context-N64",
+      "kind": "reward-shift",
+      "left": "F05",
+      "resolvable": false,
+      "right": "O01"
+    },
+    {
+      "conservative_absolute_gap": 0.3199881663462255,
+      "exact_signed_truth_cosine_gap": -0.37479904533635516,
+      "id": "reward-shift-rare-action-N64",
+      "kind": "reward-shift",
+      "left": "F06",
+      "resolvable": true,
+      "right": "O02"
+    },
+    {
+      "conservative_absolute_gap": -0.031567217552478294,
+      "exact_signed_truth_cosine_gap": -0.001834579916428658,
+      "id": "reward-shift-balanced-N32",
+      "kind": "reward-shift",
+      "left": "O03",
+      "resolvable": false,
+      "right": "O04"
+    },
+    {
+      "conservative_absolute_gap": 0.07791207709048537,
+      "exact_signed_truth_cosine_gap": -0.11115638806768713,
+      "id": "conditioning-centered-N32",
+      "kind": "fisher-conditioning",
+      "left": "K01",
+      "resolvable": false,
+      "right": "K02"
+    },
+    {
+      "conservative_absolute_gap": 0.04073281915826265,
+      "exact_signed_truth_cosine_gap": 0.07492495234953123,
+      "id": "conditioning-rotated-N64",
+      "kind": "fisher-conditioning",
+      "left": "K03",
+      "resolvable": false,
+      "right": "K04"
+    }
+  ],
+  "dissociation_target_ids": [
+    "F02",
+    "F04",
+    "F06",
+    "O02",
+    "K01",
+    "K02",
+    "K03"
+  ],
+  "experiment_id": "ACL-006",
+  "kind": "exact-finite-support-conditioned-bias-registry",
+  "numeric_comparison": {
+    "absolute_tolerance": 2e-12,
+    "relative_tolerance": 2e-12
+  },
+  "outcomes_generated": false,
+  "resolvable_contrast_ids": [
+    "effective-count-N16",
+    "effective-count-N32",
+    "effective-count-N64",
+    "reward-shift-rare-action-N64"
+  ],
+  "schema_version": 1,
+  "shadow_count": 0,
+  "target_refit": false,
+  "targets": [
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.021771,
+          -0.012546,
+          -0.009224999999999999
+        ],
+        [
+          -0.012546,
+          0.020196,
+          -0.0076500000000000005
+        ],
+        [
+          -0.009224999999999999,
+          -0.0076500000000000005,
+          0.016875
+        ]
+      ],
+      "context_probability": 0.09,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 0.36,
+      "exact_direction_covariance": [
+        [
+          0.27015586287417165,
+          -0.09428762297030846,
+          -0.1758682399038634
+        ],
+        [
+          -0.09428762297030846,
+          0.09540241533866789,
+          -0.0011147923683594713
+        ],
+        [
+          -0.1758682399038634,
+          -0.0011147923683594713,
+          0.1769830322722224
+        ]
+      ],
+      "exact_mean_direction": [
+        0.6534088290294139,
+        -0.2107657217950571,
+        -0.4426431072343566
+      ],
+      "exact_mean_fisher_norm": 0.1444399864704512,
+      "exact_probability_mass": 1.0000000000000004,
+      "exact_truth_alignment_cosine": 0.9962812299963866,
+      "exact_truth_angular_loss": 0.0037187700036134252,
+      "expected_squared_fisher_error": 0.024823657625955637,
+      "expected_squared_observed_support_perturbation": 0.0022258335461278443,
+      "expected_squared_support_loss": 0.022597824079827793,
+      "family": "rare-context-N16",
+      "final_angular_envelope": 0.01748005006540061,
+      "final_fisher_rms_standard_error": 0.0002502942415581682,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.000353969510995449,
+      "id": "F01",
+      "joint_action_probabilities": [
+        0.036899999999999995,
+        0.030600000000000002,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        0.020389895011887763,
+        0.01850606402929966,
+        -0.038895959041187506
+      ],
+      "mean_support_loss": [
+        -0.41698106598247364,
+        0.02072821417564306,
+        0.39625285180683056
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.41,
+        0.34,
+        0.25
+      ],
+      "positive_fisher_condition_number": 1.3450502152080348,
+      "positive_fisher_eigenvalues": [
+        0.025091999999999996,
+        0.03375
+      ],
+      "rank_deficient_probability": 0.6776885753694956,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 16,
+      "seed": 61001,
+      "single_shadow_fisher_variance_trace": 0.01642258952544024,
+      "support_probabilities": {
+        "": 0.22113743972843952,
+        "0": 0.19656389674498392,
+        "0,1": 0.12286230477066096,
+        "0,1,2": 0.047858430225453885,
+        "0,2": 0.08476386116000223,
+        "1": 0.15424987320128009,
+        "1,2": 0.06682682847438742,
+        "2": 0.10573736569479203
+      },
+      "two_half_cosine_lower_bound": 0.9987688937412434
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.14514,
+          -0.13186499999999998,
+          -0.013274999999999999
+        ],
+        [
+          -0.13186499999999998,
+          0.14024625,
+          -0.00838125
+        ],
+        [
+          -0.013274999999999999,
+          -0.00838125,
+          0.02165625
+        ]
+      ],
+      "context_probability": 0.6,
+      "dissociation_stratum": true,
+      "effective_minimum_count": 0.36,
+      "exact_direction_covariance": [
+        [
+          4.3792923429477035,
+          4.453884509701346,
+          -8.833176852649057
+        ],
+        [
+          4.453884509701346,
+          4.596708507468469,
+          -9.050593017169856
+        ],
+        [
+          -8.833176852649057,
+          -9.050593017169856,
+          17.88376986981894
+        ]
+      ],
+      "exact_mean_direction": [
+        4.039767370232847,
+        2.706396384617679,
+        -6.74616375485052
+      ],
+      "exact_mean_fisher_norm": 1.5898668494006258,
+      "exact_probability_mass": 0.9999999999999993,
+      "exact_truth_alignment_cosine": 0.6490835536015691,
+      "exact_truth_angular_loss": 0.3509164463984309,
+      "expected_squared_fisher_error": 2.6036133482876584,
+      "expected_squared_observed_support_perturbation": 2.603307422370515,
+      "expected_squared_support_loss": 0.00030592591721366545,
+      "family": "rare-action-N16",
+      "final_angular_envelope": 0.011585587290559888,
+      "final_fisher_rms_standard_error": 0.0018313455097784814,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.002589913657319798,
+      "id": "F02",
+      "joint_action_probabilities": [
+        0.354,
+        0.2235,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        2.9938246522719325,
+        2.960810434610291,
+        -5.954635086882226
+      ],
+      "mean_support_loss": [
+        -0.004057282039091012,
+        -0.004414049992612094,
+        0.008471332031703051
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.59,
+        0.3725,
+        0.0375
+      ],
+      "positive_fisher_condition_number": 8.473638253974045,
+      "positive_fisher_eigenvalues": [
+        0.03241019888754992,
+        0.27463230111245
+      ],
+      "rank_deficient_probability": 0.011434761005270485,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 16,
+      "seed": 61002,
+      "single_shadow_fisher_variance_trace": 0.8791854615588519,
+      "support_probabilities": {
+        "": 4.2949672960000036e-07,
+        "0": 0.010912504635485362,
+        "0,1": 0.6833793548691741,
+        "0,1,2": 0.2982330075188323,
+        "0,2": 0.00655527603943323,
+        "1": 0.0005212254439753048,
+        "1,2": 0.00039760056728973625,
+        "2": 6.014290802174847e-07
+      },
+      "two_half_cosine_lower_bound": 0.9994605108159456
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.021771,
+          -0.012546,
+          -0.009224999999999999
+        ],
+        [
+          -0.012546,
+          0.020196,
+          -0.0076500000000000005
+        ],
+        [
+          -0.009224999999999999,
+          -0.0076500000000000005,
+          0.016875
+        ]
+      ],
+      "context_probability": 0.09,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 0.72,
+      "exact_direction_covariance": [
+        [
+          0.1573885080832701,
+          -0.04175466379132314,
+          -0.11563384429194545
+        ],
+        [
+          -0.04175466379132314,
+          0.0662264875392147,
+          -0.02447182374789092
+        ],
+        [
+          -0.11563384429194545,
+          -0.02447182374789092,
+          0.14010566803984026
+        ]
+      ],
+      "exact_mean_direction": [
+        0.9270287641834146,
+        -0.24441093796003696,
+        -0.682617826223376
+      ],
+      "exact_mean_fisher_norm": 0.2063664963777643,
+      "exact_probability_mass": 0.9999999999999937,
+      "exact_truth_alignment_cosine": 0.9996649358538935,
+      "exact_truth_angular_loss": 0.0003350641461065118,
+      "expected_squared_fisher_error": 0.011519760461775469,
+      "expected_squared_observed_support_perturbation": 0.0026870630060845556,
+      "expected_squared_support_loss": 0.008832697455690913,
+      "family": "rare-context-N32",
+      "final_angular_envelope": 0.009830704085565838,
+      "final_fisher_rms_standard_error": 0.0002018804822655774,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.00028550211599840064,
+      "id": "F03",
+      "joint_action_probabilities": [
+        0.036899999999999995,
+        0.030600000000000002,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        0.03623855488146815,
+        0.019972200584114662,
+        -0.05621075546558304
+      ],
+      "mean_support_loss": [
+        -0.15920979069804717,
+        -0.014383138544153757,
+        0.17359292924220096
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.41,
+        0.34,
+        0.25
+      ],
+      "positive_fisher_condition_number": 1.3450502152080348,
+      "positive_fisher_eigenvalues": [
+        0.025091999999999996,
+        0.03375
+      ],
+      "rank_deficient_probability": 0.3244336451214564,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 32,
+      "seed": 61003,
+      "single_shadow_fisher_variance_trace": 0.010683869854376162,
+      "support_probabilities": {
+        "": 0.04890176724964922,
+        "0": 0.12557263924203488,
+        "0,1": 0.21627754590528858,
+        "0,1,2": 0.2204083803442174,
+        "0,2": 0.1374905803765043,
+        "1": 0.092013867458946,
+        "1,2": 0.10138984825253328,
+        "2": 0.05794537117082628
+      },
+      "two_half_cosine_lower_bound": 0.9996118500870335
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.14514,
+          -0.13186499999999998,
+          -0.013274999999999999
+        ],
+        [
+          -0.13186499999999998,
+          0.14024625,
+          -0.00838125
+        ],
+        [
+          -0.013274999999999999,
+          -0.00838125,
+          0.02165625
+        ]
+      ],
+      "context_probability": 0.6,
+      "dissociation_stratum": true,
+      "effective_minimum_count": 0.72,
+      "exact_direction_covariance": [
+        [
+          5.005921094083089,
+          5.022159698327698,
+          -10.028080792410858
+        ],
+        [
+          5.022159698327698,
+          5.072938741500576,
+          -10.095098439828238
+        ],
+        [
+          -10.028080792410858,
+          -10.095098439828238,
+          20.12317923223886
+        ]
+      ],
+      "exact_mean_direction": [
+        3.1475445600875527,
+        1.8328584027236614,
+        -4.980402962811214
+      ],
+      "exact_mean_fisher_norm": 1.222281010776484,
+      "exact_probability_mass": 0.9999999999999947,
+      "exact_truth_alignment_cosine": 0.7175013353813471,
+      "exact_truth_angular_loss": 0.2824986646186529,
+      "expected_squared_fisher_error": 1.8367975048206178,
+      "expected_squared_observed_support_perturbation": 1.836794354469255,
+      "expected_squared_support_loss": 3.1503514124227934e-06,
+      "family": "rare-action-N32",
+      "final_angular_envelope": 0.01598403255374272,
+      "final_fisher_rms_standard_error": 0.0019382077586521812,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.002741039698982673,
+      "id": "F04",
+      "joint_action_probabilities": [
+        0.354,
+        0.2235,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        2.0975865927845074,
+        2.0829042693963924,
+        -4.180490862180906
+      ],
+      "mean_support_loss": [
+        -4.203269694554908e-05,
+        -4.5866672736504366e-05,
+        8.789936968199818e-05
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.59,
+        0.3725,
+        0.0375
+      ],
+      "positive_fisher_condition_number": 8.473638253974045,
+      "positive_fisher_eigenvalues": [
+        0.03241019888754992,
+        0.27463230111245
+      ],
+      "rank_deficient_probability": 0.00011936425594509733,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 32,
+      "seed": 61004,
+      "single_shadow_fisher_variance_trace": 0.9847830782147328,
+      "support_probabilities": {
+        "": 1.8446744073709585e-13,
+        "0": 0.0001190921311895949,
+        "0,1": 0.48264645560085195,
+        "0,1,2": 0.5170475388846845,
+        "0,2": 0.0001860672464893405,
+        "1": 2.7212369269439706e-07,
+        "1,2": 5.740120291823177e-07,
+        "2": 8.783405846107415e-13
+      },
+      "two_half_cosine_lower_bound": 0.9989712428889499
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.021771,
+          -0.012546,
+          -0.009224999999999999
+        ],
+        [
+          -0.012546,
+          0.020196,
+          -0.0076500000000000005
+        ],
+        [
+          -0.009224999999999999,
+          -0.0076500000000000005,
+          0.016875
+        ]
+      ],
+      "context_probability": 0.09,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 1.44,
+      "exact_direction_covariance": [
+        [
+          0.03561807591478794,
+          -0.0056712027333355175,
+          -0.02994687318146183
+        ],
+        [
+          -0.0056712027333355175,
+          0.0261055920853041,
+          -0.020434389351969312
+        ],
+        [
+          -0.02994687318146183,
+          -0.020434389351969312,
+          0.05038126253342845
+        ]
+      ],
+      "exact_mean_direction": [
+        1.059696602982857,
+        -0.24293827583691585,
+        -0.8167583271459408
+      ],
+      "exact_mean_fisher_norm": 0.23725445989272004,
+      "exact_probability_mass": 1.0000000000000284,
+      "exact_truth_alignment_cosine": 0.9999603438648703,
+      "exact_truth_angular_loss": 3.9656135129684245e-05,
+      "expected_squared_fisher_error": 0.003171205171467024,
+      "expected_squared_observed_support_perturbation": 0.0018963649547147961,
+      "expected_squared_support_loss": 0.001274840216752226,
+      "family": "rare-context-N64",
+      "final_angular_envelope": 0.00463860470668926,
+      "final_fisher_rms_standard_error": 0.00010979830995546598,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.0001552782590646648,
+      "id": "F05",
+      "joint_action_probabilities": [
+        0.036899999999999995,
+        0.030600000000000002,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        0.03183542223124225,
+        0.014144374408188186,
+        -0.04597979663943079
+      ],
+      "mean_support_loss": [
+        -0.022138819248411226,
+        -0.007082650245097617,
+        0.029221469493508876
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.41,
+        0.34,
+        0.25
+      ],
+      "positive_fisher_condition_number": 1.3450502152080348,
+      "positive_fisher_eigenvalues": [
+        0.025091999999999996,
+        0.03375
+      ],
+      "rank_deficient_probability": 0.05693207993431818,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 64,
+      "seed": 61005,
+      "single_shadow_fisher_variance_trace": 0.0031603212600152105,
+      "support_probabilities": {
+        "": 0.002391382840138865,
+        "0": 0.02804993568048655,
+        "0,1": 0.18515568503534457,
+        "0,1,2": 0.5992763775617793,
+        "0,2": 0.09736742631542121,
+        "1": 0.017465833265187383,
+        "1,2": 0.06126843115313674,
+        "2": 0.009024928148505387
+      },
+      "two_half_cosine_lower_bound": 0.9999137677808297
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.14514,
+          -0.13186499999999998,
+          -0.013274999999999999
+        ],
+        [
+          -0.13186499999999998,
+          0.14024625,
+          -0.00838125
+        ],
+        [
+          -0.013274999999999999,
+          -0.00838125,
+          0.02165625
+        ]
+      ],
+      "context_probability": 0.6,
+      "dissociation_stratum": true,
+      "effective_minimum_count": 1.44,
+      "exact_direction_covariance": [
+        [
+          3.493981165071826,
+          3.494050743805908,
+          -6.988031908877538
+        ],
+        [
+          3.494050743805908,
+          3.5171409686574195,
+          -7.011191712463463
+        ],
+        [
+          -6.988031908877538,
+          -7.011191712463463,
+          13.999223621340839
+        ]
+      ],
+      "exact_mean_direction": [
+        2.075728051172023,
+        0.76554330541282,
+        -2.8412713565848517
+      ],
+      "exact_mean_fisher_norm": 0.8101469633897278,
+      "exact_probability_mass": 1.0000000000000309,
+      "exact_truth_alignment_cosine": 0.8585765083765072,
+      "exact_truth_angular_loss": 0.14142349162349277,
+      "expected_squared_fisher_error": 0.8883244327015859,
+      "expected_squared_observed_support_perturbation": 0.8883244323275387,
+      "expected_squared_support_loss": 3.7407103704851614e-10,
+      "family": "rare-action-N64",
+      "final_angular_envelope": 0.020156069165288497,
+      "final_fisher_rms_standard_error": 0.0016166452164142905,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.002286281590598677,
+      "id": "F06",
+      "joint_action_probabilities": [
+        0.354,
+        0.2235,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        1.0257280561644102,
+        1.0155433108614125,
+        -2.041271367025821
+      ],
+      "mean_support_loss": [
+        -4.992401318616478e-09,
+        -5.44857549200428e-09,
+        1.0440976755109686e-08
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.59,
+        0.3725,
+        0.0375
+      ],
+      "positive_fisher_condition_number": 8.473638253974045,
+      "positive_fisher_eigenvalues": [
+        0.03241019888754992,
+        0.27463230111245
+      ],
+      "rank_deficient_probability": 1.4183009806621447e-08,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 64,
+      "seed": 61006,
+      "single_shadow_fisher_variance_trace": 0.6851242900206933,
+      "support_probabilities": {
+        "": 3.4028236692093966e-26,
+        "0": 1.4182935755216924e-08,
+        "0,1": 0.23306282263814757,
+        "0,1,2": 0.7669370842388901,
+        "0,2": 7.893931067882988e-08,
+        "1": 7.405140452155694e-14,
+        "1,2": 6.418960538739438e-13,
+        "2": 1.0955326620516752e-24
+      },
+      "two_half_cosine_lower_bound": 0.9983612785096919
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.021771,
+          -0.012546,
+          -0.009224999999999999
+        ],
+        [
+          -0.012546,
+          0.020196,
+          -0.0076500000000000005
+        ],
+        [
+          -0.009224999999999999,
+          -0.0076500000000000005,
+          0.016875
+        ]
+      ],
+      "context_probability": 0.09,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 2.88,
+      "exact_direction_covariance": [
+        [
+          0.0062779859250496894,
+          -0.0005874116768174176,
+          -0.005690574248233049
+        ],
+        [
+          -0.0005874116768174176,
+          0.007369216380814864,
+          -0.006781804703997196
+        ],
+        [
+          -0.005690574248233049,
+          -0.006781804703997196,
+          0.012472378952231855
+        ]
+      ],
+      "exact_mean_direction": [
+        1.063521554354691,
+        -0.2447088484961662,
+        -0.8188127058585243
+      ],
+      "exact_mean_fisher_norm": 0.23807419495253956,
+      "exact_probability_mass": 1.0000000000000246,
+      "exact_truth_alignment_cosine": 0.9999675129501241,
+      "exact_truth_angular_loss": 3.248704987590667e-05,
+      "expected_squared_fisher_error": 0.0007344094181014116,
+      "expected_squared_observed_support_perturbation": 0.0007086568877183691,
+      "expected_squared_support_loss": 2.575253038304191e-05,
+      "family": "rare-context-N128",
+      "final_angular_envelope": 0.0022029376560635137,
+      "final_fisher_rms_standard_error": 5.2388556537823565e-05,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 7.408860716893977e-05,
+      "id": "F07",
+      "joint_action_probabilities": [
+        0.036899999999999995,
+        0.030600000000000002,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        0.013940140554053541,
+        0.005604829090671529,
+        -0.019544969644725026
+      ],
+      "mean_support_loss": [
+        -0.0004185861993876391,
+        -0.0003136775868314231,
+        0.0007322637862190644
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.41,
+        0.34,
+        0.25
+      ],
+      "positive_fisher_condition_number": 1.3450502152080348,
+      "positive_fisher_eigenvalues": [
+        0.025091999999999996,
+        0.03375
+      ],
+      "rank_deficient_probability": 0.0014398776375410182,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 128,
+      "seed": 61007,
+      "single_shadow_fisher_variance_trace": 0.0007194701610658658,
+      "support_probabilities": {
+        "": 5.718711888110623e-06,
+        "0": 0.0009209551613860614,
+        "0,1": 0.05300302171428573,
+        "0,1,2": 0.9202767301336529,
+        "0,2": 0.01767216674446782,
+        "1": 0.00038859031956551746,
+        "1,2": 0.007608203770052535,
+        "2": 0.00012461344470132883
+      },
+      "two_half_cosine_lower_bound": 0.9999805705376533
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.14514,
+          -0.13186499999999998,
+          -0.013274999999999999
+        ],
+        [
+          -0.13186499999999998,
+          0.14024625,
+          -0.00838125
+        ],
+        [
+          -0.013274999999999999,
+          -0.00838125,
+          0.02165625
+        ]
+      ],
+      "context_probability": 0.6,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 2.88,
+      "exact_direction_covariance": [
+        [
+          0.9977332416356268,
+          0.9930720878466938,
+          -1.9908053294822945
+        ],
+        [
+          0.9930720878466938,
+          1.0018388076684006,
+          -1.9949108955151276
+        ],
+        [
+          -1.9908053294822945,
+          -1.9949108955151276,
+          3.9857162249973754
+        ]
+      ],
+      "exact_mean_direction": [
+        1.3316334904460105,
+        0.025544502489147688,
+        -1.357177992935164
+      ],
+      "exact_mean_fisher_norm": 0.5804679125366751,
+      "exact_probability_mass": 1.0000000000000273,
+      "exact_truth_alignment_cosine": 0.9808833999317219,
+      "exact_truth_angular_loss": 0.01911660006827809,
+      "expected_squared_fisher_error": 0.2111805036610289,
+      "expected_squared_observed_support_perturbation": 0.21118050366103447,
+      "expected_squared_support_loss": 5.3053893988033215e-18,
+      "family": "rare-action-N128",
+      "final_angular_envelope": 0.015009038477710882,
+      "final_fisher_rms_standard_error": 0.0008647370873255607,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.0012229229167828154,
+      "id": "F08",
+      "joint_action_probabilities": [
+        0.354,
+        0.2235,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        0.28163349044599617,
+        0.2755445024891581,
+        -0.5571779929351589
+      ],
+      "mean_support_loss": [
+        -2.8426844252450536e-15,
+        -3.790551446722891e-15,
+        6.577724720736718e-15
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.59,
+        0.3725,
+        0.0375
+      ],
+      "positive_fisher_condition_number": 8.473638253974045,
+      "positive_fisher_eigenvalues": [
+        0.03241019888754992,
+        0.27463230111245
+      ],
+      "rank_deficient_probability": 2.011556666420943e-16,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 128,
+      "seed": 61008,
+      "single_shadow_fisher_variance_trace": 0.1960234792245774,
+      "support_probabilities": {
+        "": 1.1579208923731702e-51,
+        "0": 2.0115566663661069e-16,
+        "0,1": 0.05431828590712522,
+        "0,1,2": 0.945681714092866,
+        "0,2": 8.470597114286729e-15,
+        "1": 5.483610511620303e-27,
+        "1,2": 5.070971526729743e-25,
+        "2": 1.2747499030784587e-48
+      },
+      "two_half_cosine_lower_bound": 0.999093286829117
+    },
+    {
+      "analytic_direction": [
+        1.0499999999999998,
+        -0.25,
+        -0.7999999999999998
+      ],
+      "analytic_fisher": [
+        [
+          0.021771,
+          -0.012546,
+          -0.009224999999999999
+        ],
+        [
+          -0.012546,
+          0.020196,
+          -0.0076500000000000005
+        ],
+        [
+          -0.009224999999999999,
+          -0.0076500000000000005,
+          0.016875
+        ]
+      ],
+      "context_probability": 0.09,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 1.44,
+      "exact_direction_covariance": [
+        [
+          13.384808366758833,
+          -1.0222982983339262,
+          -12.362510068425113
+        ],
+        [
+          -1.0222982983339262,
+          16.807814988819484,
+          -15.785516690485599
+        ],
+        [
+          -12.362510068425113,
+          -15.785516690485599,
+          28.148026758910582
+        ]
+      ],
+      "exact_mean_direction": [
+        2.0131653148148945,
+        0.1261831069885817,
+        -2.1393484218034824
+      ],
+      "exact_mean_fisher_norm": 0.4929577061364693,
+      "exact_probability_mass": 1.0000000000000284,
+      "exact_truth_alignment_cosine": 0.9608789431600551,
+      "exact_truth_angular_loss": 0.039121056839944934,
+      "expected_squared_fisher_error": 1.6768514708352122,
+      "expected_squared_observed_support_perturbation": 1.6755766306184599,
+      "expected_squared_support_loss": 0.0012748402167522255,
+      "family": "rare-context-N64-shifted",
+      "final_angular_envelope": 0.05142281005785558,
+      "final_fisher_rms_standard_error": 0.0024713842865476308,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.003495065175871415,
+      "id": "O01",
+      "joint_action_probabilities": [
+        0.036899999999999995,
+        0.030600000000000002,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        0.9853041340632822,
+        0.38326575723368667,
+        -1.3685698912969744
+      ],
+      "mean_support_loss": [
+        -0.022138819248411237,
+        -0.007082650245097574,
+        0.029221469493508866
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.41,
+        0.34,
+        0.25
+      ],
+      "positive_fisher_condition_number": 1.3450502152080348,
+      "positive_fisher_eigenvalues": [
+        0.025091999999999996,
+        0.03375
+      ],
+      "rank_deficient_probability": 0.05693207993431818,
+      "reward": [
+        5.3,
+        4.0,
+        3.45
+      ],
+      "sample_count": 64,
+      "seed": 61101,
+      "single_shadow_fisher_variance_trace": 1.6011074710521886,
+      "support_probabilities": {
+        "": 0.002391382840138865,
+        "0": 0.02804993568048655,
+        "0,1": 0.18515568503534457,
+        "0,1,2": 0.5992763775617793,
+        "0,2": 0.09736742631542121,
+        "1": 0.017465833265187383,
+        "1,2": 0.06126843115313674,
+        "2": 0.009024928148505387
+      },
+      "two_half_cosine_lower_bound": 0.9891938324457222
+    },
+    {
+      "analytic_direction": [
+        1.0499999999999998,
+        -0.25,
+        -0.7999999999999998
+      ],
+      "analytic_fisher": [
+        [
+          0.14514,
+          -0.13186499999999998,
+          -0.013274999999999999
+        ],
+        [
+          -0.13186499999999998,
+          0.14024625,
+          -0.00838125
+        ],
+        [
+          -0.013274999999999999,
+          -0.00838125,
+          0.02165625
+        ]
+      ],
+      "context_probability": 0.6,
+      "dissociation_stratum": true,
+      "effective_minimum_count": 1.44,
+      "exact_direction_covariance": [
+        [
+          319.46615481286983,
+          319.47251608239935,
+          -638.9386708952673
+        ],
+        [
+          319.47251608239935,
+          321.5837301945974,
+          -641.0562462769863
+        ],
+        [
+          -638.9386708952673,
+          -641.0562462769863,
+          1279.9949171722392
+        ]
+      ],
+      "exact_mean_direction": [
+        10.858088638203524,
+        9.46070134774067,
+        -20.318789985944402
+      ],
+      "exact_mean_fisher_norm": 4.5379958284600095,
+      "exact_probability_mass": 1.0000000000000309,
+      "exact_truth_alignment_cosine": 0.48377746304015207,
+      "exact_truth_angular_loss": 0.5162225369598479,
+      "expected_squared_fisher_error": 81.2224157652966,
+      "expected_squared_observed_support_perturbation": 81.22241576492273,
+      "expected_squared_support_loss": 3.740710370485159e-10,
+      "family": "rare-action-N64-shifted",
+      "final_angular_envelope": 0.03465480982484114,
+      "final_fisher_rms_standard_error": 0.015458482850439137,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.02186159610080293,
+      "id": "O02",
+      "joint_action_probabilities": [
+        0.354,
+        0.2235,
+        0.0225
+      ],
+      "mean_observed_support_perturbation": [
+        9.808088643195862,
+        9.710701353189247,
+        -19.51878999638513
+      ],
+      "mean_support_loss": [
+        -4.992401318616493e-09,
+        -5.4485754364931316e-09,
+        1.044097675510968e-08
+      ],
+      "minimum_joint_cell_probability": 0.0225,
+      "policy": [
+        0.59,
+        0.3725,
+        0.0375
+      ],
+      "positive_fisher_condition_number": 8.473638253974045,
+      "positive_fisher_eigenvalues": [
+        0.03241019888754992,
+        0.27463230111245
+      ],
+      "rank_deficient_probability": 1.4183009806621447e-08,
+      "reward": [
+        5.3,
+        4.0,
+        3.45
+      ],
+      "sample_count": 64,
+      "seed": 61102,
+      "single_shadow_fisher_variance_trace": 62.643160229431444,
+      "support_probabilities": {
+        "": 3.4028236692093966e-26,
+        "0": 1.4182935755216924e-08,
+        "0,1": 0.23306282263814757,
+        "0,1,2": 0.7669370842388901,
+        "0,2": 7.893931067882988e-08,
+        "1": 7.405140452155694e-14,
+        "1,2": 6.418960538739438e-13,
+        "2": 1.0955326620516752e-24
+      },
+      "two_half_cosine_lower_bound": 0.9951264706340404
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.175392,
+          -0.09979199999999999,
+          -0.0756
+        ],
+        [
+          -0.09979199999999999,
+          0.159192,
+          -0.0594
+        ],
+        [
+          -0.0756,
+          -0.0594,
+          0.135
+        ]
+      ],
+      "context_probability": 0.72,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 5.76,
+      "exact_direction_covariance": [
+        [
+          0.0024301522738321424,
+          -0.0006895229346774445,
+          -0.0017406293391578065
+        ],
+        [
+          -0.0006895229346774445,
+          0.002904604607249714,
+          -0.0022150816725713673
+        ],
+        [
+          -0.0017406293391578065,
+          -0.0022150816725713673,
+          0.003955711011730423
+        ]
+      ],
+      "exact_mean_direction": [
+        1.0561549374352677,
+        -0.24875806022542024,
+        -0.8073968772098458
+      ],
+      "exact_mean_fisher_norm": 0.6715717401067355,
+      "exact_probability_mass": 0.9999999999999941,
+      "exact_truth_alignment_cosine": 0.9999967478454347,
+      "exact_truth_angular_loss": 3.252154565314136e-06,
+      "expected_squared_fisher_error": 0.002107318448059692,
+      "expected_squared_observed_support_perturbation": 0.002107316715090381,
+      "expected_squared_support_loss": 1.732969311675573e-09,
+      "family": "balanced-N32-centered",
+      "final_angular_envelope": 0.0013293674422463469,
+      "final_fisher_rms_standard_error": 8.921725938310676e-05,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.00012617225821734784,
+      "id": "O03",
+      "joint_action_probabilities": [
+        0.3024,
+        0.2376,
+        0.18
+      ],
+      "mean_observed_support_perturbation": [
+        0.00615493966980044,
+        0.0012419496465356462,
+        -0.0073968893163361416
+      ],
+      "mean_support_loss": [
+        -2.2345284358408017e-09,
+        -9.871957394445681e-09,
+        1.2106485858098832e-08
+      ],
+      "minimum_joint_cell_probability": 0.18,
+      "policy": [
+        0.42,
+        0.33,
+        0.25
+      ],
+      "positive_fisher_condition_number": 1.3528138528138525,
+      "positive_fisher_eigenvalues": [
+        0.19958400000000004,
+        0.26999999999999996
+      ],
+      "rank_deficient_probability": 3.1416685194142306e-08,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 32,
+      "seed": 61103,
+      "single_shadow_fisher_variance_trace": 0.0020865926750096723,
+      "support_probabilities": {
+        "": 2.0373094654699927e-18,
+        "0": 3.0696136804587566e-08,
+        "0,1": 0.0017459647275457268,
+        "0,1,2": 0.9980743738268486,
+        "0,2": 0.00016973594761908925,
+        "1": 7.043954854866489e-10,
+        "1,2": 9.89408130141046e-06,
+        "2": 1.6152902030777564e-11
+      },
+      "two_half_cosine_lower_bound": 0.9999929272347884
+    },
+    {
+      "analytic_direction": [
+        1.0499999999999998,
+        -0.25,
+        -0.7999999999999998
+      ],
+      "analytic_fisher": [
+        [
+          0.175392,
+          -0.09979199999999999,
+          -0.0756
+        ],
+        [
+          -0.09979199999999999,
+          0.159192,
+          -0.0594
+        ],
+        [
+          -0.0756,
+          -0.0594,
+          0.135
+        ]
+      ],
+      "context_probability": 0.72,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 5.76,
+      "exact_direction_covariance": [
+        [
+          1.879994574711044,
+          -0.5334221751685542,
+          -1.3465723995424768
+        ],
+        [
+          -0.5334221751685542,
+          2.2470326327810977,
+          -1.7136104576125484
+        ],
+        [
+          -1.3465723995424768,
+          -1.7136104576125484,
+          3.0601828571550076
+        ]
+      ],
+      "exact_mean_direction": [
+        1.221192733506989,
+        -0.21545656237784314,
+        -1.0057361711291493
+      ],
+      "exact_mean_fisher_norm": 0.7861177112062976,
+      "exact_probability_mass": 0.9999999999999941,
+      "exact_truth_alignment_cosine": 0.998162167929006,
+      "exact_truth_angular_loss": 0.0018378320709939722,
+      "expected_squared_fisher_error": 1.6302452496661208,
+      "expected_squared_observed_support_perturbation": 1.6302452479331515,
+      "expected_squared_support_loss": 1.732969311675572e-09,
+      "family": "balanced-N32-shifted",
+      "final_angular_envelope": 0.0320724300266606,
+      "final_fisher_rms_standard_error": 0.0024814770293450396,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.003509338469617054,
+      "id": "O04",
+      "joint_action_probabilities": [
+        0.3024,
+        0.2376,
+        0.18
+      ],
+      "mean_observed_support_perturbation": [
+        0.1711927357415254,
+        0.03454344749411276,
+        -0.2057361832356382
+      ],
+      "mean_support_loss": [
+        -2.2345284358408017e-09,
+        -9.87195728352084e-09,
+        1.2106485747271478e-08
+      ],
+      "minimum_joint_cell_probability": 0.18,
+      "policy": [
+        0.42,
+        0.33,
+        0.25
+      ],
+      "positive_fisher_condition_number": 1.3528138528138525,
+      "positive_fisher_eigenvalues": [
+        0.19958400000000004,
+        0.26999999999999996
+      ],
+      "rank_deficient_probability": 3.1416685194142306e-08,
+      "reward": [
+        5.3,
+        4.0,
+        3.45
+      ],
+      "sample_count": 32,
+      "seed": 61104,
+      "single_shadow_fisher_variance_trace": 1.6142115136253679,
+      "support_probabilities": {
+        "": 2.0373094654699927e-18,
+        "0": 3.0696136804587566e-08,
+        "0,1": 0.0017459647275457268,
+        "0,1,2": 0.9980743738268486,
+        "0,2": 0.00016973594761908925,
+        "1": 7.043954854866489e-10,
+        "1,2": 9.89408130141046e-06,
+        "2": 1.6152902030777564e-11
+      },
+      "two_half_cosine_lower_bound": 0.9958302261466124
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.06260800000000004,
+          -0.04472,
+          -0.017888
+        ],
+        [
+          -0.04472,
+          0.0468,
+          -0.0020800000000000003
+        ],
+        [
+          -0.017888,
+          -0.0020800000000000003,
+          0.019968000000000003
+        ]
+      ],
+      "context_probability": 0.52,
+      "dissociation_stratum": true,
+      "effective_minimum_count": 0.6656000000000001,
+      "exact_direction_covariance": [
+        [
+          10.59716797052431,
+          11.02567986796189,
+          -21.622847838486106
+        ],
+        [
+          11.02567986796189,
+          20.291893099453006,
+          -31.317572967414936
+        ],
+        [
+          -21.622847838486106,
+          -31.317572967414936,
+          52.94042080590084
+        ]
+      ],
+      "exact_mean_direction": [
+        4.5557750047715935,
+        1.8676039798397948,
+        -6.423378984611402
+      ],
+      "exact_mean_fisher_norm": 1.6193797110376889,
+      "exact_probability_mass": 0.9999999999999926,
+      "exact_truth_alignment_cosine": 0.8813494487068413,
+      "exact_truth_angular_loss": 0.11865055129315871,
+      "expected_squared_fisher_error": 4.2895933562361,
+      "expected_squared_observed_support_perturbation": 4.288438671219855,
+      "expected_squared_support_loss": 0.0011546850162136044,
+      "family": "low-kappa-N32-centered",
+      "final_angular_envelope": 0.01959270511141525,
+      "final_fisher_rms_standard_error": 0.003142022553504909,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.004443490908448786,
+      "id": "K01",
+      "joint_action_probabilities": [
+        0.4472,
+        0.052000000000000005,
+        0.020800000000000003
+      ],
+      "mean_observed_support_perturbation": [
+        3.521070474403033,
+        2.1511949945694346,
+        -5.672265468972451
+      ],
+      "mean_support_loss": [
+        -0.015295469631425166,
+        -0.033591014729639226,
+        0.048886484361064395
+      ],
+      "minimum_joint_cell_probability": 0.020800000000000003,
+      "policy": [
+        0.86,
+        0.1,
+        0.04
+      ],
+      "positive_fisher_condition_number": 3.730113169540081,
+      "positive_fisher_eigenvalues": [
+        0.02735156546213873,
+        0.10202443453786131
+      ],
+      "rank_deficient_probability": 0.08903269988988835,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 32,
+      "seed": 61201,
+      "single_shadow_fisher_variance_trace": 2.587965712428829,
+      "support_probabilities": {
+        "": 6.305500958147881e-11,
+        "0": 0.08903269801288148,
+        "0,1": 0.4213370833532976,
+        "0,1,2": 0.3975844500742537,
+        "0,2": 0.09204576277624885,
+        "1": 1.6319548682602097e-09,
+        "1,2": 3.906311490779803e-09,
+        "2": 1.819969876559717e-10
+      },
+      "two_half_cosine_lower_bound": 0.9984519659452458
+    },
+    {
+      "analytic_direction": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "analytic_fisher": [
+        [
+          0.129792,
+          -0.119808,
+          -0.009984
+        ],
+        [
+          -0.119808,
+          0.129792,
+          -0.009984
+        ],
+        [
+          -0.009984,
+          -0.009984,
+          0.019968000000000003
+        ]
+      ],
+      "context_probability": 0.52,
+      "dissociation_stratum": true,
+      "effective_minimum_count": 0.6656000000000001,
+      "exact_direction_covariance": [
+        [
+          2.2406016798599993,
+          2.232149536398059,
+          -4.472751216258056
+        ],
+        [
+          2.232149536398059,
+          2.2405963410004395,
+          -4.472745877398538
+        ],
+        [
+          -4.472751216258056,
+          -4.472745877398538,
+          8.94549709365656
+        ]
+      ],
+      "exact_mean_direction": [
+        2.518431321540582,
+        1.2184318380956605,
+        -3.736863159636241
+      ],
+      "exact_mean_fisher_norm": 0.9155834184713152,
+      "exact_probability_mass": 0.9999999999999911,
+      "exact_truth_alignment_cosine": 0.7701930606391542,
+      "exact_truth_angular_loss": 0.22980693936084584,
+      "expected_squared_fisher_error": 0.7915237050758286,
+      "expected_squared_observed_support_perturbation": 0.7915213060692654,
+      "expected_squared_support_loss": 2.399006580359178e-06,
+      "family": "high-kappa-N32-centered",
+      "final_angular_envelope": 0.013651605865786504,
+      "final_fisher_rms_standard_error": 0.0012414445408341366,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.0017556677065816754,
+      "id": "K02",
+      "joint_action_probabilities": [
+        0.2496,
+        0.2496,
+        0.020800000000000003
+      ],
+      "mean_observed_support_perturbation": [
+        1.4684645846140854,
+        1.4684650386407108,
+        -2.9369296232547955
+      ],
+      "mean_support_loss": [
+        -3.32630734939114e-05,
+        -3.3200545045482e-05,
+        6.646361853946268e-05
+      ],
+      "minimum_joint_cell_probability": 0.020800000000000003,
+      "policy": [
+        0.48,
+        0.48,
+        0.04
+      ],
+      "positive_fisher_condition_number": 8.333333333333336,
+      "positive_fisher_eigenvalues": [
+        0.029951999999999993,
+        0.2496
+      ],
+      "rank_deficient_probability": 8.312755889967055e-05,
+      "reward": [
+        1.05,
+        -0.25,
+        -0.8
+      ],
+      "sample_count": 32,
+      "seed": 61202,
+      "single_shadow_fisher_variance_trace": 0.4040122821422298,
+      "support_probabilities": {
+        "": 6.305500958147881e-11,
+        "0": 4.156365692383666e-05,
+        "0,1": 0.5102866556842863,
+        "0,1,2": 0.48950898243688656,
+        "0,2": 6.0617159963710964e-05,
+        "1": 4.156365692383666e-05,
+        "1,2": 6.0617159963710964e-05,
+        "2": 1.819969876559717e-10
+      },
+      "two_half_cosine_lower_bound": 0.9992503013157423
+    },
+    {
+      "analytic_direction": [
+        0.35000000000000003,
+        -1.1,
+        0.75
+      ],
+      "analytic_fisher": [
+        [
+          0.06260800000000004,
+          -0.04472,
+          -0.017888
+        ],
+        [
+          -0.04472,
+          0.0468,
+          -0.0020800000000000003
+        ],
+        [
+          -0.017888,
+          -0.0020800000000000003,
+          0.019968000000000003
+        ]
+      ],
+      "context_probability": 0.52,
+      "dissociation_stratum": true,
+      "effective_minimum_count": 1.3312000000000002,
+      "exact_direction_covariance": [
+        [
+          0.63339568233291,
+          0.6251872437787485,
+          -1.2585829261116686
+        ],
+        [
+          0.6251872437787485,
+          0.7621331473403572,
+          -1.3873203911191063
+        ],
+        [
+          -1.2585829261116686,
+          -1.3873203911191063,
+          2.645903317230768
+        ]
+      ],
+      "exact_mean_direction": [
+        0.8517825579758728,
+        -0.7016197515754921,
+        -0.15016280640038346
+      ],
+      "exact_mean_fisher_norm": 0.3556714630122529,
+      "exact_probability_mass": 1.0000000000000306,
+      "exact_truth_alignment_cosine": 0.8341678523425772,
+      "exact_truth_angular_loss": 0.16583214765742282,
+      "expected_squared_fisher_error": 0.16218189129403174,
+      "expected_squared_observed_support_perturbation": 0.16188478566101058,
+      "expected_squared_support_loss": 0.00029710563302645047,
+      "family": "low-kappa-N64-rotated",
+      "final_angular_envelope": 0.01944931803099778,
+      "final_fisher_rms_standard_error": 0.0006850944301410181,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.0009688698346116948,
+      "id": "K03",
+      "joint_action_probabilities": [
+        0.4472,
+        0.052000000000000005,
+        0.020800000000000003
+      ],
+      "mean_observed_support_perturbation": [
+        0.4994675032845933,
+        0.39329606079064233,
+        -0.8927635640752406
+      ],
+      "mean_support_loss": [
+        0.0023150546912742605,
+        0.0050841876338960585,
+        -0.007399242325170331
+      ],
+      "minimum_joint_cell_probability": 0.020800000000000003,
+      "policy": [
+        0.86,
+        0.1,
+        0.04
+      ],
+      "positive_fisher_condition_number": 3.730113169540081,
+      "positive_fisher_eigenvalues": [
+        0.02735156546213873,
+        0.10202443453786131
+      ],
+      "rank_deficient_probability": 0.007926821326680869,
+      "reward": [
+        0.35,
+        -1.1,
+        0.75
+      ],
+      "sample_count": 64,
+      "seed": 61203,
+      "single_shadow_fisher_variance_trace": 0.12303843412154683,
+      "support_probabilities": {
+        "": 3.975934233320385e-21,
+        "0": 0.007926821326680865,
+        "0,1": 0.2525504941352442,
+        "0,1,2": 0.7146600968142478,
+        "0,2": 0.024862587723827018,
+        "1": 2.8690825517475756e-18,
+        "1,2": 3.051763817695822e-17,
+        "2": 5.607454711674305e-20
+      },
+      "two_half_cosine_lower_bound": 0.9984746322383368
+    },
+    {
+      "analytic_direction": [
+        0.35000000000000003,
+        -1.1,
+        0.75
+      ],
+      "analytic_fisher": [
+        [
+          0.129792,
+          -0.119808,
+          -0.009984
+        ],
+        [
+          -0.119808,
+          0.129792,
+          -0.009984
+        ],
+        [
+          -0.009984,
+          -0.009984,
+          0.019968000000000003
+        ]
+      ],
+      "context_probability": 0.52,
+      "dissociation_stratum": false,
+      "effective_minimum_count": 1.3312000000000002,
+      "exact_direction_covariance": [
+        [
+          1.4732854527332346,
+          1.4680452828222463,
+          -2.9413307355554847
+        ],
+        [
+          1.4680452828222463,
+          1.4732854529330845,
+          -2.9413307357553116
+        ],
+        [
+          -2.9413307355554847,
+          -2.9413307357553116,
+          5.882661471310684
+        ]
+      ],
+      "exact_mean_direction": [
+        -0.3576984584015646,
+        -1.807698458377656,
+        2.1653969167792146
+      ],
+      "exact_mean_fisher_norm": 0.6877912963691027,
+      "exact_probability_mass": 1.0000000000000293,
+      "exact_truth_alignment_cosine": 0.9090928046921084,
+      "exact_truth_angular_loss": 0.0909071953078916,
+      "expected_squared_fisher_error": 0.35561059937196066,
+      "expected_squared_observed_support_perturbation": 0.35561059928418,
+      "expected_squared_support_loss": 8.778855204128195e-11,
+      "family": "high-kappa-N64-rotated",
+      "final_angular_envelope": 0.014742815160270796,
+      "final_fisher_rms_standard_error": 0.0010065780977018732,
+      "final_replications": 262144,
+      "half_fisher_rms_standard_error": 0.0014235163973576994,
+      "id": "K04",
+      "joint_action_probabilities": [
+        0.2496,
+        0.2496,
+        0.020800000000000003
+      ],
+      "mean_observed_support_perturbation": [
+        -0.707698459695053,
+        -0.7076984596739991,
+        1.415396919369052
+      ],
+      "mean_support_loss": [
+        1.2934821719327827e-09,
+        1.2963562378243947e-09,
+        -2.589838284275516e-09
+      ],
+      "minimum_joint_cell_probability": 0.020800000000000003,
+      "policy": [
+        0.48,
+        0.48,
+        0.04
+      ],
+      "positive_fisher_condition_number": 8.333333333333336,
+      "positive_fisher_eigenvalues": [
+        0.029951999999999993,
+        0.2496
+      ],
+      "rank_deficient_probability": 3.455085637011984e-09,
+      "reward": [
+        0.35,
+        -1.1,
+        0.75
+      ],
+      "sample_count": 64,
+      "seed": 61204,
+      "single_shadow_fisher_variance_trace": 0.26560416101777323,
+      "support_probabilities": {
+        "": 3.975934233320385e-21,
+        "0": 1.7275428184759668e-09,
+        "0,1": 0.26047731200683943,
+        "0,1,2": 0.7395226671112217,
+        "0,2": 8.713426600557085e-09,
+        "1": 1.7275428184759668e-09,
+        "1,2": 8.713426600557085e-09,
+        "2": 5.607454711674305e-20
+      },
+      "two_half_cosine_lower_bound": 0.9991252640322676
+    }
+  ]
+}

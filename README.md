@@ -81,15 +81,23 @@ result.
 
 ## Research program result
 
-ACL-002 through ACL-005 now have immutable confirmatory artifacts in `evidence/`.
-The result is a restricted positive answer with explicit boundaries: local categorical
-mutation laws predict held-out responses; a finite-lambda Gaussian expected direction
-is predictive; and ACL-004's normalized blockwise diagnostic transported without
-target refitting into regular finite-state contextual-bandit targets. The same control
-diagnostic failed badly in predeclared rare-cell stress targets despite apparent
-half-mean convergence.
+ACL-002 through ACL-008 have immutable confirmatory artifacts in `evidence/`.
+Phase I established local categorical mutation laws, a finite-lambda Gaussian expected
+direction, and no-refit transport of a normalized diagnostic into contextual-bandit
+control, with rare-cell failures. ACL-006 then confirmed exact support-conditioned bias
+and the split-consistency/truth dissociation while falsifying scalar support-only
+reductions.
 
 [FINAL_SYNTHESIS.md](FINAL_SYNTHESIS.md) gives the terminating claim, exact hashes,
 negative results, exclusions, and open theorem. The machine-readable
 [bridge ledger](BRIDGE_LEDGER.json) records every edge. No result supports a universal
 identity among adaptive systems, sequential or neural RL, or support-free transport.
+[PHASE_II_SYNTHESIS.md](PHASE_II_SYNTHESIS.md) is the terminal breadth synthesis;
+[PHASE_II_OUTCOME.json](PHASE_II_OUTCOME.json) is its machine-readable provenance and
+stopping record.
+ACL-007 transported the finite-mean/dissociation diagnostic into sequential Euclidean
+Bayesian particle filtering. ACL-008 transported ACL-003's zero-fit second-order local
+mutation law into Burg log-barrier mirror geometry while finding a nonuniform stress
+radius. Phase II therefore supports a correspondence lattice: distinct local-curvature
+and stochastic-estimator subgraphs with explicit bridges and boundaries, not one
+universal adaptive process.

@@ -1,0 +1,2612 @@
+{
+  "comparator_source": "exact-true-model-Bayes-filter-and-count-state-PF-law",
+  "contrasts": [
+    {
+      "conservative_absolute_gap": 0.44687870148308895,
+      "exact_signed_truth_cosine_gap": -0.5583987627043767,
+      "id": "A-correct-vs-reversed-N3",
+      "kind": "observation-misspecification",
+      "left": "A01",
+      "resolvable": true,
+      "right": "A05"
+    },
+    {
+      "conservative_absolute_gap": 0.5018854664853674,
+      "exact_signed_truth_cosine_gap": -0.5981676225205212,
+      "id": "A-correct-vs-reversed-N4",
+      "kind": "observation-misspecification",
+      "left": "A02",
+      "resolvable": true,
+      "right": "A06"
+    },
+    {
+      "conservative_absolute_gap": 0.5545437585663593,
+      "exact_signed_truth_cosine_gap": -0.6330814136847374,
+      "id": "A-correct-vs-reversed-N6",
+      "kind": "observation-misspecification",
+      "left": "A03",
+      "resolvable": true,
+      "right": "A07"
+    },
+    {
+      "conservative_absolute_gap": 0.5808791751741474,
+      "exact_signed_truth_cosine_gap": -0.6489519320682309,
+      "id": "A-correct-vs-reversed-N8",
+      "kind": "observation-misspecification",
+      "left": "A04",
+      "resolvable": true,
+      "right": "A08"
+    },
+    {
+      "conservative_absolute_gap": 0.3334796732168839,
+      "exact_signed_truth_cosine_gap": -0.46459239525374585,
+      "id": "A-correct-vs-flat-N4",
+      "kind": "observation-misspecification",
+      "left": "A02",
+      "resolvable": true,
+      "right": "A09"
+    },
+    {
+      "conservative_absolute_gap": 0.38662527010147096,
+      "exact_signed_truth_cosine_gap": -0.48248013754063557,
+      "id": "A-correct-vs-flat-N8",
+      "kind": "observation-misspecification",
+      "left": "A04",
+      "resolvable": true,
+      "right": "A10"
+    },
+    {
+      "conservative_absolute_gap": 0.24653362357363356,
+      "exact_signed_truth_cosine_gap": -0.36821268637754634,
+      "id": "A-correct-vs-missing-N4",
+      "kind": "missing-observation",
+      "left": "A02",
+      "resolvable": true,
+      "right": "A11"
+    },
+    {
+      "conservative_absolute_gap": 0.3183899711706964,
+      "exact_signed_truth_cosine_gap": -0.4046580227383628,
+      "id": "A-correct-vs-missing-N8",
+      "kind": "missing-observation",
+      "left": "A04",
+      "resolvable": true,
+      "right": "A12"
+    },
+    {
+      "conservative_absolute_gap": 1.57530871240925,
+      "exact_signed_truth_cosine_gap": -1.8281009804785215,
+      "id": "B-correct-vs-reversed-N4",
+      "kind": "observation-misspecification",
+      "left": "B01",
+      "resolvable": true,
+      "right": "B02"
+    }
+  ],
+  "dissociation_target_ids": [
+    "A06",
+    "A07",
+    "A08"
+  ],
+  "experiment_id": "ACL-007",
+  "kind": "exact-finite-particle-filter-registry",
+  "native_metric": "centered-euclidean-belief-tangent",
+  "numeric_comparison": {
+    "absolute_tolerance": 2e-12,
+    "relative_tolerance": 2e-12
+  },
+  "outcomes_generated": false,
+  "resolvable_contrast_ids": [
+    "A-correct-vs-reversed-N3",
+    "A-correct-vs-reversed-N4",
+    "A-correct-vs-reversed-N6",
+    "A-correct-vs-reversed-N8",
+    "A-correct-vs-flat-N4",
+    "A-correct-vs-flat-N8",
+    "A-correct-vs-missing-N4",
+    "A-correct-vs-missing-N8",
+    "B-correct-vs-reversed-N4"
+  ],
+  "schema_version": 1,
+  "shadow_count": 0,
+  "target_refit": false,
+  "targets": [
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.16226532007644343,
+          -0.1268719854052817,
+          -0.035393334671162645
+        ],
+        [
+          -0.1268719854052817,
+          0.1601926646228991,
+          -0.03332067921761847
+        ],
+        [
+          -0.035393334671162645,
+          -0.03332067921761847,
+          0.06871401388878082
+        ]
+      ],
+      "exact_mean_belief": [
+        0.3873832449085723,
+        0.4803189303909902,
+        0.13229782470043977
+      ],
+      "exact_mean_direction": [
+        -0.07261675509142773,
+        0.1403189303909902,
+        -0.06770217529956024
+      ],
+      "exact_mean_direction_norm": 0.17189002264928682,
+      "exact_probability_mass": 1.0000000000000022,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.9563334267210332,
+      "exact_truth_angular_loss": 0.043666573278966836,
+      "family": "A-correct-N3",
+      "filter_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.07368446387587592,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0012215575112957968,
+      "half_rms_standard_error": 0.001727543199693241,
+      "id": "A01",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 3,
+      "seed": 71001,
+      "single_shadow_variance_trace": 0.39117199858812335,
+      "terminal_missing_state_probability": [
+        0.4506389621324429,
+        0.3185455339389018,
+        0.7484402883979635
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.5348856640446299,
+        "2": 0.4478534563800484,
+        "3": 0.017260879575324038
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9776040661662212
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.13373974623774207,
+          -0.10737505423949342,
+          -0.02636469199824799
+        ],
+        [
+          -0.10737505423949342,
+          0.1299668204681288,
+          -0.022591766228634562
+        ],
+        [
+          -0.02636469199824799,
+          -0.022591766228634562,
+          0.04895645822688277
+        ]
+      ],
+      "exact_mean_belief": [
+        0.39631588008087854,
+        0.48219958623914283,
+        0.12148453367997698
+      ],
+      "exact_mean_direction": [
+        -0.06368411991912148,
+        0.1421995862391428,
+        -0.07851546632002303
+      ],
+      "exact_mean_direction_norm": 0.17447368829685217,
+      "exact_probability_mass": 0.9999999999999982,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.9767101031558993,
+      "exact_truth_angular_loss": 0.023289896844100655,
+      "family": "A-correct-N4",
+      "filter_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.06461716465757034,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0010921148228428257,
+      "half_rms_standard_error": 0.0015444835941330142,
+      "id": "A02",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 4,
+      "seed": 71002,
+      "single_shadow_variance_trace": 0.31266302493275366,
+      "terminal_missing_state_probability": [
+        0.35890233541454947,
+        0.23031863033043762,
+        0.6997601175656936
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.35781239437667095,
+        "2": 0.5733562945573387,
+        "3": 0.06883131106598867
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9828423307181786
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.0972928939844287,
+          -0.08026090301094896,
+          -0.01703199097348217
+        ],
+        [
+          -0.08026090301094896,
+          0.09355520905847386,
+          -0.013294306047527647
+        ],
+        [
+          -0.01703199097348217,
+          -0.013294306047527647,
+          0.030326297021009162
+        ]
+      ],
+      "exact_mean_belief": [
+        0.4055533849403634,
+        0.48274930028286805,
+        0.11169731477677428
+      ],
+      "exact_mean_direction": [
+        -0.054446615059636605,
+        0.14274930028286803,
+        -0.08830268522322574
+      ],
+      "exact_mean_direction_norm": 0.17646291633182526,
+      "exact_probability_mass": 1.0000000000000056,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.9901734446411726,
+      "exact_truth_angular_loss": 0.009826555358827371,
+      "family": "A-correct-N6",
+      "filter_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.053443738237331666,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0009185387194615445,
+      "half_rms_standard_error": 0.0012990099146273318,
+      "id": "A03",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 6,
+      "seed": 71003,
+      "single_shadow_variance_trace": 0.22117440006391173,
+      "terminal_missing_state_probability": [
+        0.22586840731545915,
+        0.11967296720359646,
+        0.6083049357758107
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.16401443077625386,
+        "2": 0.6258174487423586,
+        "3": 0.2101681204813932
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.988317890305375
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.0760073325628397,
+          -0.06351920092495986,
+          -0.012488131637878389
+        ],
+        [
+          -0.06351920092495986,
+          0.07285812010043691,
+          -0.009338919175475371
+        ],
+        [
+          -0.012488131637878389,
+          -0.009338919175475371,
+          0.021827050813354135
+        ]
+      ],
+      "exact_mean_belief": [
+        0.4102405777868034,
+        0.4824949107556009,
+        0.107264511457592
+      ],
+      "exact_mean_direction": [
+        -0.049759422213196625,
+        0.1424949107556009,
+        -0.09273548854240801
+      ],
+      "exact_mean_direction_norm": 0.177145901802545,
+      "exact_probability_mass": 0.9999999999999962,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.9945978454427876,
+      "exact_truth_angular_loss": 0.00540215455721238,
+      "family": "A-correct-N8",
+      "filter_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.04661353063861005,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0008069326033040115,
+      "half_rms_standard_error": 0.0011411750315135614,
+      "id": "A04",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 8,
+      "seed": 71004,
+      "single_shadow_variance_trace": 0.17069250347663073,
+      "terminal_missing_state_probability": [
+        0.14174800288765213,
+        0.062018967185136734,
+        0.5274214602023901
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.0766869510954535,
+        "2": 0.577814528084272,
+        "3": 0.3454985208202707
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9911384423665301
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.09857303917744455,
+          -0.05813850560483046,
+          -0.04043453357261452
+        ],
+        [
+          -0.05813850560483046,
+          0.15973886897025297,
+          -0.10160036336542365
+        ],
+        [
+          -0.04043453357261452,
+          -0.10160036336542365,
+          0.1420348969380375
+        ]
+      ],
+      "exact_mean_belief": [
+        0.19182806553071063,
+        0.5120551943855127,
+        0.2961167400837789
+      ],
+      "exact_mean_direction": [
+        -0.2681719344692894,
+        0.1720551943855127,
+        0.0961167400837789
+      ],
+      "exact_mean_direction_norm": 0.33280265034457,
+      "exact_probability_mass": 1.0000000000000024,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.39793466401665645,
+      "exact_truth_angular_loss": 0.6020653359833436,
+      "family": "A-reversed-N3",
+      "filter_likelihoods": [
+        [
+          0.14,
+          0.38,
+          0.82
+        ],
+        [
+          0.88,
+          0.66,
+          0.28
+        ],
+        [
+          0.2,
+          0.48,
+          0.71
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.03783559734541189,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0012358000900883031,
+      "half_rms_standard_error": 0.001747685247784771,
+      "id": "A05",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 3,
+      "seed": 71005,
+      "single_shadow_variance_trace": 0.400346805085735,
+      "terminal_missing_state_probability": [
+        0.6641282743579395,
+        0.2888110682475718,
+        0.5593500135351952
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.5293477033563762,
+        "2": 0.4535939494279542,
+        "3": 0.017058347215672037
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9941830643539628
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": true,
+      "exact_direction_covariance": [
+        [
+          0.07103560750060464,
+          -0.04046942316085931,
+          -0.030566184339745013
+        ],
+        [
+          -0.04046942316085931,
+          0.12888666420763195,
+          -0.08841724104677182
+        ],
+        [
+          -0.030566184339745013,
+          -0.08841724104677182,
+          0.11898342538651735
+        ]
+      ],
+      "exact_mean_belief": [
+        0.17396045877091226,
+        0.5181842056785545,
+        0.3078553355505316
+      ],
+      "exact_mean_direction": [
+        -0.28603954122908776,
+        0.17818420567855447,
+        0.10785533555053156
+      ],
+      "exact_mean_direction_norm": 0.3538375385774694,
+      "exact_probability_mass": 0.9999999999999984,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.37854248063537804,
+      "exact_truth_angular_loss": 0.6214575193646219,
+      "family": "A-reversed-N4",
+      "filter_likelihoods": [
+        [
+          0.14,
+          0.38,
+          0.82
+        ],
+        [
+          0.88,
+          0.66,
+          0.28
+        ],
+        [
+          0.2,
+          0.48,
+          0.71
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.03166499137758355,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.001102963594457946,
+      "half_rms_standard_error": 0.0015598260740862055,
+      "id": "A06",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 4,
+      "seed": 71006,
+      "single_shadow_variance_trace": 0.3189056970947539,
+      "terminal_missing_state_probability": [
+        0.6091898569683069,
+        0.20027860805927877,
+        0.46840355806945133
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.34928132835884407,
+        "2": 0.5793093663793488,
+        "3": 0.07140930526180542
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9959361868061896
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": true,
+      "exact_direction_covariance": [
+        [
+          0.04407018819824507,
+          -0.02418798702344839,
+          -0.019882201174797522
+        ],
+        [
+          -0.02418798702344839,
+          0.09229124827912843,
+          -0.06810326125568288
+        ],
+        [
+          -0.019882201174797522,
+          -0.06810326125568288,
+          0.0879854624304786
+        ]
+      ],
+      "exact_mean_belief": [
+        0.15733411127457192,
+        0.5223919783230092,
+        0.3202739104024244
+      ],
+      "exact_mean_direction": [
+        -0.3026658887254281,
+        0.18239197832300919,
+        0.12027391040242441
+      ],
+      "exact_mean_direction_norm": 0.3732817802652906,
+      "exact_probability_mass": 1.0000000000000056,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.3570920309564352,
+      "exact_truth_angular_loss": 0.6429079690435648,
+      "family": "A-reversed-N6",
+      "filter_likelihoods": [
+        [
+          0.14,
+          0.38,
+          0.82
+        ],
+        [
+          0.88,
+          0.66,
+          0.28
+        ],
+        [
+          0.2,
+          0.48,
+          0.71
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.0250939168810464,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0009251029682231226,
+      "half_rms_standard_error": 0.0013082931642527463,
+      "id": "A07",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 6,
+      "seed": 71007,
+      "single_shadow_variance_trace": 0.2243468989078521,
+      "terminal_missing_state_probability": [
+        0.5075989939482132,
+        0.09620269147497956,
+        0.3269740075300929
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.15898380347015043,
+        "2": 0.6128080860129848,
+        "3": 0.22820811051687048
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9974547946109609
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": true,
+      "exact_direction_covariance": [
+        [
+          0.03158674141570074,
+          -0.017029503285078875,
+          -0.014557238130621257
+        ],
+        [
+          -0.017029503285078875,
+          0.07173572923147409,
+          -0.054706225946392975
+        ],
+        [
+          -0.014557238130621257,
+          -0.054706225946392975,
+          0.06926346407701549
+        ]
+      ],
+      "exact_mean_belief": [
+        0.14970368120913297,
+        0.5236633756867513,
+        0.32663294310411173
+      ],
+      "exact_mean_direction": [
+        -0.31029631879086705,
+        0.18366337568675123,
+        0.12663294310411172
+      ],
+      "exact_mean_direction_norm": 0.3821674283648795,
+      "exact_probability_mass": 0.9999999999999961,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.34564591337455675,
+      "exact_truth_angular_loss": 0.6543540866254433,
+      "family": "A-reversed-N8",
+      "filter_likelihoods": [
+        [
+          0.14,
+          0.38,
+          0.82
+        ],
+        [
+          0.88,
+          0.66,
+          0.28
+        ],
+        [
+          0.2,
+          0.48,
+          0.71
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.021459226255473408,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0008113957685850374,
+      "half_rms_standard_error": 0.0011474869003851012,
+      "id": "A08",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 8,
+      "seed": 71008,
+      "single_shadow_variance_trace": 0.17258593472419032,
+      "terminal_missing_state_probability": [
+        0.4209417588352999,
+        0.04620475683148046,
+        0.22785895421247154
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.07605152183318989,
+        "2": 0.5429024262128721,
+        "3": 0.38104605195393393
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9981415237001381
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.11341115537147264,
+          -0.07230786241907784,
+          -0.04110329295239436
+        ],
+        [
+          -0.07230786241907784,
+          0.12079452058143758,
+          -0.04848665816235915
+        ],
+        [
+          -0.04110329295239436,
+          -0.04848665816235915,
+          0.08958995111475387
+        ]
+      ],
+      "exact_mean_belief": [
+        0.32490139999999956,
+        0.44251919999999945,
+        0.2325793999999996
+      ],
+      "exact_mean_direction": [
+        -0.13509860000000046,
+        0.10251919999999942,
+        0.03257939999999959
+      ],
+      "exact_mean_direction_norm": 0.1726940514174127,
+      "exact_probability_mass": 0.9999999999999986,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.5121177079021535,
+      "exact_truth_angular_loss": 0.4878822920978465,
+      "family": "A-flat-N4",
+      "filter_likelihoods": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.06649555737929162,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.001111387553104834,
+      "half_rms_standard_error": 0.0015717393506535047,
+      "id": "A09",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 4,
+      "seed": 71009,
+      "single_shadow_variance_trace": 0.32379562706766407,
+      "terminal_missing_state_probability": [
+        0.4044943543732284,
+        0.24981656975368055,
+        0.5300028686880399
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.28783398587825315,
+        "2": 0.6086458210584426,
+        "3": 0.10352019306330286
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9818159626470764
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.06376931096807578,
+          -0.040332240991791786,
+          -0.023437069976282934
+        ],
+        [
+          -0.040332240991791786,
+          0.06684429730844646,
+          -0.026512056316653307
+        ],
+        [
+          -0.023437069976282934,
+          -0.026512056316653307,
+          0.049949126292936984
+        ]
+      ],
+      "exact_mean_belief": [
+        0.324901399999999,
+        0.44251919999999867,
+        0.23257939999999924
+      ],
+      "exact_mean_direction": [
+        -0.135098600000001,
+        0.10251919999999864,
+        0.03257939999999923
+      ],
+      "exact_mean_direction_norm": 0.1726940514174126,
+      "exact_probability_mass": 0.999999999999997,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.512117707902152,
+      "exact_truth_angular_loss": 0.48788229209784795,
+      "family": "A-flat-N8",
+      "filter_likelihoods": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.049241336800554536,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0008299350395277264,
+      "half_rms_standard_error": 0.0011737053887887613,
+      "id": "A10",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 8,
+      "seed": 71010,
+      "single_shadow_variance_trace": 0.18056273456945923,
+      "terminal_missing_state_probability": [
+        0.18356345749779981,
+        0.07303415283054852,
+        0.3022102305933423
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.04350856573730312,
+        "2": 0.47179070944708434,
+        "3": 0.4847007248156095
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9901002735341664
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.11129906234553856,
+          -0.07379903708638175,
+          -0.03750002525915634
+        ],
+        [
+          -0.07379903708638175,
+          0.12384239968221736,
+          -0.05004336259583481
+        ],
+        [
+          -0.03750002525915634,
+          -0.05004336259583481,
+          0.0875433878549915
+        ]
+      ],
+      "exact_mean_belief": [
+        0.31005101271328966,
+        0.4709462404290676,
+        0.21900274685764118
+      ],
+      "exact_mean_direction": [
+        -0.14994898728671036,
+        0.13094624042906755,
+        0.019002746857641167
+      ],
+      "exact_mean_direction_norm": 0.19998180181944752,
+      "exact_probability_mass": 0.9999999999999983,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.608497416778353,
+      "exact_truth_angular_loss": 0.391502583221647,
+      "family": "A-missing-final-N4",
+      "filter_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.05706189814634243,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0011094796142815469,
+      "half_rms_standard_error": 0.001569041117693434,
+      "id": "A11",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 4,
+      "seed": 71011,
+      "single_shadow_variance_trace": 0.3226848498827474,
+      "terminal_missing_state_probability": [
+        0.4240751998961281,
+        0.2278663314749373,
+        0.5581192094396947
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.3059970210018132,
+        "2": 0.5980666988071337,
+        "3": 0.09593628019105147
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9866623763238307
+    },
+    {
+      "analytic_direction_norm": 0.17789873717376417,
+      "analytic_update": [
+        -0.03554346629201155,
+        0.13974089665453965,
+        -0.10419743036252825
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.06003867288598003,
+          -0.039320013940289514,
+          -0.020718658945689507
+        ],
+        [
+          -0.039320013940289514,
+          0.06866852891234948,
+          -0.029348514972058454
+        ],
+        [
+          -0.020718658945689507,
+          -0.029348514972058454,
+          0.050067173917748724
+        ]
+      ],
+      "exact_mean_belief": [
+        0.2992053956952831,
+        0.47662684735437527,
+        0.22416775695033822
+      ],
+      "exact_mean_direction": [
+        -0.16079460430471693,
+        0.13662684735437525,
+        0.02416775695033821
+      ],
+      "exact_mean_direction_norm": 0.21238145085556992,
+      "exact_probability_mass": 0.9999999999999963,
+      "exact_true_belief_trajectory": [
+        [
+          0.46,
+          0.34,
+          0.2
+        ],
+        [
+          0.6426956452511744,
+          0.29828835283814986,
+          0.0590160019106759
+        ],
+        [
+          0.292550446176561,
+          0.4948466545127346,
+          0.21260289931070447
+        ],
+        [
+          0.42445653370798847,
+          0.4797408966545397,
+          0.09580256963747176
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.5899398227044248,
+      "exact_truth_angular_loss": 0.4100601772955752,
+      "family": "A-missing-final-N8",
+      "filter_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "final_angular_envelope": 0.03965452092905634,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.000825814823194607,
+      "half_rms_standard_error": 0.0011678785229705527,
+      "id": "A12",
+      "initial_belief": [
+        0.46,
+        0.34,
+        0.2
+      ],
+      "model": "A",
+      "particle_count": 8,
+      "seed": 71012,
+      "single_shadow_variance_trace": 0.17877437571607824,
+      "terminal_missing_state_probability": [
+        0.20617259170100358,
+        0.05945856995617408,
+        0.3266755021366131
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.051845288626098544,
+        "2": 0.48861608654159366,
+        "3": 0.45953862483230423
+      },
+      "true_likelihoods": [
+        [
+          0.82,
+          0.38,
+          0.14
+        ],
+        [
+          0.28,
+          0.66,
+          0.88
+        ],
+        [
+          0.71,
+          0.48,
+          0.2
+        ]
+      ],
+      "true_transition": [
+        [
+          0.74,
+          0.2,
+          0.06
+        ],
+        [
+          0.11,
+          0.76,
+          0.13
+        ],
+        [
+          0.08,
+          0.22,
+          0.7
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9936054742815253
+    },
+    {
+      "analytic_direction_norm": 0.13096940312618333,
+      "analytic_update": [
+        -0.1028677851325269,
+        0.02613258105755767,
+        0.07673520407496925
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.0800429859780031,
+          -0.0448027822198822,
+          -0.03524020375812042
+        ],
+        [
+          -0.0448027822198822,
+          0.12528450962668508,
+          -0.08048172740680162
+        ],
+        [
+          -0.03524020375812042,
+          -0.08048172740680162,
+          0.1157219311649227
+        ]
+      ],
+      "exact_mean_belief": [
+        0.20646175792528548,
+        0.4987063804393022,
+        0.29483186163541
+      ],
+      "exact_mean_direction": [
+        -0.07353824207471454,
+        0.028706380439302237,
+        0.044831861635409975
+      ],
+      "exact_mean_direction_norm": 0.09078449836322176,
+      "exact_probability_mass": 0.9999999999999978,
+      "exact_true_belief_trajectory": [
+        [
+          0.28,
+          0.47,
+          0.25
+        ],
+        [
+          0.13587571687292488,
+          0.6494302746755206,
+          0.21469400845155448
+        ],
+        [
+          0.455954046272807,
+          0.42715358331965264,
+          0.11689237040754046
+        ],
+        [
+          0.17713221486747313,
+          0.49613258105755764,
+          0.32673520407496925
+        ]
+      ],
+      "exact_truth_alignment_cosine": 0.9886525055212013,
+      "exact_truth_angular_loss": 0.011347494478798681,
+      "family": "B-correct-N4",
+      "filter_likelihoods": [
+        [
+          0.25,
+          0.75,
+          0.45
+        ],
+        [
+          0.8,
+          0.3,
+          0.18
+        ],
+        [
+          0.22,
+          0.55,
+          0.9
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.68,
+          0.24,
+          0.08
+        ],
+        [
+          0.16,
+          0.69,
+          0.15
+        ],
+        [
+          0.09,
+          0.27,
+          0.64
+        ]
+      ],
+      "final_angular_envelope": 0.1298122301766829,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.001106664524789924,
+      "half_rms_standard_error": 0.0015650599799550869,
+      "id": "B01",
+      "initial_belief": [
+        0.28,
+        0.47,
+        0.25
+      ],
+      "model": "B",
+      "particle_count": 4,
+      "seed": 71101,
+      "single_shadow_variance_trace": 0.3210494267696109,
+      "terminal_missing_state_probability": [
+        0.5457980626594016,
+        0.20823917180725396,
+        0.48987552055762734
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.32167044189255367,
+        "2": 0.6005718712391755,
+        "3": 0.07775768686826838
+      },
+      "true_likelihoods": [
+        [
+          0.25,
+          0.75,
+          0.45
+        ],
+        [
+          0.8,
+          0.3,
+          0.18
+        ],
+        [
+          0.22,
+          0.55,
+          0.9
+        ]
+      ],
+      "true_transition": [
+        [
+          0.68,
+          0.24,
+          0.08
+        ],
+        [
+          0.16,
+          0.69,
+          0.15
+        ],
+        [
+          0.09,
+          0.27,
+          0.64
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9288191985542111
+    },
+    {
+      "analytic_direction_norm": 0.13096940312618333,
+      "analytic_update": [
+        -0.1028677851325269,
+        0.02613258105755767,
+        0.07673520407496925
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.12210480420502667,
+          -0.08927395794756106,
+          -0.03283084625746476
+        ],
+        [
+          -0.08927395794756106,
+          0.12446089666195523,
+          -0.03518693871439302
+        ],
+        [
+          -0.03283084625746476,
+          -0.03518693871439302,
+          0.0680177849718582
+        ]
+      ],
+      "exact_mean_belief": [
+        0.3308799788809826,
+        0.49484557135324003,
+        0.174274449765775
+      ],
+      "exact_mean_direction": [
+        0.05087997888098256,
+        0.02484557135324006,
+        -0.075725550234225
+      ],
+      "exact_mean_direction_norm": 0.09455386626190548,
+      "exact_probability_mass": 0.9999999999999977,
+      "exact_true_belief_trajectory": [
+        [
+          0.28,
+          0.47,
+          0.25
+        ],
+        [
+          0.13587571687292488,
+          0.6494302746755206,
+          0.21469400845155448
+        ],
+        [
+          0.455954046272807,
+          0.42715358331965264,
+          0.11689237040754046
+        ],
+        [
+          0.17713221486747313,
+          0.49613258105755764,
+          0.32673520407496925
+        ]
+      ],
+      "exact_truth_alignment_cosine": -0.8394484749573201,
+      "exact_truth_angular_loss": 1.8394484749573201,
+      "family": "B-reversed-N4",
+      "filter_likelihoods": [
+        [
+          0.45,
+          0.75,
+          0.25
+        ],
+        [
+          0.18,
+          0.3,
+          0.8
+        ],
+        [
+          0.9,
+          0.55,
+          0.22
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.68,
+          0.24,
+          0.08
+        ],
+        [
+          0.16,
+          0.69,
+          0.15
+        ],
+        [
+          0.09,
+          0.27,
+          0.64
+        ]
+      ],
+      "final_angular_envelope": 0.12298003789258873,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0010954637206408088,
+      "half_rms_standard_error": 0.0015492196508179233,
+      "id": "B02",
+      "initial_belief": [
+        0.28,
+        0.47,
+        0.25
+      ],
+      "model": "B",
+      "particle_count": 4,
+      "seed": 71102,
+      "single_shadow_variance_trace": 0.3145834858388401,
+      "terminal_missing_state_probability": [
+        0.4386531383270199,
+        0.20712065444044747,
+        0.5971867575683236
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.321500041866505,
+        "2": 0.5999604666027809,
+        "3": 0.07853949153071164
+      },
+      "true_likelihoods": [
+        [
+          0.25,
+          0.75,
+          0.45
+        ],
+        [
+          0.8,
+          0.3,
+          0.18
+        ],
+        [
+          0.22,
+          0.55,
+          0.9
+        ]
+      ],
+      "true_transition": [
+        [
+          0.68,
+          0.24,
+          0.08
+        ],
+        [
+          0.16,
+          0.69,
+          0.15
+        ],
+        [
+          0.09,
+          0.27,
+          0.64
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9363000912554982
+    },
+    {
+      "analytic_direction_norm": 0.13096940312618333,
+      "analytic_update": [
+        -0.1028677851325269,
+        0.02613258105755767,
+        0.07673520407496925
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.10162375948655564,
+          -0.06295026117274094,
+          -0.03867349831381415
+        ],
+        [
+          -0.06295026117274094,
+          0.11597441692345029,
+          -0.05302415575070856
+        ],
+        [
+          -0.03867349831381415,
+          -0.05302415575070856,
+          0.09169765406452315
+        ]
+      ],
+      "exact_mean_belief": [
+        0.29413389999999945,
+        0.4519742699999991,
+        0.25389182999999954
+      ],
+      "exact_mean_direction": [
+        0.014133899999999422,
+        -0.01802573000000085,
+        0.003891829999999541
+      ],
+      "exact_mean_direction_norm": 0.023234466036296395,
+      "exact_probability_mass": 0.999999999999998,
+      "exact_true_belief_trajectory": [
+        [
+          0.28,
+          0.47,
+          0.25
+        ],
+        [
+          0.13587571687292488,
+          0.6494302746755206,
+          0.21469400845155448
+        ],
+        [
+          0.455954046272807,
+          0.42715358331965264,
+          0.11689237040754046
+        ],
+        [
+          0.17713221486747313,
+          0.49613258105755764,
+          0.32673520407496925
+        ]
+      ],
+      "exact_truth_alignment_cosine": -0.5344525967982334,
+      "exact_truth_angular_loss": 1.5344525967982334,
+      "family": "B-flat-N4",
+      "filter_likelihoods": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.68,
+          0.24,
+          0.08
+        ],
+        [
+          0.16,
+          0.69,
+          0.15
+        ],
+        [
+          0.09,
+          0.27,
+          0.64
+        ]
+      ],
+      "final_angular_envelope": 0.6101192533622635,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0010862181911478004,
+      "half_rms_standard_error": 0.0015361444976175905,
+      "id": "B03",
+      "initial_belief": [
+        0.28,
+        0.47,
+        0.25
+      ],
+      "model": "B",
+      "particle_count": 4,
+      "seed": 71103,
+      "single_shadow_variance_trace": 0.3092958304745291,
+      "terminal_missing_state_probability": [
+        0.4290238614016185,
+        0.22729652087681934,
+        0.4857705414695783
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.2603002373586638,
+        "2": 0.6214904490306885,
+        "3": 0.11820931361064571
+      },
+      "true_likelihoods": [
+        [
+          0.25,
+          0.75,
+          0.45
+        ],
+        [
+          0.8,
+          0.3,
+          0.18
+        ],
+        [
+          0.22,
+          0.55,
+          0.9
+        ]
+      ],
+      "true_transition": [
+        [
+          0.68,
+          0.24,
+          0.08
+        ],
+        [
+          0.16,
+          0.69,
+          0.15
+        ],
+        [
+          0.09,
+          0.27,
+          0.64
+        ]
+      ],
+      "two_half_cosine_lower_bound": -0.9508517468903186
+    },
+    {
+      "analytic_direction_norm": 0.13096940312618333,
+      "analytic_update": [
+        -0.1028677851325269,
+        0.02613258105755767,
+        0.07673520407496925
+      ],
+      "dissociation_stratum": false,
+      "exact_direction_covariance": [
+        [
+          0.11591110034736382,
+          -0.07929693427187944,
+          -0.03661416607548368
+        ],
+        [
+          -0.07929693427187944,
+          0.11800528484380832,
+          -0.0387083505719278
+        ],
+        [
+          -0.03661416607548368,
+          -0.0387083505719278,
+          0.07532251664741188
+        ]
+      ],
+      "exact_mean_belief": [
+        0.3479372106187053,
+        0.4534582839863492,
+        0.19860450539494337
+      ],
+      "exact_mean_direction": [
+        0.06793721061870528,
+        -0.016541716013650787,
+        -0.05139549460505663
+      ],
+      "exact_mean_direction_norm": 0.08677897107609076,
+      "exact_probability_mass": 0.9999999999999978,
+      "exact_true_belief_trajectory": [
+        [
+          0.28,
+          0.47,
+          0.25
+        ],
+        [
+          0.13587571687292488,
+          0.6494302746755206,
+          0.21469400845155448
+        ],
+        [
+          0.455954046272807,
+          0.42715358331965264,
+          0.11689237040754046
+        ],
+        [
+          0.17713221486747313,
+          0.49613258105755764,
+          0.32673520407496925
+        ]
+      ],
+      "exact_truth_alignment_cosine": -0.9999368116977938,
+      "exact_truth_angular_loss": 1.9999368116977938,
+      "family": "B-missing-final-N4",
+      "filter_likelihoods": [
+        [
+          0.25,
+          0.75,
+          0.45
+        ],
+        [
+          0.8,
+          0.3,
+          0.18
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "filter_transition": [
+        [
+          0.68,
+          0.24,
+          0.08
+        ],
+        [
+          0.16,
+          0.69,
+          0.15
+        ],
+        [
+          0.09,
+          0.27,
+          0.64
+        ]
+      ],
+      "final_angular_envelope": 0.13351442560956991,
+      "final_replications": 262144,
+      "final_rms_standard_error": 0.0010861182225101115,
+      "half_rms_standard_error": 0.001536003120614359,
+      "id": "B04",
+      "initial_belief": [
+        0.28,
+        0.47,
+        0.25
+      ],
+      "model": "B",
+      "particle_count": 4,
+      "seed": 71104,
+      "single_shadow_variance_trace": 0.30923890183858405,
+      "terminal_missing_state_probability": [
+        0.3724974574366434,
+        0.2304243610597036,
+        0.570705570836538
+      ],
+      "terminal_support_size_probabilities": {
+        "1": 0.27990310351454883,
+        "2": 0.6138211823037872,
+        "3": 0.10627571418166178
+      },
+      "true_likelihoods": [
+        [
+          0.25,
+          0.75,
+          0.45
+        ],
+        [
+          0.8,
+          0.3,
+          0.18
+        ],
+        [
+          0.22,
+          0.55,
+          0.9
+        ]
+      ],
+      "true_transition": [
+        [
+          0.68,
+          0.24,
+          0.08
+        ],
+        [
+          0.16,
+          0.69,
+          0.15
+        ],
+        [
+          0.09,
+          0.27,
+          0.64
+        ]
+      ],
+      "two_half_cosine_lower_bound": 0.9245824022875326
+    }
+  ],
+  "transported_source_rule": "unchanged-native-metric-standardized-mean-and-dissociation-law"
+}
