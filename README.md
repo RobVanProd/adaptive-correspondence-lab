@@ -101,3 +101,9 @@ structurally distinct sequential Bayesian particle filter using Euclidean belief
 geometry. That is genuine no-refit breadth evidence, but not yet a common detailed
 adaptive-dynamics law; the next test must be mechanism-bearing or map a controlled
 failure boundary.
+
+ACL-008 has now supplied that mechanism-bearing test: ACL-003's zero-fit second-order
+local mutation law and practical gates transported into Burg log-barrier mirror geometry
+without refitting, while failing to provide a uniform stress radius. Phase II therefore
+supports a correspondence lattice—distinct local-curvature and stochastic-estimator
+islands with explicit bridges and boundaries—not one universal adaptive process.

@@ -187,14 +187,17 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   `I+epsilon(M-I)`.
 - **Scope:** interior finite simplex, fixed reward and step size, smooth constrained
   mirror map, finite horizon, and no projection or clipping.
-- **Transported prediction:** **preregistered, unexecuted.** ACL-008 copies ACL-003's
+- **Transported prediction:** **preregistered confirmation.** ACL-008 copied ACL-003's
   zero-fit second-order L1 prediction, epsilon regions, maximum-within-landscape reducer,
   and 10%/20% Type-7 median/Q90 gates unchanged. Sixteen new-value Burg targets and an
-  identity software control are locked with no positive-epsilon outcome.
-- **Failure boundary:** unresolved. Burg curvature and approach to its barrier may make
-  ACL-003's epsilon `0.01` practical radius entropy-specific despite the formal Taylor
-  recurrence.
+  identity software control passed; median error was `0.001966` and Q90 `0.005559`.
+- **Failure boundary:** the radius is not uniform. At epsilon `0.1`, only 13/16 targets
+  improve over first order; median second-order error is `28.92%` and maximum is
+  `277.30%` on `B05`.
 - **Falsifier:** new-value Burg targets violate the copied gates or fail to improve over
   first order throughout the frozen local region.
-- **Status:** proved local mechanism plus locked non-Fisher transport test awaiting
-  exact-SHA audit and one-shot execution.
+- **Evidence:** preregistration SHA `086c8187caa641a7699ee07cff540a7d8e77ba18`;
+  evidence commit `c972d886edddc2dd36d60bd8229640a8eec405db`; artifact SHA-256
+  `856be5ff685d65e19e029fc243a2ef40170ddf64a8b035dd1b543b484e0eba4f`.
+- **Status:** preregistered no-refit cross-geometry confirmation with a nonuniform stress
+  boundary.

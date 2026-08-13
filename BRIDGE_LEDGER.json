@@ -339,29 +339,33 @@
         "no projection or clipping"
       ],
       "transported_prediction": {
-        "status": "preregistered-unexecuted",
+        "status": "preregistered-confirmation",
         "quantity": "ACL-003 zero-fit second-order truncated L1 prediction with unchanged epsilon regions and 10%/20% Type-7 median/Q90 gates",
         "source": "ACL-003",
         "target": "ACL-008 Burg mirror dynamics",
         "target_refit": false,
         "bundle": "preregistrations/ACL-008",
         "confirmatory_target_count": 16,
-        "outcomes_generated": false
+        "outcomes_generated": true,
+        "result": "PASS: Type-7 median 0.001965748 and Q90 0.005559435 against unchanged 0.10/0.20 gates"
       },
       "failure_boundary": {
-        "status": "unresolved",
-        "candidate_mechanisms": [
-          "stronger Burg barrier curvature",
-          "boundary proximity",
-          "finite-horizon curvature accumulation"
-        ]
+        "status": "preregistered-confirmation",
+        "result": "Nonuniform stress boundary: at epsilon 0.1 only 13/16 targets improved over first order; median second-order error 0.289224350 and maximum 2.772975981."
       },
       "falsifying_observation": "New-value Burg targets violate the copied gates or fail to improve over first order throughout the frozen local region.",
       "evidence_status": [
         "theorem-reproduction",
-        "preregistered-unexecuted",
-        "unresolved"
+        "preregistered-confirmation"
       ],
+      "evidence": {
+        "approved_preregistration_sha": "086c8187caa641a7699ee07cff540a7d8e77ba18",
+        "evidence_commit": "c972d886edddc2dd36d60bd8229640a8eec405db",
+        "artifact": "evidence/ACL-008-confirmatory-086c8187caa641a7699ee07cff540a7d8e77ba18.json",
+        "artifact_sha256": "856be5ff685d65e19e029fc243a2ef40170ddf64a8b035dd1b543b484e0eba4f",
+        "report": "analysis/ACL-008-confirmatory/summary.json",
+        "report_sha256": "403c69904842d0d09ef6d9091b3e5133d684e0a25a084748b5e415770a84b0a1"
+      },
       "structural_distance_note": "Same state space, objective semantics, and perturbation, but genuinely different native geometry and exact retraction; isolates geometry with minimal confounding."
     }
   ]

@@ -44,5 +44,6 @@ information value.
 ACL-008 now instantiates candidate 2 as a Burg log-barrier mirror optimizer. Relative to
 the categorical entropy/Fisher source it retains simplex state, linear reward, and the
 mutation operator, but changes the native Hessian and exact retraction. This isolates
-geometry with minimal semantic confounding. It counts as a distinct geometry, not yet
-as confirmatory breadth evidence.
+geometry with minimal semantic confounding. Its preregistered no-refit second-order rule
+passed locally, so it is confirmatory breadth evidence for a cross-geometry curvature
+island, with the same state space and objective semantics explicitly retained.

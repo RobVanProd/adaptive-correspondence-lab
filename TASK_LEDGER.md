@@ -1403,3 +1403,49 @@
 - **Execution hold:** do not invoke `acl008-run` until this exact public commit is
   pushed and passes public-SHA, lock, source, environment, canonical path, clean-tree,
   and outcome-absence audit.
+
+## ACL-008-POST — Artifact-only non-Fisher curvature report
+
+- **Task ID:** `ACL-008-POST`.
+- **Immutable input:** preregistration SHA
+  `086c8187caa641a7699ee07cff540a7d8e77ba18`; evidence commit
+  `c972d886edddc2dd36d60bd8229640a8eec405db`; artifact
+  `evidence/ACL-008-confirmatory-086c8187caa641a7699ee07cff540a7d8e77ba18.json`;
+  SHA-256 `856be5ff685d65e19e029fc243a2ef40170ddf64a8b035dd1b543b484e0eba4f`.
+- **Observed frozen verdict:** PASS; median `0.0019657477`; Type-7 Q90
+  `0.0055594354`; identity control PASS; no target refit; randomness none.
+- **Hypothesis for reporting:** stored rows reproduce the frozen verdict and polynomial
+  oracle; the practical second-order radius transports across mirror geometry locally
+  but remains nonuniform in stress.
+- **Allowed files:** this ledger, artifact-only analyzer/tests,
+  `analysis/ACL-008-confirmatory/`, README and ledgers. No evidence/preregistration byte
+  may change and no perturbed trajectory may be recomputed.
+- **Acceptance tests:** wrong hash fails; embedded identities match; 544 rows and verdict
+  reproduce; stress/improvement summaries derive only from stored rows; deterministic
+  output; full test, Ruff, coverage, build, and immutable-hash audit.
+- **Risks:** hiding stress failures behind local PASS; overstating same-simplex geometry
+  distance; or forcing one law across deterministic-curvature and stochastic-estimator
+  islands where its estimand is undefined.
+- **Stop conditions:** evidence hash changes; any new target trajectory is evaluated;
+  a threshold changes; or a posthoc fit is introduced.
+
+### ACL-008 post-confirmatory completion record
+
+- **Artifact reconstruction:** exact. All 544 stored rows reproduce the frozen primary
+  gate; the maximum bisection-versus-polynomial discrepancy is
+  `2.3314683517128287e-15`.
+- **Confirmed:** PASS with median `0.0019657476987589772`, Type-7 Q90
+  `0.005559435449126814`, 16 regular targets, and a passing identity control. Second
+  order improves every target at every epsilon through `0.03`.
+- **Boundary:** at stress epsilon `0.1`, only 13/16 targets improve over first order;
+  median second-order relative error is `0.2892243502` and maximum is
+  `2.7729759805` on `B05`. No uniform stress radius is supported.
+- **Classification:** preregistered no-refit local curvature transport across entropy/
+  Fisher and Burg mirror geometries, with the same state space and objective semantics.
+  This forms a different predictive island from ACL-006/007's stochastic finite-mean
+  diagnostic.
+- **Report:** `analysis/ACL-008-confirmatory/summary.json`, SHA-256
+  `403c69904842d0d09ef6d9091b3e5133d684e0a25a084748b5e415770a84b0a1`.
+- **Decision:** evaluate the Phase-II stopping rule as Outcome U3, a correspondence
+  lattice. The two confirmed transported laws have different non-overlapping estimands;
+  forcing either across every node would be undefined or vacuous.
