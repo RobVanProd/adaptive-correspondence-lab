@@ -102,3 +102,19 @@ def test_acl006_validation_command_never_invokes_runner(monkeypatch, capsys) -> 
         "outcomes_generated": False,
         "valid": True,
     }
+
+
+def test_acl007_validation_command_never_invokes_runner(monkeypatch, capsys) -> None:
+    monkeypatch.setattr(
+        cli_module,
+        "validate_acl007_preregistration_bundle",
+        lambda bundle: {"valid": True, "outcomes_generated": False, "bundle": bundle},
+    )
+    return_code = main(["acl007-validate", "--bundle", "inference-frozen"])
+    assert return_code == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload == {
+        "bundle": "inference-frozen",
+        "outcomes_generated": False,
+        "valid": True,
+    }

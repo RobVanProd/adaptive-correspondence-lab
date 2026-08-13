@@ -4,6 +4,7 @@
   "status_vocabulary": [
     "theorem-reproduction",
     "exploratory",
+    "preregistered-unexecuted",
     "preregistered-confirmation",
     "failure",
     "unresolved"
@@ -289,11 +290,16 @@
         "fixed schedule and no target refit"
       ],
       "transported_prediction": {
-        "status": "mechanism-candidate-not-preregistered",
+        "status": "preregistered-unexecuted",
         "quantity": "ACL-006 unchanged standardized mean-error gates and split-consistency/truth-dissociation thresholds",
         "source": "ACL-006",
         "target": "ACL-007 sequential inference",
-        "target_refit": false
+        "target_refit": false,
+        "bundle": "preregistrations/ACL-007",
+        "target_count": 16,
+        "dissociation_target_ids": ["A06", "A07", "A08"],
+        "resolvable_contrast_count": 9,
+        "outcomes_generated": false
       },
       "failure_boundary": {
         "status": "unresolved",
@@ -308,6 +314,7 @@
       "falsifying_observation": "A preregistered target violates the unchanged ACL-006 normalized mean or dissociation gates despite exact target moments and an independently verified particle simulator.",
       "evidence_status": [
         "theorem-reproduction",
+        "preregistered-unexecuted",
         "unresolved"
       ],
       "structural_distance_note": "Different estimator family, native metric, objective semantics, temporal structure, data generation, and adaptation role; this is the first Phase-II candidate outside the Fisher-natural family."

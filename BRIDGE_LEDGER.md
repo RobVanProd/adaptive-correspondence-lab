@@ -157,12 +157,14 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   particle bootstrap-filter displacement.
 - **Scope:** independent shadows, nonzero ideal and mean directions, finite native-metric
   second moments, independently exact mean/covariance, fixed schedule, and no target fit.
-- **Transported prediction:** mechanism candidate, not yet preregistered. Copy ACL-006's
+- **Transported prediction:** **preregistered, unexecuted.** ACL-007 copies ACL-006's
   complete standardized mean-error and split-consistency/truth-dissociation rule without
-  changing thresholds.
+  changing thresholds, schedule, or contrast gap. Sixteen frozen targets span two new
+  HMMs and correct, reversed-observation, flat-observation, and missing-observation
+  particle filters.
 - **Failure boundary:** unresolved; sequential resampling, misspecification, particle
   support, changed geometry, or non-Gaussian finite-mean behavior may break transport.
 - **Falsifier:** any locked target outside the copied gates after exact target moments and
   the independent labeled-particle simulator have been verified.
-- **Status:** theorem construction plus unresolved cross-class candidate. This would be
-  the first Phase-II test outside the Fisher-natural estimator family.
+- **Status:** theorem construction plus locked preregistered cross-class test awaiting
+  exact-SHA audit and one-shot execution. No ACL-007 target outcome exists.

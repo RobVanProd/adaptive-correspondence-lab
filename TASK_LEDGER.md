@@ -1154,3 +1154,85 @@
 - **Recommended next action:** publish this mechanism checkpoint, then choose new HMM
   target values exclusively by analytic count-state quantities, freeze ACL-007, and
   audit its exact public SHA before generating any target particles.
+
+## ACL-007 — No-refit transport into sequential Bayesian inference
+
+- **Task ID:** `ACL-007`.
+- **Status:** preregistration construction only; no target particle stream until a locked
+  public checkpoint is adversarially audited and approved.
+- **Source:** ACL-006 preregistration
+  `a8b42042e397f1422866a0ca9496ee07abe0a42a`, evidence commit
+  `c94890dc8f361c0309802c0ef0173ec84e814d3d`, artifact SHA-256
+  `740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918`,
+  and report SHA-256
+  `0748482b3796b861267fdb5781bab11605cfc82263e4a6fdbd206df4b96acd6c`.
+- **Transported rule:** copy unchanged from ACL-006: fixed replication checkpoints
+  `8192,32768,131072,262144`; chunk `4096`; full and both half standardized native-
+  metric mean scores each at most `5`; Type-7 full-score median at most `1.5` and Q90
+  at most `2.5`; exact truth cosine at most `0.90`, five-score upper bound at most
+  `0.95`, and two-half lower bound at least `0.995` define dissociation; final observed
+  half cosine at least `0.995` with truth cosine at most `0.95`; contrast gap `0.10`.
+- **Target class:** two new three-state true HMMs and 16 deterministic target filters.
+  Model A crosses correct, reversed-observation, flat-observation, and missing-final-
+  observation filters over frozen particle counts. Model B supplies more adverse
+  direction/variance geometry. No model value is reused from ACL-007 mechanism fixtures.
+- **Primary estimand:** Euclidean centered-belief analogue of ACL-006's standardized
+  full/half mean error against exact count-state `m,Σ`, with all copied gates applied.
+  All targets gate; no target stratum can rescue another.
+- **Dissociation:** membership is frozen from the exact registry. PASS requires every
+  member to satisfy the copied half/truth thresholds. An empty real stratum is INVALID.
+- **Contrasts:** exact pre-outcome cosine gaps and copied five-score envelopes determine
+  resolvability. Every resolvable contrast must reproduce the predicted sign and retain
+  observed absolute gap at least `0.10`; other contrasts are non-gating.
+- **Independent path:** labeled particles and individual inverse-CDF uniforms only. The
+  confirmatory module may not call count-state kernels during RNG execution.
+- **Interpretation:** a full PASS is a preregistered no-refit transport across estimator
+  family, native metric, optimization-to-inference semantics, and sequential structure.
+  The exact target moments themselves remain theorem/software reproduction. A FAIL
+  narrows the diagnostic to the Fisher/plugin island or locates a sequential boundary.
+- **Environment/numerics:** same pinned Phase-II environment as ACL-006; float64 and
+  PCG64; registry recomputation uses `2e-12` absolute/relative tolerances; immutable
+  artifacts and bundle files use byte SHA-256 identity.
+- **Execution guards:** canonical bundle and nonexistent SHA-derived evidence path;
+  exact approved HEAD; fully clean porcelain including untracked files; exact bundle
+  membership/lock; source artifact/report hashes; pinned environment; frozen analytic
+  strata; sufficient statistics and terminal RNG states; exactly one run.
+- **Allowed files:** ACL-007 module/tests/CLI, this ledger, bridge/structural/theorem
+  ledgers, `preregistrations/ACL-007/`, and preregistration docs. No target evidence or
+  post-outcome report.
+- **Acceptance tests:** failing regressions first; exact target registry; source anchor;
+  target/contrast IDs and semantics; tolerant registry; copied thresholds; nonempty
+  dissociation; independent-path guard; chunk/checkpoint reconstruction; all verdicts;
+  environment/canonical SHA/path/worktree/lock failures; full repository gate.
+- **Risks:** claiming generic Monte Carlo normalization as a theory of adaptation;
+  allowing exact target moments to count as discovery; selecting only easy filters;
+  confusing approximate-filter truth with true-model Bayes truth; or silently changing
+  Euclidean geometry after outcomes.
+- **Stop conditions:** any labeled target particle is drawn before approval; a source
+  constant changes; target values or strata change after outcomes; the target simulator
+  calls exact kernels; or the evidence path already exists.
+
+### ACL-007 preregistration completion record
+
+- **Status:** frozen preregistration awaiting adversarial audit of the exact public
+  commit. `outcomes_generated` is false and the exact registry has `shadow_count: 0`.
+- **Frozen registry:** 16 targets from two new HMMs; dissociation IDs `A06,A07,A08`;
+  all nine declared contrasts are analytically resolvable and gating.
+- **No-refit source anchor:** ACL-006's checkpoints, chunk size, standardized-score
+  gates, Type-7 summaries, dissociation thresholds, and contrast gap are copied
+  unchanged, with source evidence/report hashes validated locally.
+- **Independent path:** the exact count-composition Markov law and the labeled-particle
+  simulator use different computational routes. The sampled path is tested to reject
+  calls into exact target moments; chunk statistics, target metadata, checkpoints,
+  terminal RNG state, and final summaries are reconstructively validated.
+- **Bundle:** six semantic/analytic files are SHA-256 locked; the lock is generated
+  last and full directory membership is enforced. The locked analytic registry uses
+  `2e-12` absolute/relative numerical-equivalence tolerances and byte hashes remain
+  authoritative for immutable files.
+- **Validation:** 198 tests pass; Ruff passes; total coverage is 84%; sdist and wheel
+  builds pass; analytic-only validation reports 16 targets, three dissociation cases,
+  nine resolvable contrasts, and no outcomes. ACL-002 through ACL-006 evidence hashes
+  remain byte-identical.
+- **Execution hold:** do not invoke `acl007-run` until this exact public commit has been
+  pushed, its public SHA and lock closure have been independently rechecked, and the
+  canonical SHA-derived evidence path is confirmed nonexistent.

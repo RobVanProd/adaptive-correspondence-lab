@@ -58,7 +58,7 @@
       "state_space": "finite belief simplex with explicit particle-count support",
       "data_generation": "hidden-state transition and observation-likelihood sequence",
       "adaptation_role": "belief estimation",
-      "phase_ii_status": "mechanism candidate; no confirmatory evidence yet"
+      "phase_ii_status": "locked preregistered cross-class test; unexecuted and no confirmatory evidence yet"
     }
   ],
   "phase_i_assessment": {
