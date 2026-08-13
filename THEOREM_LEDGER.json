@@ -42,6 +42,14 @@
       "statement": "A three-state bootstrap particle filter with fixed particle count induces an exact Markov chain on count compositions; grouped transition convolution followed by likelihood-weighted multinomial resampling yields its transition kernels and exact terminal moments.",
       "scope": "strictly positive finite HMM likelihoods, row-stochastic true and approximate transitions, multinomial resampling after every frozen observation",
       "verification": "kernel row-mass checks, brute-force labeled-path enumeration at N=2, and an independent labeled-particle simulator"
+    },
+    {
+      "id": "acl008-burg-mirror-local-sensitivity",
+      "status": "proved-implicit-derivative-construction",
+      "statement": "The constrained Burg mirror step has a unique interior dual normalizer; implicit differentiation yields its first and second directional derivatives, which induce the general second-order post-step mutation recurrence.",
+      "scope": "interior finite simplex, Burg log-barrier mirror potential, linear reward, fixed non-negative step size, and row-stochastic post-step mutation",
+      "verification": "simplex and dual residuals, non-equivalence to entropy MWU, and independent signed-trajectory five-point derivatives",
+      "empirical_open_question": "whether ACL-003's unchanged finite-epsilon relative-error gates through epsilon 0.01 transport to new Burg-geometry targets"
     }
   ]
 }

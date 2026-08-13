@@ -59,6 +59,18 @@
       "data_generation": "hidden-state transition and observation-likelihood sequence",
       "adaptation_role": "belief estimation",
       "phase_ii_status": "preregistered no-refit transport confirmed; adds one class outside the Fisher-natural family but is not alone a terminal breadth result"
+    },
+    {
+      "id": "burg-log-barrier-mirror-optimizer",
+      "systems": ["constrained-burg-mirror-descent-with-post-step-mutation"],
+      "estimator_family": "deterministic exact mirror retraction with controlled mutation",
+      "native_geometry": "Burg log-barrier Hessian diag(1/p^2), not categorical Fisher",
+      "objective_semantics": "linear-reward optimization",
+      "temporal_structure": "finite repeated state updates without environment dynamics",
+      "state_space": "interior finite simplex",
+      "data_generation": "none; deterministic mutation perturbation",
+      "adaptation_role": "optimization",
+      "phase_ii_status": "proved mechanism candidate; no confirmatory ACL-008 evidence yet"
     }
   ],
   "phase_i_assessment": {

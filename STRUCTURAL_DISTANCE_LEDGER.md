@@ -40,3 +40,9 @@ class or controlled failure is required before Phase-II termination.
 This order is provisional. ACL-006's support theory determines which prior quantity is
 eligible for no-refit transport and therefore which next class has the highest
 information value.
+
+ACL-008 now instantiates candidate 2 as a Burg log-barrier mirror optimizer. Relative to
+the categorical entropy/Fisher source it retains simplex state, linear reward, and the
+mutation operator, but changes the native Hessian and exact retraction. This isolates
+geometry with minimal semantic confounding. It counts as a distinct geometry, not yet
+as confirmatory breadth evidence.

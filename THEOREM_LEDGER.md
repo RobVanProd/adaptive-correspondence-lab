@@ -33,3 +33,12 @@ resampling produces each count kernel. Propagating the initial multinomial count
 therefore yields the exact terminal mean, covariance, and support-loss probabilities.
 Small fixtures verify the construction against brute-force labeled paths and a separate
 labeled-particle simulator.
+
+## ACL-008 non-Fisher mirror mechanism
+
+The constrained Burg log-barrier mirror step has a unique interior dual normalizer. Its
+first and second directional derivatives follow by implicit differentiation of the
+simplex constraint. Combining those derivatives with post-step mutation gives the same
+abstract chain/product-rule recurrence as ACL-003, but with a non-Fisher Hessian and a
+non-exponential update. This proves the local formal expansion; whether ACL-003's
+practical finite-epsilon radius transports remains an empirical question.

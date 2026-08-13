@@ -1288,3 +1288,58 @@
 - **Decision:** do not terminate Phase II yet. Test a mechanism-bearing normalization
   in a third structurally distinct class, or obtain a controlled failure that maps the
   breadth boundary.
+
+## ACL-008-MECH — Non-Fisher mirror-retraction sensitivity
+
+- **Task ID:** `ACL-008-MECH`.
+- **Observed behavior:** ACL-003 confirmed a zero-fit second-order mutation response in
+  Shannon-entropy/categorical-Fisher geometry. ACL-007 confirmed a different finite-mean
+  stochastic diagnostic in Euclidean sequential inference. No mechanism-bearing local
+  curvature law has yet crossed into a non-Fisher optimization geometry.
+- **Competing explanations:** (H-geometry-general) the second-order response is a local
+  retraction law whose derivative recurrence and practical radius survive a change of
+  mirror geometry; (H-entropy-island) ACL-003's useful radius depends on exponential/
+  Fisher structure even though a formal Taylor expansion exists elsewhere.
+- **Frozen substrate:** three-state simplex, linear reward, Burg log-barrier mirror map
+  `h(p)=-sum(log p_i)`, exact equality constraint, fixed step size, and the same post-step
+  row-stochastic mutation operator. No Fisher metric or exponential update is used.
+- **Map and ideal field:** the clean constrained mirror step solves
+  `q_i^{-1}=p_i^{-1}-eta*r_i+nu`, with `nu` fixed by `sum(q)=1`. The perturbed recurrence
+  is `q_{t+1}=F_B(q_t)(I+epsilon(M-I))`.
+- **Mechanism prediction:** differentiate the implicit normalization to construct
+  `D F_B[p]v` and `D^2 F_B[p][v,v]`, then propagate the same abstract first/second
+  recurrence as ACL-003. The finite-epsilon prediction is the zero-fit norm of
+  `epsilon*s + epsilon^2*u/2`.
+- **Independent oracle:** a direct signed-epsilon Burg trajectory and symmetric five-
+  point finite differences; it must not call the sensitivity recurrence.
+- **Allowed files:** this ledger, a standalone Burg-mirror module/tests, derivation and
+  bridge/structural/theorem ledgers. No ACL-008 manifest, seed, epsilon-positive target
+  outcome, lock, or evidence artifact.
+- **Acceptance tests:** failing regression first; simplex/duality residuals; analytic
+  first/second derivatives versus five-point differences; non-equivalence to the
+  entropy map; identity mutation; full pytest, Ruff, coverage, and build.
+- **Risks:** relabeling an equivalent coordinate map as a new geometry; using finite
+  differences as the scientific comparator; choosing target values from epsilon-positive
+  pilots; or mistaking the existence of Taylor expansion for a useful transported radius.
+- **Stop conditions:** the Burg step is algebraically identical to entropy MWU; an
+  implicit root is nonunique in the frozen interior scope; an epsilon-positive target is
+  evaluated before preregistration; or a derivative definition remains ambiguous.
+
+### ACL-008 mechanism completion record
+
+- **Outcome status:** derivation/mechanism checkpoint only. No ACL-008 manifest,
+  target catalog, epsilon-positive target row, lock, or evidence artifact exists.
+- **Geometry:** Burg Hessian `diag(1/p^2)` and its rational constrained retraction are
+  demonstrably different from entropy/Fisher MWU at the same state, reward, and step.
+- **Derivatives:** implicit first and second directional formulas preserve tangent mass
+  and induce the general post-step mutation recurrence.
+- **Independent oracle:** direct signed-epsilon trajectories plus symmetric five-point
+  differences agree with the analytic recurrence on the frozen software fixture.
+- **Transport candidate earned:** ACL-003's complete zero-fit second-order L1 rule,
+  local/stress regions, within-landscape maximum, and 10%/20% Type-7 gates can be copied
+  without fitting. The formal Taylor law is proved; the practical radius remains open.
+- **Verification:** 205 tests pass; Ruff passes; total coverage 84%; sdist and wheel
+  build; ACL-002 through ACL-007 artifacts remain immutable.
+- **Recommended next action:** publish this mechanism checkpoint, select entirely new
+  Burg targets using only clean/derivative quantities, then freeze and audit ACL-008
+  before any epsilon-positive trajectory.

@@ -320,6 +320,45 @@
         "report_sha256": "b03ba716bcfd8bfbb1e73a64202b11d605812d081c88d2d9077f334032d34166"
       },
       "structural_distance_note": "Different estimator family, native metric, objective semantics, temporal structure, data generation, and adaptation role; ACL-007 is the first confirmed Phase-II class outside the Fisher-natural family."
+    },
+    {
+      "id": "entropy-fisher-to-burg-mirror-sensitivity",
+      "classes": [
+        "entropy-categorical-mirror-dynamics",
+        "burg-log-barrier-mirror-dynamics"
+      ],
+      "state_map": "shared interior finite simplex with different mirror retractions",
+      "native_geometry": "source Hessian diag(1/p) versus target Burg Hessian diag(1/p^2)",
+      "ideal_vector_field": "exact constrained linear-reward mirror step in each native geometry",
+      "realized_estimator": "deterministic post-step row-stochastic mutation I+epsilon(M-I)",
+      "scope_assumptions": [
+        "interior finite simplex",
+        "fixed reward and step size",
+        "smooth constrained mirror map",
+        "finite horizon",
+        "no projection or clipping"
+      ],
+      "transported_prediction": {
+        "status": "mechanism-candidate-not-preregistered",
+        "quantity": "ACL-003 zero-fit second-order truncated L1 prediction with unchanged epsilon regions and 10%/20% Type-7 median/Q90 gates",
+        "source": "ACL-003",
+        "target": "ACL-008 Burg mirror dynamics",
+        "target_refit": false
+      },
+      "failure_boundary": {
+        "status": "unresolved",
+        "candidate_mechanisms": [
+          "stronger Burg barrier curvature",
+          "boundary proximity",
+          "finite-horizon curvature accumulation"
+        ]
+      },
+      "falsifying_observation": "New-value Burg targets violate the copied gates or fail to improve over first order throughout the frozen local region.",
+      "evidence_status": [
+        "theorem-reproduction",
+        "unresolved"
+      ],
+      "structural_distance_note": "Same state space, objective semantics, and perturbation, but genuinely different native geometry and exact retraction; isolates geometry with minimal confounding."
     }
   ]
 }
