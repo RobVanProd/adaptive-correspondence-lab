@@ -41,4 +41,15 @@ first and second directional derivatives follow by implicit differentiation of t
 simplex constraint. Combining those derivatives with post-step mutation gives the same
 abstract chain/product-rule recurrence as ACL-003, but with a non-Fisher Hessian and a
 non-exponential update. This proves the local formal expansion; whether ACL-003's
-practical finite-epsilon radius transports remains an empirical question.
+practical finite-epsilon radius transports was the empirical question. ACL-008 answered
+yes through epsilon `0.01` on 16 new Burg targets, while its epsilon-`0.1` stress error
+remained nonuniform.
+
+## Open after Phase II: typed local error atlas
+
+For `theta+ = R_theta(eta[v+b+xi])`, derive a native-geometry bound separating
+identifiability/support bias, sampling uncertainty, retraction curvature, and a
+controlled remainder. It should reduce to the ACL-006 support decomposition and the
+ACL-003/008 variational recurrence in their scopes, and prove when comparison is
+impossible because the required covariance, perturbation family, or geometry map is
+absent. This is a candidate theorem, not a supported global law.

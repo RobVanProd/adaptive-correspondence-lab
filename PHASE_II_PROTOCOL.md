@@ -67,3 +67,12 @@ Phase II stops at one of:
 Each proposed edge must earn eight fields: state map, native geometry, ideal tangent,
 realized estimator, scope assumptions, transported prediction, failure boundary, and
 falsifying observation. Structural distance is recorded independently from result.
+
+## Terminal Phase-II classification
+
+Phase II reached **U3: correspondence lattice** after ACL-006 through ACL-008. A local
+retraction-sensitivity law transported from entropy/Fisher categorical dynamics to Burg
+mirror geometry. A different finite-sample conditional-mean diagnostic transported from
+empirical-Fisher control to sequential Euclidean inference, building on the Gaussian-to-
+control bridge. Neither quantitative estimand is nontrivially defined across the whole
+graph. See `PHASE_II_SYNTHESIS.md` and `PHASE_II_OUTCOME.json`.

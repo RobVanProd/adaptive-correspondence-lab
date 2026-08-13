@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "program": "adaptive-correspondence-lab-phase-ii",
+  "outcome": "U3-correspondence-lattice",
+  "termination_reached": true,
+  "universal_adaptive_process_supported": false,
+  "broadest_supported_claim": "Restricted quantitative laws transport without target refitting inside distinct correspondence subgraphs, but no nontrivial single estimand spans all tested adaptive classes.",
+  "experiments": [
+    {
+      "id": "ACL-006",
+      "approved_preregistration_sha": "a8b42042e397f1422866a0ca9496ee07abe0a42a",
+      "evidence_commit": "c94890dc8f361c0309802c0ef0173ec84e814d3d",
+      "evidence_artifact": "evidence/ACL-006-confirmatory-a8b42042e397f1422866a0ca9496ee07abe0a42a.json",
+      "evidence_sha256": "740c541bbd69db77f6d02327ded34765a37345f907b048f8d3f3a91aebc23918",
+      "report_commit": "c8d599fe09887e22fe02f92a27bcc8c13ac4baf4",
+      "report_summary": "analysis/ACL-006-confirmatory/summary.json",
+      "report_summary_sha256": "0748482b3796b861267fdb5781bab11605cfc82263e4a6fdbd206df4b96acd6c",
+      "verdict": "PASS",
+      "role": "support-bias mechanism confirmation and exact counterexamples inside contextual-bandit plug-in NPG"
+    },
+    {
+      "id": "ACL-007",
+      "approved_preregistration_sha": "0b807af1d0428340f1e5267b1e41f6e636b49d29",
+      "evidence_commit": "c90954960b0fa099741ed9f35a61c5153b54c923",
+      "evidence_artifact": "evidence/ACL-007-confirmatory-0b807af1d0428340f1e5267b1e41f6e636b49d29.json",
+      "evidence_sha256": "54793bcb3a40d914bce2b5a567f6d25e638a75edf4a55ef724e156a93d372133",
+      "report_commit": "03424e3bb260ebe45e4fec09a2f3cf60fe5085b6",
+      "report_summary": "analysis/ACL-007-confirmatory/summary.json",
+      "report_summary_sha256": "b03ba716bcfd8bfbb1e73a64202b11d605812d081c88d2d9077f334032d34166",
+      "verdict": "PASS",
+      "role": "no-refit finite-mean and dissociation diagnostic transport into sequential Euclidean Bayesian inference"
+    },
+    {
+      "id": "ACL-008",
+      "approved_preregistration_sha": "086c8187caa641a7699ee07cff540a7d8e77ba18",
+      "evidence_commit": "c972d886edddc2dd36d60bd8229640a8eec405db",
+      "evidence_artifact": "evidence/ACL-008-confirmatory-086c8187caa641a7699ee07cff540a7d8e77ba18.json",
+      "evidence_sha256": "856be5ff685d65e19e029fc243a2ef40170ddf64a8b035dd1b543b484e0eba4f",
+      "report_commit": "66dd4c1b102fe30024e33d1c5ef33bc0269a5980",
+      "report_summary": "analysis/ACL-008-confirmatory/summary.json",
+      "report_summary_sha256": "403c69904842d0d09ef6d9091b3e5133d684e0a25a084748b5e415770a84b0a1",
+      "verdict": "PASS",
+      "role": "no-refit local second-order curvature transport from entropy/Fisher to Burg mirror geometry"
+    }
+  ],
+  "correspondence_subgraphs": [
+    {
+      "id": "local-retraction-sensitivity",
+      "classes": [
+        "categorical-entropy-fisher-replicator-mwu",
+        "burg-log-barrier-mirror-optimizer"
+      ],
+      "transported_law": "zero-fit second-order response to affine post-step mutation",
+      "boundary": "finite local radius; nonuniform and sometimes catastrophic error at epsilon 0.1"
+    },
+    {
+      "id": "finite-sample-conditional-mean-diagnostics",
+      "classes": [
+        "gaussian-rank-mu",
+        "contextual-bandit-empirical-fisher-npg",
+        "sequential-bootstrap-particle-filter"
+      ],
+      "transported_laws": [
+        "blockwise split-half and analytic Fisher-cosine diagnostic",
+        "native-metric standardized-mean and split-consistency/truth-dissociation diagnostic"
+      ],
+      "boundary": "support deficiency and stable estimator bias; self-consistency is not truth certification"
+    }
+  ],
+  "global_boundary": {
+    "stochastic_score_on_deterministic_nodes": "undefined because the covariance normalization is zero",
+    "curvature_law_on_fixed_state_estimator_nodes": "undefined because no shared epsilon-parameterized twice-differentiable trajectory was specified",
+    "conclusion": "A single numerical normalization would require adding new structure rather than transporting an already established quantity."
+  }
+}

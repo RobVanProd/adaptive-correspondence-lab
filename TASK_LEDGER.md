@@ -1449,3 +1449,52 @@
 - **Decision:** evaluate the Phase-II stopping rule as Outcome U3, a correspondence
   lattice. The two confirmed transported laws have different non-overlapping estimands;
   forcing either across every node would be undefined or vacuous.
+
+## PHASE-II-SYNTHESIS — Breadth stopping decision
+
+- **Task ID:** `PHASE-II-SYNTHESIS`.
+- **Observed evidence:** ACL-006 mapped exact support-conditioned estimator bias and
+  falsified scalar reductions; ACL-007 transported its normalized finite-mean/
+  dissociation rule into sequential Euclidean inference; ACL-008 transported ACL-003's
+  local second-order mutation law into Burg mirror geometry and found a nonuniform
+  stress boundary.
+- **Frozen interpretation:** Outcome U3, correspondence lattice. The deterministic
+  retraction-sensitivity and stochastic conditional-mean subgraphs each have predictive
+  content, but no nontrivial common estimand spans them: stochastic normalization is
+  undefined at zero variance, while the epsilon-curvature law requires a smooth
+  perturbation trajectory absent from the fixed-state estimator experiments.
+- **Allowed files:** this ledger, `PHASE_II_SYNTHESIS.md`, a machine-readable Phase-II
+  outcome record and its validation test, README, protocol, bridge/structural/theorem
+  ledgers, and draft PR metadata. No evidence or preregistration file may change.
+- **Acceptance tests:** every listed evidence/report hash is live; every evidence commit
+  and preregistration SHA is named; classification matches the machine ledgers; all
+  positive/negative findings, structural distances, boundaries, exclusions, surviving
+  claims, and open theorem are explicit; full test/Ruff/coverage/build gate.
+- **Risks:** calling connected pairwise bridges one global law; counting exact oracles
+  as discovery; ignoring that ACL-008 retained state/objective semantics; or implying
+  an LLM experiment has been earned.
+- **Stop conditions:** any immutable hash fails; a synthesis claim lacks an inspectable
+  artifact; U1/U2/U3 cannot be distinguished under the frozen rule; or new experiment
+  outcomes would be needed to justify a claim already written.
+
+### Phase-II synthesis completion record
+
+- **Stopping outcome:** U3, correspondence lattice. U1 is not supported because no
+  single no-refit quantitative law spans three structurally distinct classes; U2 is too
+  narrow because successful transport crossed both Fisher-to-Euclidean semantics and
+  entropy/Fisher-to-Burg geometry.
+- **Predictive subgraphs:** local deterministic retraction sensitivity (categorical
+  entropy/Fisher and Burg) and finite-sample conditional-mean diagnostics (Gaussian,
+  contextual control, and sequential particle inference via pairwise bridges).
+- **Global boundary:** covariance-normalized scores are undefined at deterministic zero
+  variance; epsilon-curvature laws are undefined without a specified smooth perturbed
+  trajectory. A shared slogan or additive error decomposition is not yet a shared
+  numerical prediction.
+- **Deliverables:** `PHASE_II_SYNTHESIS.md` and `PHASE_II_OUTCOME.json`, with bridge,
+  structural-distance, theorem, protocol, and README synchronization.
+- **Validation:** all machine records parse; synthesis tests verify live Phase-II
+  evidence/report hashes; 220 tests pass; Ruff passes; total coverage 84%; sdist and
+  wheel build; all immutable evidence files remain unchanged.
+- **Next action:** stop experimental expansion. Any future phase should begin from the
+  open typed-local-error-atlas theorem and must preregister a quantity that crosses the
+  current subgraph boundary before earning neural or LLM work.

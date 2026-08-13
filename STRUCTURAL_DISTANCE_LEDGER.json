@@ -85,7 +85,11 @@
     "acl006_role": "resolve the support/bias mechanism before breadth testing",
     "acl007_adds_independent_class": true,
     "acl007_role": "confirmed unchanged finite-mean and dissociation diagnostic in sequential Euclidean Bayesian inference",
-    "next_breadth_requirement": "test a mechanism-bearing normalization in a third structurally distinct class or obtain a controlled boundary failure"
+    "acl008_adds_distinct_geometry": true,
+    "acl008_role": "confirmed unchanged local second-order rule in non-Fisher Burg mirror geometry",
+    "termination_reached": true,
+    "outcome": "U3-correspondence-lattice",
+    "conclusion": "The deterministic retraction-sensitivity and stochastic conditional-mean subgraphs support different predictive laws; neither law is nontrivially defined on all nodes."
   },
   "phase_ii_candidates": [
     {

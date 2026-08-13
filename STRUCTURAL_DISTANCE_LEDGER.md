@@ -47,3 +47,12 @@ mutation operator, but changes the native Hessian and exact retraction. This iso
 geometry with minimal semantic confounding. Its preregistered no-refit second-order rule
 passed locally, so it is confirmatory breadth evidence for a cross-geometry curvature
 island, with the same state space and objective semantics explicitly retained.
+
+## Phase-II stopping assessment
+
+Outcome **U3 (correspondence lattice)** is reached. ACL-007 adds sequential inference,
+Euclidean geometry, and different semantics to the finite-sample diagnostic subgraph.
+ACL-008 adds non-Fisher geometry to the deterministic curvature subgraph. The stochastic
+normalization is undefined for zero-variance deterministic nodes; the curvature law is
+undefined without an epsilon-parameterized smooth trajectory. No target-free common
+quantity currently spans the full graph.

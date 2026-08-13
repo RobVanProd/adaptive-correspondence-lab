@@ -49,7 +49,18 @@
       "statement": "The constrained Burg mirror step has a unique interior dual normalizer; implicit differentiation yields its first and second directional derivatives, which induce the general second-order post-step mutation recurrence.",
       "scope": "interior finite simplex, Burg log-barrier mirror potential, linear reward, fixed non-negative step size, and row-stochastic post-step mutation",
       "verification": "simplex and dual residuals, non-equivalence to entropy MWU, and independent signed-trajectory five-point derivatives",
-      "empirical_open_question": "whether ACL-003's unchanged finite-epsilon relative-error gates through epsilon 0.01 transport to new Burg-geometry targets"
+      "empirical_result": "ACL-008 confirmed the unchanged finite-epsilon relative-error gates through epsilon 0.01 on 16 new Burg-geometry targets; the error remained nonuniform at epsilon 0.1"
+    },
+    {
+      "id": "typed-local-error-atlas",
+      "status": "open-candidate-after-phase-ii",
+      "statement": "For theta+ = R_theta(eta[v+b+xi]), derive a native-geometry bound separating identifiability/support bias, sampling uncertainty, retraction curvature, and a controlled remainder, together with impossibility conditions when cross-geometry comparison data are absent.",
+      "required_reductions": [
+        "ACL-006 Fisher-orthogonal support decomposition",
+        "ACL-003/ACL-008 second-order variational recurrence",
+        "ACL-006/ACL-007 self-consistency versus truth dissociation"
+      ],
+      "purpose": "Turn the correspondence lattice into a typed atlas without asserting one universal adaptive process."
     }
   ]
 }

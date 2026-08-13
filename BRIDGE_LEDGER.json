@@ -1,6 +1,8 @@
 {
   "schema_version": 1,
   "program_question": "Do restricted correspondences between adaptive dynamical systems support quantitative stability laws and no-refit cross-class transport, or only local coordinate equivalences?",
+  "phase_ii_outcome": "U3-correspondence-lattice",
+  "phase_ii_termination_reached": true,
   "status_vocabulary": [
     "theorem-reproduction",
     "exploratory",
