@@ -1343,3 +1343,63 @@
 - **Recommended next action:** publish this mechanism checkpoint, select entirely new
   Burg targets using only clean/derivative quantities, then freeze and audit ACL-008
   before any epsilon-positive trajectory.
+
+## ACL-008 — Non-Fisher second-order radius transport
+
+- **Task ID:** `ACL-008`.
+- **Status:** preregistration construction only; no epsilon-positive target trajectory
+  until a locked public checkpoint is adversarially audited and approved.
+- **Source:** ACL-003 preregistration `501464f3f6be07f6d813d94aefb818c461a3d5c7`,
+  evidence commit `b15d77600369d559cb586a3bb54924737758e038`, artifact
+  SHA-256 `1f80c3f5aba4089c67bbfec1ddd6eff53f7a6d42c658436dff0f7c82a1cf8c99`,
+  and report summary SHA-256
+  `eee21af8f75c7eb5d3a35fdb9d53b1549f275eca52c745a85c130538583128f4`.
+- **Transported rule:** copy unchanged `eta=0.05`, horizons `1,5,20,50`, the entire
+  epsilon grid/regions, zero-fit second-order truncated-vector L1 prediction, maximum
+  local within-landscape reducer, Type-7 median `<=0.10`, Q90 `<=0.20`, prediction
+  floor, and identity-control semantics.
+- **Target class:** deterministic constrained Burg log-barrier mirror dynamics with
+  post-step mutation, using new state/reward/mutation catalog values not present in
+  ACL-003 and not selected from epsilon-positive target outcomes.
+- **Primary estimand:** each regular target's maximum relative error over
+  `epsilon=0.001,0.003,0.01` between actual endpoint L1 and the analytic zero-fit Burg
+  second-order prediction at `T=20`.
+- **Independent oracle:** the runner compares bisection-normalized iterative trajectories
+  with a polynomial-root Burg-normalizer path at every stored row.
+- **Interpretation:** PASS means ACL-003's practical local curvature radius transported
+  across a genuinely changed mirror geometry; FAIL bounds that radius or identifies an
+  entropy/Fisher island. The formal Taylor recurrence is a control, not the claim.
+- **Allowed files:** ACL-008 module/tests/CLI, this ledger, bridge/structural/theorem
+  ledgers, and `preregistrations/ACL-008/`. No evidence or post-outcome report.
+- **Acceptance tests:** failing regressions first; exact source hashes and copied values;
+  numeric catalog novelty; analytic-only registry; no low-sensitivity target; polynomial
+  oracle; controls and verdict order; canonical SHA/path/clean tree/lock guards; full
+  repository gate.
+- **Risks:** target selection via actual epsilon response; accidentally changing a
+  source gate; a shared root solver creating a common-mode oracle; or treating same
+  simplex state space as greater structural distance than it provides.
+- **Stop conditions:** any epsilon-positive target path is evaluated before approval;
+  a source constant changes; target catalog/strata change after outcomes; oracle and
+  primary paths share a normalizer; or the canonical evidence path already exists.
+
+### ACL-008 preregistration completion record
+
+- **Status:** frozen preregistration awaiting adversarial audit of the exact public
+  commit. `outcomes_generated` is false; no positive-epsilon target path exists.
+- **Frozen registry:** 16 regular confirmatory targets and one identity control. All
+  eight states, eight rewards, and six hypothesis-bearing mutation matrices have zero
+  numeric overlap with ACL-003 at absolute tolerance `1e-15`.
+- **No-refit source anchor:** every source schedule, epsilon region, predictor, reducer,
+  Type-7 gate, numerical floor, and control rule is copied from ACL-003. Source evidence
+  and report hashes validate.
+- **Independent path:** target generation uses the monotone-bisection Burg normalizer;
+  its oracle constructs and solves the constraint polynomial and is tested not to call
+  the bisection normalizer.
+- **Bundle:** six files are byte-locked; clean registry reproduction uses frozen
+  `2e-12` absolute/relative tolerances. Lock SHA-256 is
+  `af8495e7b6b1ac4b5d88a174da1d74a53d5a38590eebeb8073b4742318982136`.
+- **Validation:** 215 tests pass; Ruff passes; total coverage is 84%; sdist and wheel
+  build; analytic-only validation confirms all strata/novelty and no outcomes.
+- **Execution hold:** do not invoke `acl008-run` until this exact public commit is
+  pushed and passes public-SHA, lock, source, environment, canonical path, clean-tree,
+  and outcome-absence audit.

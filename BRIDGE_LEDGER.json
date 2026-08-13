@@ -339,11 +339,14 @@
         "no projection or clipping"
       ],
       "transported_prediction": {
-        "status": "mechanism-candidate-not-preregistered",
+        "status": "preregistered-unexecuted",
         "quantity": "ACL-003 zero-fit second-order truncated L1 prediction with unchanged epsilon regions and 10%/20% Type-7 median/Q90 gates",
         "source": "ACL-003",
         "target": "ACL-008 Burg mirror dynamics",
-        "target_refit": false
+        "target_refit": false,
+        "bundle": "preregistrations/ACL-008",
+        "confirmatory_target_count": 16,
+        "outcomes_generated": false
       },
       "failure_boundary": {
         "status": "unresolved",
@@ -356,6 +359,7 @@
       "falsifying_observation": "New-value Burg targets violate the copied gates or fail to improve over first order throughout the frozen local region.",
       "evidence_status": [
         "theorem-reproduction",
+        "preregistered-unexecuted",
         "unresolved"
       ],
       "structural_distance_note": "Same state space, objective semantics, and perturbation, but genuinely different native geometry and exact retraction; isolates geometry with minimal confounding."

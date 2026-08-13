@@ -187,12 +187,14 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   `I+epsilon(M-I)`.
 - **Scope:** interior finite simplex, fixed reward and step size, smooth constrained
   mirror map, finite horizon, and no projection or clipping.
-- **Transported prediction:** mechanism candidate, not yet preregistered. Copy ACL-003's
+- **Transported prediction:** **preregistered, unexecuted.** ACL-008 copies ACL-003's
   zero-fit second-order L1 prediction, epsilon regions, maximum-within-landscape reducer,
-  and 10%/20% Type-7 median/Q90 gates unchanged.
+  and 10%/20% Type-7 median/Q90 gates unchanged. Sixteen new-value Burg targets and an
+  identity software control are locked with no positive-epsilon outcome.
 - **Failure boundary:** unresolved. Burg curvature and approach to its barrier may make
   ACL-003's epsilon `0.01` practical radius entropy-specific despite the formal Taylor
   recurrence.
 - **Falsifier:** new-value Burg targets violate the copied gates or fail to improve over
   first order throughout the frozen local region.
-- **Status:** proved local mechanism plus unresolved non-Fisher transport candidate.
+- **Status:** proved local mechanism plus locked non-Fisher transport test awaiting
+  exact-SHA audit and one-shot execution.

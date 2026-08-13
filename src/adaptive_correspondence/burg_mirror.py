@@ -85,6 +85,39 @@ def burg_mirror_step(probability: ArrayLike, reward: ArrayLike, *, eta: float) -
     return validate_simplex(updated, strictly_positive=True, atol=2e-14)
 
 
+def burg_mirror_step_polynomial_oracle(
+    probability: ArrayLike, reward: ArrayLike, *, eta: float
+) -> FloatArray:
+    """Independent normalizer oracle from the constraint polynomial roots."""
+    state = validate_simplex(probability, strictly_positive=True)
+    rewards = validate_reward(reward, state.size)
+    eta_value = _validate_eta(eta)
+    constants = 1.0 / state - eta_value * rewards
+    factors = [np.poly1d([1.0, value]) for value in constants]
+    product = np.poly1d([1.0])
+    for factor in factors:
+        product *= factor
+    reciprocal_sum = np.poly1d([0.0])
+    for omitted in range(state.size):
+        term = np.poly1d([1.0])
+        for index, factor in enumerate(factors):
+            if index != omitted:
+                term *= factor
+        reciprocal_sum += term
+    roots = np.roots(product - reciprocal_sum)
+    boundary = float(np.max(-constants))
+    feasible = [
+        float(root.real)
+        for root in roots
+        if abs(float(root.imag)) <= 2e-10 and float(root.real) > boundary
+    ]
+    if len(feasible) != 1:
+        raise FloatingPointError("Burg polynomial oracle lacks a unique feasible root")
+    updated = 1.0 / (constants + feasible[0])
+    updated /= float(np.sum(updated))
+    return validate_simplex(updated, strictly_positive=True, atol=2e-14)
+
+
 def burg_directional_first(
     probability: ArrayLike, reward: ArrayLike, *, eta: float, direction: ArrayLike
 ) -> FloatArray:
@@ -98,7 +131,9 @@ def burg_directional_first(
     weighted = output**2
     shift_first = float(np.sum(weighted * tangent / state**2) / np.sum(weighted))
     derivative = weighted * (tangent / state**2 - shift_first)
-    if abs(float(np.sum(derivative))) > 3e-13:
+    if abs(float(np.sum(derivative))) > 3e-13 + 3e-15 * float(
+        np.linalg.norm(derivative, ord=1)
+    ):
         raise FloatingPointError("Burg first derivative left the simplex tangent")
     return derivative
 
@@ -123,7 +158,9 @@ def burg_directional_second(
     shift_second = float(numerator / np.sum(weighted))
     derivative = 2.0 * output**3 * denominator_first**2
     derivative -= weighted * (2.0 * tangent**2 / state**3 + shift_second)
-    if abs(float(np.sum(derivative))) > 2e-11:
+    if abs(float(np.sum(derivative))) > 2e-11 + 2e-14 * float(
+        np.linalg.norm(derivative, ord=1)
+    ):
         raise FloatingPointError("Burg second derivative left the simplex tangent")
     return derivative
 
@@ -160,9 +197,13 @@ def burg_second_order_sensitivity_trajectory(
             state, rewards, eta=eta_value, direction=first[index]
         )
         second[index + 1] += 2.0 * (selected_first @ perturbation)
-        if abs(float(np.sum(first[index + 1]))) > 5e-13:
+        if abs(float(np.sum(first[index + 1]))) > 5e-13 + 3e-15 * float(
+            np.linalg.norm(first[index + 1], ord=1)
+        ):
             raise FloatingPointError("Burg trajectory first derivative violates mass")
-        if abs(float(np.sum(second[index + 1]))) > 3e-11:
+        if abs(float(np.sum(second[index + 1]))) > 3e-11 + 2e-14 * float(
+            np.linalg.norm(second[index + 1], ord=1)
+        ):
             raise FloatingPointError("Burg trajectory second derivative violates mass")
         states[index + 1] = clean
     return BurgSecondOrderTrace(states, first, second)
@@ -193,6 +234,36 @@ def burg_perturbed_trajectory(
         updated = selected @ mixing
         states[index + 1] = validate_simplex(
             updated, strictly_positive=True, atol=3e-13
+        )
+    return states
+
+
+def burg_perturbed_trajectory_polynomial_oracle(
+    p0: ArrayLike,
+    reward: ArrayLike,
+    mutation: ArrayLike,
+    *,
+    eta: float,
+    epsilon: float,
+    steps: int,
+) -> FloatArray:
+    """Direct perturbed path using only the polynomial normalizer oracle."""
+    initial = validate_simplex(p0, strictly_positive=True)
+    rewards = validate_reward(reward, initial.size)
+    matrix = _validate_mutation(mutation, initial.size)
+    eta_value = _validate_eta(eta)
+    count = _validate_steps(steps)
+    if not np.isfinite(epsilon):
+        raise ValueError("epsilon must be finite")
+    mixing = np.eye(initial.size) + float(epsilon) * (matrix - np.eye(initial.size))
+    states = np.empty((count + 1, initial.size), dtype=np.float64)
+    states[0] = initial
+    for index in range(count):
+        selected = burg_mirror_step_polynomial_oracle(
+            states[index], rewards, eta=eta_value
+        )
+        states[index + 1] = validate_simplex(
+            selected @ mixing, strictly_positive=True, atol=3e-13
         )
     return states
 

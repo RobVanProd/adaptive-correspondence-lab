@@ -1,0 +1,656 @@
+{
+  "experiment_id": "ACL-008",
+  "kind": "clean-Burg-second-order-analytic-registry",
+  "landscapes": [
+    {
+      "C_primary": 2.6961510881424466,
+      "clean_polynomial_oracle_max_absolute_error": 8.881784197001252e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.10808454943219638,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 2.6961510881424466,
+          "second_derivative_l1": 30.68908095168168,
+          "second_order_l1_coefficient": -15.34454047584084,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 0.5329431826634508,
+          "second_derivative_l1": 1.3709030777920348,
+          "second_order_l1_coefficient": -0.6854515388960174,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 9.132285187542113,
+          "second_derivative_l1": 205.08906760127456,
+          "second_order_l1_coefficient": -102.54453380063728,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B01",
+      "mutation": "burg_mutation_01",
+      "p0": "burg_state_01",
+      "reward": "burg_reward_01",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 30.68908095168168,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 9.028427181339087,
+      "clean_polynomial_oracle_max_absolute_error": 8.326672684688674e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.43701067533820576,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 9.028427181339087,
+          "second_derivative_l1": 160.26029005911386,
+          "second_order_l1_coefficient": -80.13014502955693,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.2016438942137553,
+          "second_derivative_l1": 8.209016007484559,
+          "second_order_l1_coefficient": -4.104508003742279,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 22.733412456963382,
+          "second_derivative_l1": 1258.8513123073067,
+          "second_order_l1_coefficient": -601.4088081739005,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B02",
+      "mutation": "burg_mutation_02",
+      "p0": "burg_state_02",
+      "reward": "burg_reward_02",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 160.26029005911386,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 16.09664964211127,
+      "clean_polynomial_oracle_max_absolute_error": 2.275957200481571e-15,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.7531715727685466,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 16.09664964211127,
+          "second_derivative_l1": 440.08292089424697,
+          "second_order_l1_coefficient": -132.2702523504699,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 3.8248153992749105,
+          "second_derivative_l1": 20.244590708458094,
+          "second_order_l1_coefficient": -5.93626361654835,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 37.66107494312279,
+          "second_derivative_l1": 4259.4680396950835,
+          "second_order_l1_coefficient": -1418.274569802606,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B03",
+      "mutation": "burg_mutation_03",
+      "p0": "burg_state_03",
+      "reward": "burg_reward_03",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 440.08292089424697,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 7.892838384630956,
+      "clean_polynomial_oracle_max_absolute_error": 6.106226635438361e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.42825889825332997,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 7.892838384630956,
+          "second_derivative_l1": 86.65965024469602,
+          "second_order_l1_coefficient": -43.32982512234801,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.1184061672546743,
+          "second_derivative_l1": 4.801588631619147,
+          "second_order_l1_coefficient": -2.4007943158095735,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 16.324024262851008,
+          "second_derivative_l1": 401.6178101893183,
+          "second_order_l1_coefficient": -170.7816466311502,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B04",
+      "mutation": "burg_mutation_04",
+      "p0": "burg_state_04",
+      "reward": "burg_reward_04",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 86.65965024469602,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 16.586078007455278,
+      "clean_polynomial_oracle_max_absolute_error": 6.661338147750939e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.8845674591845111,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 16.586078007455278,
+          "second_derivative_l1": 369.7139886422338,
+          "second_order_l1_coefficient": -184.8569943211169,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 4.361484710777976,
+          "second_derivative_l1": 19.797645351249137,
+          "second_order_l1_coefficient": -9.898822675624569,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 38.030812932444455,
+          "second_derivative_l1": 2380.242945048035,
+          "second_order_l1_coefficient": -1190.1214725240175,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B05",
+      "mutation": "burg_mutation_05",
+      "p0": "burg_state_05",
+      "reward": "burg_reward_05",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 369.7139886422338,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 2.448315656108197,
+      "clean_polynomial_oracle_max_absolute_error": 8.881784197001252e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.13041710684924038,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 2.448315656108197,
+          "second_derivative_l1": 16.191230583320717,
+          "second_order_l1_coefficient": -8.095615291660359,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 0.6459303974049972,
+          "second_derivative_l1": 0.8226532470144459,
+          "second_order_l1_coefficient": -0.41132662350722293,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 4.853603970740213,
+          "second_derivative_l1": 97.06879023705024,
+          "second_order_l1_coefficient": -48.53439511852512,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B06",
+      "mutation": "burg_mutation_06",
+      "p0": "burg_state_06",
+      "reward": "burg_reward_06",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 16.191230583320717,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 10.248025214836513,
+      "clean_polynomial_oracle_max_absolute_error": 1.6653345369377348e-15,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.48862656546259176,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 10.248025214836513,
+          "second_derivative_l1": 118.38060445591121,
+          "second_order_l1_coefficient": -59.190302227955605,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.467806270655651,
+          "second_derivative_l1": 6.288744341598138,
+          "second_order_l1_coefficient": -3.144372170799069,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 27.734150964867645,
+          "second_derivative_l1": 745.7215372853192,
+          "second_order_l1_coefficient": -372.8607686426596,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B07",
+      "mutation": "burg_mutation_01",
+      "p0": "burg_state_07",
+      "reward": "burg_reward_07",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 118.38060445591121,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 8.02865791797305,
+      "clean_polynomial_oracle_max_absolute_error": 5.551115123125783e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.4582695624013765,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 8.02865791797305,
+          "second_derivative_l1": 159.36046496204784,
+          "second_order_l1_coefficient": -32.851835690018675,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.2231539471470647,
+          "second_derivative_l1": 8.70154114495915,
+          "second_order_l1_coefficient": -4.350770572479575,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 25.487990504831103,
+          "second_derivative_l1": 693.4166198219173,
+          "second_order_l1_coefficient": -338.9493504067008,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B08",
+      "mutation": "burg_mutation_02",
+      "p0": "burg_state_08",
+      "reward": "burg_reward_08",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 159.36046496204784,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 5.233012316417732,
+      "clean_polynomial_oracle_max_absolute_error": 7.771561172376096e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.2615953857572465,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 5.233012316417732,
+          "second_derivative_l1": 115.31609523572382,
+          "second_order_l1_coefficient": -32.206989051589204,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.2661916233124504,
+          "second_derivative_l1": 6.492539738743883,
+          "second_order_l1_coefficient": -3.2462698693719414,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 15.687073353630169,
+          "second_derivative_l1": 655.1654486380883,
+          "second_order_l1_coefficient": -327.58272431904413,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B09",
+      "mutation": "burg_mutation_03",
+      "p0": "burg_state_01",
+      "reward": "burg_reward_05",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 115.31609523572382,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 5.463426146820373,
+      "clean_polynomial_oracle_max_absolute_error": 1.2212453270876722e-15,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.2547437156252865,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 5.463426146820373,
+          "second_derivative_l1": 48.835980125745714,
+          "second_order_l1_coefficient": -24.417990062872857,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.2916412896875258,
+          "second_derivative_l1": 2.45973582465649,
+          "second_order_l1_coefficient": -1.229867912328245,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 15.493758251189297,
+          "second_derivative_l1": 372.84541714476075,
+          "second_order_l1_coefficient": -186.42270857238037,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B10",
+      "mutation": "burg_mutation_04",
+      "p0": "burg_state_02",
+      "reward": "burg_reward_06",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 48.835980125745714,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 15.451453102092495,
+      "clean_polynomial_oracle_max_absolute_error": 1.7763568394002505e-15,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.7753848387313205,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 15.451453102092495,
+          "second_derivative_l1": 362.070084954216,
+          "second_order_l1_coefficient": -181.035042477108,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 3.8869712953225406,
+          "second_derivative_l1": 17.983755744721837,
+          "second_order_l1_coefficient": -8.991877872360918,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 30.288904764024323,
+          "second_derivative_l1": 2436.0754441829677,
+          "second_order_l1_coefficient": -1218.0377220914838,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B11",
+      "mutation": "burg_mutation_05",
+      "p0": "burg_state_03",
+      "reward": "burg_reward_07",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 362.070084954216,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 4.805702933825877,
+      "clean_polynomial_oracle_max_absolute_error": 1.1102230246251565e-15,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.2438441743480168,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 4.805702933825877,
+          "second_derivative_l1": 29.162077381579692,
+          "second_order_l1_coefficient": -14.581038690789846,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.215933275915125,
+          "second_derivative_l1": 1.5149720312810293,
+          "second_order_l1_coefficient": -0.7574860156405147,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 11.66622528942846,
+          "second_derivative_l1": 193.45430511278406,
+          "second_order_l1_coefficient": -96.72715255639203,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B12",
+      "mutation": "burg_mutation_06",
+      "p0": "burg_state_04",
+      "reward": "burg_reward_08",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 29.162077381579692,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 12.028874017372836,
+      "clean_polynomial_oracle_max_absolute_error": 1.1102230246251565e-15,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.6669565904396392,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 12.028874017372836,
+          "second_derivative_l1": 225.69650995518165,
+          "second_order_l1_coefficient": -72.58015387029884,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 3.257978159083218,
+          "second_derivative_l1": 12.685059935515767,
+          "second_order_l1_coefficient": -4.128152087652376,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 26.509766418581506,
+          "second_derivative_l1": 1385.2598295082494,
+          "second_order_l1_coefficient": -453.03709391835224,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B13",
+      "mutation": "burg_mutation_02",
+      "p0": "burg_state_05",
+      "reward": "burg_reward_01",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 225.69650995518165,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 7.1429579977258655,
+      "clean_polynomial_oracle_max_absolute_error": 3.885780586188048e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.32116174338868003,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 7.1429579977258655,
+          "second_derivative_l1": 164.90360849908154,
+          "second_order_l1_coefficient": -64.95526446463785,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.654613927134347,
+          "second_derivative_l1": 8.034206910571793,
+          "second_order_l1_coefficient": -2.858482868885358,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 18.09435063919088,
+          "second_derivative_l1": 1110.6672080528604,
+          "second_order_l1_coefficient": -508.0378348042127,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B14",
+      "mutation": "burg_mutation_03",
+      "p0": "burg_state_06",
+      "reward": "burg_reward_02",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 164.90360849908154,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 9.161261947503622,
+      "clean_polynomial_oracle_max_absolute_error": 8.881784197001252e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.4706186798920817,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 9.161261947503622,
+          "second_derivative_l1": 97.398660286741,
+          "second_order_l1_coefficient": -48.6993301433705,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 2.341812717870255,
+          "second_derivative_l1": 5.295229556023658,
+          "second_order_l1_coefficient": -2.647614778011829,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 21.92256922948024,
+          "second_derivative_l1": 631.4531838507726,
+          "second_order_l1_coefficient": -315.7265919253863,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B15",
+      "mutation": "burg_mutation_04",
+      "p0": "burg_state_07",
+      "reward": "burg_reward_03",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 97.398660286741,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 5.9024642227168655,
+      "clean_polynomial_oracle_max_absolute_error": 5.551115123125783e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.28533158597758973,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": []
+        },
+        "20": {
+          "C_endpoint_l1": 5.9024642227168655,
+          "second_derivative_l1": 76.6591902257963,
+          "second_order_l1_coefficient": -38.32959511289815,
+          "zero_first_derivative_coordinates": []
+        },
+        "5": {
+          "C_endpoint_l1": 1.4386620070894374,
+          "second_derivative_l1": 3.9955455115207887,
+          "second_order_l1_coefficient": -1.9977727557603944,
+          "zero_first_derivative_coordinates": []
+        },
+        "50": {
+          "C_endpoint_l1": 15.158304254520441,
+          "second_derivative_l1": 496.5236950946456,
+          "second_order_l1_coefficient": -248.2618475473228,
+          "zero_first_derivative_coordinates": []
+        }
+      },
+      "id": "B16",
+      "mutation": "burg_mutation_01",
+      "p0": "burg_state_08",
+      "reward": "burg_reward_04",
+      "role": "confirmatory-target",
+      "second_derivative_l1_primary": 76.6591902257963,
+      "stratum": "regular-sensitivity"
+    },
+    {
+      "C_primary": 0.0,
+      "clean_polynomial_oracle_max_absolute_error": 8.881784197001252e-16,
+      "horizons": {
+        "1": {
+          "C_endpoint_l1": 0.0,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": [
+            0,
+            1,
+            2
+          ]
+        },
+        "20": {
+          "C_endpoint_l1": 0.0,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": [
+            0,
+            1,
+            2
+          ]
+        },
+        "5": {
+          "C_endpoint_l1": 0.0,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": [
+            0,
+            1,
+            2
+          ]
+        },
+        "50": {
+          "C_endpoint_l1": 0.0,
+          "second_derivative_l1": 0.0,
+          "second_order_l1_coefficient": 0.0,
+          "zero_first_derivative_coordinates": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "id": "C01",
+      "mutation": "identity_control",
+      "p0": "burg_state_01",
+      "reward": "burg_reward_01",
+      "role": "software-control",
+      "second_derivative_l1_primary": 0.0,
+      "stratum": "identity-control"
+    }
+  ],
+  "native_geometry": "Burg-log-barrier",
+  "outcomes_generated": false,
+  "prediction_kind": "zero-fit-second-order-truncated-vector",
+  "schema_version": 1,
+  "target_refit": false
+}

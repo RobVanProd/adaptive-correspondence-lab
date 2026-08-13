@@ -118,3 +118,29 @@ def test_acl007_validation_command_never_invokes_runner(monkeypatch, capsys) -> 
         "outcomes_generated": False,
         "valid": True,
     }
+
+
+def test_acl008_validation_command_never_invokes_runner(monkeypatch, capsys) -> None:
+    monkeypatch.setattr(
+        cli_module,
+        "validate_acl008_preregistration_bundle",
+        lambda bundle, reference_path: {
+            "valid": True,
+            "outcomes_generated": False,
+            "bundle": bundle,
+            "reference": reference_path,
+        },
+    )
+    return_code = main(
+        [
+            "acl008-validate",
+            "--bundle",
+            "burg-frozen",
+            "--reference-manifest",
+            "source.json",
+        ]
+    )
+    assert return_code == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["outcomes_generated"] is False
+    assert payload["bundle"] == "burg-frozen"

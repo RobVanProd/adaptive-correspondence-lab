@@ -1,7 +1,9 @@
 import numpy as np
 
+import adaptive_correspondence.burg_mirror as burg_module
 from adaptive_correspondence.burg_mirror import (
     burg_mirror_step,
+    burg_mirror_step_polynomial_oracle,
     burg_perturbed_trajectory,
     burg_second_order_sensitivity_trajectory,
     five_point_trajectory_derivatives,
@@ -24,6 +26,24 @@ def test_burg_step_is_interior_and_not_entropy_relabeling() -> None:
     assert np.all(burg > 0.0)
     np.testing.assert_allclose(np.sum(burg), 1.0, atol=2e-14, rtol=0.0)
     assert np.linalg.norm(burg - entropy) > 1e-4
+
+
+def test_polynomial_normalizer_oracle_matches_bisection_step() -> None:
+    state, reward, _ = _fixture()
+    primary = burg_mirror_step(state, reward, eta=0.08)
+    oracle = burg_mirror_step_polynomial_oracle(state, reward, eta=0.08)
+    np.testing.assert_allclose(primary, oracle, atol=2e-14, rtol=2e-14)
+
+
+def test_polynomial_oracle_does_not_call_bisection_normalizer(monkeypatch) -> None:
+    state, reward, _ = _fixture()
+
+    def forbidden(*args, **kwargs):
+        raise AssertionError("polynomial oracle called bisection normalizer")
+
+    monkeypatch.setattr(burg_module, "_dual_shift", forbidden)
+    oracle = burg_mirror_step_polynomial_oracle(state, reward, eta=0.08)
+    assert np.all(oracle > 0.0)
 
 
 def test_second_order_recurrence_matches_independent_five_point_oracle() -> None:

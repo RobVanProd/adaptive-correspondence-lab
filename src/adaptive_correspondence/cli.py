@@ -41,6 +41,12 @@ from .acl007 import (
 from .acl007 import (
     validate_preregistration_bundle as validate_acl007_preregistration_bundle,
 )
+from .acl008 import (
+    execute_confirmatory as execute_acl008_confirmatory,
+)
+from .acl008 import (
+    validate_preregistration_bundle as validate_acl008_preregistration_bundle,
+)
 from .bandit import ContextualBandit, run_bandit_trajectory
 from .experiments import (
     CategoricalExperimentConfig,
@@ -279,6 +285,27 @@ def build_parser() -> argparse.ArgumentParser:
     acl007_run.add_argument("--bundle", default="preregistrations/ACL-007")
     acl007_run.add_argument("--approved-sha", required=True)
     acl007_run.add_argument("--output", required=True)
+
+    acl008_validate = subparsers.add_parser(
+        "acl008-validate",
+        help="validate the locked ACL-008 bundle without perturbed trajectories",
+    )
+    acl008_validate.add_argument("--bundle", default="preregistrations/ACL-008")
+    acl008_validate.add_argument(
+        "--reference-manifest", default="preregistrations/ACL-003/manifest.json"
+    )
+    acl008_validate.add_argument("--output")
+
+    acl008_run = subparsers.add_parser(
+        "acl008-run",
+        help="execute ACL-008 only after explicit approval of its preregistration SHA",
+    )
+    acl008_run.add_argument("--bundle", default="preregistrations/ACL-008")
+    acl008_run.add_argument(
+        "--reference-manifest", default="preregistrations/ACL-003/manifest.json"
+    )
+    acl008_run.add_argument("--approved-sha", required=True)
+    acl008_run.add_argument("--output", required=True)
     return parser
 
 
@@ -485,6 +512,20 @@ def main(argv: list[str] | None = None) -> int:
             destination = execute_acl007_confirmatory(
                 repo_path=Path.cwd(),
                 bundle_path=args.bundle,
+                approved_sha=args.approved_sha,
+                output_path=args.output,
+            )
+            print(destination.resolve())
+        elif args.command == "acl008-validate":
+            payload = validate_acl008_preregistration_bundle(
+                args.bundle, reference_path=args.reference_manifest
+            )
+            _emit_json(payload, args.output)
+        elif args.command == "acl008-run":
+            destination = execute_acl008_confirmatory(
+                repo_path=Path.cwd(),
+                bundle_path=args.bundle,
+                reference_path=args.reference_manifest,
                 approved_sha=args.approved_sha,
                 output_path=args.output,
             )
