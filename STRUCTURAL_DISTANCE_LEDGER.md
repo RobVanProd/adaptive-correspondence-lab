@@ -20,12 +20,14 @@ ACL-006 remained in the contextual-bandit plug-in NPG class and confirmed the ex
 finite support/bias mechanism plus the split-consistency/truth dissociation. It did not
 increase the count of structurally independent adaptive classes.
 
-ACL-007 is now frozen but unexecuted. Its sequential bootstrap particle filter changes
+ACL-007 is now confirmed. Its sequential bootstrap particle filter changes
 estimator family, native metric, objective semantics, temporal structure, data
 generation, and adaptation role relative to ACL-006. Exact Bayes filtering supplies the
 comparator; exact count-state dynamics and an independent labeled-particle path keep the
-substrate small. This classification does not count as breadth evidence until the
-preregistered one-shot result exists.
+substrate small. The unchanged no-refit diagnostic passed and therefore adds one
+structurally independent breadth class. Because the diagnostic is a finite-mean Monte
+Carlo normalization rather than a detailed dynamical law, one more mechanism-bearing
+class or controlled failure is required before Phase-II termination.
 
 ## Candidate ordering after ACL-006
 

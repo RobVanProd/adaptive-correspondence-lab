@@ -1,0 +1,49 @@
+{
+  "analysis_kind": "artifact-only-post-confirmatory",
+  "boundary": {
+    "dissociation_target_count": 3,
+    "maximum_dissociation_truth_cosine": 0.3789702232280476,
+    "minimum_all_target_truth_cosine": -0.9997973360222147,
+    "minimum_dissociation_half_cosine": 0.9999943485911748,
+    "minimum_dissociation_truth_cosine": 0.34490678566568583,
+    "negative_truth_alignment_target_count": 3
+  },
+  "classification": {
+    "adds_structurally_independent_class": true,
+    "changes_native_geometry": true,
+    "changes_objective_semantics": true,
+    "changes_temporal_structure": true,
+    "next_required_step": "preregister the smallest third structurally distinct class that tests a mechanism-bearing normalization without target refit",
+    "outside_fisher_natural_family": true,
+    "reason_not_terminal": "the transported score follows finite-mean Monte Carlo geometry; a third class must test a mechanism-bearing shared law or expose the boundary before broad adaptive unification is defensible",
+    "result_type": "preregistered-no-refit-cross-class-transport",
+    "satisfies_phase_ii_termination_alone": false,
+    "supports_common_detailed_bias_mechanism": false,
+    "supports_split_consistency_as_truth_certificate": false
+  },
+  "confirmed": {
+    "all_angular_residuals_within_frozen_envelopes": true,
+    "approved_preregistration_sha": "0b807af1d0428340f1e5267b1e41f6e636b49d29",
+    "contrast_reproduction_verdict": "PASS",
+    "direction_score_maximum": 1.815368506776592,
+    "dissociation_prediction_verdict": "PASS",
+    "evidence_commit": "c90954960b0fa099741ed9f35a61c5153b54c923",
+    "evidence_sha256": "54793bcb3a40d914bce2b5a567f6d25e638a75edf4a55ef724e156a93d372133",
+    "full_direction_score_median_type7": 0.7964069189049904,
+    "full_direction_score_q90_type7": 1.2127316616278656,
+    "maximum_checkpoint_reproduction_error": 0.0,
+    "resolvable_contrasts_passed": 9,
+    "standardized_mean_prediction_verdict": "PASS",
+    "transport_verdict": "PASS"
+  },
+  "execution_note": {
+    "artifact_status": "complete-atomic-canonical-output-preserved",
+    "rerun_performed": false,
+    "runner_invocations": 1,
+    "shell_harness_status": "timeout-after-five-seconds"
+  },
+  "experiment_id": "ACL-007",
+  "new_particles_generated": false,
+  "schema_version": 1,
+  "target_refit": false
+}

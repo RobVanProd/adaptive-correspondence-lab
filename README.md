@@ -96,4 +96,8 @@ validation inside the same estimator family, not an additional breadth class.
 negative results, exclusions, and open theorem. The machine-readable
 [bridge ledger](BRIDGE_LEDGER.json) records every edge. No result supports a universal
 identity among adaptive systems, sequential or neural RL, or support-free transport.
-Phase II now proceeds to a structurally distinct non-Fisher class.
+Phase II has now confirmed ACL-007's unchanged finite-mean/dissociation diagnostic in a
+structurally distinct sequential Bayesian particle filter using Euclidean belief
+geometry. That is genuine no-refit breadth evidence, but not yet a common detailed
+adaptive-dynamics law; the next test must be mechanism-bearing or map a controlled
+failure boundary.

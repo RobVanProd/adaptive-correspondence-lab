@@ -157,14 +157,21 @@ machine-readable source is [`BRIDGE_LEDGER.json`](BRIDGE_LEDGER.json).
   particle bootstrap-filter displacement.
 - **Scope:** independent shadows, nonzero ideal and mean directions, finite native-metric
   second moments, independently exact mean/covariance, fixed schedule, and no target fit.
-- **Transported prediction:** **preregistered, unexecuted.** ACL-007 copies ACL-006's
+- **Transported prediction:** **preregistered confirmation.** ACL-007 copied ACL-006's
   complete standardized mean-error and split-consistency/truth-dissociation rule without
   changing thresholds, schedule, or contrast gap. Sixteen frozen targets span two new
   HMMs and correct, reversed-observation, flat-observation, and missing-observation
-  particle filters.
-- **Failure boundary:** unresolved; sequential resampling, misspecification, particle
-  support, changed geometry, or non-Gaussian finite-mean behavior may break transport.
+  particle filters. All three components passed; the maximum score was `1.815369`,
+  Type-7 median `0.796407`, and Q90 `1.212732`.
+- **Failure boundary:** stable estimator bias survives the diagnostic by design. Three
+  targets had negative truth alignment, down to `-0.999797336`, while the locked
+  dissociation cases reached half cosine at least `0.999994349`. The rule predicts
+  finite-mean estimation and bias/variance dissociation, not truth alignment or a common
+  detailed bias mechanism.
 - **Falsifier:** any locked target outside the copied gates after exact target moments and
   the independent labeled-particle simulator have been verified.
-- **Status:** theorem construction plus locked preregistered cross-class test awaiting
-  exact-SHA audit and one-shot execution. No ACL-007 target outcome exists.
+- **Evidence:** preregistration SHA `0b807af1d0428340f1e5267b1e41f6e636b49d29`;
+  evidence commit `c90954960b0fa099741ed9f35a61c5153b54c923`; artifact SHA-256
+  `54793bcb3a40d914bce2b5a567f6d25e638a75edf4a55ef724e156a93d372133`.
+- **Status:** preregistered no-refit cross-class confirmation outside the Fisher-natural
+  family. It adds real breadth but is not alone a general theory of adaptive dynamics.

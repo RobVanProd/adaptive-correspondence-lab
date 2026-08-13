@@ -58,7 +58,7 @@
       "state_space": "finite belief simplex with explicit particle-count support",
       "data_generation": "hidden-state transition and observation-likelihood sequence",
       "adaptation_role": "belief estimation",
-      "phase_ii_status": "locked preregistered cross-class test; unexecuted and no confirmatory evidence yet"
+      "phase_ii_status": "preregistered no-refit transport confirmed; adds one class outside the Fisher-natural family but is not alone a terminal breadth result"
     }
   ],
   "phase_i_assessment": {
@@ -71,7 +71,9 @@
   "phase_ii_current_assessment": {
     "acl006_adds_independent_class": false,
     "acl006_role": "resolve the support/bias mechanism before breadth testing",
-    "next_breadth_requirement": "confirm or falsify no-refit transport in the sequential bootstrap particle-filter class"
+    "acl007_adds_independent_class": true,
+    "acl007_role": "confirmed unchanged finite-mean and dissociation diagnostic in sequential Euclidean Bayesian inference",
+    "next_breadth_requirement": "test a mechanism-bearing normalization in a third structurally distinct class or obtain a controlled boundary failure"
   },
   "phase_ii_candidates": [
     {

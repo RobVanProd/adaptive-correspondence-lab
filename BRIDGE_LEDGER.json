@@ -290,7 +290,7 @@
         "fixed schedule and no target refit"
       ],
       "transported_prediction": {
-        "status": "preregistered-unexecuted",
+        "status": "preregistered-confirmation",
         "quantity": "ACL-006 unchanged standardized mean-error gates and split-consistency/truth-dissociation thresholds",
         "source": "ACL-006",
         "target": "ACL-007 sequential inference",
@@ -299,25 +299,27 @@
         "target_count": 16,
         "dissociation_target_ids": ["A06", "A07", "A08"],
         "resolvable_contrast_count": 9,
-        "outcomes_generated": false
+        "outcomes_generated": true,
+        "result": "PASS: all standardized-mean, dissociation, and contrast gates passed; maximum score 1.815369, Type-7 median 0.796407, and Q90 1.212732"
       },
       "failure_boundary": {
-        "status": "unresolved",
-        "candidate_mechanisms": [
-          "sequential resampling dependence",
-          "model misspecification",
-          "particle support loss",
-          "changed native metric",
-          "non-Gaussian finite-mean fluctuations"
-        ]
+        "status": "preregistered-confirmation",
+        "result": "Three targets had negative truth alignment, down to -0.999797336, while locked dissociation targets reached half cosine at least 0.999994349. The transported rule predicts finite-mean estimation and bias/variance dissociation, not truth alignment or a common detailed bias mechanism."
       },
       "falsifying_observation": "A preregistered target violates the unchanged ACL-006 normalized mean or dissociation gates despite exact target moments and an independently verified particle simulator.",
       "evidence_status": [
         "theorem-reproduction",
-        "preregistered-unexecuted",
-        "unresolved"
+        "preregistered-confirmation"
       ],
-      "structural_distance_note": "Different estimator family, native metric, objective semantics, temporal structure, data generation, and adaptation role; this is the first Phase-II candidate outside the Fisher-natural family."
+      "evidence": {
+        "approved_preregistration_sha": "0b807af1d0428340f1e5267b1e41f6e636b49d29",
+        "evidence_commit": "c90954960b0fa099741ed9f35a61c5153b54c923",
+        "artifact": "evidence/ACL-007-confirmatory-0b807af1d0428340f1e5267b1e41f6e636b49d29.json",
+        "artifact_sha256": "54793bcb3a40d914bce2b5a567f6d25e638a75edf4a55ef724e156a93d372133",
+        "report": "analysis/ACL-007-confirmatory/summary.json",
+        "report_sha256": "b03ba716bcfd8bfbb1e73a64202b11d605812d081c88d2d9077f334032d34166"
+      },
+      "structural_distance_note": "Different estimator family, native metric, objective semantics, temporal structure, data generation, and adaptation role; ACL-007 is the first confirmed Phase-II class outside the Fisher-natural family."
     }
   ]
 }

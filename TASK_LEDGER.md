@@ -1236,3 +1236,55 @@
 - **Execution hold:** do not invoke `acl007-run` until this exact public commit has been
   pushed, its public SHA and lock closure have been independently rechecked, and the
   canonical SHA-derived evidence path is confirmed nonexistent.
+
+## ACL-007-POST — Artifact-only sequential-inference report
+
+- **Task ID:** `ACL-007-POST`.
+- **Immutable input:** preregistration SHA
+  `0b807af1d0428340f1e5267b1e41f6e636b49d29`; evidence commit
+  `c90954960b0fa099741ed9f35a61c5153b54c923`; artifact
+  `evidence/ACL-007-confirmatory-0b807af1d0428340f1e5267b1e41f6e636b49d29.json`;
+  SHA-256 `54793bcb3a40d914bce2b5a567f6d25e638a75edf4a55ef724e156a93d372133`.
+- **Observed frozen verdicts:** overall transport PASS; standardized-mean PASS;
+  dissociation PASS; contrast reproduction PASS; no target refit.
+- **Hypothesis for reporting:** stored chunk sufficient statistics reproduce every
+  target checkpoint and frozen verdict; the unchanged ACL-006 diagnostic transported
+  into sequential Euclidean Bayesian inference, but generic Monte Carlo normalization
+  alone is not yet a theory of adaptive dynamics.
+- **Allowed files:** this ledger, artifact-only ACL-007 analyzer/tests,
+  `analysis/ACL-007-confirmatory/`, README, theorem/bridge/structural ledgers, and draft
+  PR metadata. No evidence or preregistration byte may change; no RNG call is allowed.
+- **Acceptance tests:** wrong artifact hash fails; embedded SHA/lock/source/registry
+  identities match; every checkpoint reconstructs from chunks; all frozen component
+  verdicts reproduce; deterministic raw derived tables and summary; full pytest, Ruff,
+  coverage, wheel, and immutable-hash audit.
+- **Risks:** inflating a finite-mean diagnostic into a universal adaptive law; counting
+  exact target moments as discovery; ignoring adverse Model-B cases; or hiding the
+  operational shell timeout even though the canonical artifact completed atomically.
+- **Stop conditions:** evidence hash changes; any particle/RNG call occurs; a verdict is
+  recomputed under altered semantics; or a target coefficient/threshold is refit.
+
+### ACL-007 post-confirmatory completion record
+
+- **Artifact reconstruction:** exact. All 64 stored checkpoints reconstruct from chunk
+  sufficient statistics with zero maximum vector discrepancy; embedded registry, lock,
+  source evidence, environment, approved SHA, and all verdicts match.
+- **Confirmed:** overall no-refit transport PASS; standardized-mean PASS; dissociation
+  PASS; all nine contrasts PASS. Maximum full/half standardized score `1.8153685068`;
+  Type-7 full-score median `0.7964069189`; Q90 `1.2127316616`.
+- **Boundary retained:** the three dissociation targets reached minimum split-half
+  Euclidean cosine `0.9999943486` while truth cosine was only `0.3449067857` to
+  `0.3789702232`. Three full-benchmark targets had negative truth alignment, including
+  a minimum `-0.9997973360`; self-consistency still does not certify truth.
+- **Execution provenance:** the runner was invoked once. The shell harness timed out at
+  five seconds after the atomic canonical artifact had completed. The artifact was
+  preserved and committed untouched; no rerun occurred.
+- **Classification:** first preregistered no-refit transport outside the Fisher-natural
+  family, across estimator, metric, inference semantics, and temporal structure. The
+  exact target moments remain controls, and the transported finite-mean normalization
+  alone is not a unified adaptive-dynamics theory.
+- **Report:** `analysis/ACL-007-confirmatory/summary.json`, SHA-256
+  `b03ba716bcfd8bfbb1e73a64202b11d605812d081c88d2d9077f334032d34166`.
+- **Decision:** do not terminate Phase II yet. Test a mechanism-bearing normalization
+  in a third structurally distinct class, or obtain a controlled failure that maps the
+  breadth boundary.

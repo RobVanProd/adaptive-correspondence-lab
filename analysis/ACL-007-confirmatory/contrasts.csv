@@ -1,0 +1,10 @@
+conservative_absolute_gap,exact_signed_truth_cosine_gap,id,kind,left,resolvable,right,observed_signed_truth_cosine_gap,predicted_sign_reproduced,observed_gap_retains_minimum,gating_reproduced
+0.44687870148308895,-0.5583987627043767,A-correct-vs-reversed-N3,observation-misspecification,A01,True,A05,-0.5572054258833614,True,True,True
+0.5018854664853674,-0.5981676225205212,A-correct-vs-reversed-N4,observation-misspecification,A02,True,A06,-0.5984568468181204,True,True,True
+0.5545437585663593,-0.6330814136847374,A-correct-vs-reversed-N6,observation-misspecification,A03,True,A07,-0.6330665126349818,True,True,True
+0.5808791751741474,-0.6489519320682309,A-correct-vs-reversed-N8,observation-misspecification,A04,True,A08,-0.6497581809302457,True,True,True
+0.3334796732168839,-0.46459239525374585,A-correct-vs-flat-N4,observation-misspecification,A02,True,A09,-0.46625234651482805,True,True,True
+0.38662527010147096,-0.48248013754063557,A-correct-vs-flat-N8,observation-misspecification,A04,True,A10,-0.48638500051448574,True,True,True
+0.24653362357363356,-0.36821268637754634,A-correct-vs-missing-N4,missing-observation,A02,True,A11,-0.374058713620675,True,True,True
+0.3183899711706964,-0.4046580227383628,A-correct-vs-missing-N8,missing-observation,A04,True,A12,-0.4042634664835829,True,True,True
+1.57530871240925,-1.8281009804785215,B-correct-vs-reversed-N4,observation-misspecification,B01,True,B02,-1.8343980032797407,True,True,True
